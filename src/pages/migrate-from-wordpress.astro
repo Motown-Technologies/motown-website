@@ -1,0 +1,486 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NumberedRow from "../components/NumberedRow.astro";
+
+import WebIcon from "../components/icons/WebIcon.astro";
+import SoftwareIcon from "../components/icons/SoftwareIcon.astro";
+import AnalyticsIcon from "../components/icons/AnalyticsIcon.astro";
+import DatabaseIcon from "../components/icons/DatabaseIcon.astro";
+import AutomationIcon from "../components/icons/AutomationIcon.astro";
+import ApiIcon from "../components/icons/ApiIcon.astro";
+
+// The hero dashboard: a WordPress install everyone is afraid to touch.
+const adminRows = [
+    { label: "Plugins", value: "14 updates available", bad: false },
+    { label: "Contact form plugin", value: "Vulnerability reported", bad: true },
+    { label: "PHP version", value: "7.4 · unsupported", bad: true },
+    { label: "Mobile PageSpeed", value: "38 / 100", bad: true },
+    { label: "Failed logins (24h)", value: "1,284", bad: false },
+    { label: "Last backup", value: "11 days ago", bad: false },
+];
+
+// What the site becomes.
+const layers = [
+    {
+        title: "Static Front End",
+        icon: WebIcon,
+        desc: "Your site is pre-built into HTML. Visitors never touch PHP or a database, so pages load fast and there's far less to attack.",
+    },
+    {
+        title: "A CMS Your Team Knows",
+        icon: SoftwareIcon,
+        desc: "Keep WordPress as a back office your editors already use, or move to a newer CMS. Either way, editing stays familiar.",
+    },
+    {
+        title: "Every URL Kept",
+        icon: AnalyticsIcon,
+        desc: "We crawl the old site, map each URL to its new address, and set up 301 redirects so your search rankings carry over.",
+    },
+    {
+        title: "Content Moved by Script",
+        icon: DatabaseIcon,
+        desc: "Posts, pages, media, categories and custom fields come over in bulk and get checked against the original.",
+    },
+    {
+        title: "Publish Means Rebuild",
+        icon: AutomationIcon,
+        desc: "When an editor hits publish, the site rebuilds itself. Nobody on your team has to think about it.",
+    },
+    {
+        title: "Forms & Integrations",
+        icon: ApiIcon,
+        desc: "Contact forms, analytics and newsletter signups get rebuilt without plugins.",
+    },
+];
+
+// WordPress vs. after: the complaints we hear on every first call.
+const beforeAfter = [
+    {
+        before: "A dozen plugins waiting on updates, and nobody sure which one breaks the site",
+        after: "No plugins running on the public site",
+    },
+    {
+        before: "Bots hammering /wp-admin all day",
+        after: "Visitors never reach a login or a database",
+    },
+    {
+        before: "PHP and a database run on every page view",
+        after: "Pages built ahead of time and served as plain HTML",
+    },
+    {
+        before: "Mobile PageSpeed scores in the red",
+        after: "A lean front end built for speed from day one",
+    },
+    {
+        before: "A theme only the original developer understands",
+        after: "Clean code we document and hand over",
+    },
+];
+
+// How we get off WordPress.
+const steps = [
+    {
+        title: "Audit the site",
+        desc: "We inventory every page, plugin, form and redirect, and work out which plugins you actually need.",
+    },
+    {
+        title: "Choose the CMS",
+        desc: "Keep WordPress headless or move to a new CMS. We help you pick based on who edits and how often.",
+    },
+    {
+        title: "Rebuild & migrate",
+        desc: "We build the new front end and import your content, so you review real pages with real content.",
+    },
+    {
+        title: "Redirect & launch",
+        desc: "Every old URL gets a 301. After launch we check the redirects and watch Search Console for crawl errors.",
+    },
+];
+---
+
+<BaseLayout
+    meta_title="Migrate Off WordPress Without Losing SEO | Motown Solutions"
+    meta_description="Move your site off WordPress and keep your rankings and content. We rebuild it as fast static pages, redirect every old URL, and give editors an easy CMS."
+>
+    <!-- Hero -->
+    <section class="relative overflow-hidden border-b-2 border-ink">
+        <!-- Grid-line decoration -->
+        <svg
+            aria-hidden
+            class="absolute inset-0 w-full h-full pointer-events-none opacity-[0.08] text-ink"
+            viewBox="0 0 1200 700"
+            preserveAspectRatio="xMidYMid slice"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+        >
+            {Array.from({ length: 13 }, (_, i) => <path d={`M${i * 100} 0 V700`} />)}
+            {Array.from({ length: 15 }, (_, i) => <path d={`M0 ${i * 50} H1200`} />)}
+        </svg>
+
+        <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"
+                        ></span>
+                        <span
+                            class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted"
+                            >WordPress Migration</span
+                        >
+                    </div>
+
+                    <h1
+                        class="font-display font-bold text-display text-ink text-balance"
+                    >
+                        Keep your content.
+                        <br />
+                        <span class="italic text-accent">Leave WordPress</span>
+                        behind.
+                    </h1>
+
+                    <p
+                        class="mt-10 text-lg md:text-xl text-ink-muted leading-relaxed text-pretty max-w-xl"
+                    >
+                        Plugin updates eat your team's week, each one adds code
+                        attackers can probe, and pages get slower as the list
+                        grows. We rebuild your site as pre-built static pages,
+                        carry over every post and URL, and give your editors a
+                        CMS that's just as easy to use.
+                    </p>
+
+                    <div class="mt-10 flex flex-wrap gap-3">
+                        <a
+                            href="/contact"
+                            class="group inline-flex items-center gap-2 bg-accent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-accent hover:bg-paper hover:text-ink hover:border-ink transition-colors"
+                        >
+                            Plan my migration
+                            <span
+                                class="transition-transform group-hover:translate-x-0.5"
+                                aria-hidden>→</span
+                            >
+                        </a>
+                        <a
+                            href="#build"
+                            class="inline-flex items-center gap-2 bg-transparent text-ink font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-ink hover:bg-ink hover:text-paper transition-colors"
+                        >
+                            See what changes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- The dashboard nobody wants to open -->
+                <div class="col-span-12 lg:col-span-5 mt-12 lg:mt-0">
+                    <div
+                        class="border-2 border-ink bg-paper-2 lg:translate-y-2"
+                        data-reveal
+                    >
+                        <div
+                            class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[10px] uppercase tracking-eyebrow text-ink-muted"
+                        >
+                            <span>/wp-admin · Dashboard</span>
+                            <span aria-hidden class="text-accent">● 3 critical</span>
+                        </div>
+                        <table class="w-full font-mono text-xs border-collapse">
+                            <tbody>
+                                {
+                                    adminRows.map((row) => (
+                                        <tr>
+                                            <td class="px-4 py-3 text-ink-muted border-b border-r border-ink/30">
+                                                {row.label}
+                                            </td>
+                                            <td
+                                                class:list={[
+                                                    "px-4 py-3 border-b border-ink/30",
+                                                    row.bad && "text-accent bg-accent/10",
+                                                ]}
+                                            >
+                                                {row.value}
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metadata strip -->
+        <div class="relative border-t border-ink/40 bg-paper">
+            <div
+                class="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted"
+            >
+                <span>Pages &amp; Posts</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Media Library</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Custom Fields</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Menus</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Redirects</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"
+                        ></span>
+                        <span
+                            class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted"
+                            >Sound Familiar?</span
+                        >
+                    </div>
+                    <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        Signs it's time
+                        <br />
+                        to leave WordPress.
+                    </h2>
+                </div>
+                <div class="col-span-12 md:col-span-5 md:col-start-8 md:self-end">
+                    <p
+                        class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        WordPress is easy to start with. Years of plugins,
+                        themes and quick fixes later, keeping it running
+                        becomes a job of its own.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-ink">
+                <div
+                    class="hidden md:grid grid-cols-12 gap-8 py-4 border-b border-ink font-mono text-[10px] uppercase tracking-eyebrow text-ink-muted"
+                >
+                    <span class="col-span-6">WordPress</span>
+                    <span class="col-span-6">After</span>
+                </div>
+                {
+                    beforeAfter.map((row) => (
+                        <div class="grid grid-cols-12 gap-4 md:gap-8 items-center py-7 border-b border-ink">
+                            <div class="col-span-12 md:col-span-6 flex items-start gap-3 text-ink-muted">
+                                <span
+                                    aria-hidden
+                                    class="font-mono text-lg leading-none mt-[2px]"
+                                >
+                                    ×
+                                </span>
+                                <span class="leading-relaxed line-through decoration-ink/30">
+                                    {row.before}
+                                </span>
+                            </div>
+                            <div class="col-span-12 md:col-span-6 flex items-start gap-3">
+                                <span
+                                    aria-hidden
+                                    class="font-mono text-lg leading-none mt-[2px] text-accent"
+                                >
+                                    →
+                                </span>
+                                <span class="font-medium leading-relaxed">
+                                    {row.after}
+                                </span>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- What we build -->
+    <section id="build" class="border-t-2 border-ink bg-paper-2" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"
+                        ></span>
+                        <span
+                            class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted"
+                            >What You Get</span
+                        >
+                    </div>
+                    <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        The same site,
+                        <br />
+                        without the upkeep.
+                    </h2>
+                </div>
+                <div class="col-span-12 md:col-span-5 md:col-start-8 md:self-end">
+                    <p
+                        class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        Your content, URLs and editing workflow come with you.
+                        The plugin stack, the PHP runtime and the exposed admin
+                        stay behind.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink bg-paper"
+            >
+                {
+                    layers.map((layer) => {
+                        const Icon = layer.icon;
+                        return (
+                            <div class="p-8 md:p-10 border-ink border-b border-r last:border-b-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0 md:[&:nth-child(even)]:border-r-0 lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(even)]:border-r">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <span class="w-10 h-10 border-[1.5px] border-ink flex items-center justify-center">
+                                        <Icon />
+                                    </span>
+                                </div>
+                                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-3">
+                                    {layer.title}
+                                </h3>
+                                <p class="text-ink-muted leading-relaxed">
+                                    {layer.desc}
+                                </p>
+                            </div>
+                        );
+                    })
+                }
+            </div>
+
+            <!-- Proof -->
+            <a
+                href="/case-studies/endoscopy-center"
+                class="group mt-12 md:mt-16 grid grid-cols-12 gap-6 items-end border-2 border-ink bg-paper p-8 md:p-10 hover:bg-ink hover:text-paper transition-colors"
+            >
+                <div class="col-span-12 md:col-span-9">
+                    <span
+                        class="block font-mono text-xs uppercase tracking-eyebrow text-ink-muted group-hover:text-paper/60 mb-4"
+                        >Case Study</span
+                    >
+                    <p class="text-lg md:text-xl leading-relaxed text-pretty">
+                        An endoscopy center's site ran on a full WordPress
+                        install. We rebuilt it as static pages that pull
+                        content from WordPress at build time. Patients never
+                        touch WordPress, and staff still edit in the admin they
+                        know.
+                    </p>
+                </div>
+                <span
+                    class="col-span-12 md:col-span-3 md:justify-self-end inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em]"
+                >
+                    Read the case study
+                    <span
+                        class="transition-transform group-hover:translate-x-0.5"
+                        aria-hidden>→</span
+                    >
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"
+                        ></span>
+                        <span
+                            class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted"
+                            >How It Works</span
+                        >
+                    </div>
+                    <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        From WordPress
+                        <br />
+                        to whatever's next.
+                    </h2>
+                </div>
+                <div class="col-span-12 md:col-span-5 md:col-start-8 md:self-end">
+                    <p
+                        class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        Your current site stays live the whole time. We only
+                        switch DNS once the new one checks out.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                {
+                    steps.map((step, i) => (
+                        <NumberedRow
+                            title={`0${i + 1} ${step.title}`}
+                            description={step.desc}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-ink border-t-2 border-ink" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-24 md:py-36 flex flex-col items-start">
+            <div class="flex items-center gap-3 mb-8">
+                <span aria-hidden class="inline-block w-8 h-px bg-paper"></span>
+                <span
+                    class="font-mono text-xs uppercase tracking-eyebrow text-paper/60"
+                    >Leave WordPress</span
+                >
+            </div>
+            <h2
+                class="font-display font-bold text-display text-paper text-balance mb-10 max-w-5xl leading-[0.95]"
+            >
+                Your content, minus
+                <span class="italic text-accent">WordPress</span>.
+            </h2>
+            <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
+                Send us your site's URL. We'll look at what it runs on, tell
+                you what moving would involve, and give you a realistic
+                timeline.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-12">
+                <a
+                    href="/contact"
+                    class="group inline-flex items-center gap-2 bg-accent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-accent hover:bg-paper hover:text-ink hover:border-paper transition-colors"
+                >
+                    Plan my migration
+                    <span
+                        class="transition-transform group-hover:translate-x-0.5"
+                        aria-hidden>→</span
+                    >
+                </a>
+                <a
+                    href="/case-studies/endoscopy-center"
+                    class="inline-flex items-center gap-2 bg-transparent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-paper hover:bg-paper hover:text-ink transition-colors"
+                >
+                    Read the case study
+                </a>
+            </div>
+
+            <!-- Contact strip -->
+            <div
+                class="w-full border-t border-paper/20 pt-8 flex flex-wrap items-center gap-x-10 gap-y-3 font-mono text-xs uppercase tracking-eyebrow text-paper/60"
+            >
+                <a
+                    href="https://motowntech.com"
+                    class="link-underline text-paper"
+                    >motowntech.com</a
+                >
+                <a href="tel:+18459252661" class="link-underline text-paper"
+                    >845-925-2661</a
+                >
+            </div>
+        </div>
+    </section>
+</BaseLayout>
