@@ -1,0 +1,25 @@
+{
+    "cover": "Inheriting a codebase that still works",
+    "slides": [
+        {
+            "title": "Nothing was broken",
+            "body": "The site worked. Underneath, every fragile part was holding something up, so every change felt risky."
+        },
+        {
+            "title": "The first month shipped nothing",
+            "body": "We made the system runnable, deployable and reproducible before touching a feature."
+        },
+        {
+            "title": "Every move had a reason",
+            "body": "Invisible to search engines, a framework near end of support, editors waiting on a developer."
+        },
+        {
+            "title": "Every step could be undone",
+            "body": "The old API stayed running, rollback was one setting, and the migration copied without deleting."
+        },
+        {
+            "title": "A site that publishes itself",
+            "body": "352 static pages. Editors hit publish, the site rebuilds, and a broken build never reaches production."
+        }
+    ]
+}
