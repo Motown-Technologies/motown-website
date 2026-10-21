@@ -17,15 +17,15 @@
        viewport — above ~6rem the display face only fits ~8 characters a line. */
     --text-display: clamp(2.75rem, 7vw, 6rem);
     --text-display--line-height: 0.95;
-    --text-display--letter-spacing: -0.03em;
+    --text-display--letter-spacing: -0.015em;
     /* Case-study heroes carry longer sentences than a landing page hero, so they
        cap lower than --text-display — ~14 characters a line instead of ~8. */
     --text-hero: clamp(2.5rem, 5.2vw, 4.5rem);
     --text-hero--line-height: 1;
-    --text-hero--letter-spacing: -0.03em;
+    --text-hero--letter-spacing: -0.015em;
     --text-h2: clamp(2.25rem, 4vw, 4rem);
     --text-h2--line-height: 1.05;
-    --text-h2--letter-spacing: -0.02em;
+    --text-h2--letter-spacing: -0.01em;
 
     /* The CSS built-ins are too weak to read as intentional. --ease-out
        deliberately overrides Tailwind's default so every `ease-out` utility
