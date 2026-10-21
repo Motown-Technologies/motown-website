@@ -5,7 +5,7 @@ import NumberedRow from "../components/NumberedRow.astro";
 import { Image } from "astro:assets";
 import { getPosts } from "../lib/posts";
 
-const latestPosts = (await getPosts()).slice(0, 3);
+const latestPosts = (await getPosts()).slice(0, 6);
 
 const whyChoose = [
     {
@@ -236,20 +236,14 @@ const whyChoose = [
         latestPosts.length > 0 && (
             <section class="border-t-2 border-ink" data-reveal>
                 <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
-                    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 md:mb-16">
-                        <div>
-                            <div class="flex items-center gap-3 mb-5">
-                                <span aria-hidden class="inline-block w-8 h-px bg-ink" />
-                                <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">From the Blog</span>
-                            </div>
-                            <h2 class="font-display font-bold text-h2 tracking-tight text-balance">Notes from the workbench.</h2>
+                    <div class="mb-12 md:mb-16">
+                        <div class="flex items-center gap-3 mb-5">
+                            <span aria-hidden class="inline-block w-8 h-px bg-ink" />
+                            <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">From the Blog</span>
                         </div>
-                        <a href="/blog" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-eyebrow link-underline">
-                            <span aria-hidden>→</span>
-                            All posts
-                        </a>
+                        <h2 class="font-display font-bold text-h2 tracking-tight text-balance">Notes from the workbench.</h2>
                     </div>
-                    <div class="grid gap-10 md:gap-8 md:grid-cols-3">
+                    <div class="grid gap-10 md:gap-x-8 md:gap-y-14 md:grid-cols-3">
                         {latestPosts.map((post) => (
                             <a href={`/blog/${post.id}`} class="group flex flex-col">
                                 {post.data.image && (
@@ -267,6 +261,15 @@ const whyChoose = [
                                 <p class="text-ink-muted leading-relaxed">{post.data.description}</p>
                             </a>
                         ))}
+                    </div>
+                    <div class="mt-14">
+                        <a
+                            href="/blog"
+                            class="group inline-flex items-center gap-2 bg-transparent text-ink font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-ink hover:bg-ink hover:text-paper transition-colors"
+                        >
+                            All posts
+                            <span class="transition-transform group-hover:translate-x-0.5" aria-hidden>→</span>
+                        </a>
                     </div>
                 </div>
             </section>
