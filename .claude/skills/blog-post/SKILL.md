@@ -98,8 +98,9 @@ Write a native LinkedIn version and give it to the user in the reply:
 - The point in the first two lines (that is all LinkedIn shows before
   "see more").
 - 150-300 words that stand on their own; no "read more at the link".
-- No URL in the post. Give `https://motowntech.com/blog/<slug>` separately,
-  for the first comment.
+- No URL in the post. Give this separately, for the first comment:
+  `https://motowntech.com/blog/<slug>?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>`
+  (the tracking code shows LinkedIn visits in Vercel Web Analytics).
 - Run it through the `humanizer` skill too.
 
 ## 8. Stop

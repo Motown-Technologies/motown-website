@@ -52,6 +52,7 @@ const organization = {
 <meta name="twitter:card" content="summary_large_image" />
 <script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
 {noindex && <meta name="robots" content="noindex" />}
+{import.meta.env.PROD && <script is:inline defer src="/_vercel/insights/script.js" />}
 <slot name="head" />
         <ClientRouter />
         <style is:global>
