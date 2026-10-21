@@ -22,7 +22,7 @@ We start every engagement with a two-week audit of the stack, the team and the r
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/fractional-cto-for-startups.pdf)
 
 Document title: Do you need a CTO, or a CTO's judgment?
 

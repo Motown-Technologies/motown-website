@@ -21,7 +21,7 @@ If you have a prototype that works, the workflow is the hard part and it's alrea
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/prototype-to-production-health-data.pdf)
 
 Document title: What a prototype skips before it can hold health data
 

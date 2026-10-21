@@ -21,7 +21,7 @@ If your team runs on spreadsheets and the same status lives in more than one pla
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/auction-house-spreadsheets.pdf)
 
 Document title: Signs your business has outgrown its spreadsheets
 

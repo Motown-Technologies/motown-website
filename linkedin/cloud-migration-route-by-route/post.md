@@ -20,7 +20,7 @@ The cutover happens route by route, behind the DNS you already have, and users k
 
 If your cloud bill has grown faster than your traffic, the full write-up is in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/cloud-migration-route-by-route.pdf)
 
 Document title: Where your cloud bill actually goes
 

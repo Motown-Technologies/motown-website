@@ -4,8 +4,12 @@
 // The cover uses the post's header image when it has one; a closing slide
 // pointing to the full post is added automatically. Run once per post:
 //   node scripts/carousel.mjs <slug> [--png <dir>]   (--png also writes each slide)
+// The PDF goes to ~/Documents/Motown Carousels/<slug>.pdf (override with
+// CAROUSEL_DIR); it is an upload for LinkedIn, so it stays out of the repo.
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { homedir } from "node:os";
+import { join } from "node:path";
 import sharp from "sharp";
 import { PDFDocument } from "pdf-lib";
 import { C, el, contourLayer, renderPng } from "./render.mjs";
@@ -86,5 +90,8 @@ for (const [i, tree] of trees.entries()) {
     page.drawImage(await pdf.embedPng(png), { x: 0, y: 0, width: W, height: H });
 }
 pdf.setTitle(cover);
-await writeFile(`linkedin/${slug}/carousel.pdf`, await pdf.save());
-console.log(`wrote linkedin/${slug}/carousel.pdf (${trees.length} slides)`);
+const outDir = process.env.CAROUSEL_DIR ?? join(homedir(), "Documents", "Motown Carousels");
+await mkdir(outDir, { recursive: true });
+const out = join(outDir, `${slug}.pdf`);
+await writeFile(out, await pdf.save());
+console.log(`wrote ${out} (${trees.length} slides)`);

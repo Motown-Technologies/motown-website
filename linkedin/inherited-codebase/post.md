@@ -18,7 +18,7 @@ If you've inherited a codebase, make it reproducible before you change anything.
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/inherited-codebase.pdf)
 
 Document title: Inheriting a codebase that still works
 

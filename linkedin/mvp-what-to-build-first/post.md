@@ -16,7 +16,7 @@ A typical first version takes eight to twelve weeks, and you own the repo and th
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/mvp-what-to-build-first.pdf)
 
 Document title: What to build first in your MVP
 

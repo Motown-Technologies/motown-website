@@ -18,7 +18,7 @@ A prototype that works is a good place to start, because the idea has already be
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/what-your-prototype-skipped.pdf)
 
 Document title: What your prototype skipped
 

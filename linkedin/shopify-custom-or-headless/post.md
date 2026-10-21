@@ -20,7 +20,7 @@ Start with what's losing you sales. Most of the time that can be fixed on the pl
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/shopify-custom-or-headless.pdf)
 
 Document title: Shopify, custom or headless?
 

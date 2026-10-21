@@ -122,8 +122,9 @@ automatically. Then render it and check every slide:
 node scripts/carousel.mjs <slug> --png <scratch dir>
 ```
 
-This writes `linkedin/<slug>/carousel.pdf` (upload that to LinkedIn as a
-document post). Read the PNGs and fix any text that wraps badly or overflows.
+This writes `~/Documents/Motown Carousels/<slug>.pdf` (upload that to
+LinkedIn as a document post; it is not committed). Read the PNGs and fix any
+text that wraps badly or overflows.
 
 ## 8. Stop
 

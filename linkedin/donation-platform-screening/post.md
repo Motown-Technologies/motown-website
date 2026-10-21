@@ -21,7 +21,7 @@ Most of these are cheap to build in at the start and expensive to add once money
 
 Full write-up in the comments.
 
-## Post 2: carousel (carousel.pdf)
+## Post 2: carousel (~/Documents/Motown Carousels/donation-platform-screening.pdf)
 
 Document title: Compliance rules a giving platform can't skip
 
