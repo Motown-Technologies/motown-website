@@ -1,0 +1,7 @@
+Bold conceptual still-life photograph for a software consultancy's blog. Subject: {{scene}}.
+
+Style: graphic and striking, like a modern design magazine cover. Hard directional sunlight with long, crisp shadows. Strong geometry and a confident camera angle (overhead flat lay, low dramatic angle, or a tight crop). One clear idea, simply staged, with clean empty space around it. A touch of the unexpected is welcome: an impossible arrangement or a surprising change of scale. Sharp, tactile, real materials.
+
+Palette: saturated cobalt blue (#1d4ed8) used boldly, as a background, a large surface or the hero object, with warm off-white (#f5f2ea), stone and near-black (#0b0b0c). No other saturated colors.
+
+Keep it clean and appropriate for a professional audience. Do not include: any text, letters, numbers, logos, screens showing UI or code, people, faces, hands or body parts, clutter, weapons, alcohol, drugs, money, anything violent, suggestive or alarming, robots, glowing brains, circuit boards, holograms, neon, lens flare, gradients, stock-photo office scenes, or 3D-rendered plastic looks.
