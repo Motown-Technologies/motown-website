@@ -1,0 +1,25 @@
+{
+    "cover": "Do you need a CTO, or a CTO's judgment?",
+    "slides": [
+        {
+            "title": "You may not need a full-time CTO",
+            "body": "They need someone senior making the few technical calls a month that are expensive to get wrong."
+        },
+        {
+            "title": "Hard calls get made and written down",
+            "body": "Rewrite or refactor, build or buy. Each decision is recorded with its tradeoffs."
+        },
+        {
+            "title": "Hiring stops being a guess",
+            "body": "Role scoped, brief written, technical interviews run alongside the founders."
+        },
+        {
+            "title": "The board gets a straight answer",
+            "body": "The technical update comes from someone who can answer the follow-up questions."
+        },
+        {
+            "title": "It starts with a two-week audit",
+            "body": "A fixed-scope review of stack, team and roadmap, with written findings and no obligation."
+        }
+    ]
+}
