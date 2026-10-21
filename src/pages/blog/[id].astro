@@ -1,0 +1,105 @@
+---
+import { render } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPosts, formatDate as fmt } from "../../lib/posts";
+import PostArt from "../../components/PostArt.astro";
+
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, pubDate, updatedDate, cover, image, imageAlt } = post.data;
+
+const article = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished: pubDate.toISOString(),
+    dateModified: (updatedDate ?? pubDate).toISOString(),
+    url: new URL(Astro.url.pathname, Astro.site).href,
+    ...(cover && { image: new URL(cover.src, Astro.site).href }),
+    author: { "@type": "Organization", name: "Motown Solutions", url: "https://motowntech.com" },
+    publisher: { "@type": "Organization", name: "Motown Solutions", url: "https://motowntech.com" },
+};
+---
+
+<BaseLayout meta_title={`${title} | Motown Solutions`} meta_description={description} og_type="article" og_image={cover?.src}>
+    <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(article)} />
+
+    <section class="relative border-b-2 border-ink overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 pt-16 md:pt-24 pb-16 md:pb-20">
+            <div class="flex items-center gap-3 mb-8">
+                <span aria-hidden class="inline-block w-8 h-px bg-ink"></span>
+                <a href="/blog" class="link-underline font-mono text-xs uppercase tracking-eyebrow text-ink-muted">Blog</a>
+                <span aria-hidden class="font-mono text-xs text-ink-muted">/</span>
+                <time datetime={pubDate.toISOString()} class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">
+                    {fmt(pubDate)}
+                </time>
+            </div>
+            <h1 class="font-display font-bold text-hero text-ink text-balance">{title}</h1>
+            <p class="mt-8 text-lg md:text-xl text-ink-muted leading-relaxed text-pretty max-w-2xl">{description}</p>
+            {
+                updatedDate && (
+                    <p class="mt-6 font-mono text-xs uppercase tracking-eyebrow text-ink-muted">
+                        Updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time>
+                    </p>
+                )
+            }
+        </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto px-6 pt-12 md:pt-16">
+        {
+            image ? (
+                <Image src={image} alt={imageAlt} widths={[600, 900, 1200]} sizes="(min-width: 896px) 848px, 100vw" class="w-full h-auto border border-ink" loading="eager" />
+            ) : (
+                <PostArt seed={post.id} />
+            )
+        }
+    </div>
+
+    <article class="post max-w-3xl mx-auto px-6 py-16 md:py-20">
+        <Content />
+    </article>
+
+    <section class="section-ink border-t-2 border-ink">
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28 flex flex-col items-start">
+            <h2 class="font-display font-bold text-h2 text-paper text-balance mb-8 max-w-4xl">
+                Have a project like this?
+            </h2>
+            <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
+                Tell us what you have and what it needs to do. We usually reply within 24 hours.
+            </p>
+            <a
+                href="/contact"
+                class="group inline-flex items-center gap-2 bg-accent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-accent hover:bg-paper hover:text-ink hover:border-paper transition-colors"
+            >
+                Start a conversation
+                <span class="transition-transform group-hover:translate-x-0.5" aria-hidden>→</span>
+            </a>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    /* Markdown output has no classes, so the body is styled by element. */
+    .post :global(> * + *) { margin-top: 1.25em; }
+    .post :global(p), .post :global(li) { font-size: 1.125rem; line-height: 1.75; color: var(--color-ink); }
+    .post :global(h2) { font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.1; letter-spacing: -0.02em; margin-top: 2.5em; }
+    .post :global(h3) { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; line-height: 1.2; margin-top: 2em; }
+    .post :global(a) { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+    .post :global(ul) { list-style: disc; padding-left: 1.5em; }
+    .post :global(ol) { list-style: decimal; padding-left: 1.5em; }
+    .post :global(li + li) { margin-top: 0.4em; }
+    .post :global(blockquote) { border-left: 3px solid var(--color-accent); padding-left: 1.25em; font-style: italic; }
+    .post :global(blockquote p) { color: var(--color-ink-muted); }
+    .post :global(:not(pre) > code) { font-family: var(--font-mono); font-size: 0.9em; background: var(--color-paper-2); padding: 0.1em 0.35em; }
+    .post :global(pre) { font-family: var(--font-mono); font-size: 0.9rem; padding: 1.25em; overflow-x: auto; border: 1px solid var(--color-ink); }
+    .post :global(img) { border: 1px solid var(--color-ink); }
+    .post :global(hr) { border-color: color-mix(in srgb, var(--color-ink) 30%, transparent); margin-block: 3em; }
+</style>

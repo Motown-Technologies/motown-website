@@ -1,0 +1,25 @@
+---
+// Text-free post image used until a post has its own `image`.
+import { contours } from "../lib/contours.mjs";
+
+const { seed } = Astro.props;
+const lines = contours(seed, { width: 1200, height: 500, count: 18 });
+const accent = lines.length >> 1;
+---
+
+<svg
+    aria-hidden
+    viewBox="0 0 1200 500"
+    preserveAspectRatio="xMidYMid slice"
+    class="block w-full h-auto aspect-[12/5] bg-paper-2 border border-ink"
+    fill="none"
+>
+    {lines.map((pts, i) => (
+        <polyline
+            points={pts}
+            stroke={i === accent ? "var(--color-accent)" : "var(--color-ink)"}
+            stroke-width={i === accent ? 3 : 1.25}
+            opacity={i === accent ? 1 : 0.35}
+        />
+    ))}
+</svg>

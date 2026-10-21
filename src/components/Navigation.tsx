@@ -65,6 +65,7 @@ export function Navigation() {
               <a href="/" className={`${linkBase} ${isActive("/")}`}>Home</a>
               <a href="/about" className={`${linkBase} ${isActive("/about")}`}>About</a>
               <a href="/case-studies" className={`${linkBase} ${isActive("/case-studies")}`}>Case Studies</a>
+              <a href="/blog" className={`${linkBase} ${isActive("/blog")}`}>Blog</a>
 
               <div className="relative group inline-flex items-center">
                 <a
@@ -169,6 +170,13 @@ export function Navigation() {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Case Studies
+                </a>
+                <a
+                  href="/blog"
+                  className="py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink border-b border-ink/10"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Blog
                 </a>
 
                 <div className="border-b border-ink/10">

@@ -1,0 +1,89 @@
+---
+import type { GetStaticPaths } from "astro";
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPosts, formatDate as fmt } from "../../lib/posts";
+
+// /blog, then /blog/2, /blog/3 ... Post slugs must not be bare numbers.
+export const getStaticPaths = (async ({ paginate }) => paginate(await getPosts(), { pageSize: 12 })) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const posts = page.data;
+---
+
+<BaseLayout
+    meta_title={page.currentPage === 1 ? "Blog | Motown Solutions" : `Blog, page ${page.currentPage} | Motown Solutions`}
+    meta_description="Notes from Motown Solutions on custom software, AI, automation and the projects we build."
+>
+    <section class="relative border-b-2 border-ink overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
+            <div class="flex items-center gap-3 mb-8">
+                <span aria-hidden class="inline-block w-8 h-px bg-ink"></span>
+                <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">Blog / {page.currentPage === 1 ? "All" : `Page ${page.currentPage} of ${page.lastPage}`}</span>
+            </div>
+            <h1 class="font-display font-bold text-display text-ink text-balance">
+                Notes from
+                <br />
+                the <span class="italic text-accent">workbench</span>.
+            </h1>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            {
+                posts.length === 0 ? (
+                    <p class="text-lg text-ink-muted">No posts yet.</p>
+                ) : (
+                    <div class="border-t border-ink/30">
+                        {posts.map((post) => (
+                            <a
+                                href={`/blog/${post.id}`}
+                                class="group block relative border-b border-ink/30 hover:border-ink transition-colors"
+                            >
+                                <span
+                                    aria-hidden
+                                    data-sweep
+                                    class="pointer-events-none absolute inset-0 bg-ink origin-left scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform duration-[400ms] ease-sweep group-active:duration-[120ms]"
+                                />
+                                <div class="relative grid grid-cols-12 gap-4 md:gap-8 py-10 md:py-12 px-4 md:px-6 transition-colors duration-[400ms] ease-sweep group-hover:text-paper">
+                                    {post.data.cover && (
+                                        <div class="col-span-12 md:col-span-4">
+                                            <Image src={post.data.cover} alt="" widths={[400, 800]} sizes="(min-width: 768px) 400px, 100vw" class="w-full h-auto border border-ink/30" />
+                                        </div>
+                                    )}
+                                    <div class={post.data.cover ? "col-span-12 md:col-span-7" : "col-span-12 md:col-span-11"}>
+                                        <div class="font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted transition-colors duration-[400ms] ease-sweep group-hover:text-paper/60 mb-4">
+                                            <time datetime={post.data.pubDate.toISOString()}>{fmt(post.data.pubDate)}</time>
+                                            {post.data.draft && " · Draft"}
+                                        </div>
+                                        <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight leading-[1] mb-5 text-balance">
+                                            {post.data.title}
+                                        </h2>
+                                        <p class="text-ink-muted transition-colors duration-[400ms] ease-sweep group-hover:text-paper/80 leading-relaxed max-w-xl">
+                                            {post.data.description}
+                                        </p>
+                                    </div>
+                                    <div class="col-span-12 md:col-span-1 md:text-right md:pt-8">
+                                        <span aria-hidden class="inline-block font-mono text-xl md:text-2xl transition-transform group-hover:translate-x-1">
+                                            →
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                )
+            }
+            {
+                page.lastPage > 1 && (
+                    <nav aria-label="Blog pages" class="mt-12 flex items-center justify-between font-mono text-xs uppercase tracking-eyebrow">
+                        {page.url.prev ? <a href={page.url.prev} class="link-underline">← Newer posts</a> : <span />}
+                        <span class="text-ink-muted">Page {page.currentPage} of {page.lastPage}</span>
+                        {page.url.next ? <a href={page.url.next} class="link-underline">Older posts →</a> : <span />}
+                    </nav>
+                )
+            }
+        </div>
+    </section>
+</BaseLayout>

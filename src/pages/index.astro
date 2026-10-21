@@ -2,6 +2,10 @@
 import servicesData, { type Service } from "../data/services";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NumberedRow from "../components/NumberedRow.astro";
+import { Image } from "astro:assets";
+import { getPosts, formatDate } from "../lib/posts";
+
+const latestPosts = (await getPosts()).slice(0, 3);
 
 const whyChoose = [
     {
@@ -226,6 +230,51 @@ const whyChoose = [
             </div>
         </div>
     </section>
+
+    <!-- Latest posts: hidden until something is published -->
+    {
+        latestPosts.length > 0 && (
+            <section class="border-t-2 border-ink" data-reveal>
+                <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+                    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 md:mb-16">
+                        <div>
+                            <div class="flex items-center gap-3 mb-5">
+                                <span aria-hidden class="inline-block w-8 h-px bg-ink" />
+                                <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">From the Blog</span>
+                            </div>
+                            <h2 class="font-display font-bold text-h2 tracking-tight text-balance">Notes from the workbench.</h2>
+                        </div>
+                        <a href="/blog" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-eyebrow link-underline">
+                            <span aria-hidden>→</span>
+                            All posts
+                        </a>
+                    </div>
+                    <div class="grid gap-10 md:gap-8 md:grid-cols-3">
+                        {latestPosts.map((post) => (
+                            <a href={`/blog/${post.id}`} class="group flex flex-col">
+                                {post.data.cover && (
+                                    <Image
+                                        src={post.data.cover}
+                                        alt=""
+                                        widths={[400, 800]}
+                                        sizes="(min-width: 768px) 400px, 100vw"
+                                        class="w-full h-auto border border-ink/30 group-hover:border-ink transition-colors mb-5"
+                                    />
+                                )}
+                                <time datetime={post.data.pubDate.toISOString()} class="font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted mb-3">
+                                    {formatDate(post.data.pubDate)}
+                                </time>
+                                <h3 class="font-display text-2xl font-bold tracking-tight leading-tight mb-3 text-balance group-hover:text-accent transition-colors">
+                                    {post.data.title}
+                                </h3>
+                                <p class="text-ink-muted leading-relaxed">{post.data.description}</p>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        )
+    }
 
     <!-- Final CTA -->
     <section class="border-t-2 border-ink" data-reveal>
