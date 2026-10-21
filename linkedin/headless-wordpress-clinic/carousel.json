@@ -1,0 +1,25 @@
+{
+    "cover": "Keep WordPress. Take it off the public site.",
+    "slides": [
+        {
+            "title": "Staff liked editing it",
+            "body": "An endoscopy center ran its site on WordPress. Editors were happy. Patients waited on every page load."
+        },
+        {
+            "title": "Patients never touch it",
+            "body": "Pages are built ahead of time from WordPress content. Visitors get plain HTML."
+        },
+        {
+            "title": "Publishing is still one button",
+            "body": "A small plugin waits ninety seconds after a publish, so ten quick saves become one rebuild."
+        },
+        {
+            "title": "A CMS outage stays backstage",
+            "body": "If WordPress is down during a build, the build fails and the previous site stays up."
+        },
+        {
+            "title": "Content is checked first",
+            "body": "A renamed field stops the build with a clear error, so a wrong page never goes live."
+        }
+    ]
+}
