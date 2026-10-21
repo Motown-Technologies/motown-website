@@ -1,0 +1,25 @@
+{
+    "cover": "Building for people on a hard day",
+    "slides": [
+        {
+            "title": "Ask one thing at a time",
+            "body": "The application asks one group of questions at a time, so nobody faces a long form while grieving."
+        },
+        {
+            "title": "Offer words first",
+            "body": "A memorial wish shows a few preset phrases before an empty box. A blank box is hard to fill on a bad day."
+        },
+        {
+            "title": "Get the date right",
+            "body": "Anniversaries are Hebrew dates, worked out fresh each year with the leap-year rule, with reminders before the day."
+        },
+        {
+            "title": "Her record is hers",
+            "body": "Closing an account is her request. Erasing her details later leaves the memorial to her parent in place."
+        },
+        {
+            "title": "Let the software keep rules",
+            "body": "With no engineers on staff, tests, contrast and permissions are rules the software enforces itself."
+        }
+    ]
+}
