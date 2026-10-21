@@ -1,0 +1,29 @@
+{
+    "cover": "When it's time to leave WordPress",
+    "slides": [
+        {
+            "title": "Plugins nobody dares update",
+            "body": "A dozen updates waiting, and nobody sure which one breaks the site. Every plugin is more code to attack."
+        },
+        {
+            "title": "Every page view runs PHP",
+            "body": "A database behind every visit, and mobile PageSpeed scores in the red."
+        },
+        {
+            "title": "When staying is fine",
+            "body": "A few plugins, painless updates and fast pages on a phone. Then WordPress is doing its job."
+        },
+        {
+            "title": "Keep the editor you know",
+            "body": "WordPress can stay as the back office. Visitors get pre-built pages and never touch it."
+        },
+        {
+            "title": "Every URL kept",
+            "body": "Each old URL maps to its new address with a 301 redirect, so search rankings carry over."
+        },
+        {
+            "title": "The old site stays live",
+            "body": "We switch DNS only once the new site checks out."
+        }
+    ]
+}
