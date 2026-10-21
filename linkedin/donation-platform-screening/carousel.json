@@ -1,0 +1,25 @@
+{
+    "cover": "Compliance rules a giving platform can't skip",
+    "slides": [
+        {
+            "title": "Screen where every gift passes",
+            "body": "One function every donation route goes through, before a record is written or a payment exists."
+        },
+        {
+            "title": "Decline without saying why",
+            "body": "Telling someone they matched a sanctions list is itself a violation, so the message stays neutral."
+        },
+        {
+            "title": "If the check fails, so does the gift",
+            "body": "When the lists can't be queried, the donation is declined. A check that switches off protects nobody."
+        },
+        {
+            "title": "Record the passes too",
+            "body": "Logging only the blocks can't prove you screened everyone. Clears go on record alongside them."
+        },
+        {
+            "title": "Tune the name match",
+            "body": "A naive check flagged six of twenty ordinary names. One extra word of slack brought it to three."
+        }
+    ]
+}
