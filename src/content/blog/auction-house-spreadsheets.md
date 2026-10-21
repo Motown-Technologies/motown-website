@@ -5,6 +5,7 @@ imageAlt: "Loose paper slips and blank photos scattered across a blue surface, t
 cover: ../../assets/blog/auction-house-spreadsheets.png
 description: "An auction house ran its inventory on spreadsheets, a photo folder and a group chat. We moved it to one system of record that tracks who changed what."
 pubDate: 2026-10-21
+relatedPages: ["/case-studies/auction-operations", "/spreadsheet-to-app"]
 draft: true
 ---
 

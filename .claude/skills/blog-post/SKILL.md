@@ -24,7 +24,12 @@ them that way. If the post needs a fact you don't have, ask.
   (`/blog/2` is pagination).
 - Frontmatter: `title`, `description` (one or two sentences; it is also the
   meta description and LinkedIn preview text, so keep it under ~155
-  characters), `pubDate` (today, YYYY-MM-DD), `draft: true`.
+  characters), `pubDate` (today unless the user gives a date, YYYY-MM-DD),
+  `relatedPages` (the site paths the post draws on, e.g.
+  `["/case-studies/auction-operations", "/spreadsheet-to-app"]`; those pages
+  then list the post under "Related posts"), `draft: true`.
+- Never date a post before the pages it links to existed
+  (`git log --diff-filter=A --format=%ad --date=short -- <page file>`).
 - Body: 600-1200 words, `##` headings, short paragraphs. Write like the case
   studies: concrete, first person plural, says what was decided and why.
   Link to the relevant service or case-study pages and end with a line

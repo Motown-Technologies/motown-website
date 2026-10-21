@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import { Navigation } from "../components/Navigation";
+import RelatedPosts from "../components/RelatedPosts.astro";
 import logo from "../img/logo.png";
 
 import "../styles/global.css";
@@ -256,6 +257,7 @@ const organization = {
     <body class="font-sans bg-paper text-ink antialiased">
         <Navigation client:load />
         <slot />
+        <RelatedPosts />
         <!-- Footer -->
         <footer class="border-t-2 border-ink bg-paper">
             <div class="max-w-7xl mx-auto px-6 py-16">

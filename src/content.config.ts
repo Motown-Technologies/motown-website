@@ -13,6 +13,9 @@ const blog = defineCollection({
         // page draws contour art seeded by the post id.
         image: image().optional(),
         imageAlt: z.string().default(""),
+        // Site paths this post draws on, e.g. "/case-studies/auction-operations".
+        // Those pages list the post under "Related posts".
+        relatedPages: z.array(z.string()).default([]),
         description: z.string(),
         pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
