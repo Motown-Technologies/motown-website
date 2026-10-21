@@ -91,17 +91,39 @@ which is fine.
 - Find the dev server with `npx astro dev status`; start one only if none is
   running. Give the user the URL `/blog/<slug>`.
 
-## 7. LinkedIn post
+## 7. LinkedIn post and carousel
 
-Write a native LinkedIn version and give it to the user in the reply:
+Everything for LinkedIn lives in `linkedin/<slug>/` (see
+`linkedin/auction-house-spreadsheets/` for a finished example). Run the
+`humanizer` skill on all of it.
 
-- The point in the first two lines (that is all LinkedIn shows before
-  "see more").
-- 150-300 words that stand on their own; no "read more at the link".
-- No URL in the post. Give this separately, for the first comment:
+`post.md` holds two LinkedIn posts and the first comment:
+
+- **Post 1, native text:** the point in the first two lines (that is all
+  LinkedIn shows before "see more"), 150-300 words that stand on their own,
+  no "read more at the link", no URL.
+- **Post 2, carousel:** a document title (the carousel's cover line) and a
+  2-3 sentence caption.
+- **First comment (both posts):**
   `https://motowntech.com/blog/<slug>?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>`
   (the tracking code shows LinkedIn visits in Vercel Web Analytics).
-- Run it through the `humanizer` skill too.
+
+`carousel.json` holds the slide text:
+
+```json
+{ "cover": "hook, under ~55 characters", "slides": [{ "title": "under ~45 characters", "body": "one or two sentences, under ~140 characters" }] }
+```
+
+Use 4-6 slides, one point each, drawn from the post. The cover uses the
+post's header image, and a closing "read the full write-up" slide is added
+automatically. Then render it and check every slide:
+
+```sh
+node scripts/carousel.mjs <slug> --png <scratch dir>
+```
+
+This writes `linkedin/<slug>/carousel.pdf` (upload that to LinkedIn as a
+document post). Read the PNGs and fix any text that wraps badly or overflows.
 
 ## 8. Stop
 

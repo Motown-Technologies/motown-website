@@ -1,0 +1,29 @@
+{
+    "cover": "Signs your business has outgrown its spreadsheets",
+    "slides": [
+        {
+            "title": "The same status lives in three places",
+            "body": "An auction house we built for kept inventory in spreadsheets, a photo folder and a group chat. Over time the three stopped agreeing."
+        },
+        {
+            "title": "Nobody can say who changed it, or when",
+            "body": "A spreadsheet shows where an item is. It can't show who moved it or when, so a disagreement has nothing to settle it."
+        },
+        {
+            "title": "Deleting the wrong row means it's gone",
+            "body": "One mistake the week before a sale, and someone has to rebuild the record from memory."
+        },
+        {
+            "title": "Real work happens in a chat thread",
+            "body": "Decisions made in the group chat never make it back into any record."
+        },
+        {
+            "title": "What we built instead",
+            "body": "One record per item through seven stages, from intake to sold. Every change is recorded against a person, and deletes can be undone."
+        },
+        {
+            "title": "AI drafts, a person approves",
+            "body": "Photos go in and catalog copy comes out. A cataloger reads and approves every draft before it reaches the inventory."
+        }
+    ]
+}
