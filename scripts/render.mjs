@@ -16,6 +16,18 @@ const fonts = Promise.all([
     font("inter-latin-400-normal.woff").then((data) => ({ name: "Inter", data, weight: 400 })),
 ]);
 
+// satori draws the "ff" ligature with the advance width of a single f, which
+// leaves a gap after it ("Staff  still"). Lay text out word by word and
+// split words containing "ff" into letters so no ligature forms.
+// ponytail: catches ff only; add fi/fl here if the font ever ligates them too.
+export function words(text, style) {
+    const gap = style.fontSize * 0.24;
+    return el("div", { display: "flex", flexWrap: "wrap", columnGap: gap, ...style },
+        text.split(/\s+/).map((w) => /ff/.test(w)
+            ? el("div", { display: "flex" }, [...w].map((ch) => el("span", {}, ch)))
+            : el("span", {}, w)));
+}
+
 // Absolutely positioned contour lines, seeded so each post gets its own.
 export function contourLayer(seed, width, height, { color = C.ink, opacity = 0.12 } = {}) {
     const lines = contours(seed, { width, height, count: Math.round(height / 45) })

@@ -12,7 +12,7 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 import sharp from "sharp";
 import { PDFDocument } from "pdf-lib";
-import { C, el, contourLayer, renderPng } from "./render.mjs";
+import { C, el, words, contourLayer, renderPng } from "./render.mjs";
 
 const [slug] = process.argv.slice(2);
 const pngAt = process.argv.indexOf("--png");
@@ -42,7 +42,7 @@ async function coverSlide() {
             : el("div", { width: W, height: imgH, display: "flex", position: "relative", background: C.paper }, [contourLayer(slug, W, imgH, { opacity: 0.35 })]),
         el("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", flexGrow: 1, padding: `56px ${PAD}px 72px` }, [
             eyebrow("MOTOWN SOLUTIONS"),
-            el("div", { display: "flex", ...display(cover.length <= 55 ? 92 : 76, C.ink) }, cover),
+            words(cover, display(cover.length <= 55 ? 92 : 76, C.ink)),
             el("div", { display: "flex", justifyContent: "space-between", alignItems: "center" }, [
                 el("div", { display: "flex", alignItems: "center", gap: 18, ...mono(22, C.ink) }, [el("div", { width: 72, height: 8, background: C.accent }), "SWIPE"]),
                 counter(1),
@@ -58,7 +58,7 @@ function pointSlide({ title, body }, n) {
             el("div", { display: "flex", justifyContent: "space-between", alignItems: "center" }, [eyebrow("MOTOWN SOLUTIONS"), counter(n)]),
             el("div", { display: "flex", flexDirection: "column", gap: 40 }, [
                 el("div", { width: 72, height: 8, background: C.accent }),
-                el("div", { display: "flex", ...display(title.length <= 40 ? 80 : 64, C.ink) }, title),
+                words(title, display(title.length <= 40 ? 80 : 64, C.ink)),
                 el("div", { display: "flex", fontFamily: "Inter", fontSize: 40, lineHeight: 1.45, color: C.muted }, body),
             ]),
             el("div", mono(22, C.muted), "MOTOWNTECH.COM"),
@@ -72,7 +72,7 @@ function ctaSlide(n) {
         el("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", padding: `${PAD}px` }, [
             el("div", { display: "flex", justifyContent: "space-between", alignItems: "center" }, [eyebrow("MOTOWN SOLUTIONS", "#a1a1a6", C.paper), counter(n, "#a1a1a6")]),
             el("div", { display: "flex", flexDirection: "column", gap: 40 }, [
-                el("div", { display: "flex", ...display(84, C.paper) }, "Read the full write-up"),
+                words("Read the full write-up", display(84, C.paper)),
                 el("div", { display: "flex", fontFamily: "Inter", fontSize: 36, lineHeight: 1.45, color: "#a1a1a6" }, `motowntech.com/blog/${slug}`),
             ]),
             el("div", { display: "flex", alignItems: "center", gap: 18, ...mono(22, C.paper) }, [el("div", { width: 72, height: 8, background: C.accent }), "LINK IN THE COMMENTS"]),

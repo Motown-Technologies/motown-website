@@ -3,7 +3,7 @@
 //   node scripts/title-card.mjs <slug>
 // Output is committed; nothing here runs during `astro build`.
 import { readFile, writeFile } from "node:fs/promises";
-import { C, el, contourLayer, renderPng } from "./render.mjs";
+import { C, el, words, contourLayer, renderPng } from "./render.mjs";
 
 const slug = process.argv[2];
 if (!slug) throw new Error("usage: node scripts/title-card.mjs <slug>");
@@ -22,7 +22,7 @@ const tree = el("div", { width: 1200, height: 630, display: "flex", position: "r
             el("div", { width: 40, height: 2, background: C.ink }),
             "MOTOWN SOLUTIONS / BLOG",
         ]),
-        el("div", { display: "flex", fontFamily: "Space Grotesk", fontSize: size, lineHeight: 1.02, letterSpacing: -size * 0.015, color: C.ink, maxWidth: 1000 }, title),
+        words(title, { fontFamily: "Space Grotesk", fontSize: size, lineHeight: 1.02, letterSpacing: -size * 0.015, color: C.ink, maxWidth: 1000 }),
         el("div", { display: "flex", alignItems: "center", gap: 20, fontFamily: "JetBrains Mono", fontSize: 20, letterSpacing: 3, color: C.ink }, [
             el("div", { width: 72, height: 8, background: C.accent }),
             "MOTOWNTECH.COM",
