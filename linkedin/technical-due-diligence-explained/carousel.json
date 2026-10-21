@@ -1,0 +1,25 @@
+{
+    "cover": "What technical due diligence checks",
+    "slides": [
+        {
+            "title": "Can it carry the roadmap?",
+            "body": "Whether the system can absorb the next 18 months, or whether the plan assumes a rewrite nobody budgeted for."
+        },
+        {
+            "title": "Could a new engineer change it?",
+            "body": "Test coverage where it counts, and how much code someone new could safely change in their first month."
+        },
+        {
+            "title": "Security findings stall deals",
+            "body": "Sign-in, access control, secrets, exposed data and vulnerable dependencies, checked before a buyer does."
+        },
+        {
+            "title": "Who owns the code?",
+            "body": "Contractor agreements that assign it, and no dependency licence an acquirer won't accept."
+        },
+        {
+            "title": "Find it first",
+            "body": "Run it four to six weeks before the data room. A problem you disclose arrives with a costed plan attached."
+        }
+    ]
+}
