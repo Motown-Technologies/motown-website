@@ -6,7 +6,6 @@ cover: ../../assets/blog/when-to-leave-wordpress.png
 description: "The signs that WordPress upkeep has become a job of its own, when staying put is fine, and what moving off it involves."
 pubDate: 2026-10-09
 relatedPages: ["/migrate-from-wordpress"]
-draft: true
 ---
 
 WordPress is easy to start with. The trouble tends to show up years later, after enough plugins, themes and quick fixes that keeping the site running has become a job of its own.

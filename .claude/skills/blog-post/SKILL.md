@@ -6,7 +6,7 @@ description: Write a new Motown Solutions blog post end to end - draft from fact
 # Blog post
 
 Posts live in `src/content/blog/<slug>.md`. The schema is in `src/content.config.ts`.
-`src/content/blog/example-post.md` is the template; never publish it.
+Copy the frontmatter layout of any existing post in `src/content/blog/`.
 
 ## 1. Pin down the topic and the facts
 
@@ -24,7 +24,8 @@ them that way. If the post needs a fact you don't have, ask.
   (`/blog/2` is pagination).
 - Frontmatter: `title`, `description` (one or two sentences; it is also the
   meta description and LinkedIn preview text, so keep it under ~155
-  characters), `pubDate` (today unless the user gives a date, YYYY-MM-DD),
+  characters), `pubDate` (today unless the user gives a date, YYYY-MM-DD;
+  it only orders posts and is not shown on the site),
   `relatedPages` (the site paths the post draws on, e.g.
   `["/case-studies/auction-operations", "/spreadsheet-to-app"]`; those pages
   then list the post under "Related posts"), `draft: true`.

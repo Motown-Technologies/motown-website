@@ -6,7 +6,6 @@ cover: ../../assets/blog/shopify-custom-or-headless.png
 description: "How we help stores choose between building on Shopify, a custom experience on their current platform and a headless front end, and when headless is the wrong call."
 pubDate: 2026-09-30
 relatedPages: ["/ecommerce-development", "/shopify-development", "/headless-commerce-development"]
-draft: true
 ---
 
 Traffic is the expensive part of running an online store. Most stores pay for it and then lose it to a slow product page, a search box that can't handle a typo, or a checkout that asks for an account before it takes the money.

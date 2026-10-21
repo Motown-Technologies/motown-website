@@ -6,7 +6,6 @@ cover: ../../assets/blog/donation-platform-screening.png
 description: "Taking donations for other organizations brings sanctions screening, charity checks and records that must hold up. Here is how that shaped one platform."
 pubDate: 2026-09-09
 relatedPages: ["/case-studies/donation-platform"]
-draft: true
 ---
 
 We're building a giving platform where nonprofits run campaigns and always-on donation pages, and donors give by card, digital wallet or a grant from a donor-advised fund. Once a platform takes payments on behalf of other organizations, it picks up obligations that have little to do with payments: sanctions screening, checking that a charity is what it says it is, and keeping records that still hold up years later.

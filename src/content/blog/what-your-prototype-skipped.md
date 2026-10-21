@@ -6,7 +6,6 @@ cover: ../../assets/blog/what-your-prototype-skipped.png
 description: "A no-code or AI-built prototype can prove an idea in days. Here is what it usually leaves out, and what we add before it goes in front of customers."
 pubDate: 2026-09-11
 relatedPages: ["/prototype-to-production"]
-draft: true
 ---
 
 It has never been faster to get a working app in front of someone. A no-code tool or an AI coding assistant can turn an idea into a demo in days, and for finding out whether an idea is worth pursuing, that speed is useful.

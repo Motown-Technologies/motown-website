@@ -6,7 +6,6 @@ cover: ../../assets/blog/inherited-codebase.png
 description: "What we do when a client hands us someone else's codebase that still works, and how one practice ended up with a site that publishes itself."
 pubDate: 2026-09-24
 relatedPages: ["/case-studies/healthcare-practice"]
-draft: true
 ---
 
 A multi-site healthcare practice came to us in August 2023 with a website someone else had built. Nothing about it was broken. Underneath, every part of it was fragile, and every fragile part was holding something up.

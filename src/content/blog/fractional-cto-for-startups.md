@@ -6,7 +6,6 @@ cover: ../../assets/blog/fractional-cto-for-startups.png
 description: "What a startup without a senior technical lead is missing, what a part-time CTO takes on, and how to tell when you need one."
 pubDate: 2026-08-28
 relatedPages: ["/fractional-cto", "/startup-consulting"]
-draft: true
 ---
 
 Most seed-stage companies we talk to don't need a full-time CTO yet. They need someone senior to make the four or five technical calls a month that are expensive to get wrong, and to stand behind those calls afterwards.

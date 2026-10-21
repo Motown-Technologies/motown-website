@@ -6,7 +6,6 @@ cover: ../../assets/blog/mvp-what-to-build-first.png
 description: "How we scope a first version: find the one user journey that proves the idea, build it properly, and park everything else in writing."
 pubDate: 2026-08-13
 relatedPages: ["/mvp-development"]
-draft: true
 ---
 
 Founders often arrive with a feature list built from every conversation they've had about the product. Each item came from someone worth listening to, and each makes sense on its own. Together they add up to a launch date that keeps moving.

@@ -6,7 +6,6 @@ cover: ../../assets/blog/cloud-migration-route-by-route.png
 description: "Most cloud bills are egress, idle capacity and managed services sized for a bigger company. We move apps to Cloudflare one route at a time."
 pubDate: 2026-09-03
 relatedPages: ["/cloud-migration-services"]
-draft: true
 ---
 
 When a company asks us to look at its AWS, GCP or Azure bill, the expensive part is rarely the compute. It's egress, capacity reserved for a peak that hardly ever comes, and managed services priced for a scale the business hasn't reached.

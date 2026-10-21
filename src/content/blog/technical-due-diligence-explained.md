@@ -6,7 +6,6 @@ cover: ../../assets/blog/technical-due-diligence-explained.png
 description: "What a technical due diligence checks before a raise or an acquisition, explained for founders and investors who don't read code."
 pubDate: 2026-10-16
 relatedPages: ["/technical-due-diligence"]
-draft: true
 ---
 
 Before an investment or an acquisition closes, someone reads the codebase with a critical eye. It might be an investor's engineer, an acquirer's team or an enterprise buyer's security reviewer. Whatever they find goes into a report, and that report affects the price.

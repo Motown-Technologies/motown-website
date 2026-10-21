@@ -6,7 +6,6 @@ cover: ../../assets/blog/headless-wordpress-clinic.png
 description: "An endoscopy center kept WordPress for its staff and moved it out of the way of patients. Here is how publishing works now, and why the site stays up."
 pubDate: 2026-10-14
 relatedPages: ["/case-studies/endoscopy-center", "/migrate-from-wordpress"]
-draft: true
 ---
 
 An outpatient endoscopy center ran its public website as a full WordPress install. Every time a patient opened a page, PHP, a database and a stack of plugins put that page together on the spot. The staff liked editing it. Nobody liked how it loaded.
