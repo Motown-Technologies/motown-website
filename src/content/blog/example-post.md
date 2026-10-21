@@ -1,5 +1,6 @@
 ---
 title: "Example post: replace me"
+cover: ../../assets/blog/example-post.png
 description: "One or two sentences. Used as the meta description, the LinkedIn preview text and the summary on /blog."
 pubDate: 2026-10-21
 draft: true
