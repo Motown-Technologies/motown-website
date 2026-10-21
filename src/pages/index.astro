@@ -3,7 +3,7 @@ import servicesData, { type Service } from "../data/services";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NumberedRow from "../components/NumberedRow.astro";
 import { Image } from "astro:assets";
-import { getPosts, formatDate } from "../lib/posts";
+import { getPosts } from "../lib/posts";
 
 const latestPosts = (await getPosts()).slice(0, 3);
 
@@ -261,9 +261,6 @@ const whyChoose = [
                                         class="w-full aspect-[16/10] object-cover border border-ink/30 group-hover:border-ink transition-colors mb-5"
                                     />
                                 )}
-                                <time datetime={post.data.pubDate.toISOString()} class="font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted mb-3">
-                                    {formatDate(post.data.pubDate)}
-                                </time>
                                 <h3 class="font-display text-2xl font-bold tracking-tight leading-tight mb-3 text-balance group-hover:text-accent transition-colors">
                                     {post.data.title}
                                 </h3>

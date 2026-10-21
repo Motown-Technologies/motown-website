@@ -1,7 +1,7 @@
 ---
 // Published posts that list this page in `relatedPages`. Renders nothing
 // when there are none, so BaseLayout can include it on every page.
-import { getPosts, formatDate } from "../lib/posts";
+import { getPosts } from "../lib/posts";
 
 const here = Astro.url.pathname.replace(/\/$/, "") || "/";
 const posts = (await getPosts()).filter((p) => p.data.relatedPages?.includes(here)).slice(0, 3);
@@ -19,9 +19,6 @@ const posts = (await getPosts()).filter((p) => p.data.relatedPages?.includes(her
                     {posts.map((post) => (
                         <li>
                             <a href={`/blog/${post.id}`} class="group block">
-                                <time datetime={post.data.pubDate.toISOString()} class="block font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted mb-3">
-                                    {formatDate(post.data.pubDate)}
-                                </time>
                                 <span class="block font-display text-2xl font-bold tracking-tight leading-tight text-balance group-hover:text-accent transition-colors">
                                     {post.data.title}
                                 </span>

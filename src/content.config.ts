@@ -18,8 +18,8 @@ const blog = defineCollection({
         // Those pages list the post under "Related posts".
         relatedPages: z.array(z.string()).default([]),
         description: z.string(),
+        // Orders posts (newest first); not shown on the site.
         pubDate: z.coerce.date(),
-        updatedDate: z.coerce.date().optional(),
         // Drafts render in `astro dev` and are left out of the build.
         draft: z.boolean().default(false),
     }),

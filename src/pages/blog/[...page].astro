@@ -2,7 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getPosts, formatDate as fmt } from "../../lib/posts";
+import { getPosts } from "../../lib/posts";
 
 // /blog, then /blog/2, /blog/3 ... Post slugs must not be bare numbers.
 export const getStaticPaths = (async ({ paginate }) => paginate(await getPosts(), { pageSize: 12 })) satisfies GetStaticPaths;
@@ -53,10 +53,11 @@ const posts = page.data;
                                         </div>
                                     )}
                                     <div class={post.data.image ? "col-span-12 md:col-span-7" : "col-span-12 md:col-span-11"}>
-                                        <div class="font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted transition-colors duration-[400ms] ease-sweep group-hover:text-paper/60 mb-4">
-                                            <time datetime={post.data.pubDate.toISOString()}>{fmt(post.data.pubDate)}</time>
-                                            {post.data.draft && " · Draft"}
-                                        </div>
+                                        {post.data.draft && (
+                                            <div class="font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted transition-colors duration-[400ms] ease-sweep group-hover:text-paper/60 mb-4">
+                                                Draft
+                                            </div>
+                                        )}
                                         <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight leading-[1] mb-5 text-balance">
                                             {post.data.title}
                                         </h2>
