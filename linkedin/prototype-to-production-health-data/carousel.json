@@ -1,0 +1,25 @@
+{
+    "cover": "What a prototype skips before it can hold health data",
+    "slides": [
+        {
+            "title": "The workflow was already right",
+            "body": "A senior-care operator ran its concierge team on a low-code prototype. The screens matched how the team really worked."
+        },
+        {
+            "title": "But it had no users",
+            "body": "The \"submitted by\" field was a dropdown of six hard-coded names. Now there are invite-only accounts with two-factor and passkeys."
+        },
+        {
+            "title": "Everyone could see everything",
+            "body": "Each facility's records are now separated underneath every query. A facility user sees only their own facilities."
+        },
+        {
+            "title": "Nothing recorded who changed what",
+            "body": "An append-only audit log now keeps a timeline on every record and for every user."
+        },
+        {
+            "title": "We audited it before launch",
+            "body": "Two reviews against 33 facilities of test data found 48 issues. Eight were fixed the same night."
+        }
+    ]
+}
