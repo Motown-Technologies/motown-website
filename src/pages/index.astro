@@ -252,13 +252,13 @@ const whyChoose = [
                     <div class="grid gap-10 md:gap-8 md:grid-cols-3">
                         {latestPosts.map((post) => (
                             <a href={`/blog/${post.id}`} class="group flex flex-col">
-                                {post.data.cover && (
+                                {post.data.image && (
                                     <Image
-                                        src={post.data.cover}
+                                        src={post.data.image}
                                         alt=""
                                         widths={[400, 800]}
                                         sizes="(min-width: 768px) 400px, 100vw"
-                                        class="w-full h-auto border border-ink/30 group-hover:border-ink transition-colors mb-5"
+                                        class="w-full aspect-[16/10] object-cover border border-ink/30 group-hover:border-ink transition-colors mb-5"
                                     />
                                 )}
                                 <time datetime={post.data.pubDate.toISOString()} class="font-mono text-[10px] md:text-xs uppercase tracking-eyebrow text-ink-muted mb-3">

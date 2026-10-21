@@ -47,9 +47,14 @@ node scripts/title-card.mjs <slug>
 ```
 
 This writes `src/assets/blog/<slug>.png` and adds `cover:` to the frontmatter.
+The card is only the social preview (og:image), never shown on the site.
 Re-run it if the title changes. Read the PNG and check that the title fits.
 
-## 5. Post image (ask first: each run spends Higgsfield credits)
+## 5. Post image (every post; about 2 Higgsfield credits each)
+
+The image is the header of the post page and its thumbnail on /blog and the
+homepage, so every published post needs one. Higgsfield allows about three
+generations at a time on the current plan; submit in groups of three.
 
 First write two things:
 
