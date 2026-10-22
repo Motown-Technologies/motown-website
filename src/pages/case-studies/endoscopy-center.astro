@@ -8,14 +8,14 @@ const outcomes = [
     },
     {
         before: "Every edit rendered live through PHP on every visit, and so did every theme and plugin update",
-        after: "Pressing publish triggers one static rebuild, and a burst of ten edits produces one build, not ten",
+        after: "Pressing publish triggers one static rebuild, and a burst of ten edits produces a single build",
     },
     {
         before: "A slow or unreachable CMS took the public site down with it",
-        after: "The pages are already built, so a CMS outage is a staff problem, not a patient one",
+        after: "The pages are already built, so a CMS outage only affects staff",
     },
     {
-        before: "Images left over from the old site quietly 404'd, and shifted the layout as they loaded",
+        before: "Images left over from the old site silently 404'd, and shifted the layout as they loaded",
         after: "Legacy URLs rewritten at build, with dimensions and lazy loading injected into CMS-authored images",
     },
     {
@@ -33,11 +33,11 @@ const pillars = [
     {
         n: "02",
         title: "A build that refuses to guess",
-        body: "Every response from the CMS is validated before it is used, so a renamed field stops the build loudly instead of quietly rendering a page that is wrong. Editor HTML is treated as untrusted on the way in. And a production build never invents content: if a fetch fails, the result is a not-found page, not a placeholder that looks real.",
+        body: "Every response from the CMS is validated before it is used, so a renamed field stops the build loudly instead of silently rendering a page that is wrong. Editor HTML is treated as untrusted on the way in. And a production build never invents content: if a fetch fails, the result is a not-found page, not a placeholder that looks real.",
     },
     {
         n: "03",
-        title: "Publishing is a build, not a request",
+        title: "Publishing triggers a build",
         body: "An editor pressing publish is the only thing that changes the public site. A small WordPress plugin notices the change, waits out a short quiet period so a burst of edits becomes one job, and asks the host for a fresh build. Nothing about that requires an editor to know it is happening.",
     },
 ];
@@ -45,11 +45,11 @@ const pillars = [
 const build = [
     {
         title: "Publish once, build once",
-        body: "A small WordPress plugin we wrote calls the hosting API when published content changes. Edits are debounced through a 90-second scheduled event, so a burst of ten saves produces one build rather than ten. A system cron keeps that scheduler ticking even when no editor has the admin open.",
+        body: "A small WordPress plugin we wrote calls the hosting API when published content changes. Edits are debounced through a 90-second scheduled event, so a burst of ten saves produces a single build. A system cron keeps that scheduler ticking even when no editor has the admin open.",
     },
     {
         title: "Validating what the CMS sends",
-        body: "WordPress schemas drift: fields get renamed, field groups get restructured, and IDs come back inconsistently typed. Every GraphQL response is checked against a schema at build time, so a shape change becomes a loud, catchable failure instead of a page that quietly renders wrong.",
+        body: "WordPress schemas drift: fields get renamed, field groups get restructured, and IDs come back inconsistently typed. Every GraphQL response is checked against a schema at build time, so a shape change becomes a loud, catchable failure instead of a page that silently renders wrong.",
     },
     {
         title: "Treating CMS HTML as untrusted",
@@ -83,7 +83,7 @@ const steps = [
     {
         n: "03",
         title: "The host builds the site",
-        body: "Appwrite Sites pulls every page, provider, procedure and the menu over GraphQL, validates each response against its schema, sanitizes editor HTML, and writes plain files. A bad response fails the build here, not in a patient's browser.",
+        body: "Appwrite Sites pulls every page, provider, procedure and the menu over GraphQL, validates each response against its schema, sanitizes editor HTML, and writes plain files. A bad response fails the build here, before any patient sees it.",
     },
     {
         n: "04",
@@ -204,10 +204,10 @@ const timeline = [
 
                         {
                             [
-                                ["Sector", "Healthcare — outpatient endoscopy"],
+                                ["Sector", "Healthcare, outpatient endoscopy"],
                                 ["Audience", "Patients, caregivers, referring physicians"],
                                 ["Stack", "Astro 7 · WPGraphQL · Tailwind 4 · Appwrite Sites"],
-                                ["CMS at request time", "None — the site is static"],
+                                ["CMS at request time", "None. The site is static"],
                                 ["Editing", "WordPress, exactly as before"],
                             ].map(([k, v], i, arr) => (
                                 <div
@@ -342,15 +342,15 @@ const timeline = [
                 <p
                     class="font-display font-bold text-2xl md:text-3xl tracking-tight leading-tight text-balance"
                 >
-                    The CMS could be down all week. Patients would never know.
+                    Patients don't notice when the CMS is down, even for a week.
                 </p>
                 <p class="mt-4 text-ink-muted leading-relaxed">
-                    That is what fetching content at build time actually buys.
+                    Content is fetched at build time.
                     The pages a patient loads were finished the last time an
                     editor pressed publish, so a plugin update, a slow database
                     or an expiring certificate on the editorial side is a staff
                     inconvenience rather than an outage on the public site. The
-                    honest flip side: a build does need WordPress reachable
+                    trade-off is that a build needs WordPress reachable
                     while it runs. When it isn't, the build fails and the previous site stays up, which is the failure mode you want.
                 </p>
             </blockquote>

@@ -37,7 +37,7 @@ const pillars = [
     {
         n: "02",
         title: "PHI shaped the architecture",
-        body: "Resident data is protected health information, and that was a decision on day one rather than a hardening pass at the end. It is why facility isolation lives in a global query scope instead of in controllers, why credentials mask themselves unless deliberately revealed, and why the automatic logoff is three coordinated layers rather than a session timeout.",
+        body: "Resident data is protected health information, and we treated it that way from day one. That is why facility isolation lives in a global query scope instead of in controllers, why credentials mask themselves unless deliberately revealed, and why the automatic logoff is three coordinated layers rather than a session timeout.",
     },
     {
         n: "03",
@@ -83,12 +83,12 @@ const rigor = [
         undo: "Two separate role models. Facility users hold none of the internal abilities, and every internal check tests both",
     },
     {
-        risk: "A change breaks something quietly",
+        risk: "A change breaks something without anyone noticing",
         undo: "Every change clears the same gate: tests, static analysis, formatter, type-check, lint, and a production build",
     },
     {
         risk: "Compliance is claimed rather than done",
-        undo: "A hardening document that marks each item as client sign-off or ops runbook, and records the known gaps rather than papering over them",
+        undo: "A hardening document that marks each item as client sign-off or ops runbook, and records the known gaps",
     },
     {
         risk: "Data is destroyed on a schedule nobody agreed to",
@@ -191,7 +191,7 @@ const rigor = [
                         </div>
                         {
                             [
-                                ["Sector", "Senior care — multi-facility"],
+                                ["Sector", "Senior care, multi-facility"],
                                 ["Data", "Resident records, treated as PHI"],
                                 ["Isolation", "Per-facility, beneath every query"],
                                 ["Stack", "Laravel 13 · Vue 3 · Postgres"],
@@ -404,8 +404,8 @@ const rigor = [
                     <p
                         class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
                     >
-                        Handing an operator a system that holds their residents'
-                        information is not a moment for optimism. Two sweeps ran
+                        A system that holds residents' information gets checked
+                        before the operator gets it. Two sweeps ran
                         against a full working dataset before launch: one asking what is broken, and one asking what was promised and
                         never built.
                     </p>
@@ -446,7 +446,7 @@ const rigor = [
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — What the sweep found
+                        What the sweep found
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         48 findings, verified against a seeded working set of 33
@@ -458,14 +458,14 @@ const rigor = [
                         row cap, 21 seconds and a tenth of the memory.
                     </p>
                     <p class="text-ink-muted leading-relaxed">
-                        Eight were fixed the same night, and five of those eight were regressions introduced hours earlier. That is why we audit before launch instead of trusting the last green test run.
+                        Eight were fixed the same night, and five of those eight were regressions introduced hours earlier. That is why we audit before launch.
                     </p>
                 </div>
                 <div class="col-span-12 lg:col-span-6 border-2 border-ink bg-paper p-8 md:p-10">
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — And two findings we argued with
+                        And two findings we argued with
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         Two were rejected as wrong. One proposed fix would have

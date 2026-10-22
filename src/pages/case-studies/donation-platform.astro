@@ -12,7 +12,7 @@ const outcomes = [
     },
     {
         before: "Let the donation through when the screening service is unavailable",
-        after: "Fail closed. A control that switches itself off during an outage was never a control",
+        after: "Fail closed: if the lists can't be queried, the donation is declined",
     },
     {
         before: "Log the blocks",
@@ -61,7 +61,7 @@ const build = [
     },
     {
         title: "A release you have to mean",
-        body: "Merging to the main branch deploys staging automatically, gated on the test suite. Production deploys only when someone pushes a version tag, so going live is a deliberate act naming an exact commit, not a side effect of merging a pull request on a Friday.",
+        body: "Merging to the main branch deploys staging automatically, gated on the test suite. Production deploys only when someone pushes a version tag, so going live is a deliberate step that names an exact commit. Merging a pull request never deploys production.",
     },
     {
         title: "One instance, on purpose",
@@ -76,15 +76,15 @@ const build = [
 const rigor = [
     {
         risk: "Coverage erodes a percent at a time",
-        undo: "A hard gate in CI, scoped to business logic, with a written rationale for every exclusion instead of a quietly shrinking denominator",
+        undo: "A hard gate in CI, scoped to business logic, with a written reason for every exclusion, so the measured code can't shrink unnoticed",
     },
     {
         risk: "A secret reaches the repository",
-        undo: "Secret scanning across the full history on every run, not just the diff",
+        undo: "Secret scanning on every run, across the full git history",
     },
     {
         risk: "Two green pull requests break the build once both land",
-        undo: "Branches are updated before merge, and a failing main branch opens and updates its own tracking issue rather than waiting to be noticed",
+        undo: "Branches are updated before merge, and a failing main branch opens and updates its own tracking issue",
     },
     {
         risk: "Documentation drifts away from the code",
@@ -194,7 +194,7 @@ const rigor = [
                                 ["Scope", "Giving · DAF grants · donor CRM · receipts"],
                                 ["Stack", "Node · Postgres · Cloudflare Workers"],
                                 ["Screening", "In the donation path, and fails closed"],
-                                ["Funds", "Direct charges — never a platform balance"],
+                                ["Funds", "Direct charges, never held in a platform balance"],
                             ].map(([k, v], i, arr) => (
                                 <div
                                     class:list={[
@@ -324,8 +324,8 @@ const rigor = [
                 <p
                     class="font-display font-bold text-2xl md:text-3xl tracking-tight leading-tight text-balance"
                 >
-                    A control that switches itself off during an outage was
-                    never a control.
+                    If screening switches itself off during an outage, it
+                    protects nothing during that outage.
                 </p>
                 <p class="mt-4 text-ink-muted leading-relaxed">
                     Which is why screening fails closed: if the lists cannot be
@@ -391,7 +391,7 @@ const rigor = [
                     >
                         The discipline is
                         <br />
-                        mechanical, not moral.
+                        built into the tooling.
                     </h2>
                 </div>
                 <div class="col-span-12 md:col-span-5 md:col-start-8 md:self-end">
@@ -440,11 +440,11 @@ const rigor = [
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — The threshold we had to tune
+                        The threshold we had to tune
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         A naive substring match against the real lists flagged
-                        six of twenty ordinary donor names in our own July
+                        six of twenty ordinary donor names in our own
                         testing. "Maria Garcia" is contained inside a longer
                         listed name, and a platform that declines her is worse
                         than useless. Allowing exactly one extra token brought it to three of twenty, and those three are genuine
@@ -461,7 +461,7 @@ const rigor = [
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — What we don't call finished
+                        What we don't call finished
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         The platform is mid-flight, and the README carries a
@@ -472,9 +472,7 @@ const rigor = [
                         rate-limiting ceiling stands until shared counters land.
                     </p>
                     <p class="text-ink-muted leading-relaxed">
-                        A documentation section that only lists what works is a
-                        sales page. The value of writing the limits down is that
-                        the next person (including us, next time) inherits them
+                        Writing the limits down means the next person (including us, next time) inherits them
                         as decisions instead of discovering them as surprises.
                     </p>
                 </div>

@@ -32,7 +32,7 @@ const pillars = [
     {
         n: "01",
         title: "The software disappears around the need",
-        body: "Members arrive grieving, often distressed, frequently on a phone, sometimes not especially technical. Nobody came here wanting to use software. So the arrival flow asks one group of questions at a time, leaving a memorial wish offers preset words before it offers a blank box, and nothing important is ever a single unguarded click.",
+        body: "Members arrive grieving, often distressed, frequently on a phone, sometimes not especially technical. The arrival flow asks one group of questions at a time, leaving a memorial wish offers preset words before it offers a blank box, and nothing important is ever a single unguarded click.",
     },
     {
         n: "02",
@@ -42,13 +42,13 @@ const pillars = [
     {
         n: "03",
         title: "Dignity written into the permissions",
-        body: "Her record is hers. Staff who need to see the member app on live data impersonate a dedicated test account and nothing else, behind three separate guards. Closing an account is a request rather than a button. Erasing the personal details is a different, deliberate action, and it leaves the memorial standing.",
+        body: "A member's record belongs to her. Staff who need to see the member app on live data impersonate a dedicated test account and nothing else, behind three separate guards. Closing an account starts with a request from the member. Erasing the personal details is a different, deliberate action, and it leaves the memorial standing.",
     },
 ];
 
 const build = [
     {
-        title: "Hebrew dates, computed not approximated",
+        title: "Hebrew dates, computed exactly",
         body: "Anniversaries are found in two steps: narrow by day of month in the database, then confirm each candidate by converting it into the target year's Hebrew calendar, including the leap-year rule that moves a plain-Adar date into Adar II. It uses the calendar extension already in the language rather than a dependency, and the logic was extracted once a second command needed it.",
     },
     {
@@ -83,7 +83,7 @@ const rigor = [
         undo: "Routes generate typed functions for the frontend, so a URL is never written by hand",
     },
     {
-        risk: "Contrast quietly fails on the text nobody checks",
+        risk: "Contrast fails silently on the text nobody checks",
         undo: "Nothing renders below 4.5:1, including placeholders and disabled labels, and hue is never the only signal",
     },
     {
@@ -188,7 +188,7 @@ const rigor = [
                         </div>
                         {
                             [
-                                ["Sector", "Nonprofit — grief support"],
+                                ["Sector", "Nonprofit, grief support"],
                                 ["Audience", "Members in grief, often on a phone"],
                                 ["Scope", "Public site · member app · back office"],
                                 ["Stack", "Laravel 13 · Vue 3 · Inertia"],
@@ -435,7 +435,7 @@ const rigor = [
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — The gate every change clears
+                        The gate every change clears
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         Four gates, all of which must pass before anything
@@ -455,7 +455,7 @@ const rigor = [
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — And one word we removed everywhere
+                        And one word we removed everywhere
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         The platform described the community as "peer-led" until

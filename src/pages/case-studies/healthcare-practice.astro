@@ -54,7 +54,7 @@ const timeline = [
         body: "Prerendered HTML, real metadata, an image pipeline, a build that could fail before it shipped. It landed, was backed out five days later, and re-landed at the end of the month. It did not solve everything: content was still fetched twice, once at build and again in the browser.",
     },
     {
-        when: "2024 – 2026",
+        when: "2024 to 2026",
         title: "Two and a half years of quiet work",
         body: "Framework upgrades, pinned dependencies, error monitoring, automatic rebuilds on publish. The content model kept growing with the practice. And we kept hand-building editor features (draft states, a preview mode, a page registry) into an admin panel that was never meant to have them.",
     },
@@ -188,11 +188,11 @@ const reversibility = [
                         </div>
                         {
                             [
-                                ["Sector", "Healthcare — multi-site practice"],
+                                ["Sector", "Healthcare, multi-site practice"],
                                 ["Stack", "Astro · Wagtail · Django 5.2 LTS"],
                                 [
                                     "Fetched at runtime",
-                                    "Nothing — the API can be down",
+                                    "Nothing. The API can be down",
                                 ],
                                 [
                                     "Publishing",
@@ -408,7 +408,7 @@ const reversibility = [
                         class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
                     >
                         Replacing the CMS under a live medical practice is the
-                        kind of work that goes wrong quietly. So the cutover was
+                        kind of work that goes wrong without warning. So the cutover was
                         built to be undone: rehearsed on a full copy of
                         production first, and reversible at every step after.
                     </p>
@@ -449,7 +449,7 @@ const reversibility = [
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — And then we went looking for what broke
+                        And then we went looking for what broke
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         The first full build on the new CMS produced 351 pages
@@ -464,18 +464,18 @@ const reversibility = [
                         <span class="font-mono text-sm text-ink"
                             >[object Object]</span
                         >, formatting collapsed out of older hand-written HTML,
-                        and a review widget quietly showing blank cards because
+                        and a review widget silently showing blank cards because
                         the vendor had changed and the new one returns
                         star-ratings with no text. None of those are build
-                        errors. All of them are things a patient would have
-                        seen.
+                        errors, and a patient would have seen every one of
+                        them.
                     </p>
                 </div>
                 <div class="col-span-12 lg:col-span-6 border-2 border-ink bg-paper p-8 md:p-10">
                     <div
                         class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-6"
                     >
-                        — We audit our own migrations
+                        We audit our own migrations
                     </div>
                     <p class="text-ink-muted leading-relaxed mb-4">
                         The same thing happened a rebuild earlier. Our own

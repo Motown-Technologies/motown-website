@@ -7,7 +7,7 @@ const outcomes = [
         after: "One record per item, from intake to sold, with every change attributed",
     },
     {
-        before: "Item status kept in three places that quietly disagreed with each other",
+        before: "Item status kept in three places that disagreed with each other",
         after: "Status computed by the database itself, so it cannot drift and code cannot overwrite it",
     },
     {
@@ -69,14 +69,14 @@ const build = [
     },
     {
         title: "Realtime, with a fallback",
-        body: "Job progress, image processing and bulk actions broadcast over WebSockets and the interface subscribes. It also polls if the socket never arrives, and failed broadcasts are retried. Progress bars are the thing users trust least when they are wrong.",
+        body: "Job progress, image processing and bulk actions broadcast over WebSockets and the interface subscribes. It also polls if the socket never arrives, and failed broadcasts are retried. The fallback matters because users stop trusting a progress bar the first time it shows the wrong state.",
     },
 ];
 
 const rigor = [
     {
         risk: "Somebody bulk-edits a few thousand items and gets it wrong",
-        undo: "Every change is attributed and recorded, so it can be found and reversed rather than reconstructed from memory",
+        undo: "Every change is attributed and recorded, so it can be found and reversed",
     },
     {
         risk: "Something is deleted the week before the sale",
@@ -191,7 +191,7 @@ const rigor = [
                         </div>
                         {
                             [
-                                ["Sector", "Auction house — internal ops"],
+                                ["Sector", "Auction house, internal ops"],
                                 ["Scope", "68 screens, one system of record"],
                                 ["Stack", "Laravel 13 · Vue 3 · Postgres 17"],
                                 ["The AI's job", "Drafts the catalog copy; a person approves"],
@@ -327,8 +327,8 @@ const rigor = [
                 <p
                     class="font-display font-bold text-2xl md:text-3xl tracking-tight leading-tight text-balance"
                 >
-                    An internal tool is where teams accept bad software. We took
-                    the exception and then didn't use it.
+                    Internal tools are where teams usually put up with bad software.
+                    We designed this one as carefully as a customer-facing product.
                 </p>
                 <p class="mt-4 text-ink-muted leading-relaxed">
                     The design system is checked into the repository: a colour scale, a five-role type scale, component specs, and named anti-references (the default template, enterprise grey, consumer playful, and the spreadsheet it replaced). Screens are dense where staff scan and calm at the commit points, such as deleting, publishing, and marking a lot sold. Status is
