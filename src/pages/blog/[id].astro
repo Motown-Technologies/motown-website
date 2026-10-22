@@ -26,7 +26,7 @@ const article = {
 };
 ---
 
-<BaseLayout meta_title={`${title} | Motown Solutions`} meta_description={description} og_type="article" og_image={cover?.src}>
+<BaseLayout meta_title={title} meta_description={description} og_type="article" og_image={cover?.src}>
     <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(article)} />
 
     <section class="relative border-b-2 border-ink overflow-hidden">

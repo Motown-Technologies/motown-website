@@ -3,7 +3,7 @@ title: "Shopify, a custom theme or headless: how to pick"
 image: ../../assets/blog/shopify-custom-or-headless-image.jpg
 imageAlt: "Three empty shopping baskets, wicker, wire and blue, on a blue floor"
 cover: ../../assets/blog/shopify-custom-or-headless.png
-description: "How we help stores choose between building on Shopify, a custom experience on their current platform and a headless front end, and when headless is the wrong call."
+description: "How we help stores choose between Shopify, a custom experience on their current platform and a headless front end, and when headless is the wrong call."
 pubDate: 2026-09-30
 relatedPages: ["/ecommerce-development", "/shopify-development", "/headless-commerce-development"]
 ---

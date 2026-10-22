@@ -12,8 +12,10 @@ const posts = page.data;
 ---
 
 <BaseLayout
-    meta_title={page.currentPage === 1 ? "Blog | Motown Solutions" : `Blog, page ${page.currentPage} | Motown Solutions`}
-    meta_description="Notes from Motown Solutions on custom software, AI, automation and the projects we build."
+    meta_title={page.currentPage === 1 ? "Blog: Custom Software, AI & Automation | Motown Solutions" : `Blog, page ${page.currentPage} | Motown Solutions`}
+    meta_description={page.currentPage === 1
+        ? "Articles on custom software, AI and automation from Motown Solutions, drawn from client projects: what we built, what we decided and why."
+        : `More articles on custom software, AI and automation from Motown Solutions. Page ${page.currentPage} of ${page.lastPage}.`}
 >
     <section class="relative border-b-2 border-ink overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
