@@ -8,9 +8,7 @@ pubDate: 2026-10-09
 relatedPages: ["/migrate-from-wordpress"]
 ---
 
-WordPress is easy to start with. The trouble tends to show up years later, after enough plugins, themes and quick fixes that keeping the site running has become a job of its own.
-
-Here is how we think about whether a site should move off it.
+Leave WordPress when keeping the site alive takes more of your team's time than writing for it. That usually shows up years in, after enough plugins, themes and quick fixes that upkeep has become a job of its own. If updates go through cleanly and pages load fast on a phone, staying is fine.
 
 ## The signs it's time
 
@@ -25,7 +23,7 @@ Each of these has a cost. Plugin updates eat into your team's week. Every plugin
 
 ## When staying is fine
 
-If your site runs a handful of plugins, updates go through without drama and pages load quickly on a phone, WordPress is doing its job. A migration takes real work, and we wouldn't spend it on a site that isn't causing problems. The case for leaving starts when keeping the site alive takes more of your team's time than writing for it.
+If your site runs a handful of plugins, updates go through without drama and pages load quickly on a phone, WordPress is doing its job. A migration takes real work, and we wouldn't spend it on a site that isn't causing problems.
 
 ## What leaving looks like
 
@@ -46,10 +44,10 @@ The biggest worry is usually SEO. We crawl the old site, map every URL to its ne
 3. Rebuild and migrate. We build the new front end and import your content, so you review real pages with real content.
 4. Redirect and launch. Every old URL gets a 301, and after launch we check the redirects and watch Search Console for crawl errors.
 
-Your current site stays live the whole time. We only switch DNS once the new one checks out.
+Most migrations take roughly 4 to 8 weeks. Your current site stays live the whole time, and we only switch DNS once the new one checks out.
 
-## An example
+## Example: a clinic that kept WordPress for editing
 
-An endoscopy center's site ran on a full WordPress install. We rebuilt it as static pages that pull content from WordPress at build time. Patients never touch WordPress, and staff still edit in the admin they know. The [endoscopy center case study](/case-studies/endoscopy-center) has the details.
+An endoscopy center's site ran on a full WordPress install. We rebuilt it as static pages that pull content from WordPress at build time. Patients never touch WordPress, and staff still edit in the admin they know. We wrote up [how that rebuild works](/blog/headless-wordpress-clinic), and the [endoscopy center case study](/case-studies/endoscopy-center) has the technical details.
 
 If you're weighing a move, [send us your site's URL](/contact). We'll look at what it runs on, tell you what moving would involve and give you a realistic timeline. The [WordPress migration page](/migrate-from-wordpress) covers how we do it.
