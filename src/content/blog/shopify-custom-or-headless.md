@@ -8,11 +8,13 @@ pubDate: 2026-09-30
 relatedPages: ["/ecommerce-development", "/shopify-development", "/headless-commerce-development"]
 ---
 
+Fix what's losing sales on the platform you have first, and go headless only when the platform itself is the limit and someone can maintain a separate front end. For most stores, that means Shopify with a custom theme or a better storefront on their current platform.
+
 Traffic is the expensive part of running an online store. Most stores pay for it and then lose it to a slow product page, a search box that can't handle a typo, or a checkout that asks for an account before it takes the money.
 
 When a store owner comes to us with that problem, the first question is usually about platforms. Should they stay on Shopify, rebuild the storefront on what they have, or go headless? Those three options cost very different amounts, so it's worth being clear about what each one buys.
 
-## Option one: build properly on Shopify
+## When Shopify with a custom theme is enough
 
 Shopify gets a store live in a week. The trouble tends to show up later. The theme won't do what the brand needs, the app stack is slowing the site down, and someone is still updating the ERP by hand every morning.
 
@@ -25,7 +27,7 @@ A lot of that is fixable without leaving the platform. Shopify has supported ext
 
 A surprising amount of Shopify work is subtraction. Most stores carry around a dozen apps, with several doing the same job and all of them loading on every page. We replace or cut the ones that cost speed and monthly fees. Building on supported extension points also means the store keeps upgrading cleanly when Shopify releases changes.
 
-## Option two: a custom experience on the platform you have
+## Rebuilding the storefront on the platform you have
 
 Sometimes the platform is fine and the experience on top of it is the problem. In that case we keep the platform you're on, or help you pick one that won't need replacing in two years, and build the customer-facing layer properly.
 
@@ -38,7 +40,7 @@ That covers every screen between the click and the confirmation:
 
 We agree on the numbers before we start and report against them after launch: load time, conversion rate per checkout step, average order value and repeat purchase rate.
 
-## Option three: headless
+## When headless commerce is worth it
 
 Headless keeps the engine that handles your carts, orders and tax, and replaces the front end it ships with. The storefront becomes a separate application (Next, Astro or Hydrogen) rendered at the edge, with a CMS your marketing team can publish from without a deploy and a real search index behind it.
 
