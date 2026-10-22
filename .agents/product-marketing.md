@@ -7,7 +7,7 @@ TODO need the owner's input.
 ## Company
 
 - Name: Motown Solutions. Site: https://motowntech.com
-- What it is: a small services company (2-10 people) that designs, builds and
+- What it is: a services company that designs, builds and
   rescues custom software. Not a SaaS product.
 - Location: New York and Florida. Phone +1-845-925-2661,
   contact@motowntech.com. Usually replies within 24 hours.
@@ -53,6 +53,8 @@ concierge app. Thirteen blog posts adapted from these and the landing pages.
 - Investors and acquirers (technical due diligence)
 
 ## Voice
+
+Don't state team size or call the team "small" (owner decision).
 
 Plain, specific, first person plural. No hype, no em dashes. Copy goes through
 the humanizer skill. Clients stay anonymous.
