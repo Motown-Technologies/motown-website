@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NumberedRow from "../components/NumberedRow.astro";
+import Faq from "../components/Faq.astro";
 
 import WebIcon from "../components/icons/WebIcon.astro";
 import SoftwareIcon from "../components/icons/SoftwareIcon.astro";
@@ -94,6 +95,29 @@ const steps = [
     {
         title: "Redirect & launch",
         desc: "Every old URL gets a 301. After launch we check the redirects and watch Search Console for crawl errors.",
+    },
+];
+
+const faqs = [
+    {
+        q: "Will I lose my SEO if I move off WordPress?",
+        a: "Your rankings carry over when every old URL points to its new address. Before launch we crawl the old site, map each URL to its replacement and set up 301 redirects. After launch we check the redirects and watch Search Console for crawl errors, so anything we missed gets caught early.",
+    },
+    {
+        q: "What happens to my posts, pages and images?",
+        a: "They come over in bulk by script, including posts, pages, media, categories and custom fields. We check the imported content against the original site. You then review the new site with your real pages and real content before anything goes live, so problems show up while there is still time to fix them.",
+    },
+    {
+        q: "Will my website go down during the migration?",
+        a: "Your current site stays live the whole time we work. We build the new site alongside it and only switch DNS once the new one checks out. Visitors keep using the old site right up until the new one takes over.",
+    },
+    {
+        q: "What happens to my plugins and contact forms?",
+        a: "During the audit we list every plugin and work out which ones you actually need. Contact forms, analytics and newsletter signups get rebuilt without plugins, so nothing on the public site waits on plugin updates. The theme is replaced with clean code that we document and hand over to you.",
+    },
+    {
+        q: "What if WordPress is down when someone hits publish?",
+        a: "If you keep WordPress for editing, the public site keeps running. The rebuild needs WordPress reachable, so a rebuild that starts while WordPress is down fails and the previous version of the site stays up. Visitors never see the problem.",
     },
 ];
 ---
@@ -395,6 +419,8 @@ const steps = [
             </div>
         </div>
     </section>
+
+    <Faq items={faqs} heading="Questions about leaving WordPress." />
 
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>

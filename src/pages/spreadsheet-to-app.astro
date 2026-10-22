@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NumberedRow from "../components/NumberedRow.astro";
+import Faq from "../components/Faq.astro";
 
 import DatabaseIcon from "../components/icons/DatabaseIcon.astro";
 import SoftwareIcon from "../components/icons/SoftwareIcon.astro";
@@ -95,6 +96,33 @@ const steps = [
     {
         title: "Migrate & cut over",
         desc: "Your existing data is imported and cleaned, then both run side by side until you trust the app. Only then does the spreadsheet retire.",
+    },
+];
+
+const faqs = [
+    {
+        q: "Can you turn our Excel or Google Sheets file into an app?",
+        a: "Yes. We work from Excel, Google Sheets, Airtable and Access files, including VBA macros. We walk through every tab, formula, macro and workaround to map what the workbook actually does, then use it as the spec for the app: a real database, screens shaped around how your team works, logins and permissions, and reports built on clean data.",
+    },
+    {
+        q: "Will we lose any data when we move off the spreadsheet?",
+        a: "No. Your existing data is imported and cleaned as part of the move. While we model it, the duplicates and inconsistencies hiding in the cells come to the surface, so you can decide how to fix them before they reach the new system. The spreadsheet only retires once the app holds everything you need.",
+    },
+    {
+        q: "Can our team keep using the spreadsheet while you build?",
+        a: "Yes. Your team keeps working in the spreadsheet for the whole build. When the app is ready, both run side by side until you trust the app, and only then does the spreadsheet go away. You see working software every week or two along the way, so you can steer the build as it takes shape.",
+    },
+    {
+        q: "Can the app connect to our accounting software and CRM?",
+        a: "Yes. We connect the app to the tools you already use, such as accounting, CRM, email and payment systems, so data flows in on its own instead of being typed in twice. The app can also take over the copy-pasting, reminder emails and weekly rollups that someone on your team does by hand today.",
+    },
+    {
+        q: "Who can see and change the data in the app?",
+        a: "Only the people you allow. Everyone signs in with their own account, and roles decide what each person can see and what they can change. Every change is recorded in an audit log, so when a number looks wrong you can see who changed it and when, and stop guessing whose paste broke the formula.",
+    },
+    {
+        q: "Have you replaced a spreadsheet like ours before?",
+        a: "Yes. An auction house we built for ran its inventory across spreadsheets, a shared photo folder and a group chat. We replaced them with one system of record where each item moves through seven stages from intake to sold, every change is attributed to a person, and deletes can be undone. The auction operations case study has the full story.",
     },
 ];
 ---
@@ -386,6 +414,8 @@ const steps = [
             </div>
         </div>
     </section>
+
+    <Faq items={faqs} heading="Questions about replacing a spreadsheet." />
 
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>

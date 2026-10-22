@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Faq from "../components/Faq.astro";
 
 import EnterpriseIcon from "../components/icons/EnterpriseIcon.astro";
 import ConsultingIcon from "../components/icons/ConsultingIcon.astro";
@@ -101,6 +102,29 @@ const gap = [
     {
         before: "First senior hire is a guess with a six-figure downside",
         after: "Role scoped, loop designed, technical screen we run with you",
+    },
+];
+
+const faqs = [
+    {
+        q: "What does a fractional CTO do?",
+        a: "A fractional CTO makes the senior technical calls a startup has nobody to make: architecture, build or buy, hiring, security and compliance, vendor and cloud spend, and the technical section of the board update. We write each decision down with its reasoning, review what the team is building, and support your engineers with one-to-ones and code review standards.",
+    },
+    {
+        q: "How much time does a fractional CTO spend with us?",
+        a: "It depends on the shape of the engagement. An audit is a fixed two weeks and ends with a written findings document. A sprint runs 4 to 8 weeks to close out one specific problem, such as a migration or a first engineering hire. A retainer is a standing day or two a week for as long as you need it.",
+    },
+    {
+        q: "When should a startup hire a full-time CTO instead?",
+        a: "When the gap stops being occasional. Most seed-stage companies need someone senior for the four or five calls a month that are expensive to get wrong, and a fractional CTO covers that. A retainer is meant to hold the role until you hire a full-time CTO, and we can help you scope that hire and run its technical interviews.",
+    },
+    {
+        q: "Can a fractional CTO help us hire engineers?",
+        a: "Yes. We scope the role, write the brief, screen candidates and run the technical interview loop with you, sitting on your side of the table. A first senior hire made without that is a guess with a six-figure downside, so a first engineering hire is one of the things a sprint engagement can cover.",
+    },
+    {
+        q: "What do we get each month on a retainer?",
+        a: "Five things land every month: decision records with the reasoning behind each call, a standing architecture review of what's being built, support for your team through one-to-ones and code review, a spend report showing what you pay for and what to cut, and an investor-ready technical summary for the board.",
     },
 ];
 ---
@@ -431,6 +455,8 @@ const gap = [
             </div>
         </div>
     </section>
+
+    <Faq items={faqs} heading="Questions about fractional CTOs." />
 
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Faq from "../components/Faq.astro";
 
 import SoftwareIcon from "../components/icons/SoftwareIcon.astro";
 import ApiIcon from "../components/icons/ApiIcon.astro";
@@ -71,6 +72,33 @@ const beforeAfter = [
     {
         before: "Deployed by hand, no way to roll back",
         after: "Automated CI/CD with monitoring and rollback",
+    },
+];
+
+const faqs = [
+    {
+        q: "Can you make my AI-built or vibe-coded app production-ready?",
+        a: "Yes. We take apps built with AI coding assistants, vibe-coded demos and prototypes stuck at 80%, and add what they skipped: a real data schema, authentication and permissions, background jobs, hardened integrations, automated deploys with rollback, and monitoring. The aim is an app you can put in front of paying customers and keep running.",
+    },
+    {
+        q: "Do you rewrite the prototype from scratch?",
+        a: "We keep what the prototype got right and rebuild what it skipped. On a senior-care concierge app built on a low-code platform, we reproduced the workflow the team already knew, so nobody needed retraining, then rebuilt almost everything underneath it. The screens stayed familiar and the foundations changed.",
+    },
+    {
+        q: "Can you take over a prototype built on a no-code or low-code platform?",
+        a: "Yes. A no-code or low-code prototype has usually done the hard thinking already: the screens, the data and the way people actually work. We treat it as the specification, rebuild it as an application you own in your own cloud account, and add the security, data handling and infrastructure the platform left out.",
+    },
+    {
+        q: "Is my AI-built app secure enough for customer data?",
+        a: "Often it isn't yet. Prototypes commonly ship with hard-coded secrets and sign-in that lets anyone in, which is fine on a laptop and a real problem once customer data is involved. We add proper authentication, role-based access so each person reaches only what they should, and secrets managed outside the code.",
+    },
+    {
+        q: "Why does my prototype lose its data when I redeploy?",
+        a: "In many prototypes the data lives in memory or in a store nobody designed, so a restart resets it or leaves records that disagree. A production app needs a real schema, migrations so its structure can change without losing anything, and backups. We set those up so the data is still there after every deploy.",
+    },
+    {
+        q: "What do I need to send you to get started?",
+        a: "Send us the prototype as it is, whether it was vibe-coded, generated with AI, built on a no-code platform or stuck at 80%. We'll tell you what stands between it and an app you can ship. Start from the contact page or email contact@motowntech.com.",
     },
 ];
 ---
@@ -356,6 +384,8 @@ const beforeAfter = [
             </div>
         </div>
     </section>
+
+    <Faq items={faqs} heading="Questions about taking a prototype to production." />
 
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>

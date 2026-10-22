@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Faq from "../components/Faq.astro";
 
 import ConsultingIcon from "../components/icons/ConsultingIcon.astro";
 import WebIcon from "../components/icons/WebIcon.astro";
@@ -82,6 +83,32 @@ const discipline = [
     {
         before: "You can't change anything without calling the agency",
         after: "You own the repo, the accounts, and the deploy button",
+    },
+];
+const faqs = [
+    {
+        q: "What should an MVP include?",
+        a: "One user journey that proves the idea works, built properly, plus the plumbing every product needs: sign-up and login, payments, data with backups, and a way to deploy updates safely. Every other feature goes on a written list for later. That list is what keeps the launch date from moving.",
+    },
+    {
+        q: "How long does it take to build an MVP?",
+        a: "Our usual plan starts with a scope workshop in week one and design in week two. The core build runs from week three to week six, integrations follow, and real users test a beta around weeks eight to ten before launch and handover. The exact length depends on what the one loop needs, which the workshop settles.",
+    },
+    {
+        q: "Do I need a technical co-founder to build an MVP?",
+        a: "No. We build the product and hand you the code, the accounts, setup notes and the deploy pipeline, all in your name from the first commit. If you hire an engineer later, they can pick it up without calling us. If you want senior technical judgment before that hire, that is what our fractional CTO work covers.",
+    },
+    {
+        q: "Will the MVP code be thrown away later?",
+        a: "Some of it may be rewritten, and that is planned. We build the first version simply so it can be rewritten once real usage shows what matters. The parts users touch are built properly, and the data model is designed for the questions you will ask in six months, with migrations and backups from day one.",
+    },
+    {
+        q: "Should my MVP be a mobile app or a web app?",
+        a: "Usually a web app. We build responsive web by default, so it works on phones and laptops from one codebase. A native app makes sense when the product really needs the camera, push notifications or a place in the app store. Otherwise the web version is the product.",
+    },
+    {
+        q: "What happens if we think of new features during the build?",
+        a: "They go on the list for the next cycle. Scope and launch date are fixed when the build starts, because an MVP that absorbs every good idea tends to never launch. You leave with a prioritised backlog for the next 90 days, so those ideas are written down and ready when the first version is live.",
     },
 ];
 ---
@@ -392,6 +419,8 @@ const discipline = [
             </div>
         </div>
     </section>
+
+    <Faq items={faqs} heading="Questions founders ask about MVPs." />
 
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>
