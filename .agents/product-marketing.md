@@ -68,8 +68,8 @@ the humanizer skill. Clients stay anonymous.
 - TODO: top competitors.
 - TODO: Search Console access and current organic traffic baseline.
 - Blog posts show no dates and carry no datePublished (owner decision).
-- Service and landing pages: the H1 is the small label naming the service
-  (matches the title keyword); the big slogan below it is a <p>.
+- Service and landing pages: the H1 is the large headline and names the
+  service ("AI agents that know when to stop."). No eyebrow labels anywhere.
 - Site notes: Astro static site, deployed to GitHub Pages by
   .github/workflows/deploy.yaml on push to main (a Vercel project exists but
   is not production); sitemap, canonical, Open Graph and
