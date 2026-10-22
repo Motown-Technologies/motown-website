@@ -10,7 +10,7 @@ relatedPages: ["/prototype-to-production"]
 
 Before an AI-built or no-code prototype can take real users, it needs data that survives a redeploy, real sign-in and permissions, handling for the paths a demo never takes, hardened connections to the services it depends on, and a way to ship and roll back.
 
-A no-code tool or an AI coding assistant can turn an idea into a demo in days, and that speed is useful for finding out whether an idea is worth pursuing. A demo only has to work for one person following one path through the screens, though, and most prototypes are built with that in mind. Whether yours was vibe-coded, generated with AI or built on a no-code platform, these are the layers we add before it runs for real.
+A no-code tool or an AI coding assistant can turn an idea into a demo in days, and that speed is useful for finding out whether an idea is worth pursuing. A demo only has to work for one person following one path through the screens, though, and most prototypes are built with that in mind. These are the layers we add before one runs for real.
 
 ## Data that survives a redeploy
 

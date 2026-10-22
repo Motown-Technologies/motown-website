@@ -35,7 +35,7 @@ We build responsive web by default. A native app makes sense when the product re
 
 We build for the users you'll have in year one, in a way that can be rewritten once the product has earned it.
 
-What we do give you is a cost model: what the product costs to run at 100 users and at 10,000. You can plan around real numbers without paying for capacity you don't need.
+You also get a cost model: what the product costs to run at 100 users and at 10,000. You can plan around real numbers without paying for capacity you don't need.
 
 ## What a typical build looks like
 

@@ -10,13 +10,13 @@ relatedPages: ["/technical-due-diligence"]
 
 A technical due diligence checks six things before an investment or acquisition closes: architecture, code quality, security, infrastructure and cost, key-person risk, and IP and licensing. Whoever does the reading, whether an investor's engineer, an acquirer's team or an enterprise buyer's security reviewer, writes up what they find, and that report affects the price.
 
-A technical due diligence is a structured version of that same read. We run it as a two-week audit with a fixed scope, and we look where a buyer's reviewer would look, so nothing in their report comes as news to you.
+We run that same read as a two-week audit with a fixed scope, and we look where a buyer's reviewer would look, so nothing in their report comes as news to you.
 
 ## Six areas we examine
 
 ### Architecture
 
-The question is whether the system can absorb the next 18 months of the roadmap. Some plans quietly assume a rewrite that nobody has budgeted for, and this is where that shows up.
+The question is whether the system can absorb the next 18 months of the roadmap. Some plans assume a rewrite that nobody has budgeted for, and this is where that shows up.
 
 ### Code quality
 

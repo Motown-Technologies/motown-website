@@ -51,8 +51,6 @@ It's worth the extra complexity when one of these is your actual problem:
 - Marketing waits on a developer every time a landing page changes.
 - Platform search misses a large part of your own catalogue.
 
-If none of those is the problem, headless just adds a codebase.
-
 ## When we'd talk you out of headless
 
 Headless gets sold much more often than it's warranted, and we'd rather lose the project than build something your team can't maintain. Three situations where we usually recommend against it:

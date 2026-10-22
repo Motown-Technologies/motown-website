@@ -38,7 +38,7 @@ Sanctions screening blocks the donation, because violations carry strict liabili
 
 A sanctions list might write "SMITH, John" and a donor types "John Smith." The platform normalizes both into the same set of words, with accents, punctuation, titles and company suffixes stripped out, so those compare as equal.
 
-Tuning that match took real testing. In our testing, a naive "is this name contained in a listed name" check flagged six of twenty ordinary donor names. "Maria Garcia" sits inside a longer listed name, and a platform that declines her gift is worse than useless. Allowing exactly one extra word brought it down to three of twenty, and those three are genuine possible matches that a person should review.
+Tuning that match took work. In our testing, a naive "is this name contained in a listed name" check flagged six of twenty ordinary donor names. "Maria Garcia" sits inside a longer listed name, and a platform that declines her gift is worse than useless. Allowing exactly one extra word brought it down to three of twenty, and those three are genuine possible matches that a person should review.
 
 No setting gets you zero false alarms and zero misses at the same time. The work is choosing where to sit, measuring that choice against the real lists, and writing down what it still lets through. This system has no fuzzy matching yet, so a name transliterated differently can slip past. That gap is written down in the repository.
 

@@ -23,7 +23,7 @@ At almost every startup we see without senior technical leadership, the same wor
 - Security and compliance, including the [SOC 2 questions](/soc-2-readiness) enterprise buyers raise before they sign.
 - Scoping the first engineering roles and running the technical screens.
 
-None of these gaps look like mistakes at the time. Six months of building before talking to a user feels like progress. So does picking a stack because a blog post recommended it, or letting an agency build something nobody in-house can maintain. The cost shows up later, when undoing those choices takes far longer than making them did.
+None of these gaps look like mistakes at the time. Six months of building before talking to a user feels like progress. So does picking a stack because a blog post recommended it, or letting an agency build something nobody in-house can maintain. Undoing those choices later takes far longer than making them did.
 
 ## What a part-time CTO does
 
