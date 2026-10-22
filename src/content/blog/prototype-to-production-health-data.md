@@ -8,9 +8,9 @@ pubDate: 2026-08-19
 relatedPages: ["/case-studies/senior-care-concierge", "/prototype-to-production"]
 ---
 
-A senior-care operator with several facilities ran its concierge team on a low-code proof of concept. The team handled resident and family concerns, admissions, discharges and daily tasks, and the prototype matched how they actually worked a call. The thinking behind it was sound.
+We rebuilt a senior-care operator's low-code prototype as an app that can hold protected health information. It kept the screens staff already knew and added invite-only accounts, per-facility data separation, encrypted credentials and an audit log.
 
-It still couldn't hold a real resident's record. There were no user accounts, no permissions and no audit trail, and nothing kept one facility's data away from another's. A prototype is allowed to skip all of that, which is why it can be built quickly. Those skipped parts are exactly what a regulated business needs before it can use the tool for real.
+The operator runs several facilities, and its concierge team used the prototype for resident and family concerns, admissions, discharges and daily tasks. The prototype matched how the team worked a call, but it couldn't hold a real resident's record. There were no user accounts, no permissions and no audit trail, and nothing kept one facility's data away from another's. A prototype is allowed to skip all of that, which is why it can be built quickly. Those skipped parts are what a regulated business needs before it can use the tool for real.
 
 ## Keep what works, then add what was skipped
 
@@ -18,7 +18,7 @@ The prototype had already answered the hard product questions: which screens exi
 
 Because the screens and the flow stayed the same, staff who had used the prototype didn't need retraining.
 
-## What changed underneath
+## What a prototype skips that health data needs
 
 Most of this work is invisible to the people using the app. Here is what moved from prototype to application:
 
@@ -43,10 +43,10 @@ Before launch we audited the system as if someone else had built it. Two reviews
 
 They turned up 48 findings. One of them mattered a lot: external facility accounts were showing up in lists meant for internal staff, which could eventually have sent a resident's name to someone outside the organization. Another was a report whose default date range took 456 seconds and six gigabytes of memory to produce. After a row limit it took 21 seconds and a tenth of the memory.
 
-Eight findings were fixed the same night, and five of those were bugs introduced only hours earlier. That is why we audit before launch instead of trusting the last passing test run. We also pushed back where a finding was wrong. Two were rejected with reasons, and two were deliberately deferred with the reason written into the code.
+Eight findings were fixed the same night, and five of those were bugs introduced only hours earlier. That is why we audit before launch. We also pushed back where a finding was wrong. Two were rejected with reasons, and two were deliberately deferred with the reason written into the code.
 
 ## If you have a prototype that works
 
-A working prototype is a good place to start. It means the workflow has already been tested by the people who use it. The question is what has to change before it can hold regulated data, real users and other people's information, and what can stay as it is.
+A working prototype is a good place to start. It means the workflow has already been tested by the people who use it. The question is what has to change before it can hold regulated data, real users and other people's information, and what can stay as it is. We keep a [general checklist of what AI-built and no-code prototypes skip](/blog/what-your-prototype-skipped).
 
 The [senior care case study](/case-studies/senior-care-concierge) has the full technical detail. If you have a prototype of your own, read how we approach [taking a prototype to production](/prototype-to-production), or [send us what you've built](/contact).
