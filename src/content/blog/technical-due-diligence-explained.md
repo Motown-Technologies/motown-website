@@ -8,9 +8,9 @@ pubDate: 2026-10-16
 relatedPages: ["/technical-due-diligence"]
 ---
 
-Before an investment or an acquisition closes, someone reads the codebase with a critical eye. It might be an investor's engineer, an acquirer's team or an enterprise buyer's security reviewer. Whatever they find goes into a report, and that report affects the price.
+A technical due diligence checks six things before an investment or acquisition closes: architecture, code quality, security, infrastructure and cost, key-person risk, and IP and licensing. Whoever does the reading, whether an investor's engineer, an acquirer's team or an enterprise buyer's security reviewer, writes up what they find, and that report affects the price.
 
-A technical due diligence is a structured version of that same read. We run it as a two-week audit with a fixed scope, and we look where a buyer's reviewer would look, so nothing in their report comes as news to you. Here is what the audit examines, for readers who don't spend their days in code.
+A technical due diligence is a structured version of that same read. We run it as a two-week audit with a fixed scope, and we look where a buyer's reviewer would look, so nothing in their report comes as news to you.
 
 ## Six areas we examine
 
@@ -58,7 +58,7 @@ Finding it first gives you the choice. You can fix it beforehand, or disclose it
 
 ## When to run one
 
-If you're the founder, run the audit four to six weeks before you open a data room. That leaves time to fix what's cheap, put a cost on what isn't, and go into diligence with the answers already written. Buyers increasingly ask for a SOC 2 report as well, which we cover under [SOC 2 readiness](/soc-2-readiness).
+If you're the founder, run the audit four to six weeks before you open a data room. That leaves time to fix what's cheap, put a cost on what isn't, and go into diligence with the answers already written. If nobody on your team can own the fixes, that is the kind of gap a [fractional CTO](/blog/fractional-cto-for-startups) covers. Buyers often ask for a SOC 2 report as well, which we cover under [SOC 2 readiness](/soc-2-readiness).
 
 If you're the investor, we run the same audit on a company you're considering and report to you. You get the architecture, the risks, the cost to fix them and a read on how much of the roadmap the current system can carry.
 
