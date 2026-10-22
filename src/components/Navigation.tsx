@@ -99,7 +99,7 @@ export function Navigation() {
                       }`}
                     >
                       <span className="flex items-center gap-3">
-                        <span className="font-mono text-[10px] text-ink-muted">
+                        <span className="font-mono text-[11px] text-ink-muted">
                           0{idx + 1}
                         </span>
                         {s.name}
@@ -202,7 +202,7 @@ export function Navigation() {
                           className="flex items-center gap-3 text-sm text-ink-muted hover:text-accent transition-colors py-1.5"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
-                          <span className="font-mono text-[10px]">0{idx + 1}</span>
+                          <span className="font-mono text-[11px]">0{idx + 1}</span>
                           {s.name}
                         </a>
                       ))}
