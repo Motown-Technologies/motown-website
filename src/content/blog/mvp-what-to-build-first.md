@@ -8,9 +8,9 @@ pubDate: 2026-08-13
 relatedPages: ["/mvp-development"]
 ---
 
-Founders often arrive with a feature list built from every conversation they've had about the product. Each item came from someone worth listening to, and each makes sense on its own. Together they add up to a launch date that keeps moving.
+Build the one user journey that proves your idea, build it properly, and write everything else on a list for later. That keeps a first version to eight to twelve weeks.
 
-In our experience, an MVP stalls when nobody decides what isn't in it. So that's where we start.
+Founders often arrive with a feature list built from every conversation they've had about the product. Each item came from someone worth listening to, and each makes sense on its own. Together they add up to a launch date that keeps moving. In our experience, an MVP stalls when nobody decides what isn't in it, so that's where we start.
 
 ## Find the one loop
 
@@ -18,14 +18,14 @@ An MVP is the smallest thing that answers the question your business depends on.
 
 The first week of a build is a scope workshop where we look for that single user journey: the loop that proves the idea works. We build that loop. Everything else goes into a written list and waits.
 
-Writing it down matters more than it sounds. A feature that has been cut, and that everyone knows has been cut, stops coming back in every meeting. When a good idea turns up mid-build, it goes on the list for the next cycle, and the launch date stays where it was.
+A feature that has been cut, and that everyone knows has been cut, stops coming back in every meeting. When a good idea turns up mid-build, it goes on the list for the next cycle, and the launch date stays where it was.
 
 ## Build the loop properly
 
 A small scope is a reason to build the parts you keep well, because those are the parts your first users will touch. For us that means:
 
 - A responsive, accessible interface your first users won't need you to apologise for.
-- Sign-up, login, roles and payments. Every product needs them and no founder wants to spend six weeks on them.
+- Sign-up, login, roles and payments.
 - A database designed for the questions you'll want to ask in six months, with migrations and backups from day one.
 - A deploy pipeline with staging, rollbacks and error alerts, so shipping an update is routine.
 
@@ -33,7 +33,7 @@ We build responsive web by default. A native app makes sense when the product re
 
 ## Leave out the scale you don't have yet
 
-It's tempting to build for a million users on day one. We build simply instead, in a way that can be rewritten once the product has earned it.
+We build for the users you'll have in year one, in a way that can be rewritten once the product has earned it.
 
 What we do give you is a cost model: what the product costs to run at 100 users and at 10,000. You can plan around real numbers without paying for capacity you don't need.
 
@@ -52,7 +52,7 @@ A first version usually takes eight to twelve weeks:
 
 Everything lives in your accounts and under your name from the start: the repository, the hosting and the deploy button. At handover you get the live app on your domain, the source with readable setup notes, the pipeline and monitoring, the cost model, and a prioritised backlog for the next 90 days.
 
-If you hire an engineer the month after launch, they should be able to pick it up without calling us.
+If you hire an engineer the month after launch, they should be able to pick it up without calling us. If you need senior technical judgment after launch but not a full-time hire yet, read about [when a fractional CTO makes sense](/blog/fractional-cto-for-startups).
 
 ## Before you start
 
