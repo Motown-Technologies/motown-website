@@ -10,7 +10,7 @@ relatedPages: ["/case-studies/nonprofit-community"]
 
 A small nonprofit we built for supports women through the loss of a parent. It runs community events, grief support groups and subsidized therapy, and it marks the anniversaries that come around every year. When we started, it had no software at all. The story, the applications and the community all lived in conversations.
 
-We built a public site that explains the organization and takes applications, a members' app, and the back office the staff now run everything from. Forty-seven screens in all. The feature list mattered less than one fact about the people using it: they arrive grieving, often distressed, usually on a phone, and sometimes without much patience for technology.
+We built a public site that explains the organization and takes applications, a members' app, and the back office the staff now run everything from, 47 screens in all. The feature list mattered less than one fact about the people using it: they arrive grieving, often distressed, usually on a phone, and sometimes without much patience for technology.
 
 ## One question at a time
 
@@ -28,7 +28,7 @@ The memorial wall is built on those dates. The system works out each anniversary
 
 Reminders run hourly. The hosting sleeps when idle, and checking every fifteen minutes would have kept it awake and billing all day. The reminder job is written so that a late run catches up, which means a reminder can arrive a little later but is never skipped.
 
-## Dignity in the permissions
+## Who can see and erase a member's data
 
 A member's record belongs to her, and the permissions are built around that.
 
@@ -44,10 +44,10 @@ Before the platform, there was no way to see who nobody had checked in on lately
 
 Giving moved into the same system: one-off and recurring donations with dedications, PDF receipts and annual giving statements. Recurring charges run inside the app so every cycle produces its own receipt, and two charging runs can never overlap, so nobody is charged twice.
 
-## A team of four can't debug this at midnight
+## Rules the software enforces for a team of four
 
-The nonprofit has no engineers on staff. Wherever we could, we made a rule the software enforces itself. Every change has to pass the full test suite, with complete test coverage, before it can be merged. Text never drops below a 4.5:1 contrast ratio, placeholders and disabled labels included. Every admin action is logged, and the destructive ones are limited to a single role.
+The nonprofit has no engineers on staff. Wherever we could, we made a rule the software enforces itself. Every change has to pass the full test suite, with exactly 100% line coverage and 100% type coverage, before it can be merged. Text never drops below a 4.5:1 contrast ratio, placeholders and disabled labels included. Every admin action is logged, and the destructive ones are limited to a single role.
 
-None of this is visible to a member, and that's how it should be. She should be able to apply, find an event and remember her parent without thinking about the software at all.
+A member should be able to apply, find an event and remember her parent without thinking about the software at all.
 
 The [nonprofit community case study](/case-studies/nonprofit-community) has the full build, including the technical decisions behind each of these. If you're building for people who arrive on a hard day, [tell us who they are](/contact). That answer changes more of the build than the feature list does.
