@@ -61,6 +61,14 @@ const reasons = [
         body: "We start by understanding what you're trying to solve, then build to that.",
     },
 ];
+const glance = [
+    ["Based", "New York and Florida"],
+    ["Team", "2 to 10 people"],
+    ["We build", "Custom software, AI, web, mobile and automation"],
+    ["Industries", "Healthcare, senior care, nonprofits, auction houses"],
+    ["Ways to work", "Projects, ongoing support, fractional CTO"],
+    ["Focused projects", "Roughly 4 to 8 weeks"],
+];
 ---
 
 <BaseLayout
@@ -128,26 +136,45 @@ const reasons = [
     <!-- Our Story -->
     <section class="border-t-2 border-ink bg-paper-2" data-reveal>
         <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
-            <div class="grid grid-cols-12 gap-6 md:gap-12">
-
-                <div class="col-span-12 md:col-span-8">
-                    <h2
-                        class="font-display font-bold text-h2 tracking-tight text-balance mb-8"
-                    >
-                        We're the partner
-                        <br />
-                        behind the product.
+            <div class="grid grid-cols-12 gap-6 md:gap-12 lg:items-start">
+                <div class="col-span-12 lg:col-span-7">
+                    <h2 class="font-display font-bold text-h2 tracking-tight text-balance mb-8">
+                        Who you'll be working with.
                     </h2>
                     <div class="space-y-5 text-ink-muted leading-relaxed text-lg max-w-2xl">
                         <p>
-                            Our team builds websites, custom software, and automation tools, and we shape each one around the client it's for.
+                            Motown Solutions is a small team of engineers and
+                            designers in New York and Florida. We build custom
+                            software, websites, mobile apps, AI tools and
+                            automation, and we stay on after launch to maintain
+                            what we built.
                         </p>
                         <p>
-                            Before we build anything, we learn how the client's industry works.
+                            Most projects start with something that already
+                            exists and isn't keeping up: a spreadsheet the
+                            business has outgrown, a prototype that now has to
+                            hold real data, or a site that's slow and hard to
+                            change. We learn how your team works first, then
+                            build the simplest thing that fits it. You own the
+                            code, the accounts and the documentation from day
+                            one.
                         </p>
-                        <p>
-                            Our clients range from startups that need a strong online presence to established companies automating their operations.
-                        </p>
+                    </div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-5">
+                    <div class="border-2 border-ink bg-paper">
+                        <div class="px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted">
+                            At a glance
+                        </div>
+                        {
+                            glance.map(([k, v], i, arr) => (
+                                <div class:list={["px-5 py-3.5", i !== arr.length - 1 && "border-b border-ink/30"]}>
+                                    <div class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted">{k}</div>
+                                    <div class="mt-1 font-display font-bold tracking-tight text-lg leading-snug">{v}</div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
