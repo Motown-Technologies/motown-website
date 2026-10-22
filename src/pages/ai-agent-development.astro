@@ -31,7 +31,7 @@ const work = [
     {
         title: "Human Checkpoints",
         icon: ConsultingIcon,
-        desc: "Approval steps placed where a mistake would be expensive, so the agent drafts and a person confirms rather than finding out afterwards.",
+        desc: "Approval steps placed where a mistake would be expensive, so the agent drafts and a person confirms before anything happens.",
     },
     {
         title: "Failure Handling",
@@ -104,7 +104,7 @@ const control = [
                     <p
                         class="mt-10 text-lg md:text-xl text-ink-muted leading-relaxed text-pretty max-w-xl"
                     >
-                        Getting an agent to take an action is the easy part. The real work is deciding what it may do unsupervised, where a person has to sign off, and how it behaves when something goes wrong.
+                        Getting an agent to take an action is the easy part. Most of the work is deciding what it may do unsupervised, where a person has to sign off, and how it behaves when something goes wrong.
                     </p>
 
                     <div class="mt-10 flex flex-wrap gap-3">
@@ -200,7 +200,7 @@ const control = [
                     <p
                         class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
                     >
-                        What matters is how much the agent should be trusted to do without anyone watching, and the answer differs for every action it can take.
+                        The design question is how much the agent should be trusted to do without anyone watching, and the answer differs for every action it can take.
                     </p>
                 </div>
             </div>
@@ -248,8 +248,7 @@ const control = [
                     <p
                         class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
                     >
-                        Agents fail in ways ordinary software doesn't: plausibly, confidently, and at speed. The containment has to be
-                        designed in rather than added after the first incident.
+                        Agents fail in ways ordinary software doesn't: plausibly, confidently, and at speed, so containment has to be designed in before the first incident.
                     </p>
                 </div>
             </div>
