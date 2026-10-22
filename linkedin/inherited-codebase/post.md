@@ -8,7 +8,7 @@ A multi-site healthcare practice handed us a website someone else had built. It 
 
 Our first month produced no features. We spent it making the system runnable, deployable and reproducible, so later changes could be made and undone on purpose.
 
-Over three years the site moved five times, and each move had a reason: search engines couldn't see the pages, a framework was reaching end of support, and editors couldn't publish without a developer.
+Over three years the site was rebuilt three times, and each rebuild had a reason: search engines couldn't see the pages, a framework was reaching end of support, and editors couldn't publish without a developer.
 
 Every step was built to be reversible. The old API stayed running. Rollback was one setting. The content migration copied records and never deleted them, and the old tables stayed for a month after the switch.
 
