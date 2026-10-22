@@ -24,12 +24,15 @@ const organization = {
         "Motown Solutions builds custom software, AI systems, websites, mobile apps, and automation tools, and advises on the technology strategy behind them.",
     email: "contact@motowntech.com",
     telephone: "+1-845-925-2661",
-    address: {
-        "@type": "PostalAddress",
-        addressLocality: "New York",
-        addressRegion: "NY",
-        addressCountry: "US",
-    },
+    address: [
+        {
+            "@type": "PostalAddress",
+            addressLocality: "New York",
+            addressRegion: "NY",
+            addressCountry: "US",
+        },
+        { "@type": "PostalAddress", addressRegion: "FL", addressCountry: "US" },
+    ],
     areaServed: { "@type": "Country", name: "United States" },
     sameAs: ["https://www.linkedin.com/company/motown-solutions/"],
     contactPoint: {
@@ -277,7 +280,7 @@ const organization = {
                         </div>
                         <p class="text-ink-muted max-w-md leading-relaxed">
                             Custom software, AI, websites, mobile apps and
-                            automation, from a small team in New York.
+                            automation, from a small team in New York and Florida.
                         </p>
                     </div>
                     <div class="col-span-1 md:col-span-4 lg:col-span-2">

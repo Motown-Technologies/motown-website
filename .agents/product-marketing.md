@@ -9,7 +9,7 @@ TODO need the owner's input.
 - Name: Motown Solutions. Site: https://motowntech.com
 - What it is: a small services company (2-10 people) that designs, builds and
   rescues custom software. Not a SaaS product.
-- Location: New York, NY (per the LinkedIn page). Phone +1-845-925-2661,
+- Location: New York and Florida. Phone +1-845-925-2661,
   contact@motowntech.com. Usually replies within 24 hours.
 - LinkedIn tagline: "Custom software and AI for companies that have outgrown
   spreadsheets and off-the-shelf tools."
@@ -60,7 +60,7 @@ the humanizer skill. Clients stay anonymous.
 ## SEO
 
 - Primary goal: qualified project inquiries through /contact.
-- Region: based in New York, NY, serving clients US-wide (location in
+- Region: based in New York and Florida, serving clients US-wide (location in
   Organization JSON-LD, About and Contact; not in page titles).
 - TODO: priority keywords.
 - TODO: top competitors.

@@ -1,6 +1,6 @@
 # Motown Solutions
 
-> Motown Solutions (motowntech.com) builds custom software, AI systems, websites, mobile apps and automation tools, and advises companies on the technology strategy behind them. Based in New York, NY, working with clients across the US. LinkedIn: https://www.linkedin.com/company/motown-solutions/
+> Motown Solutions (motowntech.com) builds custom software, AI systems, websites, mobile apps and automation tools, and advises companies on the technology strategy behind them. Based in New York and Florida, working with clients across the US. LinkedIn: https://www.linkedin.com/company/motown-solutions/
 
 Every page on this site is also available as Markdown. Request it with `Accept: text/markdown`, or append `/index.md` to the page path (for example https://motowntech.com/services/ai-development/index.md).
 

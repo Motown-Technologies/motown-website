@@ -11,7 +11,7 @@ Shared facts:
 - Website: https://motowntech.com
 - Email: contact@motowntech.com
 - Phone: +1 845-925-2661
-- Location: New York, NY. Works with clients across the US.
+- Location: New York and Florida. Works with clients across the US.
 - Size: 2 to 10 people
 - LinkedIn: https://www.linkedin.com/company/motown-solutions/
 - One-line positioning (same as LinkedIn): Custom software and AI for
@@ -31,7 +31,8 @@ phone or form; ask the clients from the case studies first.
 
 **Company summary**
 
-> Motown Solutions is a New York software company that builds custom web
+> Motown Solutions is a software company in New York and Florida that
+> builds custom web
 > apps, mobile apps, AI tools and automation for companies that have
 > outgrown spreadsheets and off-the-shelf software.
 >
@@ -85,7 +86,7 @@ size, client focus split.
 
 Set it up as a **service-area business**: hide the street address and list
 service areas instead. Google limits service areas to the region you
-travel to, so list the New York area; the description covers
+travel to, so list the New York and Florida areas; the description covers
 remote work across the US.
 
 **Business name:** Motown Solutions (no keywords added; Google suspends
@@ -95,7 +96,7 @@ profiles that stuff the name)
 
 **Additional categories:** Website designer, Computer consultant
 
-**Service areas:** New York, NY; TODO add the surrounding counties or
+**Service areas:** New York, NY; TODO add the Florida city and the surrounding counties or
 cities you serve in person
 
 **Website link** (tagged so visits show up in analytics):
@@ -103,7 +104,8 @@ cities you serve in person
 
 **Description** (Google allows 750 characters)
 
-> Motown Solutions is a New York software company. We build custom web
+> Motown Solutions is a software company in New York and Florida. We
+> build custom web
 > apps, mobile apps, AI tools and automation for companies that have
 > outgrown spreadsheets and off-the-shelf software. Typical projects include
 > turning a spreadsheet into an internal app, making an AI-built prototype
