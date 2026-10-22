@@ -8,19 +8,19 @@ pubDate: 2026-10-21
 relatedPages: ["/case-studies/auction-operations", "/spreadsheet-to-app"]
 ---
 
-An auction house we built for ran its whole inventory across a set of spreadsheets, a shared photo folder and a group chat. Each of those worked fine on its own. Things broke down the day two people disagreed about where a lot stood and none of the three could settle it.
+An auction house we built for ran its inventory across a set of spreadsheets, a shared photo folder and a group chat. We replaced them with one app that tracks every item from intake to sale and records who changed what.
 
-In our experience, most businesses that run on spreadsheets hit a version of that day eventually.
+Each of the old tools worked fine on its own. Things broke down the day two people disagreed about where a lot stood and none of the three could settle it.
 
 ## What the spreadsheet couldn't answer
 
 The staff already knew how to run an auction, and we left their process alone. For any item, they needed to know where it was, who last changed it and when.
 
-A spreadsheet can tell you where an item is, if someone remembered to update it. It has no idea who changed a cell or when. Keep the same status in three places and the three drift apart. Say the spreadsheet has an item as photographed, the chat says it's still in storage, and the photo folder holds two files with two different names. Each person can point to their own copy, and nothing shows which one is current.
+A spreadsheet can tell you where an item is, if someone remembered to update it. It has no idea who changed a cell or when. Keep the same status in three places and the three drift apart. For example, the spreadsheet might have an item as photographed while the chat says it's still in storage and the photo folder holds two files with two different names. Each person can point to their own copy, and nothing shows which one is current.
 
 ## One record per item
 
-We built one system of record for the whole job, from intake to catalog to auction. Each item moves through seven stages: quick catalog, photograph, store, assign, review, catalog and auction. After that it's either sold or unsold.
+We built one system of record for the whole job, from intake to catalog to auction. It runs to 68 screens, all reading from the same records. Each item moves through seven stages: quick catalog, photograph, store, assign, review, catalog and auction. After that it's either sold or unsold.
 
 The main design decision was how status works. The database works out where an item stands from the times each stage was completed, so there is no separate status field for anyone to keep in sync. Every screen and every export reads status from that one source. The database also refuses impossible states: an item can't be both sold and unsold, and it can't sit in two lots at once.
 
@@ -32,9 +32,9 @@ Cataloging used to mean typing titles, descriptions and keywords by hand, item b
 
 The model can't publish anything itself. A cataloger reads each draft, asks for a new version with feedback when it's off, and approves it into the inventory. If the AI service starts failing, the system pauses the queue for a while and stops sending it requests until it recovers.
 
-This is the part we'd recommend to anyone adding AI to an internal process. Let the model do the tedious first pass, and leave the decision with a person.
+This is the part we'd recommend to anyone adding AI to an [automated internal process](/workflow-automation). Let the model do the tedious first pass, and leave the decision with a person.
 
-## Built for the warehouse floor
+## Cataloging from a phone on the warehouse floor
 
 Most photos are taken on a phone in the warehouse, and the system is designed around that. Photos upload straight from the phone's camera. iPhone images are converted and compressed on the phone before upload and optimized again once they arrive.
 
@@ -49,4 +49,4 @@ None of this is specific to auctions. If these sound familiar, the spreadsheet h
 - Deleting the wrong row means the data is gone.
 - Part of the real work happens in a chat thread, outside any record.
 
-The [auction operations case study](/case-studies/auction-operations) has the full story, including the technical decisions behind it. If your team runs on spreadsheets and is starting to run into this, read how we approach [turning spreadsheets into an app](/spreadsheet-to-app), or [tell us what you're working with](/contact).
+The [auction operations case study](/case-studies/auction-operations) has the full story, including the technical decisions behind it. Most spreadsheet replacements take roughly 4 to 8 weeks. If your team runs on spreadsheets and is starting to run into this, read how we approach [turning spreadsheets into an app](/spreadsheet-to-app), or [tell us what you're working with](/contact).
