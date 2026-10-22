@@ -264,7 +264,7 @@ const organization = {
         </style>
     </head>
     <body class="font-sans bg-paper text-ink antialiased">
-        <Navigation client:load />
+        <Navigation client:load pathname={Astro.url.pathname} />
         <slot />
         <RelatedPosts />
         <!-- Footer -->

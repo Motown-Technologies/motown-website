@@ -2,14 +2,26 @@ import { ChevronDown, Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
 import logo from "../img/motown_solutions_logo.png"
 
-export function Navigation() {
+// "/about/" and "/about" are the same page.
+const normalize = (path: string) => path.replace(/\/+$/, "") || "/"
+
+const links = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Blog", href: "/blog" },
+]
+
+// Rendered on the server with the real path so the active link is right
+// before hydration; pathname is passed in from BaseLayout.
+export function Navigation({ pathname: initialPath = "/" }: { pathname?: string }) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [pathname, setPathname] = useState("/")
+  const [pathname, setPathname] = useState(normalize(initialPath))
+  const [isServicesOpen, setIsServicesOpen] = useState(pathname.startsWith("/services"))
 
   useEffect(() => {
-    setPathname(window.location.pathname)
+    setPathname(normalize(window.location.pathname))
 
     let ticking = false
     const onScroll = () => {
@@ -36,8 +48,14 @@ export function Navigation() {
   ]
 
   const linkBase =
-    "inline-flex items-center font-mono text-xs uppercase tracking-[0.15em] leading-none text-ink hover:text-accent transition-colors"
-  const isActive = (href: string) => (pathname === href ? "text-accent" : "")
+    "inline-flex items-center font-mono text-xs uppercase tracking-[0.15em] leading-none hover:text-accent transition-colors"
+  // A section stays active on its child pages (/blog/some-post marks Blog).
+  const inSection = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/")
+  const current = (href: string) => (pathname === href ? "page" : undefined)
+  // linkBase carries no colour so the active colour can't lose a cascade fight with text-ink.
+  const linkState = (href: string) =>
+    inSection(href) ? "text-accent underline decoration-[1.5px] underline-offset-[6px]" : "text-ink"
 
   return (
     <>
@@ -62,15 +80,17 @@ export function Navigation() {
 
             {/* Desktop */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="/" className={`${linkBase} ${isActive("/")}`}>Home</a>
-              <a href="/about" className={`${linkBase} ${isActive("/about")}`}>About</a>
-              <a href="/case-studies" className={`${linkBase} ${isActive("/case-studies")}`}>Case Studies</a>
-              <a href="/blog" className={`${linkBase} ${isActive("/blog")}`}>Blog</a>
+              {links.map((l) => (
+                <a key={l.href} href={l.href} aria-current={current(l.href)} className={`${linkBase} ${linkState(l.href)}`}>
+                  {l.name}
+                </a>
+              ))}
 
               <div className="relative group inline-flex items-center">
                 <a
                   href="/services"
-                  className={`${linkBase} gap-1`}
+                  className={`${linkBase} gap-1 ${linkState("/services")}`}
+                  aria-current={current("/services")}
                   aria-haspopup="menu"
                 >
                   Services
@@ -94,8 +114,9 @@ export function Navigation() {
                     <a
                       key={s.href}
                       href={s.href}
+                      aria-current={current(s.href)}
                       className={`flex items-center justify-between gap-3 px-4 py-3 text-sm font-medium hover:bg-ink hover:text-paper transition-colors ${
-                        pathname === s.href ? "bg-paper-2" : ""
+                        pathname === s.href ? "bg-paper-2 text-accent" : ""
                       }`}
                     >
                       <span className="flex items-center gap-3">
@@ -150,39 +171,22 @@ export function Navigation() {
           >
             <div className="overflow-hidden">
               <div className="pb-6 pt-2 border-t border-ink/20 flex flex-col">
-                <a
-                  href="/"
-                  className="py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink border-b border-ink/10"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Home
-                </a>
-                <a
-                  href="/about"
-                  className="py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink border-b border-ink/10"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  About
-                </a>
-                <a
-                  href="/case-studies"
-                  className="py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink border-b border-ink/10"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Case Studies
-                </a>
-                <a
-                  href="/blog"
-                  className="py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink border-b border-ink/10"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Blog
-                </a>
+                {links.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    aria-current={current(l.href)}
+                    className={`py-3 font-mono text-xs uppercase tracking-[0.15em] border-b border-ink/10 ${inSection(l.href) ? "text-accent" : "text-ink"}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {l.name}
+                  </a>
+                ))}
 
                 <div className="border-b border-ink/10">
                   <button
                     onClick={() => setIsServicesOpen((v) => !v)}
-                    className="w-full flex items-center justify-between py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink"
+                    className={`w-full flex items-center justify-between py-3 font-mono text-xs uppercase tracking-[0.15em] ${inSection("/services") ? "text-accent" : "text-ink"}`}
                     aria-expanded={isServicesOpen}
                   >
                     Services
@@ -199,7 +203,8 @@ export function Navigation() {
                         <a
                           key={s.href}
                           href={s.href}
-                          className="flex items-center gap-3 text-sm text-ink-muted hover:text-accent transition-colors py-1.5"
+                          aria-current={current(s.href)}
+                          className={`flex items-center gap-3 text-sm hover:text-accent transition-colors py-1.5 ${pathname === s.href ? "text-accent font-medium" : "text-ink-muted"}`}
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           <span className="font-mono text-[11px]">0{idx + 1}</span>
