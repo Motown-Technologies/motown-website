@@ -1,5 +1,5 @@
 ---
-title: "Screen every donor. Tell none of them."
+title: "How we built sanctions screening into a donation platform"
 image: ../../assets/blog/donation-platform-screening-image.jpg
 imageAlt: "A mesh sieve on a blue surface letting small white pebbles through and holding back larger stones"
 cover: ../../assets/blog/donation-platform-screening.png

@@ -1,5 +1,5 @@
 ---
-title: "A spreadsheet knows what. It never knows who, or when."
+title: "How an auction house replaced its spreadsheets with a real app"
 image: ../../assets/blog/auction-house-spreadsheets-image.jpg
 imageAlt: "Loose paper slips and blank photos scattered across a blue surface, turning into a neat column of paper tags on the right"
 cover: ../../assets/blog/auction-house-spreadsheets.png

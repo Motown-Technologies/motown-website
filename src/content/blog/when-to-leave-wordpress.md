@@ -1,5 +1,5 @@
 ---
-title: "When it's time to leave WordPress"
+title: "When to leave WordPress, and when staying is fine"
 image: ../../assets/blog/when-to-leave-wordpress-image.jpg
 imageAlt: "A heavy old filing cabinet next to a single slim blue binder on a blue floor"
 cover: ../../assets/blog/when-to-leave-wordpress.png

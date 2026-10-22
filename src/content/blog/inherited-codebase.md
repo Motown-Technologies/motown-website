@@ -1,5 +1,5 @@
 ---
-title: "Nothing was broken. That was the hard part."
+title: "Taking over someone else's codebase without breaking anything"
 image: ../../assets/blog/inherited-codebase-image.jpg
 imageAlt: "A ring of old mismatched keys on a blue surface, one of them new and blue"
 cover: ../../assets/blog/inherited-codebase.png

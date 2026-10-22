@@ -1,5 +1,5 @@
 ---
-title: "A prototype proves the idea. It can't hold someone's name."
+title: "Rebuilding a low-code prototype to safely handle health data"
 image: ../../assets/blog/prototype-to-production-health-data-image.jpg
 imageAlt: "A paper model house next to the same house cast in concrete"
 cover: ../../assets/blog/prototype-to-production-health-data.png

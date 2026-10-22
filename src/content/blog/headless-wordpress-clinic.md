@@ -1,5 +1,5 @@
 ---
-title: "Staff still edit WordPress. Patients never load it."
+title: "How a clinic kept WordPress for editing and made its site static"
 image: ../../assets/blog/headless-wordpress-clinic-image.jpg
 imageAlt: "An empty blue stage with ropes and pulleys visible backstage"
 cover: ../../assets/blog/headless-wordpress-clinic.png

@@ -1,5 +1,5 @@
 ---
-title: "Leaving AWS one route at a time"
+title: "Migrating from AWS to Cloudflare one route at a time"
 image: ../../assets/blog/cloud-migration-route-by-route-image.jpg
 imageAlt: "Taped cardboard moving boxes floating above a blue floor, one box resting on the ground"
 cover: ../../assets/blog/cloud-migration-route-by-route.png

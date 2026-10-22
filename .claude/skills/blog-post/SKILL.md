@@ -20,6 +20,18 @@ them that way. If the post needs a fact you don't have, ask.
 
 ## 2. Write the draft
 
+- Title: say what the post covers, not a teaser.
+  - Name the topic in the first few words, the way a reader would search
+    for it ("MVP", "WordPress migration", "technical due diligence").
+  - Say what the reader gets: a decision, a method, or what changed for a
+    client. Case-study posts name the kind of client and what was done
+    ("How an auction house replaced its spreadsheets with a real app").
+  - 45 to 65 characters; posts have no brand suffix in the browser title.
+  - Plain sentence case. No riddles, slogans or two-fragment lines
+    ("X. Y.") as the whole title; a clever line can open the post instead.
+    A colon only to separate topic from angle.
+  - Test: someone who reads only the title can say what the post covers
+    and whether it's for them.
 - Slug: lowercase words joined by hyphens, unique, never a bare number
   (`/blog/2` is pagination).
 - Frontmatter: `title`, `description` (one or two sentences; it is also the

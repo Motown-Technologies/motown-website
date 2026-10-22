@@ -1,5 +1,5 @@
 ---
-title: "Shopify, a custom theme or headless: how to pick"
+title: "Shopify, a custom theme or headless commerce: how to choose"
 image: ../../assets/blog/shopify-custom-or-headless-image.jpg
 imageAlt: "Three empty shopping baskets, wicker, wire and blue, on a blue floor"
 cover: ../../assets/blog/shopify-custom-or-headless.png

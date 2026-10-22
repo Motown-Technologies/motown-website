@@ -1,5 +1,5 @@
 ---
-title: "Nobody arrives here wanting to use software."
+title: "How we designed a member platform for a grief-support nonprofit"
 image: ../../assets/blog/building-for-people-in-grief-image.jpg
 imageAlt: "A small olive sapling in a pot on a blue windowsill in sunlight"
 cover: ../../assets/blog/building-for-people-in-grief.png

@@ -1,5 +1,5 @@
 ---
-title: "Most seed-stage startups don't need a full-time CTO"
+title: "When a startup needs a fractional CTO instead of a full-time one"
 image: ../../assets/blog/fractional-cto-for-startups-image.jpg
 imageAlt: "A brass compass on a blue surface casting a long shadow"
 cover: ../../assets/blog/fractional-cto-for-startups.png

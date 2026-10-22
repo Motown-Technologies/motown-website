@@ -1,5 +1,5 @@
 ---
-title: "Your MVP needs one loop. Write the rest of the list down."
+title: "What to build first in an MVP, and what to leave out"
 image: ../../assets/blog/mvp-what-to-build-first-image.jpg
 imageAlt: "A small wooden stool alone on a blue floor, with a stack of blank cards set aside in the corner"
 cover: ../../assets/blog/mvp-what-to-build-first.png
