@@ -35,6 +35,14 @@ multi-tenant donation platform, an endoscopy center (headless WordPress), a
 multi-site healthcare practice, a grief-support nonprofit, a senior-care
 concierge app. Thirteen blog posts adapted from these and the landing pages.
 
+## Published timelines
+
+- Spreadsheet to app, prototype to production, WordPress migration: most
+  take roughly 4 to 8 weeks (owner-approved range). MVP: the page's own
+  week-by-week plan (8 to 12 weeks). Websites: 2 to 4 weeks for a simple
+  site, 3 to 6 months for a complex web application (contact page FAQ).
+- No published prices.
+
 ## Audience
 
 - Founders and non-technical teams who need a first version built
