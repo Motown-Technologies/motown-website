@@ -12,7 +12,6 @@ Shared facts:
 - Email: contact@motowntech.com
 - Phone: +1 845-925-2661
 - Location: New York and Florida. Works with clients across the US.
-- Size: 2 to 10 people
 - LinkedIn: https://www.linkedin.com/company/motown-solutions/
 - One-line positioning (same as LinkedIn): Custom software and AI for
   companies that have outgrown spreadsheets and off-the-shelf tools.
