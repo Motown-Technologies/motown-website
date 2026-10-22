@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import { Image } from "astro:assets";
+import Faq from "../../components/Faq.astro";
 
 import processImage from "../../img/it-consultant-presenting-technology-strategy-to-bu.jpg";
 
@@ -56,6 +57,80 @@ const services = [
             "Ongoing support",
         ],
         link: { href: "/legacy-system-modernization", label: "Legacy system modernisation" },
+    },
+];
+
+const situations = [
+    {
+        t: "Your stack grew by accident",
+        d: "Each tool was picked on its own, often from whichever vendor called that quarter, and nobody decides when two teams disagree. We write a roadmap tied to your priorities and budget, then review it with you every quarter.",
+    },
+    {
+        t: "You're about to buy major software",
+        d: "We agree your requirements before any vendor is contacted, script the demos against your real scenarios and model implementation, migration and exit costs alongside the licence price.",
+    },
+    {
+        t: "A process everyone works around",
+        d: "Before anything gets automated, we map the process, measure cycle time and error rate, and remove the steps that add nothing. Changes are piloted with one team first.",
+    },
+    {
+        t: "An old system you can't switch off",
+        d: "We find the seams, plan an incremental replacement and run the old and new systems side by side until the numbers reconcile.",
+    },
+    {
+        t: "A raise, a sale or a security review is coming",
+        d: "We audit the codebase on your timeline, before an investor's engineer does, and help you prepare for the SOC 2 report buyers increasingly ask for.",
+    },
+];
+
+const related = [
+    {
+        href: "/blog/fractional-cto-for-startups",
+        title: "Most seed-stage startups don't need a full-time CTO",
+        d: "What a startup without a senior technical lead is missing, and what a part-time CTO takes on.",
+    },
+    {
+        href: "/blog/technical-due-diligence-explained",
+        title: "Know what's in the codebase before they do",
+        d: "What a technical due diligence checks before a raise or an acquisition.",
+    },
+    {
+        href: "/blog/inherited-codebase",
+        title: "Nothing was broken. That was the hard part.",
+        d: "How we take over someone else's codebase that still works, and make it safe to change.",
+    },
+    {
+        href: "/fractional-cto",
+        title: "Fractional CTO",
+        d: "Senior technical judgment on retainer, starting with a two-week audit.",
+    },
+    {
+        href: "/technical-due-diligence",
+        title: "Technical due diligence",
+        d: "A two-week, fixed-scope audit for founders preparing a raise and for investors reviewing a company.",
+    },
+];
+
+const faqs = [
+    {
+        q: "What does an IT strategy engagement produce?",
+        a: "A roadmap tied to your business priorities and budget, an architecture your teams agree on, and governance that names who decides what. We assess your current systems first and come back with a plan and a number. After that we review the plan with you each quarter against what actually happened.",
+    },
+    {
+        q: "Can you help us choose between software vendors?",
+        a: "Yes. We agree requirements before any vendor is contacted, run scripted demos against your real scenarios and source our own reference calls. We model implementation, migration and exit costs along with the licence, and review the contract's renewal terms, price increases, data ownership and exit clauses. You get an independent recommendation you can defend.",
+    },
+    {
+        q: "Should we automate a process or fix it first?",
+        a: "Fix it first. We map the process, measure cycle time and error rate, and remove the steps that add nothing before anything is built. The changes are piloted with the team that runs the process and measured against the baseline. Once the process is worth keeping, automating it is a separate piece of work.",
+    },
+    {
+        q: "How do you replace a legacy system without stopping the business?",
+        a: "Incrementally. We put a facade in front of the old system, capture its behaviour as tests and replace it piece by piece. Old and new run side by side, processing the same work, until the outputs reconcile. Each phase delivers value on its own and can be stopped at any point.",
+    },
+    {
+        q: "We're a startup without a technical lead. Is this the right service?",
+        a: "Usually our startup consulting is a better fit. Depending on where you are, that means an MVP build, a fractional CTO on retainer or a technical due diligence before a raise. A fractional CTO engagement starts with a two-week, fixed-scope audit with written findings.",
     },
 ];
 
@@ -225,6 +300,41 @@ const approach = [
         </div>
     </section>
 
+    <!-- When to call us -->
+    <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"></span>
+                        <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">When To Call Us</span>
+                    </div>
+                    <h2 class="font-display font-bold text-h2 tracking-tight text-balance">What brings clients to us</h2>
+                </div>
+                <div class="col-span-12 md:col-span-5 md:col-start-8 md:self-end">
+                    <p class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty">
+                        Most consulting work starts with one of these.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-ink">
+                {
+                    situations.map((item) => (
+                        <div class="grid grid-cols-12 gap-4 md:gap-8 items-start py-8 px-1 border-b border-ink">
+                            <h3 class="col-span-12 md:col-span-5 font-display text-xl md:text-2xl font-bold tracking-tight leading-tight">
+                                {item.t}
+                            </h3>
+                            <p class="col-span-12 md:col-span-7 md:pl-4 text-ink-muted leading-relaxed text-sm md:text-base">
+                                {item.d}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
     <!-- Approach -->
     <section class="border-t-2 border-ink bg-paper-2" data-reveal>
         <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
@@ -286,6 +396,41 @@ const approach = [
         </div>
     </section>
 
+    <!-- Related work -->
+    <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"></span>
+                        <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">Related Work</span>
+                    </div>
+                    <h2 class="font-display font-bold text-h2 tracking-tight text-balance">Read more about how we work</h2>
+                </div>
+            </div>
+
+            <ul class="border-t border-ink">
+                {
+                    related.map((item) => (
+                        <li class="border-b border-ink">
+                            <a href={item.href} class="group grid grid-cols-12 gap-4 md:gap-8 items-start py-8 px-1">
+                                <span class="col-span-12 md:col-span-5 font-display text-xl md:text-2xl font-bold tracking-tight leading-tight group-hover:text-accent transition-colors">
+                                    {item.title}
+                                </span>
+                                <span class="col-span-11 md:col-span-6 md:pl-4 text-ink-muted leading-relaxed text-sm md:text-base">
+                                    {item.d}
+                                </span>
+                                <span aria-hidden class="col-span-1 text-right font-mono transition-transform group-hover:translate-x-1">→</span>
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+
+    <Faq items={faqs} heading="Questions about consulting." />
+
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>
         <div
@@ -303,9 +448,7 @@ const approach = [
             <h2
                 class="font-display font-bold text-display text-paper text-balance mb-10 max-w-5xl leading-[0.95]"
             >
-                Ready to Transform Your IT <span class="italic text-accent"
-                    >Strategy</span
-                >?
+                Bring us the <span class="italic text-accent">decision</span>.
             </h2>
             <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
                 Book a consultation and tell us which technology decisions are on your desk.

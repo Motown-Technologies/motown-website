@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import NumberedRow from "../../components/NumberedRow.astro";
+import Faq from "../../components/Faq.astro";
 
 import { Image } from "astro:assets";
 import processImg from "../../img/mobile-app-development-team-working-on-app-design-.jpg";
@@ -43,6 +45,79 @@ const capabilities = [
             "Feature enhancements",
         ],
         link: { href: "/app-maintenance-and-support", label: "App maintenance & support" },
+    },
+];
+
+const situations = [
+    {
+        h: "The app has to run on iOS and Android",
+        d: "We build one codebase in React Native or Flutter, picked on your team's existing skills and what the app needs. Business rules, state and networking are written once.",
+    },
+    {
+        h: "Users keep getting logged out or uploads fail",
+        d: "These problems usually live in the backend. We refresh sign-in tokens in the background and make uploads resumable, so a dropped connection doesn't cost anyone a photo.",
+    },
+    {
+        h: "The app has to work without a signal",
+        d: "We give the app a local store it trusts, a queue for changes made offline and a sync strategy that decides what happens when two devices edit the same record.",
+    },
+    {
+        h: "Launch is close and store review is a worry",
+        d: "We check the App Store and Google Play review guidelines during the build, including the rules that most often cause rejections, so they don't come up in launch week.",
+    },
+    {
+        h: "Nobody has touched the app since it shipped",
+        d: "We test against new OS versions, patch dependencies and work through crash reports. Tell us what's live and we'll audit it before quoting to take it on.",
+    },
+];
+
+const related = [
+    {
+        title: "Cross-Platform Apps",
+        description: "One codebase in React Native or Flutter, native modules where the framework can't reach, store submission and over-the-air updates.",
+        href: "/cross-platform-app-development",
+    },
+    {
+        title: "Mobile Backends",
+        description: "Sign-in, sync, push notifications, media uploads and offline support for apps on real phone networks.",
+        href: "/mobile-backend-development",
+    },
+    {
+        title: "App Maintenance",
+        description: "OS testing, security patches, crash triage and store compliance for apps that are already live.",
+        href: "/app-maintenance-and-support",
+    },
+    {
+        title: "Native App or Web?",
+        description: "From our post on scoping an MVP: when a first version needs a native app and when the web version is enough.",
+        href: "/blog/mvp-what-to-build-first",
+    },
+];
+
+const faqs = [
+    {
+        q: "Do we need separate apps for iOS and Android?",
+        a: "Usually not. We build one codebase in React Native or Flutter and choose between them based on your team's existing skills and what the app needs. Business rules, state and networking are written once, and that is most of the code. Anything the framework can't reach, such as some hardware, background work or a native-only SDK, gets a small native module.",
+    },
+    {
+        q: "Do we need a native app at all?",
+        a: "Not always. For a first version we build responsive web by default. A native app makes sense when the product really needs the camera, push notifications or a place in the app store. When it does, we build it cross-platform so one team maintains one codebase.",
+    },
+    {
+        q: "Will you handle the App Store and Google Play submission?",
+        a: "Yes. We check the store review guidelines while we build, including the rules that most often cause rejections, so they don't surface in launch week. After launch, small fixes can go out as over-the-air updates where the platform rules allow it, so a typo doesn't have to wait for a full store review.",
+    },
+    {
+        q: "Can you build the backend for our app too?",
+        a: "Yes. We build backends that expect a phone on a weak connection: sign-in with Apple and Google, token refresh that keeps people signed in, push notifications through APNs and FCM, resumable photo uploads served from a CDN, and versioned APIs so older app versions keep working while they are still on people's phones.",
+    },
+    {
+        q: "Can the app work without a connection?",
+        a: "Yes, if we plan for it from the start. The app keeps a local store it trusts and a queue of changes made offline, and a sync strategy decides what happens when the same record changes on two devices. Without that, an app loses data the moment someone walks into a tunnel or a lift.",
+    },
+    {
+        q: "What happens after the app launches?",
+        a: "We can keep maintaining it. That means testing against operating system betas before they ship, updating dependencies on a schedule, working through crash reports by frequency and impact, and applying app store policy changes before their deadlines. If someone else built your app, tell us what's live and when it was last updated, and we'll audit it and quote for taking it on.",
     },
 ];
 
@@ -205,6 +280,45 @@ const process = [
         </div>
     </section>
 
+    <!-- When to call us -->
+    <section class="border-t-2 border-ink" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span
+                            aria-hidden
+                            class="inline-block w-8 h-px bg-ink"></span>
+                        <span
+                            class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted"
+                            >When To Call Us</span
+                        >
+                    </div>
+                    <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        Where most mobile projects start
+                    </h2>
+                </div>
+            </div>
+
+            <div class="border-t border-ink">
+                {
+                    situations.map((s) => (
+                        <div class="grid grid-cols-12 gap-4 md:gap-8 items-start py-8 px-1 border-b border-ink">
+                            <h3 class="col-span-12 md:col-span-5 font-display text-xl md:text-2xl font-bold tracking-tight leading-tight">
+                                {s.h}
+                            </h3>
+                            <p class="col-span-12 md:col-span-7 md:pl-4 text-ink-muted leading-relaxed text-sm md:text-base">
+                                {s.d}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
     <!-- Process -->
     <section class="border-t-2 border-ink bg-paper-2" data-reveal>
         <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
@@ -267,6 +381,44 @@ const process = [
         </div>
     </section>
 
+    <!-- Related work -->
+    <section class="border-t-2 border-ink" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span
+                            aria-hidden
+                            class="inline-block w-8 h-px bg-ink"></span>
+                        <span
+                            class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted"
+                            >Related Work</span
+                        >
+                    </div>
+                    <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        More on mobile
+                    </h2>
+                </div>
+            </div>
+
+            <div>
+                {
+                    related.map((r) => (
+                        <NumberedRow
+                            title={r.title}
+                            description={r.description}
+                            href={r.href}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <Faq items={faqs} heading="Questions about mobile apps." />
+
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>
         <div
@@ -284,12 +436,10 @@ const process = [
             <h2
                 class="font-display font-bold text-display text-paper text-balance mb-10 max-w-5xl leading-[0.95]"
             >
-                Ready to Build Your Mobile <span class="italic text-accent"
-                    >App</span
-                >?
+                Have an <span class="italic text-accent">app</span> in mind?
             </h2>
             <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
-                Tell us about the app you have in mind.
+                Tell us what it needs to do and which devices matter. We'll come back with the framework choice, what has to be native and a realistic timeline.
             </p>
             <div class="flex flex-wrap gap-3">
                 <a

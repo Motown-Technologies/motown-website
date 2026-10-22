@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import processImage from "../../img/web-design-process-with-wireframes-and-mockups-on-.jpg";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Faq from "../../components/Faq.astro";
 
 const services = [
     {
@@ -67,6 +68,84 @@ const services = [
             "SEO improvements",
         ],
         link: { href: "/website-redesign", label: "Website redesign" },
+    },
+];
+
+const situations = [
+    {
+        t: "A redesign that can't lose its rankings",
+        d: "Most redesigns that lose traffic skipped the URL map. We list every indexed page, give each one a 301 redirect to its replacement, and compare rankings against a recorded baseline after launch.",
+    },
+    {
+        t: "WordPress has become a job of its own",
+        d: "Plugin updates nobody dares run and mobile pages that load slowly. We rebuild the site as pre-built static pages, carry over every post and URL, and keep an editor your team already knows.",
+    },
+    {
+        t: "It works on a laptop and fails on a phone",
+        d: "Tap targets that need a second attempt and tables that push the page sideways. We build from the narrowest screen outward and test on real phones over mobile networks.",
+    },
+    {
+        t: "Paid traffic lands on a page that does four things",
+        d: "A landing page has one job. We build it around a single offer, with the proof placed where visitors start to doubt it.",
+    },
+    {
+        t: "Nobody watches the site after launch",
+        d: "Sites usually break months later, when an update stops the contact form and nobody notices. We patch on a schedule, test on staging first and monitor the pages that bring in enquiries.",
+    },
+];
+
+const related = [
+    {
+        href: "/case-studies/endoscopy-center",
+        label: "Endoscopy center",
+        d: "A WordPress site rebuilt as static pages, with WordPress kept as the editor staff already use.",
+    },
+    {
+        href: "/case-studies/healthcare-practice",
+        label: "Multi-site healthcare practice",
+        d: "An inherited React app and a Django admin turned into a static site with a real CMS.",
+    },
+    {
+        href: "/blog/when-to-leave-wordpress",
+        label: "When it's time to leave WordPress",
+        d: "The signs that upkeep has taken over, and when staying put is fine.",
+    },
+    {
+        href: "/blog/headless-wordpress-clinic",
+        label: "Staff still edit WordPress. Patients never load it.",
+        d: "How publishing works on the endoscopy center's rebuilt site, and why it stays up.",
+    },
+    {
+        href: "/blog/shopify-custom-or-headless",
+        label: "Shopify, a custom theme or headless",
+        d: "How we help stores choose, and when headless is the wrong call.",
+    },
+];
+
+const faqs = [
+    {
+        q: "How long does it take to build a website?",
+        a: "A simple website might take 2 to 4 weeks, and a complex web application 3 to 6 months. The difference comes from how many page types, integrations and content migrations are involved. We give you a timeline for your project after the first conversation, once we know what the site has to do.",
+    },
+    {
+        q: "Will a redesign hurt our search rankings?",
+        a: "It can, and the usual cause is old URLs that nobody mapped. Before cutover we list every indexed page, point each one at its replacement with a 301 redirect and record a baseline. After launch we track rankings, errors and conversions against that baseline daily through the weeks when problems tend to surface.",
+    },
+    {
+        q: "Can our team keep editing in WordPress if you rebuild the site?",
+        a: "Yes. We can keep WordPress as the back office your editors already use and build the public site from it as static pages, so visitors never reach WordPress or its database. When an editor hits publish, the site rebuilds itself. If you would rather leave WordPress completely, we can move you to a newer CMS instead.",
+    },
+    {
+        q: "Should our store use Shopify, a custom theme or a headless build?",
+        a: "Most stores do well on Shopify with a custom theme, which ships sooner and is easier for a small team to run. Headless earns its complexity when the platform is the limit, for example when the theme can't render the brand or you run a separate store per market. We would talk a two-person team with a tight deadline out of it.",
+    },
+    {
+        q: "Will the site work properly on phones?",
+        a: "We design from the narrowest screen outward, size controls for thumbs and keep the main actions within reach on a large phone. Phones get correctly sized images in modern formats, and tables reflow or scroll in their own frame. Before launch we test on actual phones over mobile connections.",
+    },
+    {
+        q: "Do you look after the site after launch?",
+        a: "Yes. Maintenance covers security patches tested on staging first, monitoring on the pages that bring in enquiries, backups we verify by restoring them, and the small content changes that otherwise wait for months. Each month you get a short note on what was patched, what broke, what was fixed and what needs a decision.",
     },
 ];
 
@@ -229,6 +308,37 @@ const process = [
         </div>
     </section>
 
+    <!-- When to call us -->
+    <section class="border-t-2 border-ink" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-7">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"></span>
+                        <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">When To Call Us</span>
+                    </div>
+                    <h2 class="font-display font-bold text-h2 tracking-tight text-balance">
+                        What usually brings people to us.
+                    </h2>
+                </div>
+            </div>
+            <div class="border-t border-ink">
+                {
+                    situations.map((s) => (
+                        <div class="grid grid-cols-12 gap-4 md:gap-8 items-start py-8 px-1 border-b border-ink">
+                            <h3 class="col-span-12 md:col-span-5 font-display text-xl md:text-2xl font-bold tracking-tight leading-tight">
+                                {s.t}
+                            </h3>
+                            <p class="col-span-12 md:col-span-7 md:pl-4 text-ink-muted leading-relaxed">
+                                {s.d}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
     <!-- Design Process -->
     <section class="border-t-2 border-ink bg-paper-2" data-reveal>
         <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
@@ -291,6 +401,41 @@ const process = [
         </div>
     </section>
 
+    <!-- Related work -->
+    <section class="border-t-2 border-ink" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+            <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
+                <div class="col-span-12 md:col-span-7">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span aria-hidden class="inline-block w-8 h-px bg-ink"></span>
+                        <span class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted">Related Work</span>
+                    </div>
+                    <h2 class="font-display font-bold text-h2 tracking-tight text-balance">
+                        Case studies and posts.
+                    </h2>
+                </div>
+            </div>
+            <ul class="border-t border-ink">
+                {
+                    related.map((item) => (
+                        <li class="border-b border-ink">
+                            <a href={item.href} class="group grid grid-cols-12 gap-4 md:gap-8 items-start py-6 px-1">
+                                <span class="col-span-12 md:col-span-5 font-display text-xl md:text-2xl font-bold tracking-tight leading-tight group-hover:text-accent transition-colors">
+                                    {item.label}
+                                </span>
+                                <span class="col-span-12 md:col-span-7 md:pl-4 text-ink-muted leading-relaxed">
+                                    {item.d}
+                                </span>
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+
+    <Faq items={faqs} heading="Questions about web projects." />
+
     <!-- Final CTA -->
     <section class="section-ink border-t-2 border-ink" data-reveal>
         <div
@@ -308,9 +453,7 @@ const process = [
             <h2
                 class="font-display font-bold text-display text-paper text-balance mb-10 max-w-5xl leading-[0.95]"
             >
-                Ready to Transform Your Online <span
-                    class="italic text-accent">Presence</span
-                >?
+                Let's talk about your <span class="italic text-accent">site</span>.
             </h2>
             <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
                 Tell us what your site needs to do for your business.
