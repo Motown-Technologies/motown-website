@@ -71,7 +71,7 @@ test("htmlToMarkdown keeps content, drops chrome and decoration", () => {
 
 test("build emitted index.md for every page", { skip: !existsSync(dist) && "no dist/" }, () => {
     const home = readFileSync(new URL("index.md", dist), "utf8");
-    assert.match(home, /^# Where ideas/m);
+    assert.match(home, /^# Software and AI built around how you work/m);
     assert.doesNotMatch(home, /<script|<nav|<footer/);
     assert.ok(existsSync(new URL("about/index.md", dist)));
     assert.ok(!existsSync(new URL("404.md", dist)));
