@@ -1,5 +1,5 @@
 ---
-title: "What technical due diligence checks before a raise or acquisition"
+title: "What technical due diligence checks before a raise or sale"
 image: ../../assets/blog/technical-due-diligence-explained-image.jpg
 imageAlt: "A jeweler's loupe next to a white cube on a blue surface"
 cover: ../../assets/blog/technical-due-diligence-explained.png

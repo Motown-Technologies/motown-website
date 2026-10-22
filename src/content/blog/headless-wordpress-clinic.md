@@ -1,5 +1,5 @@
 ---
-title: "How a clinic kept WordPress for editing and made its site static"
+title: "How a clinic kept WordPress for editing and went static"
 image: ../../assets/blog/headless-wordpress-clinic-image.jpg
 imageAlt: "An empty blue stage with ropes and pulleys visible backstage"
 cover: ../../assets/blog/headless-wordpress-clinic.png

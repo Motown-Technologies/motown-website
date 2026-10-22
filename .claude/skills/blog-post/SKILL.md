@@ -26,7 +26,8 @@ them that way. If the post needs a fact you don't have, ask.
   - Say what the reader gets: a decision, a method, or what changed for a
     client. Case-study posts name the kind of client and what was done
     ("How an auction house replaced its spreadsheets with a real app").
-  - 45 to 65 characters; posts have no brand suffix in the browser title.
+  - 45 to 60 characters (Google trims longer titles on mobile); posts have
+    no brand suffix in the browser title.
   - Plain sentence case. No riddles, slogans or two-fragment lines
     ("X. Y.") as the whole title; a clever line can open the post instead.
     A colon only to separate topic from angle.

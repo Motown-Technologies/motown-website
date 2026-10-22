@@ -1,5 +1,5 @@
 ---
-title: "What an AI-built prototype needs before it's ready for real users"
+title: "What an AI-built prototype needs before real users arrive"
 image: ../../assets/blog/what-your-prototype-skipped-image.jpg
 imageAlt: "A half-built stone arch supported by wooden scaffolding on a blue floor"
 cover: ../../assets/blog/what-your-prototype-skipped.png

@@ -1,5 +1,5 @@
 ---
-title: "When a startup needs a fractional CTO instead of a full-time one"
+title: "Fractional vs. full-time CTO: which a startup needs"
 image: ../../assets/blog/fractional-cto-for-startups-image.jpg
 imageAlt: "A brass compass on a blue surface casting a long shadow"
 cover: ../../assets/blog/fractional-cto-for-startups.png
