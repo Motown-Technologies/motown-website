@@ -8,13 +8,13 @@ pubDate: 2026-10-14
 relatedPages: ["/case-studies/endoscopy-center", "/migrate-from-wordpress"]
 ---
 
-An outpatient endoscopy center ran its public website as a full WordPress install. Every time a patient opened a page, PHP, a database and a stack of plugins put that page together on the spot. The staff liked editing it. Nobody liked how it loaded.
+An outpatient endoscopy center kept WordPress for editing and moved its public site to static HTML, which patients load without touching WordPress. Staff still publish the way they always have, and the public pages keep loading even when WordPress is down.
 
-The usual fix for a slow WordPress site is to replace WordPress. That works, and it also takes away the one tool the office already knows how to use. We kept WordPress exactly where it was and changed everything in front of it.
+Before the rebuild, the site was a full WordPress install. Every time a patient opened a page, PHP, a database and a stack of plugins put that page together on the spot. The staff liked editing it. Nobody liked how it loaded. Replacing WordPress would have fixed the speed and taken away the one tool the office already knew, so we kept it for editing and changed everything in front of it.
 
 ## WordPress only runs when someone publishes
 
-The public site is now plain HTML pages, built ahead of time and served from hosting we run. WordPress still holds all the content: pages, provider bios, procedures and the navigation menu. The site reads that content while it builds and then serves finished files. A patient loading a page never touches WordPress at all.
+The public site is now plain HTML pages, built ahead of time and served from Appwrite Sites on infrastructure we run. WordPress still holds all the content: pages, provider bios, procedures and the navigation menu. The site reads that content while it builds and then serves finished files. A patient loading a page never touches WordPress at all.
 
 That one decision changes what can go wrong. A slow database, a plugin update or an expiring certificate on the editing side used to slow down or break the public site. Now each of those is an inconvenience for staff, and patients don't notice. The CMS could be down all week and the public pages would keep loading.
 
@@ -32,7 +32,7 @@ Moving WordPress out of the way of patients moves the risk into the build, so mo
 
 Every piece of content WordPress sends is checked before it's used. If a field gets renamed or a content type changes shape, the build stops with a clear error and the live site stays as it was. A production build never fills a gap with placeholder text. If something can't be fetched, the page comes out as a not-found page, and those pages are kept out of search results.
 
-HTML written in the editor is cleaned on the way in, with scripts, forms and embedded frames stripped out. Every change to the code is also built against a stand-in copy of WordPress before it goes anywhere near the live site, so a broken build never reaches patients.
+HTML written in the editor is cleaned on the way in, with scripts, forms and embedded frames stripped out. Every change to the code is also built against a mock of the WordPress API before it goes anywhere near the live site, so a broken build never reaches patients.
 
 ## The small things editors used to fix by hand
 
