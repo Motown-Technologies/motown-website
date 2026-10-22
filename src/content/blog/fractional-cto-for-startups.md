@@ -18,9 +18,9 @@ At almost every startup we see without senior technical leadership, the same wor
 
 - What to build, what to skip and in what order, planned against the runway.
 - Architecture and stack choices the team can still defend in two years, made for its size, budget and realistic scale.
-- The scope of the first version, cut down to the one loop that proves value.
-- The technical part of the fundraising deck, and a codebase that holds up when investors look at it.
-- Security and compliance, including the SOC 2 questions enterprise buyers raise before they sign.
+- The scope of the first version, [cut down to the one loop](/blog/mvp-what-to-build-first) that proves value.
+- The technical part of the fundraising deck, and a codebase that holds up when [investors look at it](/blog/technical-due-diligence-explained).
+- Security and compliance, including the [SOC 2 questions](/soc-2-readiness) enterprise buyers raise before they sign.
 - Scoping the first engineering roles and running the technical screens.
 
 None of these gaps look like mistakes at the time. Six months of building before talking to a user feels like progress. So does picking a stack because a blog post recommended it, or letting an agency build something nobody in-house can maintain. The cost shows up later, when undoing those choices takes far longer than making them did.
@@ -35,7 +35,7 @@ Then there's spend (cloud bills, overlapping tools and contractor rates) and ris
 
 An advisor tells you what they would do. A fractional CTO makes the call, puts their name on it, and is still there when it plays out.
 
-## Three ways to start
+## How an engagement starts
 
 Founders usually get in touch at one of three moments: with an idea and no product yet, with a team but no senior technical lead, or while preparing to raise or sell. The shape of the work depends on which.
 
@@ -53,8 +53,10 @@ Retainers go bad when nobody can point at the output, so ours produce the same t
 - A spend report covering what you're paying for and what to cut
 - A technical summary ready for the board
 
-## How to tell if you need one
+## Fractional or full-time: how to tell
 
-If nobody on the team can settle a technical disagreement, if architecture gets decided by whoever argues hardest, or if the board asks about scale and the answer is improvised, that is the gap a fractional CTO fills.
+Hire a full-time CTO when the gap stops being occasional. While the need is the four or five calls a month that are expensive to get wrong, a fractional CTO covers it. A retainer is meant to hold the role until you make that hire, and we can help scope it and run its technical interviews.
+
+Until then, the signs are easy to spot. If nobody on the team can settle a technical disagreement, if architecture gets decided by whoever argues hardest, or if the board asks about scale and the answer is improvised, that is the gap a fractional CTO fills.
 
 Read more about how we work as a [fractional CTO](/fractional-cto) or through [startup consulting](/startup-consulting). If you'd like to talk through where your company is, [book a founder call](/contact).
