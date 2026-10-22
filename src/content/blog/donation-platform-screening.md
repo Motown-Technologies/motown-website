@@ -8,7 +8,7 @@ pubDate: 2026-09-09
 relatedPages: ["/case-studies/donation-platform"]
 ---
 
-We're building a giving platform where nonprofits run campaigns and always-on donation pages, and donors give by card, digital wallet or a grant from a donor-advised fund. Once a platform takes payments on behalf of other organizations, it picks up obligations that have little to do with payments: sanctions screening, checking that a charity is what it says it is, and keeping records that still hold up years later.
+We put sanctions screening inside the one function every donation passes through, so every donor is checked before a record is written or a payment exists. The platform we're building lets nonprofits run campaigns and always-on donation pages, and donors give by card, digital wallet or a grant from a donor-advised fund. Once a platform takes payments on behalf of other organizations, it picks up obligations that have little to do with payments: sanctions screening, checking that a charity is what it says it is, and keeping records that still hold up years later.
 
 We treated those obligations as part of the architecture from the first week. Most of them are cheap to get right at the start and expensive to add once money is already moving.
 
@@ -16,7 +16,7 @@ We treated those obligations as part of the architecture from the first week. Mo
 
 Every donor is checked against the sanctions lists before anything else happens. There is one function that every donation route goes through to identify the donor, and the check lives there. It runs before a record is written or a payment is created, for card gifts and donor-advised fund grants alike.
 
-A check that sits beside the main path instead of inside it tends to get routed around eventually, for example when someone adds a new way to give.
+A check that sits beside the main path tends to get routed around eventually, for example when someone adds a new way to give.
 
 The watchlists are stored locally and queried in about half a millisecond. No outside vendor sits between a donor and their gift, and screening adds no noticeable wait.
 
@@ -38,13 +38,13 @@ Sanctions screening blocks the donation, because violations carry strict liabili
 
 A sanctions list might write "SMITH, John" and a donor types "John Smith." The platform normalizes both into the same set of words, with accents, punctuation, titles and company suffixes stripped out, so those compare as equal.
 
-Tuning that match took real testing. In our July tests, a naive "is this name contained in a listed name" check flagged six of twenty ordinary donor names. "Maria Garcia" sits inside a longer listed name, and a platform that declines her gift is worse than useless. Allowing exactly one extra word brought it down to three of twenty, and those three are genuine possible matches that a person should review.
+Tuning that match took real testing. In our testing, a naive "is this name contained in a listed name" check flagged six of twenty ordinary donor names. "Maria Garcia" sits inside a longer listed name, and a platform that declines her gift is worse than useless. Allowing exactly one extra word brought it down to three of twenty, and those three are genuine possible matches that a person should review.
 
-No setting gets you zero false alarms and zero misses at the same time. The work is choosing where to sit, measuring that choice against the real lists, and writing down what it still lets through. This system has no fuzzy matching yet, so a name transliterated differently can slip past. That gap is documented in the repository instead of glossed over.
+No setting gets you zero false alarms and zero misses at the same time. The work is choosing where to sit, measuring that choice against the real lists, and writing down what it still lets through. This system has no fuzzy matching yet, so a name transliterated differently can slip past. That gap is written down in the repository.
 
 ## Money that can't be sent twice
 
-Donor-advised fund providers are third-party services that don't guarantee a retried request won't be processed twice. So every provider runs through the same pattern on our side: the grant is reserved before the request goes out, a response that comes back unclear is handled as its own case instead of being assumed a success, and receipts come from our own record.
+Donor-advised fund providers are third-party services that don't guarantee a retried request won't be processed twice. So every provider runs through the same pattern on our side: the grant is reserved before the request goes out, a response that comes back unclear is handled as its own case and never assumed to be a success, and receipts come from our own record.
 
 Donations are direct charges to the receiving organization, and the platform never holds a balance of its own. Each organization's credentials are encrypted, and production refuses to start if the encryption key is missing.
 
@@ -52,6 +52,6 @@ Donations are direct charges to the receiving organization, and the platform nev
 
 The platform is still being built, and the README has a section for known limitations: list imports are still run by hand instead of on a schedule, one security migration is waiting behind feature flags for the frontend release, and a rate-limiting ceiling stays in place until shared counters land.
 
-We think that section is as useful as the features list. Whoever works on the system next inherits those limits as decisions instead of discovering them as surprises.
+We think that section is as useful as the features list. Whoever works on the system next starts from a written list of known limits.
 
-The [donation platform case study](/case-studies/donation-platform) has the full technical detail. If your product moves payments, donations or regulated data, [tell us what it does and who you answer to](/contact), and we'll tell you which obligations belong in the architecture now and which can wait.
+The [donation platform case study](/case-studies/donation-platform) has the full technical detail. If your product moves payments, donations or [regulated data](/soc-2-readiness), [tell us what it does and who you answer to](/contact), and we'll tell you which obligations belong in the architecture now and which can wait.
