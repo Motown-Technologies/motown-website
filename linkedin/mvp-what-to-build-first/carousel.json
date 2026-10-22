@@ -11,7 +11,7 @@
         },
         {
             "title": "Build the loop properly",
-            "body": "Accounts, payments, backups and a deploy pipeline from day one. Small scope is no excuse for shaky plumbing."
+            "body": "Accounts, payments, backups and a deploy pipeline from day one, even in a small first version."
         },
         {
             "title": "Skip the scale you don't have",
@@ -19,7 +19,7 @@
         },
         {
             "title": "Own it from the first commit",
-            "body": "Your repo, your accounts, your deploy button. A new engineer can pick it up without calling us."
+            "body": "The repo, accounts and deploy button are yours, so a new engineer can pick it up without calling us."
         }
     ]
 }

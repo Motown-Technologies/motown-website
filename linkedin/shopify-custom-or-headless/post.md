@@ -8,8 +8,6 @@ A slow product page, a search box that can't handle a typo, or a checkout that a
 
 When store owners bring us that problem, the question is usually about platforms. Stay on Shopify, rebuild the storefront on what you have, or go headless?
 
-Here's how we think about it:
-
 • Shopify does more than most people assume. Custom themes, Shopify Functions and checkout extensions cover a lot of what stores think the platform can't do.
 • A surprising amount of the work is removing things. Many stores carry a dozen apps, several doing the same job, all loading on every page.
 • Headless makes sense when the platform itself is the limit: the theme can't render the brand, or you're running a separate store for every market.

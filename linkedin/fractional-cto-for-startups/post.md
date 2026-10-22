@@ -16,7 +16,7 @@ Here's what usually goes unowned without a technical lead:
 • Security questions from enterprise buyers
 • The technical section of the board update
 
-A fractional CTO covers that for a day or two a week. Decisions get written down with their tradeoffs. Hiring gets a proper technical screen. The board gets answers from someone who can handle the follow-up.
+A fractional CTO covers that for a day or two a week. Decisions get written down with their tradeoffs, hires get a proper technical screen, and the board hears from someone who can handle the follow-up questions.
 
 We start every engagement with a two-week audit of the stack, the team and the roadmap. It ends with written findings, and there's no obligation to continue.
 

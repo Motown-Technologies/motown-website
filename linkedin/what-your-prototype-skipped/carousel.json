@@ -7,7 +7,7 @@
         },
         {
             "title": "Real sign-in and permissions",
-            "body": "Proper authentication, role-based access and secrets kept out of the code, in place of anyone being able to sign in."
+            "body": "Proper authentication, role-based access and secrets kept out of the code, so only the right people can sign in."
         },
         {
             "title": "The paths a demo never takes",

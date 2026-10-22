@@ -10,7 +10,7 @@ Our first month produced no features. We spent it making the system runnable, de
 
 Over three years the site was rebuilt three times, and each rebuild had a reason: search engines couldn't see the pages, a framework was reaching end of support, and editors couldn't publish without a developer.
 
-Every step was built to be reversible. The old API stayed running. Rollback was one setting. The content migration copied records and never deleted them, and the old tables stayed for a month after the switch.
+Every step was built to be reversible: the old API stayed running, rollback was one setting, and the content migration copied records without deleting them. The old tables stayed for a month after the switch.
 
 Today the site is 352 pages of static HTML. Editors publish their own content, the site rebuilds itself, and a change that would break it fails in the build before it reaches production.
 

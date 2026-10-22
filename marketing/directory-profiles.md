@@ -85,7 +85,7 @@ size, client focus split.
 
 Set it up as a **service-area business**: hide the street address and list
 service areas instead. Google limits service areas to the region you
-actually travel to, so list the New York area; the description covers
+travel to, so list the New York area; the description covers
 remote work across the US.
 
 **Business name:** Motown Solutions (no keywords added; Google suspends

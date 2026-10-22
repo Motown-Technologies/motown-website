@@ -20,7 +20,7 @@ Full write-up in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/headless-wordpress-clinic.pdf)
 
-Document title: Keep WordPress. Take it off the public site.
+Document title: WordPress for editors, static pages for patients
 
 How an endoscopy center kept WordPress for its staff and stopped patients from waiting on it. Swipe through, and the full write-up is in the comments.
 
