@@ -23,7 +23,7 @@ const capabilities = [
     },
     {
         title: "LLM Fine-Tuning",
-        desc: "Adapt frontier models to your data, tone, and judgment, with rigorous evaluation at every step.",
+        desc: "Adapt frontier models to your data and tone, and evaluate them at every step.",
         icon: SoftwareIcon,
         bullets: [
             "Supervised fine-tuning (SFT) & DPO",
@@ -282,7 +282,7 @@ const techBlocks = [
                     <p
                         class="text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
                     >
-                        We start from your problem rather than the model, and we only ship what we can measure.
+                        We start from your problem and only ship what we can measure.
                     </p>
                 </div>
             </div>
@@ -331,7 +331,7 @@ const techBlocks = [
                     techBlocks.map((block) => (
                         <div class="p-8 md:p-10 border-ink border-b md:[&:nth-child(odd)]:border-r md:[&:nth-child(n+3)]:border-b-0 last:border-b-0">
                             <div class="font-mono text-xs uppercase tracking-eyebrow text-ink-muted mb-6">
-                                — {block.title}
+                                {block.title}
                             </div>
                             <ul class="grid grid-cols-2 gap-y-2 gap-x-4 text-sm md:text-base">
                                 {block.items.map((tech) => (
