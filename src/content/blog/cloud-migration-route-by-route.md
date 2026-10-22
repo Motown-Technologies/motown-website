@@ -8,6 +8,8 @@ pubDate: 2026-09-03
 relatedPages: ["/cloud-migration-services"]
 ---
 
+We migrate applications from AWS, GCP or Azure to Cloudflare route by route, behind the DNS you already have, so users keep the same URLs while each piece switches over.
+
 When a company asks us to look at its AWS, GCP or Azure bill, the expensive part is rarely the compute. It's egress, capacity reserved for a peak that hardly ever comes, and managed services priced for a scale the business hasn't reached.
 
 Most of a typical application can move to Cloudflare cleanly. The hard part is knowing which pieces move, and in what order, so the switch is uneventful for the people using the app.
@@ -25,7 +27,7 @@ Being honest about that last group is what keeps the cutover boring. A plan that
 ## Where each piece usually goes
 
 - API routes and the glue between services move to Workers. There are no instances to size, and nothing sits idle waiting for a peak that arrives twice a year.
-- Static sites and server-rendered frontends move to Pages. The CDN, TLS and preview environments come with the platform, so there's no need to piece them together from four separate services.
+- Static sites and server-rendered frontends move to Pages. The CDN, TLS and preview environments come with the platform, so there's no need to piece them together from four separate services. For apps built on these from the start, see [cloud application development](/cloud-application-development).
 - Files in S3 move to R2, which uses the same S3 API with no egress fees. For anything that serves files to users, that line item alone is often the whole business case.
 - Small relational databases move to D1. Postgres and MySQL databases that need to stay put get Hyperdrive in front of them, so a Worker isn't paying for a cold connection on every request.
 - Scheduled jobs become Cron Triggers and background work becomes Queues. The server whose only job was running crontab can be retired.
@@ -38,7 +40,7 @@ The cutover happens in steps. Because traffic already flows through DNS you cont
 
 ## What changes on the bill
 
-The legacy cloud bill was designed around instances and regions. Most applications built in the last decade don't need either, and they pay every month for the mismatch. After a migration, the usual changes look like this:
+The legacy cloud bill was designed around instances and regions. Many applications don't need either, and they pay every month for the mismatch. After a migration, the usual changes look like this:
 
 - Egress on every file a user downloads goes away with R2.
 - Instances sized for peak and idle the rest of the month become Workers billed per request, which scale to zero when traffic is quiet.
