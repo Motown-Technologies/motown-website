@@ -8,11 +8,9 @@ pubDate: 2026-09-11
 relatedPages: ["/prototype-to-production"]
 ---
 
-It has never been faster to get a working app in front of someone. A no-code tool or an AI coding assistant can turn an idea into a demo in days, and for finding out whether an idea is worth pursuing, that speed is useful.
+Before an AI-built or no-code prototype can take real users, it needs data that survives a redeploy, real sign-in and permissions, handling for the paths a demo never takes, hardened connections to the services it depends on, and a way to ship and roll back.
 
-The problems show up when real customers arrive. A demo only has to work for one person following one path through the screens, and most prototypes are built with that in mind. The second user, the unexpected click and the redeploy that wipes the data all come later.
-
-Whether a prototype was vibe-coded, generated with AI or built on a no-code platform, these are the layers we add before it can run for real.
+A no-code tool or an AI coding assistant can turn an idea into a demo in days, and that speed is useful for finding out whether an idea is worth pursuing. A demo only has to work for one person following one path through the screens, though, and most prototypes are built with that in mind. Whether yours was vibe-coded, generated with AI or built on a no-code platform, these are the layers we add before it runs for real.
 
 ## Data that survives a redeploy
 
@@ -22,15 +20,15 @@ A production app needs a real schema, migrations so its structure can change wit
 
 ## Real sign-in and permissions
 
-Prototypes often have hard-coded secrets and let anyone sign in. That is fine on a laptop and a serious problem once customer data is involved.
+Prototypes often have hard-coded secrets and let anyone sign in. That is fine on a laptop and a serious problem once customer data is involved. In one rebuild we took on, the "submitted by" field was a dropdown of six hard-coded names, because the demo had no users at all.
 
-We add proper authentication, role-based access so each person only reaches what they should, and secrets that are managed outside the code. Those are the guardrails that keep a live app safe.
+We add proper authentication, role-based access so each person only reaches what they should, and secrets that are managed outside the code.
 
 ## The paths a demo never takes
 
 A demo sticks to the happy path. That is why so many prototypes work on the first try and break on the second user.
 
-Production code runs background jobs and queues for the work that shouldn't hold up a page, and its business logic has to keep working when something goes wrong partway through. We test it under real load, with proper error handling, before customers rely on it.
+Production code runs background jobs and queues for the work that shouldn't hold up a page, and its business logic has to keep working when something goes wrong partway through. We test it under real load, with proper error handling, before customers rely on it. The screens people touch also need to be accessible and responsive, and they need to hold up to what a paying customer expects.
 
 ## The services it depends on
 
@@ -42,14 +40,10 @@ Underneath that, we connect the app to the cloud it runs on (AWS, GCP or Azure),
 
 Prototypes tend to be deployed by hand, with no way back if a release goes wrong. We set up hosting, automated CI/CD, monitoring and scaling, so a release is routine and a bad one can be rolled back.
 
-## An interface built for a real audience
-
-The screens people touch need to be accessible and responsive, and they need to hold up to what a paying customer expects. A demo audience is usually more forgiving than that.
-
-## A worked example
+## Example: a senior-care prototype rebuilt for health data
 
 We wrote about one of these rebuilds in detail: [a senior-care operator's low-code prototype](/blog/prototype-to-production-health-data) that had exactly the right workflow and no way to hold real resident records. The screens stayed the same and almost everything underneath changed.
 
 ## Where to start
 
-A prototype that works is a good starting point, because the idea has already been tested. If you have one, whether it was vibe-coded, AI-built or got stuck at 80%, [send it to us](/contact). We'll tell you what stands between it and an app you can ship, and how quickly we can get there. You can also read more about how we approach [prototype to production](/prototype-to-production).
+A prototype that works is a good starting point, because the idea has already been tested. If you have one, whether it was vibe-coded, AI-built or got stuck at 80%, [send it to us](/contact). We'll tell you what stands between it and an app you can ship. Most prototypes take roughly 4 to 8 weeks to make production-ready. You can also read more about how we approach [prototype to production](/prototype-to-production).
