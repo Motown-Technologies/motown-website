@@ -510,5 +510,57 @@ const organization = {
                 document.addEventListener("astro:page-load", reveal);
             })();
         </script>
+
+        <!-- Visit path for the contact form. Kept in this tab's sessionStorage
+             (no cookies) and only leaves the browser if the visitor submits
+             the form, which adds it as extra fields. The ClientRouter swaps
+             pages without reloads, so document.referrer only covers the
+             landing page; the path has to be recorded here. -->
+        <script is:inline data-journey>
+            (() => {
+                const KEY = "motown:journey";
+                const read = () => {
+                    try {
+                        return JSON.parse(sessionStorage.getItem(KEY)) || null;
+                    } catch {
+                        return null;
+                    }
+                };
+                const record = () => {
+                    const j = read() || {};
+                    if (!j.landing) {
+                        const ref = document.referrer;
+                        const params = new URLSearchParams(location.search);
+                        j.landing = location.pathname + location.search;
+                        j.referrer = ref && !ref.startsWith(location.origin) ? ref : "";
+                        j.campaign = ["utm_source", "utm_medium", "utm_campaign"]
+                            .filter((k) => params.get(k))
+                            .map((k) => `${k}=${params.get(k)}`)
+                            .join("&");
+                        j.pages = [];
+                    }
+                    if (j.pages.at(-1) !== location.pathname) j.pages.push(location.pathname);
+                    j.pages = j.pages.slice(-15);
+                    try {
+                        sessionStorage.setItem(KEY, JSON.stringify(j));
+                    } catch {}
+                };
+                // Extra form fields describing how the visitor got to the form.
+                window.motownJourneyFields = () => {
+                    const j = read();
+                    if (!j) return {};
+                    const before = j.pages.filter((p) => p !== location.pathname).at(-1);
+                    return {
+                        "Landing page": j.landing,
+                        "Referrer": j.referrer || "(direct or unknown)",
+                        "Campaign": j.campaign || "(none)",
+                        "Page before contact": before || "(came straight to contact)",
+                        "Pages viewed": j.pages.join(" > "),
+                    };
+                };
+                record();
+                document.addEventListener("astro:page-load", record);
+            })();
+        </script>
     </body>
 </html>

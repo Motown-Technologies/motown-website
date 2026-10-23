@@ -388,6 +388,11 @@ const faqs = [
 
         try {
             const formData = new FormData(form);
+            // How the visitor got here (recorded by BaseLayout); shows up as
+            // extra fields in the Web3Forms email.
+            for (const [k, v] of Object.entries(window.motownJourneyFields?.() ?? {})) {
+                formData.append(k, v);
+            }
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 body: formData,
