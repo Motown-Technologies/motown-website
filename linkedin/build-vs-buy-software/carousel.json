@@ -1,0 +1,25 @@
+{
+    "cover": "Build or buy: when custom software beats SaaS",
+    "slides": [
+        {
+            "title": "Buy when the work is the same everywhere",
+            "body": "Payroll, email and accounting are solved problems. The vendor has already met the edge cases you haven't."
+        },
+        {
+            "title": "A spreadsheet sits beside the tool",
+            "body": "When people keep one open to do the part the tool can't, you're already running a second system by hand."
+        },
+        {
+            "title": "Count every cost, not the subscription",
+            "body": "Migration, seats as you hire, renewal increases, hours on workarounds, and what it would cost to leave."
+        },
+        {
+            "title": "Buy the standard parts, build your own",
+            "body": "Keep the tools that work and build a thin layer for what's specific to you, connected through their APIs."
+        },
+        {
+            "title": "Check the exit before you sign",
+            "body": "Make sure the tool has a decent API and lets you export your data, even if you have no plans to build yet."
+        }
+    ]
+}
