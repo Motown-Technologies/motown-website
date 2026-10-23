@@ -35,8 +35,8 @@ knowledge, with these limits:
   - Name the topic in the first few words, the way a reader would search
     for it ("MVP", "WordPress migration", "technical due diligence").
   - Say what the reader gets: a decision, a method, or what changed for a
-    client. Case-study posts name the kind of client and what was done
-    ("How an auction house replaced its spreadsheets with a real app").
+    client. Case-study posts are titled by the reader's topic, not the client
+    ("Signs your team has outgrown its spreadsheets").
   - 45 to 60 characters (Google trims longer titles on mobile); posts have
     no brand suffix in the browser title.
   - Plain sentence case. No riddles, slogans or two-fragment lines
@@ -59,6 +59,11 @@ topics, `software` for everything else), `relatedPages` (the site paths the post
   with a "Scheduled" label.
 - Never date a post before the pages it links to existed
   (`git log --diff-filter=A --format=%ad --date=short -- <page file>`).
+- Posts drawn from a case study are not case studies. Open with the
+  reader's problem or decision, make each heading a takeaway, and use the
+  client as one example inside the argument. Leave the build inventory
+  (screen counts, stage lists, implementation detail) to the case study page
+  and link to it. `auction-house-spreadsheets.md` is the model.
 - Body: 600-1200 words, `##` headings, short paragraphs. Write like the case
   studies: concrete, first person plural, says what was decided and why.
   Link to the relevant service or case-study pages and end with a line
