@@ -40,3 +40,21 @@
     --tracking-eyebrow: 0.18em;
     --tracking-navlabel: 0.15em;
 }
+
+/* Hero contour lines drift slowly side to side. The paths run 50 units past
+   the viewBox on each side, so a 40px drift never shows an edge. */
+@keyframes hero-drift {
+    from { transform: translateX(-40px); }
+    to { transform: translateX(40px); }
+}
+.hero-drift {
+    animation: hero-drift 16s var(--ease-in-out) infinite alternate;
+}
+.hero-drift--slow {
+    animation-duration: 24s;
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-drift {
+        animation: none;
+    }
+}
