@@ -1,0 +1,25 @@
+{
+    "cover": "AI agent or plain automation? Four questions",
+    "slides": [
+        {
+            "title": "Can you write the rules down?",
+            "body": "If the person doing the job explains it as a list of conditions, that's automation. \"It depends, you just have to read it\" is where AI fits."
+        },
+        {
+            "title": "How varied are the inputs?",
+            "body": "Forms and spreadsheets rarely need a model. Free text, photos and documents often do, but only to turn them into structured data."
+        },
+        {
+            "title": "What does a mistake cost?",
+            "body": "A model can be right for weeks and then wrong in a way nobody predicted. Expensive actions need a person to approve them."
+        },
+        {
+            "title": "Does the path change case by case?",
+            "body": "If each case means looking something up and deciding what to check next, an agent may fit. Same five steps every time? It doesn't."
+        },
+        {
+            "title": "Often the answer is one AI step",
+            "body": "Ordinary automation runs the process, and a model handles the one part a rule can't, like reading a messy request."
+        }
+    ]
+}
