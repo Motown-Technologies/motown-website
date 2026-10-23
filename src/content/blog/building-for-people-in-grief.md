@@ -6,6 +6,7 @@ cover: ../../assets/blog/building-for-people-in-grief.png
 description: "How the people a grief-support nonprofit serves shaped its public site, members' app and back office, from the first question to the last email."
 pubDate: 2026-10-07
 relatedPages: ["/case-studies/nonprofit-community"]
+category: case-stories
 ---
 
 A small nonprofit we built for supports women through the loss of a parent. It runs community events, grief support groups and subsidized therapy, and it marks the anniversaries that come around every year. When we started, it had no software at all. The story, the applications and the community all lived in conversations.

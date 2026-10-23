@@ -6,6 +6,7 @@ cover: ../../assets/blog/shopify-custom-or-headless.png
 description: "How we help stores choose between Shopify, a custom experience on their current platform and a headless front end, and when headless is the wrong call."
 pubDate: 2026-09-30
 relatedPages: ["/ecommerce-development", "/shopify-development", "/headless-commerce-development"]
+category: software
 ---
 
 Fix what's losing sales on the platform you have first, and go headless only when the platform itself is the limit and someone can maintain a separate front end. For most stores, that means Shopify with a custom theme or a better storefront on their current platform.

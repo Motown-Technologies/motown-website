@@ -6,6 +6,7 @@ cover: ../../assets/blog/inherited-codebase.png
 description: "What we do when a client hands us someone else's codebase that still works, and how one practice ended up with a site that publishes itself."
 pubDate: 2026-09-24
 relatedPages: ["/case-studies/healthcare-practice"]
+category: case-stories
 ---
 
 When you take over a codebase that still works, make it reproducible first, change one thing at a time for a reason you can name, and keep a way back from every step. That is how we handled a multi-site healthcare practice that came to us in August 2023 with a website someone else had built.

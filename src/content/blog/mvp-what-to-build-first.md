@@ -6,6 +6,7 @@ cover: ../../assets/blog/mvp-what-to-build-first.png
 description: "How we scope a first version: find the one user journey that proves the idea, build it properly, and park everything else in writing."
 pubDate: 2026-08-13
 relatedPages: ["/mvp-development"]
+category: software
 ---
 
 Build the one user journey that proves your idea, build it properly, and write everything else on a list for later. That keeps a first version to eight to twelve weeks.

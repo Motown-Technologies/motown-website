@@ -6,6 +6,7 @@ cover: ../../assets/blog/prototype-to-production-health-data.png
 description: "A senior-care operator's low-code prototype had the right workflow. Here is what it took to rebuild it as an app that can safely hold resident records."
 pubDate: 2026-08-19
 relatedPages: ["/case-studies/senior-care-concierge", "/prototype-to-production"]
+category: case-stories
 ---
 
 We rebuilt a senior-care operator's low-code prototype as an app that can hold protected health information. It kept the screens staff already knew and added invite-only accounts, per-facility data separation, encrypted credentials and an audit log.

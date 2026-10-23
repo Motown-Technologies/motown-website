@@ -1,0 +1,37 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import PostList from "../../../../components/PostList.astro";
+import { CATEGORIES, getPosts, type Category } from "../../../../lib/posts";
+
+// /blog/category/ai, /blog/category/ai/2 ... Categories with no live posts get no page.
+export const getStaticPaths = (async ({ paginate }) => {
+    const pages = [];
+    for (const category of Object.keys(CATEGORIES) as Category[]) {
+        const posts = await getPosts(category);
+        if (posts.length) pages.push(...paginate(posts, { params: { category }, props: { category }, pageSize: 12 }));
+    }
+    return pages;
+}) satisfies GetStaticPaths;
+
+const { page, category } = Astro.props;
+const label = CATEGORIES[category as Category];
+const descriptions: Record<Category, string> = {
+    "case-stories": "What we built for clients and why it held: case stories from healthcare, nonprofits, auctions and more, by Motown Solutions.",
+    ai: "Plain explanations of AI agents, embeddings, RAG, evals and the rest, from a team that builds AI features for clients.",
+    software: "Guides to building, buying and fixing software: MVPs, migrations, integrations and technical decisions, from Motown Solutions.",
+};
+---
+
+<BaseLayout
+    meta_title={`${label}${page.currentPage > 1 ? `, page ${page.currentPage}` : ""} | Motown Solutions Blog`}
+    meta_description={descriptions[category as Category]}
+>
+    <section class="relative border-b-2 border-ink overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
+            <h1 class="font-display font-bold text-display text-ink text-balance">{label}</h1>
+            <p class="mt-8 text-lg md:text-xl text-ink-muted leading-relaxed text-pretty max-w-2xl">{descriptions[category as Category]}</p>
+        </div>
+    </section>
+    <PostList page={page} category={category as Category} />
+</BaseLayout>

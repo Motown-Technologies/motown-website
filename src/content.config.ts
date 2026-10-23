@@ -17,6 +17,8 @@ const blog = defineCollection({
         // Site paths this post draws on, e.g. "/case-studies/auction-operations".
         // Those pages list the post under "Related posts".
         relatedPages: z.array(z.string()).default([]),
+        // Groups posts on /blog and /blog/category/<category>.
+        category: z.enum(["case-stories", "ai", "software"]),
         description: z.string(),
         // Orders posts (newest first); not shown on the site.
         pubDate: z.coerce.date(),

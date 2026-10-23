@@ -6,6 +6,7 @@ cover: ../../assets/blog/technical-due-diligence-explained.png
 description: "What a technical due diligence checks before a raise or an acquisition, explained for founders and investors who don't read code."
 pubDate: 2026-10-16
 relatedPages: ["/technical-due-diligence"]
+category: software
 ---
 
 A technical due diligence checks six things before an investment or acquisition closes: architecture, code quality, security, infrastructure and cost, key-person risk, and IP and licensing. Whoever does the reading, whether an investor's engineer, an acquirer's team or an enterprise buyer's security reviewer, writes up what they find, and that report affects the price.

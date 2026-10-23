@@ -1,0 +1,98 @@
+---
+// The post list shared by /blog and /blog/category/<category>: category
+// filters, one row per post, and newer/older pagination.
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import { CATEGORIES, getPosts, isScheduled, type Category } from "../lib/posts";
+
+interface Props {
+    page: Page<CollectionEntry<"blog">>;
+    category?: Category;
+}
+const { page, category } = Astro.props;
+const posts = page.data;
+const all = await getPosts();
+const filters = [
+    { label: "All", href: "/blog", count: all.length, active: !category },
+    ...Object.entries(CATEGORIES)
+        .map(([key, label]) => ({ key, label, count: all.filter((p) => p.data.category === key).length }))
+        .filter((c) => c.count > 0)
+        .map((c) => ({ label: c.label, href: `/blog/category/${c.key}`, count: c.count, active: c.key === category })),
+];
+---
+
+    <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav aria-label="Blog categories" class="mb-10 flex flex-wrap gap-x-6 gap-y-3 font-mono text-xs uppercase tracking-eyebrow">
+                {
+                    filters.map((f) => (
+                        <a
+                            href={f.href}
+                            aria-current={f.active ? "page" : undefined}
+                            class={f.active ? "text-accent underline decoration-[1.5px] underline-offset-[6px]" : "text-ink hover:text-accent transition-colors"}
+                        >
+                            {f.label} <span class="text-ink-muted">({f.count})</span>
+                        </a>
+                    ))
+                }
+            </nav>
+            {
+                posts.length === 0 ? (
+                    <p class="text-lg text-ink-muted">No posts yet.</p>
+                ) : (
+                    <div class="border-t border-ink/30">
+                        {posts.map((post) => (
+                            <a
+                                href={`/blog/${post.id}`}
+                                class="group block relative border-b border-ink/30 hover:border-ink transition-colors"
+                            >
+                                <span
+                                    aria-hidden
+                                    data-sweep
+                                    class="pointer-events-none absolute inset-0 bg-ink origin-left scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform duration-[400ms] ease-sweep group-active:duration-[120ms]"
+                                />
+                                <div class="relative grid grid-cols-12 gap-4 md:gap-8 py-10 md:py-12 px-4 md:px-6 transition-colors duration-[400ms] ease-sweep group-hover:text-paper">
+                                    {post.data.image && (
+                                        <div class="col-span-12 md:col-span-4">
+                                            <Image src={post.data.image} alt="" widths={[400, 800]} sizes="(min-width: 768px) 400px, 100vw" class="w-full aspect-[16/10] object-cover border border-ink/30" />
+                                        </div>
+                                    )}
+                                    <div class={post.data.image ? "col-span-12 md:col-span-7" : "col-span-12 md:col-span-11"}>
+                                        {(post.data.draft || isScheduled(post.data)) && (
+                                            <div class="font-mono text-[11px] md:text-xs uppercase tracking-eyebrow text-ink-muted transition-colors duration-[400ms] ease-sweep group-hover:text-paper/60 mb-4">
+                                                {post.data.draft ? "Draft" : `Scheduled ${post.data.pubDate.toISOString().slice(0, 10)}`}
+                                            </div>
+                                        )}
+                                        <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight leading-[1] mb-5 text-balance">
+                                            {post.data.title}
+                                        </h2>
+                                        <p class="text-ink-muted transition-colors duration-[400ms] ease-sweep group-hover:text-paper/80 leading-relaxed max-w-xl">
+                                            {post.data.description}
+                                        </p>
+                                        <div class="mt-5 font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted transition-colors duration-[400ms] ease-sweep group-hover:text-paper/60">
+                                            {CATEGORIES[post.data.category]}
+                                        </div>
+                                    </div>
+                                    <div class="col-span-12 md:col-span-1 md:text-right md:pt-8">
+                                        <span aria-hidden class="inline-block font-mono text-xl md:text-2xl transition-transform group-hover:translate-x-1">
+                                            →
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                )
+            }
+            {
+                page.lastPage > 1 && (
+                    <nav aria-label="Pages" class="mt-12 flex items-center justify-between font-mono text-xs uppercase tracking-eyebrow">
+                        {page.url.prev ? <a href={page.url.prev} class="link-underline">← Newer posts</a> : <span />}
+                        <span class="text-ink-muted">Page {page.currentPage} of {page.lastPage}</span>
+                        {page.url.next ? <a href={page.url.next} class="link-underline">Older posts →</a> : <span />}
+                    </nav>
+                )
+            }
+        </div>
+    </section>

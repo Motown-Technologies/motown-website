@@ -6,6 +6,7 @@ cover: ../../assets/blog/auction-house-spreadsheets.png
 description: "An auction house ran its inventory on spreadsheets, a photo folder and a group chat. We moved it to one system of record that tracks who changed what."
 pubDate: 2026-10-21
 relatedPages: ["/case-studies/auction-operations", "/spreadsheet-to-app"]
+category: case-stories
 ---
 
 An auction house we built for ran its inventory across a set of spreadsheets, a shared photo folder and a group chat. We replaced them with one app that tracks every item from intake to sale and records who changed what.

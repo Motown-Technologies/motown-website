@@ -6,6 +6,7 @@ cover: ../../assets/blog/cloud-migration-route-by-route.png
 description: "Most cloud bills are egress, idle capacity and managed services sized for a bigger company. We move apps to Cloudflare one route at a time."
 pubDate: 2026-09-03
 relatedPages: ["/cloud-migration-services"]
+category: software
 ---
 
 We migrate applications from AWS, GCP or Azure to Cloudflare route by route, behind the DNS you already have, so users keep the same URLs while each piece switches over.

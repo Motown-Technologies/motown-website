@@ -6,6 +6,7 @@ cover: ../../assets/blog/what-your-prototype-skipped.png
 description: "A no-code or AI-built prototype can prove an idea in days. Here is what it usually leaves out, and what we add before it goes in front of customers."
 pubDate: 2026-09-11
 relatedPages: ["/prototype-to-production"]
+category: software
 ---
 
 Before an AI-built or no-code prototype can take real users, it needs data that survives a redeploy, real sign-in and permissions, handling for the paths a demo never takes, hardened connections to the services it depends on, and a way to ship and roll back.

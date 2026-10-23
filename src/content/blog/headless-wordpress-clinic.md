@@ -6,6 +6,7 @@ cover: ../../assets/blog/headless-wordpress-clinic.png
 description: "An endoscopy center kept WordPress for its staff and moved it out of the way of patients. Here is how publishing works now, and why the site stays up."
 pubDate: 2026-10-14
 relatedPages: ["/case-studies/endoscopy-center", "/migrate-from-wordpress"]
+category: case-stories
 ---
 
 An outpatient endoscopy center kept WordPress for editing and moved its public site to static HTML, which patients load without touching WordPress. Staff still publish the way they always have, and the public pages keep loading even when WordPress is down.

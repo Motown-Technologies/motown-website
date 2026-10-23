@@ -6,6 +6,7 @@ cover: ../../assets/blog/when-to-leave-wordpress.png
 description: "The signs that WordPress upkeep has become a job of its own, when staying put is fine, and what moving off it involves."
 pubDate: 2026-10-09
 relatedPages: ["/migrate-from-wordpress"]
+category: software
 ---
 
 Leave WordPress when keeping the site alive takes more of your team's time than writing for it. That usually shows up years in, after enough plugins, themes and quick fixes that upkeep has become a job of its own. If updates go through cleanly and pages load fast on a phone, staying is fine.
