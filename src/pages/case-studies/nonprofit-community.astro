@@ -115,9 +115,10 @@ const rigor = [
             <path d="M-50 440 Q 150 380 350 440 T 750 440 T 1150 440 T 1550 440" />
             <path d="M-50 500 Q 150 440 350 500 T 750 500 T 1150 500 T 1550 500" />
             <path d="M-50 560 Q 150 500 350 560 T 750 560 T 1150 560 T 1550 560" />
-            <circle cx="600" cy="200" r="70" />
-            <circle cx="600" cy="200" r="110" />
-            <circle cx="600" cy="200" r="150" />
+            <!-- The rings ripple outward slowly, inner first. -->
+            <circle class="nonprofit-ring" cx="600" cy="200" r="70" />
+            <circle class="nonprofit-ring" cx="600" cy="200" r="110" />
+            <circle class="nonprofit-ring" cx="600" cy="200" r="150" />
         </svg>
 
         <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
@@ -528,3 +529,21 @@ const rigor = [
         </div>
     </section>
 </BaseLayout>
+
+<style>
+    /* 6s loop: each ring brightens and widens a little, inner to outer. */
+    @keyframes nonprofit-ring {
+        0%, 50%, 100% { transform: scale(1); opacity: 0.5; }
+        20% { transform: scale(1.05); opacity: 1; }
+    }
+    .nonprofit-ring {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: nonprofit-ring 6s ease infinite;
+    }
+    .nonprofit-ring:nth-of-type(2) { animation-delay: 0.6s; }
+    .nonprofit-ring:nth-of-type(3) { animation-delay: 1.2s; }
+    @media (prefers-reduced-motion: reduce) {
+        .nonprofit-ring { animation: none; opacity: 1; }
+    }
+</style>

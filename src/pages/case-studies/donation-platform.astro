@@ -119,6 +119,8 @@ const rigor = [
             <path d="M680 350 H 1060" />
             <path d="M1020 330 l 40 20 l -40 20" />
             <circle cx="1120" cy="350" r="40" />
+            <!-- A donation enters, is screened in the box, then reaches the charity. -->
+            <circle class="donation-packet" cx="60" cy="350" r="12" fill="currentColor" stroke="none" />
             <path d="M60 200 H 300 M60 500 H 300" />
         </svg>
 
@@ -533,3 +535,20 @@ const rigor = [
         </div>
     </section>
 </BaseLayout>
+
+<style>
+    /* 9s loop: in, held for screening, out to the charity, fade, reset. */
+    @keyframes donation-packet {
+        0% { transform: translate(0, 0); opacity: 0; }
+        6%, 12% { transform: translate(0, 0); opacity: 1; }
+        26%, 56% { transform: translate(500px, 0); opacity: 1; }
+        72%, 82% { transform: translate(1060px, 0); opacity: 1; }
+        90%, 100% { transform: translate(1060px, 0); opacity: 0; }
+    }
+    .donation-packet {
+        animation: donation-packet 9s var(--ease-in-out) infinite;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .donation-packet { animation: none; transform: translate(500px, 0); }
+    }
+</style>

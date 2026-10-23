@@ -146,6 +146,15 @@ const timeline = [
             <rect x="1060" y="180" width="80" height="60" />
             <rect x="1060" y="290" width="80" height="60" />
             <rect x="1060" y="400" width="80" height="60" />
+            <!-- Each publish builds the static pages, one after another. -->
+            <g class="endoscopy-pages" fill="currentColor" stroke="none">
+                <rect x="940" y="180" width="80" height="60" />
+                <rect x="1060" y="180" width="80" height="60" />
+                <rect x="940" y="290" width="80" height="60" />
+                <rect x="1060" y="290" width="80" height="60" />
+                <rect x="940" y="400" width="80" height="60" />
+                <rect x="1060" y="400" width="80" height="60" />
+            </g>
         </svg>
 
         <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
@@ -556,3 +565,24 @@ const timeline = [
         </div>
     </section>
 </BaseLayout>
+
+<style>
+    /* 6s loop: the six built pages fill in one by one, hold, then clear. */
+    @keyframes endoscopy-page {
+        0%, 8% { opacity: 0; }
+        16%, 70% { opacity: 0.6; }
+        84%, 100% { opacity: 0; }
+    }
+    .endoscopy-pages rect {
+        opacity: 0;
+        animation: endoscopy-page 6s ease infinite;
+    }
+    .endoscopy-pages rect:nth-child(2) { animation-delay: 0.15s; }
+    .endoscopy-pages rect:nth-child(3) { animation-delay: 0.3s; }
+    .endoscopy-pages rect:nth-child(4) { animation-delay: 0.45s; }
+    .endoscopy-pages rect:nth-child(5) { animation-delay: 0.6s; }
+    .endoscopy-pages rect:nth-child(6) { animation-delay: 0.75s; }
+    @media (prefers-reduced-motion: reduce) {
+        .endoscopy-pages rect { animation: none; opacity: 0.6; }
+    }
+</style>

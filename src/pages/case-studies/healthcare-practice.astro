@@ -114,11 +114,12 @@ const reversibility = [
             <path d="M660 640 V 180" />
             <path d="M900 640 V 300" />
             <path d="M1080 640 V 240" />
-            <circle cx="180" cy="120" r="6" />
-            <circle cx="420" cy="220" r="6" />
-            <circle cx="660" cy="180" r="6" />
-            <circle cx="900" cy="300" r="6" />
-            <circle cx="1080" cy="240" r="6" />
+            <!-- The practice's milestones light up in order, oldest first. -->
+            <circle class="practice-milestone" cx="180" cy="120" r="6" fill="currentColor" />
+            <circle class="practice-milestone" cx="420" cy="220" r="6" fill="currentColor" />
+            <circle class="practice-milestone" cx="660" cy="180" r="6" fill="currentColor" />
+            <circle class="practice-milestone" cx="900" cy="300" r="6" fill="currentColor" />
+            <circle class="practice-milestone" cx="1080" cy="240" r="6" fill="currentColor" />
         </svg>
 
         <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
@@ -550,3 +551,23 @@ const reversibility = [
         </div>
     </section>
 </BaseLayout>
+
+<style>
+    /* 7.5s loop, one milestone every 1.5s: each swells and settles. */
+    @keyframes practice-milestone {
+        0%, 20%, 100% { transform: scale(1); opacity: 0.4; }
+        6% { transform: scale(2.2); opacity: 1; }
+    }
+    .practice-milestone {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: practice-milestone 7.5s ease infinite;
+    }
+    .practice-milestone:nth-of-type(2) { animation-delay: 1.5s; }
+    .practice-milestone:nth-of-type(3) { animation-delay: 3s; }
+    .practice-milestone:nth-of-type(4) { animation-delay: 4.5s; }
+    .practice-milestone:nth-of-type(5) { animation-delay: 6s; }
+    @media (prefers-reduced-motion: reduce) {
+        .practice-milestone { animation: none; opacity: 1; }
+    }
+</style>
