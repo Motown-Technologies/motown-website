@@ -14,9 +14,20 @@ Get the topic from the user, or the page to adapt (a case study in
 `src/pages/case-studies/`, a landing page in `src/pages/`, or `public/llms.txt`).
 Read the source pages before writing.
 
-Use only facts from the site or from the user: no invented clients, numbers,
-dates, quotes or results. Case-study clients are anonymised on the site; keep
-them that way. If the post needs a fact you don't have, ask.
+Posts about Motown's own work use only facts from the site or from the user:
+no invented clients, numbers, dates, quotes or results. Case-study clients are
+anonymised on the site; keep them that way. If the post needs a fact you don't
+have, ask.
+
+General explainers (AI, software, security) may use general technical
+knowledge, with these limits:
+
+- No invented statistics, studies, quotes or client stories. Illustrate with
+  a plainly hypothetical example ("say a clinic wants...") or a published
+  case study.
+- Check anything that changes fast (model names, prices, standards, product
+  features) on the web while writing, and link the primary source.
+- Link to the matching service page so the post connects to what we sell.
 
 ## 2. Write the draft
 
@@ -39,9 +50,13 @@ them that way. If the post needs a fact you don't have, ask.
   meta description and LinkedIn preview text, so keep it under ~155
   characters), `pubDate` (today unless the user gives a date, YYYY-MM-DD;
   it only orders posts and is not shown on the site),
-  `relatedPages` (the site paths the post draws on, e.g.
+  `category` (`case-stories` for posts about client work, `ai` for AI
+topics, `software` for everything else), `relatedPages` (the site paths the post draws on, e.g.
   `["/case-studies/auction-operations", "/spreadsheet-to-app"]`; those pages
   then list the post under "Related posts"), `draft: true`.
+- A future `pubDate` schedules the post: it stays out of the live build
+  until that date, and the daily rebuild publishes it. `astro dev` shows it
+  with a "Scheduled" label.
 - Never date a post before the pages it links to existed
   (`git log --diff-filter=A --format=%ad --date=short -- <page file>`).
 - Body: 600-1200 words, `##` headings, short paragraphs. Write like the case
