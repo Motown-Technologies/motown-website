@@ -1,0 +1,29 @@
+{
+    "cover": "Open source licenses: what they ask of you",
+    "slides": [
+        {
+            "title": "Your software runs on other people's code",
+            "body": "A typical web app pulls in hundreds of open source packages, each with its own license terms."
+        },
+        {
+            "title": "Permissive: keep the notice",
+            "body": "MIT and Apache 2.0 allow use in closed commercial products. The main condition is keeping the copyright notice."
+        },
+        {
+            "title": "Copyleft: share alike when you distribute",
+            "body": "Ship software built on GPL code and you must make its source available under the same license."
+        },
+        {
+            "title": "AGPL: the one to check first",
+            "body": "It treats network use as distribution, so modified code offered over the web must have its source available."
+        },
+        {
+            "title": "Source-available isn't open source",
+            "body": "The Open Source Initiative doesn't recognise the SSPL as open source. Read the real terms before you rely on it."
+        },
+        {
+            "title": "Keep a list, review it before a deal",
+            "body": "A tool-generated license inventory, a short review rule, and another check before any sale or raise."
+        }
+    ]
+}
