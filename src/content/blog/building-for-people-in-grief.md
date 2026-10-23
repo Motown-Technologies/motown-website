@@ -11,7 +11,7 @@ category: case-stories
 
 A small nonprofit we built for supports women through the loss of a parent. It runs community events, grief support groups and subsidized therapy, and it marks the anniversaries that come around every year. When we started, it had no software at all. The story, the applications and the community all lived in conversations.
 
-We built a public site that explains the organization and takes applications, a members' app, and the back office the staff now run everything from, 47 screens in all. The feature list mattered less than one fact about the people using it: they arrive grieving, often distressed, usually on a phone, and sometimes without much patience for technology.
+We built a public site that explains the organization and takes applications, a members' app, and the back office the staff now run everything from, 47 screens in all. The feature list mattered less than one fact about the people using it: most of them come to it soon after losing a parent, usually on a phone, so the software has to ask as little of them as possible.
 
 ## One question at a time
 

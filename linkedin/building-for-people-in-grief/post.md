@@ -4,7 +4,7 @@
 
 The people using this software arrive on one of the worst days of their year.
 
-A small nonprofit we built for supports women through the loss of a parent. Its members come to it grieving, often on a phone, sometimes without much patience for technology. That shaped the build more than any feature list did.
+A small nonprofit we built for supports women through the loss of a parent. Most members come to it soon after losing a parent, usually on a phone, so the software has to ask as little of them as possible. That shaped the build more than any feature list did.
 
 The application asks one group of questions at a time, so nobody faces a long form on a bad day. A memorial wish offers a few preset phrases before it offers an empty text box. Nothing important happens on a single click without a chance to stop.
 
