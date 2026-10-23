@@ -1,0 +1,25 @@
+{
+    "cover": "Technical debt, explained for the people who pay",
+    "slides": [
+        {
+            "title": "You pay it as interest",
+            "body": "Every new feature takes longer and breaks more than it would in a cleaner system."
+        },
+        {
+            "title": "Spot it without reading code",
+            "body": "Small changes take weeks, releases break unrelated things, and one person holds the knowledge."
+        },
+        {
+            "title": "A full rewrite is rarely the first move",
+            "body": "It freezes new work for months, and the new system has to rediscover every rule the old one handled."
+        },
+        {
+            "title": "Start where it hurts",
+            "body": "Debt in code nobody touches costs almost nothing. Debt in the checkout flow costs you every week."
+        },
+        {
+            "title": "Budget for it every cycle",
+            "body": "Clean up what each feature touches and reserve time for upgrades, so the work happens before it's urgent."
+        }
+    ]
+}
