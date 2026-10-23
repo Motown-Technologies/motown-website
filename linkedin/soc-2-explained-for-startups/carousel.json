@@ -1,0 +1,25 @@
+{
+    "cover": "SOC 2 for startups, explained",
+    "slides": [
+        {
+            "title": "A report, not a certificate",
+            "body": "A licensed CPA firm tests your controls against AICPA criteria and writes up what it found. Security is in every report."
+        },
+        {
+            "title": "Type 1 is a snapshot",
+            "body": "It checks that your controls are designed properly at one point in time. Quicker to get, and a useful first step."
+        },
+        {
+            "title": "Type 2 covers a period",
+            "body": "It checks that controls worked throughout a window of months. Most enterprise buyers ask for this one."
+        },
+        {
+            "title": "You need it when buyers ask",
+            "body": "Deals stall in security review, or questionnaires pile up. If nobody has asked, the report can usually wait."
+        },
+        {
+            "title": "Start before the deal depends on it",
+            "body": "A Type 2 window can't be rushed. Controls have to be running before it opens, and then it has to run its course."
+        }
+    ]
+}
