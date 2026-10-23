@@ -1,54 +1,52 @@
 ---
-title: "Designing a member platform for a grief-support nonprofit"
+title: "Designing software for people going through grief"
 image: ../../assets/blog/building-for-people-in-grief-image.jpg
 imageAlt: "A small olive sapling in a pot on a blue windowsill in sunlight"
 cover: ../../assets/blog/building-for-people-in-grief.png
-description: "How the people a grief-support nonprofit serves shaped its public site, members' app and back office, from the first question to the last email."
+description: "People who come to you after a loss have a lot to carry already. What that should change about your forms, tone, dates and member data."
 pubDate: 2026-10-07
 relatedPages: ["/case-studies/nonprofit-community"]
 category: case-stories
 ---
 
-A small nonprofit we built for supports women through the loss of a parent. It runs community events, grief support groups and subsidized therapy, and it marks the anniversaries that come around every year. When we started, it had no software at all. The story, the applications and the community all lived in conversations.
+If the people you serve come to you after a loss, they came for help, and your software is only the way to reach it. Every question, field and button you put in front of them is one more thing to do on a day when they already have plenty to carry. Designing for them mostly means asking less, and asking it gently.
 
-We built a public site that explains the organization and takes applications, a members' app, and the back office the staff now run everything from, 47 screens in all. The feature list mattered less than one fact about the people using it: most of them come to it soon after losing a parent, usually on a phone, so the software has to ask as little of them as possible.
+## Ask for less, in smaller pieces
 
-## One question at a time
+A long form is a small thing on an ordinary day. For someone who lost her mother last month, it can be the reason she closes the tab and means to come back later. Breaking an application into one group of questions at a time makes it feel manageable, and it suits a phone, which is where most people will fill it in.
 
-That fact changed small decisions everywhere. The application asks one group of questions at a time, so nobody faces a long form on a bad day. When a member leaves a memorial wish for someone, the app offers a few preset phrases before it offers an empty text box, because a blank box is hard to fill when you are grieving. Nothing important happens on a single click without a chance to stop.
+Empty text boxes deserve the same thought. A grief-support nonprofit we worked with lets members leave a memorial wish for someone else in the community. The app offers a few preset phrases first, and a member can still write her own. Finding words for someone else's loss is hard, and a place to start helps.
 
-The design brief listed what the product should never look like: clinical, corporate, greeting-card or funereal. The public site uses a warmer voice, because it has to persuade someone to apply. Inside, past the login, it's calmer and built for coming back to. Both halves share one accent color, and that color is used only on the button that finishes a form.
+Also check that nothing important happens on a single tap without a chance to stop.
 
-We also took a word out. Early copy described the community as "peer-led." That describes how the organization is run, and it undersold what a visitor actually gets, since the support groups and subsidized therapy aren't run by peers. It came out of every page. The client then rewrote the public copy themselves, and we used their version as written. They know how to talk to the person arriving.
+## Decide on a tone, and write down what to avoid
 
-## The anniversary has to land on the right day
+Software for hard moments tends to slide toward cold and clinical or toward soft and sentimental. The nonprofit's design brief named four things the product should never look like: clinical, corporate, greeting-card or funereal. A list like that is easy to check a screen against.
 
-For the people this nonprofit serves, the anniversary of a parent's death (the Yahrtzeit) is one of the most important days of the year. It is recorded as a Hebrew date, so its date on the ordinary calendar moves every year. In a leap year, an anniversary that falls in the month of Adar is observed in Adar II.
+The tone can also change with the job. Their public site has to persuade someone to apply, so its voice is warmer. Past the login, the members' app is calmer and made for coming back to.
 
-The memorial wall is built on those dates. The system works out each anniversary fresh for every year, including the leap-year rule, and sends reminders and community wishes before the day. Getting this wrong would mean a reminder on the wrong day, so we treated it as core logic from the start.
+Then read the words closely. Early copy called the community "peer-led." That described how the organization is run and undersold what a visitor gets, since the support groups and subsidized therapy aren't run by peers. The phrase came out of every page. When the staff rewrote the public copy themselves, we used their version as written. The people who do this work every day usually know how to welcome someone better than any designer does.
 
-Reminders run hourly. The hosting sleeps when idle, and checking every fifteen minutes would have kept it awake and billing all day. The reminder job is written so that a late run catches up, which means a reminder can arrive a little later but is never skipped.
+## Get the dates that matter exactly right
 
-## Who can see and erase a member's data
+Many organizations in this space keep track of dates: anniversaries, milestones, a day each year someone wants remembered. If your software sends a reminder for one, it has to arrive on the right day.
 
-A member's record belongs to her, and the permissions are built around that.
+For this nonprofit, that date is the Yahrtzeit, the anniversary of a parent's death. It's recorded on the Hebrew calendar, so it falls on a different ordinary date every year, and in a leap year an anniversary in Adar is observed in Adar II. The system works each one out fresh every year, and we treated that as core logic from the start.
 
-Staff sometimes need to see the members' app with real data. They can only do that by signing in as a dedicated test account, which has three separate safeguards and can't reach any real member's account. Every time someone enters or leaves that view, it goes in the audit log.
+So ask early which dates matter to the people you serve, and which calendar they keep them on.
 
-Closing an account is something a member asks for. Erasing her personal details is a separate step an admin takes later, and only on an account that is already closed. When the details are erased, the memorial she created for her parent and the wishes others wrote stay in place.
+## Treat each member's record as hers
 
-Email works the same way. Members can turn off each kind of bulk email, and only messages about their own account always arrive. Unsubscribing asks for confirmation and doesn't promise an instant effect it can't deliver.
+People share a lot with an organization that supports them through something hard. Build the permissions on the assumption that what they share belongs to them. A few questions worth answering before launch:
 
-## The back office
+- Can staff see a real member's account? At the nonprofit, staff who need to preview the members' app on real data sign in as a dedicated test account that can't reach any real member, and every visit goes in the audit log.
+- What happens when someone leaves? Closing an account is the member's request. Erasing her personal details is a separate step an admin takes later, and the memorial she made for her parent stays in place.
+- Which emails can she turn off? Every kind of bulk email. Only messages about her own account always arrive.
 
-Before the platform, there was no way to see who nobody had checked in on lately. Now staff have reach-out tasks that surface exactly those members, with a view of each staff member's workload.
+## Let the software keep the rules
 
-Giving moved into the same system: one-off and recurring donations with dedications, PDF receipts and annual giving statements. Recurring charges run inside the app so every cycle produces its own receipt, and two charging runs can never overlap, so nobody is charged twice.
-
-## Rules the software enforces for a team of four
-
-The nonprofit has no engineers on staff. Wherever we could, we made a rule the software enforces itself. Every change has to pass the full test suite, with exactly 100% line coverage and 100% type coverage, before it can be merged. Text never drops below a 4.5:1 contrast ratio, placeholders and disabled labels included. Every admin action is logged, and the destructive ones are limited to a single role.
+Most organizations doing this work are small. This one has a team of four and no engineers on staff, so wherever we could, a rule became something the software enforces itself. Every change has to pass the full test suite before it can be merged. Text never drops below a 4.5:1 contrast ratio, placeholders included. Every admin action is logged, and the destructive ones are limited to a single role. Nobody has to remember any of it during a busy week.
 
 A member should be able to apply, find an event and remember her parent without thinking about the software at all.
 
-The [nonprofit community case study](/case-studies/nonprofit-community) has the full build, including the technical decisions behind each of these. If you're building for people who arrive on a hard day, [tell us who they are](/contact). That answer changes more of the build than the feature list does.
+The [nonprofit community case study](/case-studies/nonprofit-community) covers the full build. If you're designing for people going through something hard, read how we approach [UI and UX design](/ui-ux-design-services), or [tell us who they are](/contact).

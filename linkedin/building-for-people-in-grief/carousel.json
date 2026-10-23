@@ -1,25 +1,25 @@
 {
-    "cover": "Building for people on a hard day",
+    "cover": "Designing software for people in grief",
     "slides": [
         {
-            "title": "Ask one thing at a time",
-            "body": "The application asks one group of questions at a time, so nobody faces a long form while grieving."
+            "title": "Ask for less, in smaller pieces",
+            "body": "One group of questions at a time feels manageable on a hard day, and it suits the phone most people use."
         },
         {
-            "title": "Offer words first",
-            "body": "A memorial wish shows a few preset phrases before an empty box. A blank box is hard to fill on a bad day."
+            "title": "Give people words to start from",
+            "body": "Offer a few preset phrases before an empty box. Finding words for someone else’s loss is hard."
         },
         {
-            "title": "Get the date right",
-            "body": "Anniversaries are Hebrew dates, worked out fresh each year with the leap-year rule, with reminders before the day."
+            "title": "Write down the tones to avoid",
+            "body": "One brief named four: clinical, corporate, greeting-card and funereal. Check every screen against the list."
+        },
+        {
+            "title": "Get the dates exactly right",
+            "body": "An anniversary kept on the Hebrew calendar moves every year. Work it out fresh, and remind people before the day."
         },
         {
             "title": "Her record is hers",
             "body": "Closing an account is her request. Erasing her details later leaves the memorial to her parent in place."
-        },
-        {
-            "title": "Let the software keep rules",
-            "body": "With no engineers on staff, tests, contrast and permissions are rules the software enforces itself."
         }
     ]
 }
