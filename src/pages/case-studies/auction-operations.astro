@@ -118,8 +118,8 @@ const rigor = [
             <path d="M0 140 H 1200 M0 220 H 1200 M0 300 H 1200 M0 380 H 1200 M0 460 H 1200 M0 540 H 1200 M0 620 H 1200" />
             <path d="M120 100 V 660 M340 100 V 660 M560 100 V 660 M780 100 V 660 M1000 100 V 660" />
             <!-- The active record hops cell to cell; the last change trails one step behind. -->
-            <rect class="cell-hop" x="340" y="300" width="220" height="80" fill="currentColor" opacity="1" />
-            <rect class="cell-hop cell-trail" x="340" y="300" width="220" height="80" fill="currentColor" opacity="0.5" />
+            <rect data-cell-active x="340" y="300" width="220" height="80" fill="currentColor" opacity="1" />
+            <rect data-cell-trail x="340" y="300" width="220" height="80" fill="currentColor" opacity="0.5" style="transform: translate(0px, 80px)" />
         </svg>
 
         <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
@@ -492,33 +492,54 @@ const rigor = [
     </section>
 </BaseLayout>
 
-<style>
-    /* One hop every 2s around a 2x2 loop of cells: 0.6s of movement, then a
-       hold. Each pair of equal keyframes is a hold; the curve only acts on
-       the moves between them. Translations are in the SVG's own units. */
-    @keyframes cell-hop {
-        0%, 17.5% { transform: translate(0, 0); }
-        25%, 42.5% { transform: translate(220px, 0); }
-        50%, 67.5% { transform: translate(220px, 80px); }
-        75%, 92.5% { transform: translate(0, 80px); }
-        100% { transform: translate(0, 0); }
-    }
-
-    .cell-hop {
-        animation: cell-hop 8s var(--ease-in-out) infinite;
-    }
-
-    /* Three quarters into the loop is the previous cell. */
-    .cell-trail {
-        animation-delay: -6s;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .cell-hop {
-            animation: none;
-        }
-        .cell-trail {
-            transform: translate(0, 80px);
-        }
-    }
-</style>
+<script is:inline>
+    // The active cell takes a random walk across the hero grid (4 columns x
+    // 6 rows of 220x80 cells); the lighter cell trails onto the cell it just
+    // left. Random neighbour each hop, never straight back, with a varied
+    // hold, so the path never repeats. Runs only while the hero is visible;
+    // skipped entirely under reduced motion, which leaves the static pair.
+    (() => {
+        if (window.__auctionCells) return;
+        window.__auctionCells = true;
+        const COLS = 4, ROWS = 6, W = 220, H = 80;
+        const START = { c: 1, r: 2 }; // the rect's own x/y: column 1, row 2
+        const MOVE = { duration: 600, easing: "cubic-bezier(0.77, 0, 0.175, 1)", fill: "forwards" };
+        let stop = () => {};
+        const run = () => {
+            stop();
+            const active = document.querySelector("[data-cell-active]");
+            const trail = document.querySelector("[data-cell-trail]");
+            if (!active || !trail || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            const at = (cell) => `translate(${(cell.c - START.c) * W}px, ${(cell.r - START.r) * H}px)`;
+            let cur = { ...START }, prev = { c: 1, r: 3 }, timer = 0, visible = false;
+            const hop = () => {
+                const options = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+                    .map(([dc, dr]) => ({ c: cur.c + dc, r: cur.r + dr }))
+                    .filter((n) => n.c >= 0 && n.c < COLS && n.r >= 0 && n.r < ROWS && !(n.c === prev.c && n.r === prev.r));
+                const next = options[Math.floor(Math.random() * options.length)];
+                active.animate([{ transform: at(cur) }, { transform: at(next) }], MOVE);
+                trail.animate([{ transform: at(prev) }, { transform: at(cur) }], MOVE);
+                prev = cur;
+                cur = next;
+                schedule();
+            };
+            const schedule = () => {
+                clearTimeout(timer);
+                if (visible && !document.hidden) timer = setTimeout(hop, 1200 + Math.random() * 1200);
+            };
+            const io = new IntersectionObserver(([e]) => {
+                visible = e.isIntersecting;
+                schedule();
+            });
+            io.observe(active.ownerSVGElement);
+            document.addEventListener("visibilitychange", schedule);
+            stop = () => {
+                clearTimeout(timer);
+                io.disconnect();
+                document.removeEventListener("visibilitychange", schedule);
+            };
+        };
+        document.addEventListener("astro:page-load", run);
+        document.addEventListener("astro:before-swap", () => stop());
+    })();
+</script>
