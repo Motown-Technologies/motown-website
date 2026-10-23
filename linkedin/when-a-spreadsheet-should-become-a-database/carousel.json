@@ -1,0 +1,25 @@
+{
+    "cover": "When your spreadsheet should become a database",
+    "slides": [
+        {
+            "title": "Size is rarely the reason",
+            "body": "Excel allows over a million rows per sheet. Most business spreadsheets get into trouble long before that."
+        },
+        {
+            "title": "The same record, three versions",
+            "body": "One customer in several tabs or files, and they don't agree. Nobody knows which one is right."
+        },
+        {
+            "title": "Nobody knows who changed it",
+            "body": "A spreadsheet can't show who edited a number or when, so a wrong figure has nothing to settle it."
+        },
+        {
+            "title": "A database enforces the rules",
+            "body": "A status comes from a fixed list. An order needs a real customer. A rushed edit can't quietly break that."
+        },
+        {
+            "title": "Start with the data model",
+            "body": "Screens can change in a week. A database with years of records in it is much harder to restructure."
+        }
+    ]
+}
