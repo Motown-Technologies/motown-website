@@ -1,0 +1,29 @@
+{
+    "cover": "What an AI feature costs to run",
+    "slides": [
+        {
+            "title": "You pay per token",
+            "body": "A token is roughly four characters of English. You pay for what goes in and what comes back, and output costs more."
+        },
+        {
+            "title": "Model choice moves the bill most",
+            "body": "On Anthropic's price list, Opus 5.5 input costs forty times what Haiku 5.5 costs for shorter requests."
+        },
+        {
+            "title": "Cache what repeats",
+            "body": "Put fixed instructions and documents first. Cached input is billed at a fraction of the normal rate."
+        },
+        {
+            "title": "Batch work that can wait",
+            "body": "Anthropic and OpenAI both offer batch processing at about half the normal price, with results later."
+        },
+        {
+            "title": "Send less context",
+            "body": "The three most relevant articles, not the whole knowledge base. Every token you send is billed."
+        },
+        {
+            "title": "Set limits before launch",
+            "body": "A budget per customer stops one heavy user or a looping bug from running up a bill nobody sees."
+        }
+    ]
+}
