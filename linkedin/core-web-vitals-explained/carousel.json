@@ -1,0 +1,29 @@
+{
+    "cover": "Core Web Vitals in plain words",
+    "slides": [
+        {
+            "title": "LCP: how fast the page appears",
+            "body": "Time until the biggest thing in view shows up. Good is 2.5 seconds or less."
+        },
+        {
+            "title": "INP: how fast the page responds",
+            "body": "Delay between a tap or click and a visible reaction. Good is 200 milliseconds or less."
+        },
+        {
+            "title": "CLS: how much the page jumps",
+            "body": "How far content moves after it first appears. Good is 0.1 or less."
+        },
+        {
+            "title": "Measured on real visits, not yours",
+            "body": "Google uses real Chrome visits at the 75th percentile. Your laptop on office wifi is the best case."
+        },
+        {
+            "title": "Scores help, relevance wins",
+            "body": "Google says good scores don't guarantee a top ranking. Speed matters most once visitors arrive."
+        },
+        {
+            "title": "Sites slow down over time",
+            "body": "Widgets, tracking tags and camera-sized photos pile up. Track the scores so the slide gets caught early."
+        }
+    ]
+}
