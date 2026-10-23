@@ -1,0 +1,25 @@
+{
+    "cover": "RAG or fine-tuning: which one your data needs",
+    "slides": [
+        {
+            "title": "RAG controls what it knows",
+            "body": "The system looks up relevant passages each time someone asks, and the model answers from them."
+        },
+        {
+            "title": "Fine-tuning controls how it answers",
+            "body": "Training on examples changes format, tone and judgment. It is a poor way to teach a model facts."
+        },
+        {
+            "title": "Facts change, tuned models don't",
+            "body": "Update a policy and a tuned model keeps the old one until you retrain it. RAG uses the new version on the next question."
+        },
+        {
+            "title": "When tuning earns its place",
+            "body": "The model knows the right thing but says it in the wrong shape, thousands of times a day."
+        },
+        {
+            "title": "The platforms are shifting",
+            "body": "OpenAI closed fine-tuning to new organizations in May 2026. Keep your dataset and test set so you can move."
+        }
+    ]
+}
