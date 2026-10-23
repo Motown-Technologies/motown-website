@@ -496,14 +496,14 @@ const rigor = [
     // The active cell takes a random walk across the hero grid (4 columns x
     // 6 rows of 220x80 cells); the lighter cell trails onto the cell it just
     // left. Random neighbour each hop, never straight back, with a varied
-    // hold, so the path never repeats. Runs only while the hero is visible;
+    // hold (0.7 to 1.4s), so the path never repeats. Runs only while the hero is visible;
     // skipped entirely under reduced motion, which leaves the static pair.
     (() => {
         if (window.__auctionCells) return;
         window.__auctionCells = true;
         const COLS = 4, ROWS = 6, W = 220, H = 80;
         const START = { c: 1, r: 2 }; // the rect's own x/y: column 1, row 2
-        const MOVE = { duration: 600, easing: "cubic-bezier(0.77, 0, 0.175, 1)", fill: "forwards" };
+        const MOVE = { duration: 450, easing: "cubic-bezier(0.77, 0, 0.175, 1)", fill: "forwards" };
         let stop = () => {};
         const run = () => {
             stop();
@@ -525,7 +525,7 @@ const rigor = [
             };
             const schedule = () => {
                 clearTimeout(timer);
-                if (visible && !document.hidden) timer = setTimeout(hop, 1200 + Math.random() * 1200);
+                if (visible && !document.hidden) timer = setTimeout(hop, 700 + Math.random() * 700);
             };
             const io = new IntersectionObserver(([e]) => {
                 visible = e.isIntersecting;
