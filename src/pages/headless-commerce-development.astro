@@ -112,7 +112,7 @@ const trade = [
             <path d="M-50 580 Q 200 500 430 550 T 880 530 T 1260 500" />
             <path d="M-50 640 Q 200 560 430 610 T 880 590 T 1260 560" />
             <path d="M-50 460 Q 200 380 430 430 T 880 410 T 1260 380" />
-            <path d="M-50 400 Q 200 320 430 370 T 880 350 T 1260 320" />
+            <path class="headless-commerce-development-line" stroke-width="2" d="M-50 400 Q 200 320 430 370 T 880 350 T 1260 320" />
         </svg>
 
         <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
@@ -416,3 +416,24 @@ const trade = [
         </div>
     </section>
 </BaseLayout>
+
+<style>
+    /* The top wave starts on top of the one below it and pulls away:
+       one layer decoupling from another. 0.6s moves, long holds. Translation is in the SVG's units
+       (the two waves are the same curve, 60 apart). */
+    @keyframes headless-commerce-development-wave {
+        0%, 20% { transform: translate(0, 60px); }
+        27.5%, 70% { transform: translate(0, 0); }
+        77.5%, 100% { transform: translate(0, 60px); }
+    }
+
+    .headless-commerce-development-line {
+        animation: headless-commerce-development-wave 8s var(--ease-in-out) infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .headless-commerce-development-line {
+            animation: none;
+        }
+    }
+</style>
