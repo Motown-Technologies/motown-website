@@ -1,0 +1,25 @@
+{
+    "cover": "Webhooks, APIs and integrations, explained",
+    "slides": [
+        {
+            "title": "An API answers when you ask",
+            "body": "Your CRM asks the accounting system whether an invoice was paid. Asking on a schedule is called polling."
+        },
+        {
+            "title": "A webhook tells you when it happens",
+            "body": "A deposit clears and the payment provider tells your booking system at once, so nothing has to keep asking."
+        },
+        {
+            "title": "Webhooks need careful receiving",
+            "body": "Verify the signature, expect duplicates, don't rely on order, and reply fast before doing the work."
+        },
+        {
+            "title": "Decide which system wins",
+            "body": "If an address changes in two tools on the same day, one has to be the source of truth. Write it down."
+        },
+        {
+            "title": "Know when it breaks",
+            "body": "A daily check that totals match on both sides catches a silent failure the same day, not at month end."
+        }
+    ]
+}
