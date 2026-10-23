@@ -1,0 +1,29 @@
+{
+    "cover": "Where a person should sign off on AI work",
+    "slides": [
+        {
+            "title": "Check where mistakes get hard to undo",
+            "body": "Money moving, a customer message, a shared record changing. A person approves before any of those take effect."
+        },
+        {
+            "title": "Let it read, sort and draft alone",
+            "body": "If the output is wrong and nothing has happened yet, the person who uses it later will notice."
+        },
+        {
+            "title": "Some actions stay out of reach",
+            "body": "Deleting data or changing permissions isn't left to a prompt. The AI's permissions simply don't allow it."
+        },
+        {
+            "title": "Design the review so people keep up",
+            "body": "Show the source beside the draft, make editing as easy as approving, and make unusual cases look different."
+        },
+        {
+            "title": "Keep a record and a stop button",
+            "body": "Log what the AI saw and produced, and who approved it. Halt the queue automatically when errors pile up."
+        },
+        {
+            "title": "Loosen checkpoints with evidence",
+            "body": "When the records show people almost never change a kind of output, let it through with spot checks."
+        }
+    ]
+}
