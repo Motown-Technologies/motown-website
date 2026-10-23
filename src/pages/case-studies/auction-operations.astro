@@ -118,8 +118,8 @@ const rigor = [
             <path d="M0 140 H 1200 M0 220 H 1200 M0 300 H 1200 M0 380 H 1200 M0 460 H 1200 M0 540 H 1200 M0 620 H 1200" />
             <path d="M120 100 V 660 M340 100 V 660 M560 100 V 660 M780 100 V 660 M1000 100 V 660" />
             <!-- The active record hops cell to cell; the last change trails one step behind. -->
-            <rect class="cell-hop" x="340" y="300" width="220" height="80" fill="currentColor" opacity="0.35" />
-            <rect class="cell-hop cell-trail" x="340" y="300" width="220" height="80" fill="currentColor" opacity="0.2" />
+            <rect class="cell-hop" x="340" y="300" width="220" height="80" fill="currentColor" opacity="1" />
+            <rect class="cell-hop cell-trail" x="340" y="300" width="220" height="80" fill="currentColor" opacity="0.5" />
         </svg>
 
         <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
@@ -176,7 +176,7 @@ const rigor = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>At A Glance</span>
-                            <span aria-hidden class="text-accent">● in use</span
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> in use</span
                             >
                         </div>
 
@@ -294,7 +294,7 @@ const rigor = [
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 border border-ink bg-paper">
+            <div data-stagger class="grid grid-cols-1 md:grid-cols-3 border border-ink bg-paper">
                 {
                     pillars.map((p, i, arr) => (
                         <div
@@ -356,7 +356,7 @@ const rigor = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {
