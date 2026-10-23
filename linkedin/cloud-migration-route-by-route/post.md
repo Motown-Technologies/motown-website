@@ -2,29 +2,28 @@
 
 ## Post 1: native text
 
-When we look at a company's AWS, GCP or Azure bill, the expensive part is rarely the compute.
+If your cloud bill has grown faster than your traffic, the cause is rarely compute.
 
-It's egress, capacity reserved for a peak that hardly ever comes, and managed services priced for a scale the business hasn't reached.
+Look at a recent invoice. The big lines are usually egress on every file users download, servers sized for a peak that hardly ever comes, and a load balancer, firewall and CDN that each bill separately.
 
-Most of a typical app can move to Cloudflare cleanly. A migration starts with a list of every workload, and each one goes into one of three groups: it moves as it is, it needs a bridge, or it stays where it is.
+A cheaper platform can fix that. The worry is the move itself: one weekend where everything switches at once and any problem reaches every user.
 
-Some of the usual moves:
+You don't have to migrate that way. A few things make it gradual:
 
-• API routes go to Workers, billed per request and scaled to zero when traffic is quiet.
-• Files in S3 go to R2, which speaks the same S3 API with no egress fees. For apps that serve files, that alone is often the business case.
-• Cron jobs become Cron Triggers, and the server that only ran crontab gets retired.
+• List every workload and sort it into three groups: moves as it is, needs a bridge, or stays where it is.
+• Be honest about what stays. GPU work, long-running stateful services and hard-won compliance boundaries are often best left alone.
+• Move one route at a time behind the DNS you already control, so users keep the same URLs throughout.
+• Start where savings are high and risk is low. File storage is often first, because moving it removes egress fees without touching application code.
 
-GPU workloads, long-running stateful services and anything behind a hard-won compliance boundary stay put, with Cloudflare in front.
+Then look at the bill after the easy moves and decide on the rest.
 
-The cutover happens route by route, behind the DNS you already have, and users keep the same URLs throughout.
-
-If your cloud bill has grown faster than your traffic, the full write-up is in the comments.
+We wrote up how to read the invoice and decide what moves. Link in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/cloud-migration-route-by-route.pdf)
 
-Document title: Where your cloud bill actually goes
+Document title: Cut your cloud bill without a risky cutover
 
-Most cloud bills pay for egress and idle capacity more than compute. Here's how we decide what moves to Cloudflare, what stays, and how the cutover works. The full write-up is in the comments.
+Most cloud bills pay for egress and idle capacity more than compute. How to read yours, decide what moves and migrate one route at a time. The full write-up is in the comments.
 
 ## First comment (both posts)
 

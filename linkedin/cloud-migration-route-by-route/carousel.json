@@ -1,29 +1,25 @@
 {
-    "cover": "Where your cloud bill actually goes",
+    "cover": "Cut your cloud bill without a risky cutover",
     "slides": [
         {
-            "title": "Compute is rarely the problem",
-            "body": "The cost is egress, capacity reserved for a rare peak, and managed services priced for a bigger company."
+            "title": "Read the invoice first",
+            "body": "The big lines are usually egress, servers sized for a rare peak, and services that each bill separately."
         },
         {
-            "title": "Start with an inventory",
-            "body": "Every workload either moves as it is, needs a bridge, or stays where it is."
+            "title": "Sort every workload",
+            "body": "Each one moves as it is, needs a bridge, or stays where it is."
         },
         {
-            "title": "Files move to R2",
-            "body": "Same S3 API, no egress fees. For apps that serve files, that alone is often the business case."
+            "title": "Be honest about what stays",
+            "body": "GPU work, stateful services and hard-won compliance boundaries are often best left alone."
         },
         {
-            "title": "Servers become Workers",
-            "body": "Billed per request and scaled to zero when traffic is quiet, with nothing sized for peak."
+            "title": "Move one route at a time",
+            "body": "Behind the DNS you already control, so users keep the same URLs throughout."
         },
         {
-            "title": "Some things should stay",
-            "body": "GPU workloads, long-running stateful services and hard-won compliance boundaries stay, with Cloudflare in front."
-        },
-        {
-            "title": "Cut over route by route",
-            "body": "Routes move one at a time behind the DNS you already have, and users keep the same URLs."
+            "title": "Start with the easy savings",
+            "body": "File storage is often first: moving it removes egress fees without touching application code."
         }
     ]
 }
