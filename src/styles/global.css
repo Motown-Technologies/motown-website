@@ -31,10 +31,10 @@
        deliberately overrides Tailwind's default so every `ease-out` utility
        gets the stronger curve. */
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-    /* Long hover sweeps. Shared by the fill AND every colour riding on it, so
+    /* Long hover sweeps. Shared by the fill AND every color riding on it, so
        text never changes ahead of the edge that is supposed to cause it. */
     --ease-sweep: cubic-bezier(0.22, 1, 0.36, 1);
-    /* On-screen movement (a thing travelling from A to B, not entering). */
+    /* On-screen movement (a thing traveling from A to B, not entering). */
     --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 
     --tracking-eyebrow: 0.18em;

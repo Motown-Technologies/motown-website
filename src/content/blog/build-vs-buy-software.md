@@ -11,7 +11,7 @@ category: software
 
 Buy the SaaS tool when your process looks like everyone else's in your industry and the tool fits it without workarounds. Build custom software when the process is what sets you apart, or when your team spends more time working around the tool than working in it.
 
-Most businesses should buy most of their software. Payroll, email, accounting and the help desk are solved problems, and a subscription costs less than anything we could build for you. The decision gets harder for the one or two systems at the centre of how you make money.
+Most businesses should buy most of their software. Payroll, email, accounting and the help desk are solved problems, and a subscription costs less than anything we could build for you. The decision gets harder for the one or two systems at the center of how you make money.
 
 ## When buying is the right call
 

@@ -2,7 +2,7 @@
 
 ## Post 1: native text
 
-Most businesses should buy most of their software. The hard decision is about the one or two systems at the centre of how you make money.
+Most businesses should buy most of their software. The hard decision is about the one or two systems at the center of how you make money.
 
 Buy when the work is the same everywhere. Payroll, email and accounting are solved problems, and the vendor has already met the edge cases you haven't.
 

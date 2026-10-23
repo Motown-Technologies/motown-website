@@ -25,7 +25,7 @@ We sort every action an AI system can take into three groups.
 
 ### Things it can do alone
 
-Reading documents, searching, summarising, tagging, sorting a queue and drafting text that nobody outside sees yet. If the output is wrong, nothing has happened, and the person who uses it later will notice.
+Reading documents, searching, summarizing, tagging, sorting a queue and drafting text that nobody outside sees yet. If the output is wrong, nothing has happened, and the person who uses it later will notice.
 
 ### Things it prepares and a person approves
 

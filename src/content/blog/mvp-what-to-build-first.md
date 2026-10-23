@@ -25,7 +25,7 @@ A feature that has been cut, and that everyone knows has been cut, stops coming 
 
 A small scope is a reason to build the parts you keep well, because those are the parts your first users will touch. For us that means:
 
-- A responsive, accessible interface your first users won't need you to apologise for.
+- A responsive, accessible interface your first users won't need you to apologize for.
 - Sign-up, login, roles and payments.
 - A database designed for the questions you'll want to ask in six months, with migrations and backups from day one.
 - A deploy pipeline with staging, rollbacks and error alerts, so shipping an update is routine.
@@ -51,7 +51,7 @@ A first version usually takes eight to twelve weeks:
 
 ## You own it from the first commit
 
-Everything lives in your accounts and under your name from the start: the repository, the hosting and the deploy button. At handover you get the live app on your domain, the source with readable setup notes, the pipeline and monitoring, the cost model, and a prioritised backlog for the next 90 days.
+Everything lives in your accounts and under your name from the start: the repository, the hosting and the deploy button. At handover you get the live app on your domain, the source with readable setup notes, the pipeline and monitoring, the cost model, and a prioritized backlog for the next 90 days.
 
 If you hire an engineer the month after launch, they should be able to pick it up without calling us. If you need senior technical judgment after launch but not a full-time hire yet, read about [when a fractional CTO makes sense](/blog/fractional-cto-for-startups).
 

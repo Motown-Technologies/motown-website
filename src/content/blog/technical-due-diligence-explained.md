@@ -29,7 +29,7 @@ We look at sign-in, access control, how secrets are stored, what data is exposed
 
 ### Infrastructure and cost
 
-We work out what the platform costs to run today, what it would cost at ten times the load, and which line items grow in ways nobody has modelled.
+We work out what the platform costs to run today, what it would cost at ten times the load, and which line items grow in ways nobody has modeled.
 
 ### Team and key-person risk
 
@@ -37,7 +37,7 @@ Some systems are understood by only one person. We find those, note what is undo
 
 ### IP and licensing
 
-We check who owns the code, whether contractor agreements actually assign it to the company, and whether any dependency carries a licence an acquirer won't accept. Contractor-built code with no assignment on file is one of the gaps we look for, along with an inventory of every dependency's licence.
+We check who owns the code, whether contractor agreements actually assign it to the company, and whether any dependency carries a license an acquirer won't accept. Contractor-built code with no assignment on file is one of the gaps we look for, along with an inventory of every dependency's license.
 
 ## What you get at the end
 

@@ -10,7 +10,7 @@ Copyleft licenses like the GPL ask more. If you distribute software built on GPL
 
 The AGPL closes that gap. It treats network use as distribution, so if you modify AGPL code and offer it over the web, your users can ask for your modified source. It's the one to check first in a web app or SaaS product.
 
-Then there's source-available code under licenses like the SSPL or the Business Source License. The code is public, but the Open Source Initiative doesn't recognise these licenses as open source, and they often restrict commercial hosting.
+Then there's source-available code under licenses like the SSPL or the Business Source License. The code is public, but the Open Source Initiative doesn't recognize these licenses as open source, and they often restrict commercial hosting.
 
 You don't need to read every license. You need a generated list of dependencies and their licenses, a short rule about which ones get reviewed before they're added, and another look at that list before any sale, raise or big customer contract.
 

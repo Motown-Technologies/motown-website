@@ -49,7 +49,7 @@ A full rewrite is tempting and usually the wrong first move. It freezes new work
 What we do instead:
 
 1. Find where it hurts. Look at which parts of the system change most often and break most often. Debt in code nobody touches costs almost nothing. Debt in the checkout flow costs you every week.
-2. Write tests that capture what the system does today, including the odd behaviour people now depend on, before changing anything.
+2. Write tests that capture what the system does today, including the odd behavior people now depend on, before changing anything.
 3. Pay down debt where you're already working. When a feature touches a messy part of the code, clean up that part as part of the feature.
 4. Set a steady budget. Reserve part of every development cycle for maintenance and upgrades, so the work gets done before it becomes urgent.
 5. Replace older systems in pieces. We move one part at a time behind a layer that sends each request to the old or the new code, and run both until the results match. Our [legacy system modernization](/legacy-system-modernization) page describes the approach.
@@ -63,6 +63,6 @@ You can manage technical debt without being technical. Ask your team:
 3. Which of our dependencies are out of date or no longer supported?
 4. How long does it take a new engineer to ship their first change?
 
-The answers turn a vague complaint into a list you can prioritise and budget for.
+The answers turn a vague complaint into a list you can prioritize and budget for.
 
 If your software has become slow to change, or you've inherited a system nobody wants to touch, [tell us what's slowing you down](/contact).

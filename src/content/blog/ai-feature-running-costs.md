@@ -53,11 +53,11 @@ To benefit, put the parts that stay the same at the start of the request and the
 
 ## Batch work that can wait
 
-Some work doesn't need an answer in seconds: summarising yesterday's calls, tagging a backlog of documents, writing product descriptions for a new catalog. Both Anthropic and OpenAI offer batch processing, where you submit many requests at once and get the results later, at about half the normal price.
+Some work doesn't need an answer in seconds: summarizing yesterday's calls, tagging a backlog of documents, writing product descriptions for a new catalog. Both Anthropic and OpenAI offer batch processing, where you submit many requests at once and get the results later, at about half the normal price.
 
 ## Send less context
 
-Every token you send is billed, so trim what goes in. Send the three most relevant help articles instead of the whole knowledge base. Summarise a long conversation instead of resending all of it each turn. Cap how long the answer can be when you only need a short one. Retrieval systems that look up the right passages before calling the model exist partly for this reason.
+Every token you send is billed, so trim what goes in. Send the three most relevant help articles instead of the whole knowledge base. Summarize a long conversation instead of resending all of it each turn. Cap how long the answer can be when you only need a short one. Retrieval systems that look up the right passages before calling the model exist partly for this reason.
 
 ## Put limits in before launch
 

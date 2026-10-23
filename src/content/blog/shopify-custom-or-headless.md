@@ -50,7 +50,7 @@ It's worth the extra complexity when one of these is your actual problem:
 - The theme system can't render what the brand needs.
 - You maintain a separate store for every market and want one storefront serving several locales, currencies and brands.
 - Marketing waits on a developer every time a landing page changes.
-- Platform search misses a large part of your own catalogue.
+- Platform search misses a large part of your own catalog.
 
 ## When we'd talk you out of headless
 

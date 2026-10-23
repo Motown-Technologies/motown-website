@@ -19,7 +19,7 @@ Paying for software doesn't automatically make you the owner of its copyright. U
 
 Check that your contract has that clause, that it covers everyone who works on the project, including any subcontractors, and that it is signed. This is general information, so have a lawyer review the contract itself.
 
-Contractor-built code with no assignment on file is one of the gaps a [technical due diligence](/technical-due-diligence) looks for before a raise or a sale, along with the licences of the open-source packages the code depends on. Ask your contractor for a list of those licences at handover.
+Contractor-built code with no assignment on file is one of the gaps a [technical due diligence](/technical-due-diligence) looks for before a raise or a sale, along with the licenses of the open-source packages the code depends on. Ask your contractor for a list of those licenses at handover.
 
 ## The code repository
 

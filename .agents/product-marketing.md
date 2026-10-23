@@ -30,7 +30,7 @@ TODO need the owner's input.
 
 ## Proof
 
-Six anonymised case studies: an auction house's operations system, a
+Six anonymized case studies: an auction house's operations system, a
 multi-tenant donation platform, an endoscopy center (headless WordPress), a
 multi-site healthcare practice, a grief-support nonprofit, a senior-care
 concierge app. Thirteen blog posts adapted from these and the landing pages.

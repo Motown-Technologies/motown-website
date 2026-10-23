@@ -53,7 +53,7 @@ export function Navigation({ pathname: initialPath = "/" }: { pathname?: string 
   const inSection = (href: string) =>
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/")
   const current = (href: string) => (pathname === href ? "page" : undefined)
-  // linkBase carries no colour so the active colour can't lose a cascade fight with text-ink.
+  // linkBase carries no color so the active color can't lose a cascade fight with text-ink.
   const linkState = (href: string) =>
     inSection(href) ? "text-accent underline decoration-[1.5px] underline-offset-[6px]" : "text-ink"
 

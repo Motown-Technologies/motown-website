@@ -15,7 +15,7 @@ A technical due diligence lets you read the code that way first. We run it as a 
 • Security, the findings most likely to stall a deal late
 • What the platform costs today and at ten times the load
 • Which systems only one person understands
-• Who owns the code, and whether every dependency's licence is acceptable to a buyer
+• Who owns the code, and whether every dependency's license is acceptable to a buyer
 
 Every finding comes with evidence, an estimated cost to fix and a plain sentence on why it matters.
 

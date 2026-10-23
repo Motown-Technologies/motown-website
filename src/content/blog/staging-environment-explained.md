@@ -1,7 +1,7 @@
 ---
 title: "Staging environment explained: why your app needs one"
 image: ../../assets/blog/staging-environment-explained-image.jpg
-imageAlt: "A miniature blue theatre stage with a teacup in a spotlight, next to an identical teacup on the table beside it"
+imageAlt: "A miniature blue theater stage with a teacup in a spotlight, next to an identical teacup on the table beside it"
 cover: ../../assets/blog/staging-environment-explained.png
 description: "A staging environment is a private copy of your app where changes get tested before customers see them. What it catches, and how to set one up."
 pubDate: 2026-12-09

@@ -17,7 +17,7 @@ We built a public site that explains the organization and takes applications, a 
 
 That fact changed small decisions everywhere. The application asks one group of questions at a time, so nobody faces a long form on a bad day. When a member leaves a memorial wish for someone, the app offers a few preset phrases before it offers an empty text box, because a blank box is hard to fill when you are grieving. Nothing important happens on a single click without a chance to stop.
 
-The design brief listed what the product should never look like: clinical, corporate, greeting-card or funereal. The public site uses a warmer voice, because it has to persuade someone to apply. Inside, past the login, it's calmer and built for coming back to. Both halves share one accent colour, and that colour is used only on the button that finishes a form.
+The design brief listed what the product should never look like: clinical, corporate, greeting-card or funereal. The public site uses a warmer voice, because it has to persuade someone to apply. Inside, past the login, it's calmer and built for coming back to. Both halves share one accent color, and that color is used only on the button that finishes a form.
 
 We also took a word out. Early copy described the community as "peer-led." That describes how the organization is run, and it undersold what a visitor actually gets, since the support groups and subsidized therapy aren't run by peers. It came out of every page. The client then rewrote the public copy themselves, and we used their version as written. They know how to talk to the person arriving.
 

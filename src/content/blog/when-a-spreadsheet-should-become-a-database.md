@@ -15,7 +15,7 @@ Spreadsheets are a good tool. They're quick to start, everyone knows how to use 
 
 ## Signs a spreadsheet has outgrown its job
 
-You'll probably recognise some of these:
+You'll probably recognize some of these:
 
 - The same customer or order appears in several tabs or files, and they don't always agree.
 - People email copies around, and more than one file has "final" in its name.

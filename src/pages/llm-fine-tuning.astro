@@ -50,7 +50,7 @@ const work = [
     },
 ];
 
-const rigour = [
+const rigor = [
     {
         before: "Tuned on the examples that were easiest to collect",
         after: "A dataset weighted toward the cases that actually fail",
@@ -263,7 +263,7 @@ const rigour = [
                     <span class="col-span-6">How we run it</span>
                 </div>
                 {
-                    rigour.map((row) => (
+                    rigor.map((row) => (
                         <div class="grid grid-cols-12 gap-4 md:gap-8 items-center py-7 border-b border-ink">
                             <div class="col-span-12 md:col-span-6 flex items-start gap-3 text-ink-muted">
                                 <span
@@ -293,7 +293,7 @@ const rigour = [
             </div>
 
             <p class="mt-8 text-ink-muted leading-relaxed max-w-2xl">
-                Fine-tuning teaches behaviour, not facts. If the model needs to
+                Fine-tuning teaches behavior, not facts. If the model needs to
                 know things it wasn't trained on, you want
                 <a href="/rag-development" class="link-underline font-medium text-ink"
                     >RAG development</a

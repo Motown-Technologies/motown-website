@@ -37,7 +37,7 @@ There are milder versions. The LGPL lets a separate program use a library withou
 
 ## The AGPL: the one to check first
 
-The GNU Affero General Public License (AGPL) closes the gap that the GPL leaves for hosted software. Choosealicense.com summarises it as treating network use as distribution. If you modify AGPL code and let people use it over a network, you have to make your modified source available to those users.
+The GNU Affero General Public License (AGPL) closes the gap that the GPL leaves for hosted software. Choosealicense.com summarizes it as treating network use as distribution. If you modify AGPL code and let people use it over a network, you have to make your modified source available to those users.
 
 That's why the AGPL is the license most likely to come up when you build a web application or a SaaS product. It doesn't stop you using the code. It does mean someone should decide on purpose whether an AGPL component belongs in a product whose source you plan to keep private.
 
@@ -57,7 +57,7 @@ Day to day, licenses rarely cause problems. They come up at specific moments.
 - An enterprise customer. Large buyers often ask about open source use in security and procurement questionnaires.
 - Shipping software to customers. A mobile app, a desktop program or a device brings the GPL's distribution rules into play.
 
-Say a clinic commissions a patient portal and later wants to license it to other clinics as a product. Code that was harmless inside one clinic's private system now ships to other organisations, and the license list suddenly matters.
+Say a clinic commissions a patient portal and later wants to license it to other clinics as a product. Code that was harmless inside one clinic's private system now ships to other organizations, and the license list suddenly matters.
 
 ## How to stay on top of it
 

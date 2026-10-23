@@ -12,7 +12,7 @@ import SendIcon from "../components/icons/SendIcon.astro";
 const panel = [
     { title: "Sources", icon: ApiIcon },
     { title: "Ingestion", icon: AutomationIcon },
-    { title: "Modelling", icon: DatabaseIcon },
+    { title: "Modeling", icon: DatabaseIcon },
     { title: "Transformation", icon: SoftwareIcon },
     { title: "Metric Layer", icon: ConsultingIcon },
     { title: "Dashboards", icon: AnalyticsIcon },
@@ -25,9 +25,9 @@ const work = [
         desc: "Scheduled loads from each source system with failure alerting, so a silent pipeline break doesn't poison a quarter of reporting.",
     },
     {
-        title: "Dimensional Modelling",
+        title: "Dimensional Modeling",
         icon: DatabaseIcon,
-        desc: "Facts and dimensions modelled for the questions the business asks, rather than a copy of each source schema stacked in one place.",
+        desc: "Facts and dimensions modeled for the questions the business asks, rather than a copy of each source schema stacked in one place.",
     },
     {
         title: "Transformations",
@@ -58,7 +58,7 @@ const rows = [
     },
     {
         before: "Reports produced by exporting into a spreadsheet",
-        after: "Modelled tables the BI tool queries directly",
+        after: "Modeled tables the BI tool queries directly",
     },
     {
         before: "Data refreshed whenever someone runs the export",
@@ -73,7 +73,7 @@ const rows = [
 
 <BaseLayout
     meta_title="Data Warehouse & BI Development | Motown Solutions"
-    meta_description="Data warehouse and BI development: ingestion, dimensional modelling, version-controlled transformations, one shared metric layer, and trusted dashboards."
+    meta_description="Data warehouse and BI development: ingestion, dimensional modeling, version-controlled transformations, one shared metric layer, and trusted dashboards."
 >
     <section class="relative overflow-hidden border-b-2 border-ink">
         <svg
@@ -174,7 +174,7 @@ const rows = [
             >
                 <span>Ingestion</span>
                 <span class="hidden md:inline" aria-hidden>·</span>
-                <span>Modelling</span>
+                <span>Modeling</span>
                 <span class="hidden md:inline" aria-hidden>·</span>
                 <span>Transforms</span>
                 <span class="hidden md:inline" aria-hidden>·</span>
@@ -286,7 +286,7 @@ const rows = [
             <p class="mt-8 text-ink-muted leading-relaxed max-w-2xl">
                 Getting data out of the source systems is <a href="/data-integration-services" class="link-underline font-medium text-ink"
                     >data integration</a
-                >; the modelling underneath is <a href="/database-design" class="link-underline font-medium text-ink"
+                >; the modeling underneath is <a href="/database-design" class="link-underline font-medium text-ink"
                     >database design</a
                 >.
             </p>
