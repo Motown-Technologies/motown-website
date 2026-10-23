@@ -1,0 +1,29 @@
+{
+    "cover": "What software maintenance covers after launch",
+    "slides": [
+        {
+            "title": "Launch is when the upkeep starts",
+            "body": "Security updates, platform changes, monitoring and small fixes keep the product doing what it did on day one."
+        },
+        {
+            "title": "Every integration is a moving part",
+            "body": "Each payment provider, plugin or outside API can change underneath you. More of them means more upkeep."
+        },
+        {
+            "title": "Tests make every later change cheaper",
+            "body": "With automated tests and a staging site, each update gets checked before it goes live, not tested by hand."
+        },
+        {
+            "title": "Sensitive data can't wait a month",
+            "body": "Health records or payment details need faster patching and access reviews, so the plan must allow urgent work."
+        },
+        {
+            "title": "Neglect costs the most",
+            "body": "Two years without updates usually means a catch-up project, sometimes a framework upgrade, before routine work starts."
+        },
+        {
+            "title": "Budget for it before the build ends",
+            "body": "Ask what depends on outside services while your developer still knows the whole system, then set a monthly line."
+        }
+    ]
+}
