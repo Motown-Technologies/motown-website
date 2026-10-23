@@ -1,0 +1,29 @@
+{
+    "cover": "Write a software brief a developer can price",
+    "slides": [
+        {
+            "title": "Start with the problem",
+            "body": "Say what goes wrong today and what it costs. That tells a developer more than naming the system you think you need."
+        },
+        {
+            "title": "List each user and their job",
+            "body": "\"A driver marks each job done from a phone\" is a piece of work someone can estimate."
+        },
+        {
+            "title": "Attach the real spreadsheet",
+            "body": "Keep the columns and the messy parts. A developer learns more from your actual sheet than from a description of it."
+        },
+        {
+            "title": "Name every system it touches",
+            "body": "Accounting, CRM, online store. Integrations are where estimates most often go wrong."
+        },
+        {
+            "title": "Give a budget range and a date",
+            "body": "With a range, developers can tell you what fits inside it. With the reason for the date, they can plan a smaller first release."
+        },
+        {
+            "title": "Mark what can wait",
+            "body": "Split features into needed at launch and useful later. That list controls the price more than anything else."
+        }
+    ]
+}
