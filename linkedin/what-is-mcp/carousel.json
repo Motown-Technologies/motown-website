@@ -1,0 +1,25 @@
+{
+    "cover": "MCP explained in five slides",
+    "slides": [
+        {
+            "title": "One standard for AI connections",
+            "body": "MCP lets a system offer one connection that works in any AI tool that supports it, instead of one integration per tool."
+        },
+        {
+            "title": "Servers offer, AI tools use",
+            "body": "An MCP server offers tools (actions), resources (information) and prompts. The AI app lists them and calls them when needed."
+        },
+        {
+            "title": "No single vendor owns it",
+            "body": "Anthropic created MCP and in December 2025 donated it to the Agentic AI Foundation, under the Linux Foundation."
+        },
+        {
+            "title": "It's only as good as your API",
+            "body": "An MCP server usually sits on an API you already have. If that API is thin or inconsistent, start there."
+        },
+        {
+            "title": "Start with read access",
+            "body": "A server that only needs to read orders shouldn't be able to cancel them. Add write actions one at a time."
+        }
+    ]
+}
