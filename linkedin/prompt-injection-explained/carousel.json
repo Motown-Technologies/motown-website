@@ -1,0 +1,29 @@
+{
+    "cover": "Prompt injection, explained for business owners",
+    "slides": [
+        {
+            "title": "Text the AI reads can give it orders",
+            "body": "Your instructions and the content the AI reads arrive as one stream. The model can't reliably tell which part is which."
+        },
+        {
+            "title": "The dangerous kind is hidden",
+            "body": "Instructions tucked into an email, a PDF or a web page the AI reads for someone. The person using the tool never sees them."
+        },
+        {
+            "title": "Actions raise the stakes",
+            "body": "A chatbot can be made to say something wrong. An agent that can edit records or send email can be made to do something wrong."
+        },
+        {
+            "title": "Give it the least access that works",
+            "body": "An assistant that drafts replies doesn't need to send them. Every permission left out is one an attacker can't use."
+        },
+        {
+            "title": "Keep a person on expensive actions",
+            "body": "Refunds, deletions, payments and customer messages wait for approval. The AI prepares them and a person confirms."
+        },
+        {
+            "title": "Enforce permissions outside the model",
+            "body": "If the AI never receives the confidential file, no hidden instruction can make it leak that file."
+        }
+    ]
+}
