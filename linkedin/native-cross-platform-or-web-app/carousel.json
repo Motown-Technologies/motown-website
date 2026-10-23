@@ -1,0 +1,25 @@
+{
+    "cover": "Native, cross-platform or web app?",
+    "slides": [
+        {
+            "title": "Start with what it needs from the phone",
+            "body": "If a browser can do everything the product needs, build a web app. No store review, no install, and updates reach everyone at once."
+        },
+        {
+            "title": "Signs you need an installed app",
+            "body": "Daily camera or location use, work without a signal, notifications people rely on, or customers who expect you in the app stores."
+        },
+        {
+            "title": "Web push needs the home screen",
+            "body": "On iPhone, a web app can send push notifications only after someone adds it to the home screen. Most people never do."
+        },
+        {
+            "title": "Need an app? Build it once",
+            "body": "React Native or Flutter shares the business rules and data handling across iOS and Android, so one team maintains one codebase."
+        },
+        {
+            "title": "Go native only where it counts",
+            "body": "One native-only requirement rarely justifies two codebases. A small native module covers it and the rest stays shared."
+        }
+    ]
+}
