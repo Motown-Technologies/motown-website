@@ -67,7 +67,7 @@ topics, `software` for everything else), `relatedPages` (the site paths the post
 ## 3. Humanize
 
 Run the `humanizer` skill in embedded mode on the title, description and body.
-The final text must have no em or en dashes.
+The final text must have no em or en dashes. Use American spelling (color, license, organize, catalog).
 
 ## 4. Title card (always)
 
