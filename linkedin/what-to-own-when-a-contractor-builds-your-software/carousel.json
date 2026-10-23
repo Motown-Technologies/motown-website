@@ -1,0 +1,29 @@
+{
+    "cover": "What to own when a contractor builds your software",
+    "slides": [
+        {
+            "title": "The copyright",
+            "body": "Paying for code doesn't make it yours by default. Get a signed IP assignment that covers subcontractors."
+        },
+        {
+            "title": "The repository and its history",
+            "body": "Code lives in your company's organization from the first commit, with the contractor added as a member."
+        },
+        {
+            "title": "Cloud and hosting accounts",
+            "body": "Opened by you, billed to your card. The contractor gets a user you can remove without breaking anything."
+        },
+        {
+            "title": "The domain name",
+            "body": "Registered in your company's name, at a registrar where you hold the login. Your email depends on it too."
+        },
+        {
+            "title": "Every credential",
+            "body": "Payment, email and app store accounts in your name, with keys in a password manager you control."
+        },
+        {
+            "title": "Documentation you can hand on",
+            "body": "Could a new engineer run, deploy and change it without calling the contractor? If not, it isn't done."
+        }
+    ]
+}
