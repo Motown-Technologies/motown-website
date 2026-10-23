@@ -173,7 +173,7 @@ const reversibility = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>At A Glance</span>
-                            <span aria-hidden class="text-accent">● live</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> live</span>
                         </div>
 
                         <div class="flex items-end gap-5 px-5 py-6 border-b border-ink/30">
@@ -297,7 +297,7 @@ const reversibility = [
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 border border-ink bg-paper">
+            <div data-stagger class="grid grid-cols-1 md:grid-cols-3 border border-ink bg-paper">
                 {
                     pillars.map((p, i, arr) => (
                         <div

@@ -174,7 +174,7 @@ const rigor = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>At A Glance</span>
-                            <span aria-hidden class="text-accent">● in build</span
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> in build</span
                             >
                         </div>
 
@@ -290,7 +290,7 @@ const rigor = [
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 border border-ink bg-paper">
+            <div data-stagger class="grid grid-cols-1 md:grid-cols-3 border border-ink bg-paper">
                 {
                     pillars.map((p, i, arr) => (
                         <div
@@ -354,7 +354,7 @@ const rigor = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {

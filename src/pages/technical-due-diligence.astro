@@ -154,13 +154,13 @@ const timing = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>Audit / Scope</span>
-                            <span aria-hidden class="text-accent">● 2-week</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> 2-week</span>
                         </div>
                         {
                             scope.map((item, i) => {
                                 const Icon = item.icon;
                                 return (
-                                    <div
+                                    <div data-step
                                         class:list={[
                                             "flex items-center gap-4 px-5 py-4",
                                             i !== scope.length - 1 &&
@@ -223,7 +223,7 @@ const timing = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {
@@ -268,7 +268,7 @@ const timing = [
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-ink">
+            <div data-stagger class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-ink">
                 {
                     deliverables.map((item) => {
                         const Icon = item.icon;

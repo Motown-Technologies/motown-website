@@ -137,13 +137,13 @@ const lockin = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>Your Stack / AI Layer</span>
-                            <span aria-hidden class="text-accent">● portable</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> portable</span>
                         </div>
                         {
                             layer.map((s, i) => {
                                 const Icon = s.icon;
                                 return (
-                                    <div
+                                    <div data-step
                                         class:list={[
                                             "flex items-center gap-4 px-5 py-4",
                                             i !== layer.length - 1 &&
@@ -203,7 +203,7 @@ const lockin = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {

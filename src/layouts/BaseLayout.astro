@@ -130,6 +130,60 @@ const organization = {
                 transform: none;
             }
 
+            /* Card grids inside a revealed section enter one card at a
+               time, 50ms apart. An animation rather than a transition so it
+               can't clobber the cards' own hover transitions. */
+            @keyframes stagger-in {
+                from {
+                    opacity: 0;
+                    translate: 0 8px;
+                }
+            }
+            [data-reveal]:not(.is-revealed) [data-stagger] > * {
+                opacity: 0;
+            }
+            [data-reveal].is-revealed [data-stagger] > * {
+                animation: stagger-in 400ms var(--ease-out) var(--stagger, 0ms) both;
+            }
+            [data-stagger] > :nth-child(2) { --stagger: 50ms; }
+            [data-stagger] > :nth-child(3) { --stagger: 100ms; }
+            [data-stagger] > :nth-child(4) { --stagger: 150ms; }
+            [data-stagger] > :nth-child(5) { --stagger: 200ms; }
+            [data-stagger] > :nth-child(6) { --stagger: 250ms; }
+            [data-stagger] > :nth-child(n + 7) { --stagger: 300ms; }
+
+            /* "● live": the dot breathes so the label reads as a live state. */
+            @keyframes status-pulse {
+                50% {
+                    opacity: 0.3;
+                }
+            }
+            .status-dot {
+                display: inline-block;
+                animation: status-pulse 2.4s ease infinite;
+            }
+
+            /* Hero step panels: a script walks data-active down the rows. */
+            [data-step] {
+                transition:
+                    background-color 300ms ease,
+                    box-shadow 300ms ease;
+            }
+            [data-step][data-active] {
+                background-color: var(--color-paper);
+                box-shadow: inset 3px 0 0 var(--color-accent);
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                [data-stagger] > * {
+                    animation: none !important;
+                    opacity: 1 !important;
+                }
+                .status-dot {
+                    animation: none;
+                }
+            }
+
             @media (prefers-reduced-motion: reduce) {
                 [data-reveal] {
                     opacity: 1;
@@ -508,6 +562,53 @@ const organization = {
                 };
                 reveal();
                 document.addEventListener("astro:page-load", reveal);
+            })();
+        </script>
+
+        <!-- Hero step panels: highlight one row at a time, 1.6s each, only
+             while the panel is on screen. Skipped under reduced motion,
+             where the rows stay as they are. -->
+        <script is:inline>
+            (() => {
+                // Registered once even if this inline script runs again
+                // after a ClientRouter swap; timers are cleared per page.
+                if (window.__motownSteps) return;
+                window.__motownSteps = true;
+                const STEP_MS = 1600;
+                let cleanups = [];
+                const stop = () => {
+                    cleanups.forEach((f) => f());
+                    cleanups = [];
+                };
+                const start = () => {
+                    stop();
+                    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+                    const panels = new Set([...document.querySelectorAll("[data-step]")].map((r) => r.parentElement));
+                    panels.forEach((panel) => {
+                        const rows = [...panel.querySelectorAll(":scope > [data-step]")];
+                        let i = 0;
+                        let timer = 0;
+                        const tick = () => {
+                            rows.forEach((r, k) => r.toggleAttribute("data-active", k === i));
+                            i = (i + 1) % rows.length;
+                        };
+                        const io = new IntersectionObserver(([entry]) => {
+                            clearInterval(timer);
+                            if (entry.isIntersecting) {
+                                tick();
+                                timer = setInterval(() => document.hidden || tick(), STEP_MS);
+                            }
+                        });
+                        io.observe(panel);
+                        cleanups.push(() => {
+                            clearInterval(timer);
+                            io.disconnect();
+                        });
+                    });
+                };
+                // astro:page-load fires on the first load and after every swap.
+                document.addEventListener("astro:page-load", start);
+                document.addEventListener("astro:before-swap", stop);
             })();
         </script>
 

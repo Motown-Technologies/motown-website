@@ -200,13 +200,13 @@ const faqs = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>Your Team / Coverage</span>
-                            <span aria-hidden class="text-accent">● retained</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> retained</span>
                         </div>
                         {
                             coverage.map((item, i) => {
                                 const Icon = item.icon;
                                 return (
-                                    <div
+                                    <div data-step
                                         class:list={[
                                             "flex items-center gap-4 px-5 py-4",
                                             i !== coverage.length - 1 &&
@@ -268,7 +268,7 @@ const faqs = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {
@@ -312,7 +312,7 @@ const faqs = [
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 border border-ink bg-paper">
+            <div data-stagger class="grid grid-cols-1 lg:grid-cols-3 border border-ink bg-paper">
                 {
                     engagements.map((item, i) => (
                         <div class="flex flex-col p-8 md:p-10 border-ink border-b lg:border-b-0 lg:border-r last:border-b-0 lg:last:border-r-0">
@@ -358,7 +358,7 @@ const faqs = [
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-ink">
+            <div data-stagger class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-ink">
                 {
                     monthly.map((item) => {
                         const Icon = item.icon;

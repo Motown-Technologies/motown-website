@@ -140,13 +140,13 @@ const gaps = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>Your API / Lifecycle</span>
-                            <span aria-hidden class="text-accent">● v2</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> v2</span>
                         </div>
                         {
                             lifecycle.map((s, i) => {
                                 const Icon = s.icon;
                                 return (
-                                    <div
+                                    <div data-step
                                         class:list={[
                                             "flex items-center gap-4 px-5 py-4",
                                             i !== lifecycle.length - 1 &&
@@ -207,7 +207,7 @@ const gaps = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {

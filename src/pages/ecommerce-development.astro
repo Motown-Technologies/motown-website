@@ -188,13 +188,13 @@ const leaks = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>Your Store / Journey</span>
-                            <span aria-hidden class="text-accent">● converting</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> converting</span>
                         </div>
                         {
                             journey.map((step, i) => {
                                 const Icon = step.icon;
                                 return (
-                                    <div
+                                    <div data-step
                                         class:list={[
                                             "flex items-center gap-4 px-5 py-4",
                                             i !== journey.length - 1 &&
@@ -256,7 +256,7 @@ const leaks = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {
@@ -301,7 +301,7 @@ const leaks = [
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-ink">
+            <div data-stagger class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-ink">
                 {
                     wired.map((item) => {
                         const Icon = item.icon;
@@ -343,7 +343,7 @@ const leaks = [
                     </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-ink">
+            <div data-stagger class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-ink">
                 {
                     metrics.map((m) => (
                         <div class="p-8 md:p-10 border-ink border-b sm:border-r last:border-b-0 sm:[&:nth-child(even)]:border-r-0 lg:[&:not(:last-child)]:border-r lg:[&:nth-child(even)]:border-r lg:[&:nth-last-child(-n+1)]:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b-0">
@@ -439,7 +439,7 @@ const leaks = [
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 border border-ink">
+            <div data-stagger class="grid grid-cols-1 lg:grid-cols-2 border border-ink">
                 {
                     [
                         {

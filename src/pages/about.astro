@@ -113,7 +113,7 @@ const glance = [
                         Every project follows the same four stages, and you can see where it stands from the first conversation through launch and after.
                     </p>
             </div>
-            <div
+            <div data-stagger
                 class="grid gap-0 md:grid-cols-4 border border-ink"
             >
                 {
@@ -195,7 +195,7 @@ const glance = [
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 border border-ink">
+            <div data-stagger class="grid grid-cols-1 md:grid-cols-2 border border-ink">
                 {
                     values.map((v) => (
                         <div class="p-8 md:p-10 border-ink border-b md:[&:nth-child(odd)]:border-r md:[&:nth-child(n+3)]:border-b-0 last:border-b-0">

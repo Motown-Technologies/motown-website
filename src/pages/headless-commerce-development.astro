@@ -163,13 +163,13 @@ const trade = [
                             class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
                         >
                             <span>Your Stack / Headless</span>
-                            <span aria-hidden class="text-accent">● decoupled</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> decoupled</span>
                         </div>
                         {
                             stack.map((item, i) => {
                                 const Icon = item.icon;
                                 return (
-                                    <div
+                                    <div data-step
                                         class:list={[
                                             "flex items-center gap-4 px-5 py-4",
                                             i !== stack.length - 1 &&
@@ -231,7 +231,7 @@ const trade = [
                     </p>
             </div>
 
-            <div
+            <div data-stagger
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink"
             >
                 {
@@ -276,7 +276,7 @@ const trade = [
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 border border-ink bg-paper">
+            <div data-stagger class="grid grid-cols-1 lg:grid-cols-3 border border-ink bg-paper">
                 {
                     wrong.map((item, i) => (
                         <div class="flex flex-col p-8 md:p-10 border-ink border-b lg:border-b-0 lg:border-r last:border-b-0 lg:last:border-r-0">
