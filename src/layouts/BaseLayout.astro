@@ -538,12 +538,28 @@ const organization = {
                             .map((k) => `${k}=${params.get(k)}`)
                             .join("&");
                         j.pages = [];
+                        j.titles = {};
                     }
                     if (j.pages.at(-1) !== location.pathname) j.pages.push(location.pathname);
                     j.pages = j.pages.slice(-15);
+                    j.titles[location.pathname] = document.title.replace(/ \| Motown Solutions$/, "");
                     try {
                         sessionStorage.setItem(KEY, JSON.stringify(j));
                     } catch {}
+                };
+                // "Case study: Auction Operations Platform" for a path and its title.
+                const describe = (path, title = path) => {
+                    const t = title.replace(/ Case Study$/, "");
+                    if (path === "/") return "Home page";
+                    if (path === "/blog" || /^\/blog\/\d+$/.test(path)) return "Blog index";
+                    if (path.startsWith("/blog/")) return `Blog post: ${t}`;
+                    if (path === "/case-studies") return "Case studies index";
+                    if (path.startsWith("/case-studies/")) return `Case study: ${t}`;
+                    if (path === "/services") return "Services overview";
+                    if (path.startsWith("/services/")) return `Service: ${t}`;
+                    const fixed = { "/about": "About page", "/contact": "Contact page", "/privacy": "Privacy policy", "/terms": "Terms of service" };
+                    if (fixed[path]) return fixed[path];
+                    return `Landing page: ${t}`;
                 };
                 // Extra form fields describing how the visitor got to the form.
                 window.motownJourneyFields = () => {
@@ -551,6 +567,7 @@ const organization = {
                     if (!j) return {};
                     const before = j.pages.filter((p) => p !== location.pathname).at(-1);
                     return {
+                        "Came from": before ? describe(before, j.titles?.[before]) : "(came straight to contact)",
                         "Landing page": j.landing,
                         "Referrer": j.referrer || "(direct or unknown)",
                         "Campaign": j.campaign || "(none)",
