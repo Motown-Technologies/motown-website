@@ -1,25 +1,29 @@
 {
-    "cover": "What a prototype skips before it can hold health data",
+    "cover": "What your prototype needs before it holds health data",
     "slides": [
         {
-            "title": "The workflow was already right",
-            "body": "A senior-care operator ran its concierge team on a low-code prototype. The screens matched how the team really worked."
+            "title": "Keep the screens",
+            "body": "A prototype your staff already use has the workflow right. The work is in who can sign in and which records they can reach."
         },
         {
-            "title": "But it had no users",
-            "body": "The “submitted by” field was a dropdown of six hard-coded names. Now there are invite-only accounts with two-factor and passkeys."
+            "title": "Enforce access below every screen",
+            "body": "Put the access rule where every query passes through it. A misconfigured account should see nothing at all."
         },
         {
-            "title": "Everyone could see everything",
-            "body": "Each facility's records are now separated underneath every query. A facility user sees only their own facilities."
+            "title": "Make secrets a deliberate reveal",
+            "body": "Encrypt logins and keys, hide them by default, and log every time someone shows one."
         },
         {
-            "title": "Nothing recorded who changed what",
-            "body": "An append-only audit log now keeps a timeline on every record and for every user."
+            "title": "Answer “who looked at this?”",
+            "body": "An append-only audit log keeps a timeline on every record and every user."
         },
         {
-            "title": "We audited it before launch",
-            "body": "Two reviews against 33 facilities of test data found 48 issues. Eight were fixed the same night."
+            "title": "Turn vague rules into decisions",
+            "body": "HIPAA requires automatic logoff but names no duration. Pick the numbers, and write down why."
+        },
+        {
+            "title": "Test with realistic data first",
+            "body": "One pre-launch review found external accounts in lists meant for internal staff. Fixed before anyone signed in."
         }
     ]
 }
