@@ -1,0 +1,25 @@
+{
+    "cover": "Single sign-on, explained for growing companies",
+    "slides": [
+        {
+            "title": "One login for every tool",
+            "body": "Staff sign in once with their company account. Each app trusts the identity provider and never sees the password."
+        },
+        {
+            "title": "Offboarding in one step",
+            "body": "Disable one account and the person is locked out of every connected app, with no list of tools to remember."
+        },
+        {
+            "title": "Security rules set once",
+            "body": "Require a second factor in the identity provider and every connected app inherits it."
+        },
+        {
+            "title": "Sign-in isn't provisioning",
+            "body": "SSO may not remove accounts inside each app. SCIM does that automatically. Ask vendors about both."
+        },
+        {
+            "title": "Before you buy, ask",
+            "body": "Is SSO on our plan or only a higher one? Can we turn off password login so SSO is the only way in?"
+        }
+    ]
+}
