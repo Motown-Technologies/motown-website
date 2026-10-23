@@ -1,0 +1,25 @@
+{
+    "cover": "What an AI agent harness is, and why it matters",
+    "slides": [
+        {
+            "title": "The model reasons, the harness acts",
+            "body": "The harness decides what the model sees, which tools it can call, when it stops and what counts as finished."
+        },
+        {
+            "title": "Most agent failures aren't the model",
+            "body": "Wrong data, a tool error it couldn't read, no check on the result, or no rule for when to stop."
+        },
+        {
+            "title": "Don't let it grade its own work",
+            "body": "Agents tend to rate their own output too highly. A separate check should decide what counts as done."
+        },
+        {
+            "title": "Limits and approvals",
+            "body": "Step budgets, timeouts, and a person confirming anything expensive or irreversible before it happens."
+        },
+        {
+            "title": "The harness is the part you keep",
+            "body": "Models change every few months. Your permissions, rules, checks and audit trail carry over."
+        }
+    ]
+}
