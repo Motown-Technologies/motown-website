@@ -1,25 +1,25 @@
 {
-    "cover": "WordPress for editors, static pages for patients",
+    "cover": "Keep WordPress for editing, out of visitors’ way",
     "slides": [
         {
-            "title": "Staff liked editing it",
-            "body": "An endoscopy center ran its site on WordPress. Editors were happy. Patients waited on every page load."
+            "title": "Which problem do you have?",
+            "body": "If editors like WordPress and the complaints are about slow pages and outages, the editor isn’t the problem."
         },
         {
-            "title": "Patients never touch it",
-            "body": "Pages are built ahead of time from WordPress content. Visitors get plain HTML."
+            "title": "Build pages ahead of time",
+            "body": "WordPress holds the content. The site is built from it as plain pages, so visitors never touch WordPress."
         },
         {
-            "title": "Publishing is still one button",
-            "body": "A small plugin waits ninety seconds after a publish, so ten quick saves become one rebuild."
+            "title": "Publishing stays one button",
+            "body": "At a clinic we worked with, a small plugin waits ninety seconds after a publish, so ten quick saves become one rebuild."
         },
         {
-            "title": "A CMS outage stays backstage",
-            "body": "If WordPress is down during a build, the build fails and the previous site stays up."
+            "title": "A failed build changes nothing",
+            "body": "If WordPress is down during a build, the build fails and yesterday’s site stays up."
         },
         {
-            "title": "Content is checked first",
-            "body": "A renamed field stops the build with a clear error, so a wrong page never goes live."
+            "title": "Make the build strict",
+            "body": "Content is checked first. A renamed field stops the build with a clear error before anything goes live."
         }
     ]
 }

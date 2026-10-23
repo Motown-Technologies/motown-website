@@ -1,52 +1,58 @@
 ---
-title: "How a clinic kept WordPress for editing and went static"
+title: "Headless WordPress: keep the editor, speed up the site"
 image: ../../assets/blog/headless-wordpress-clinic-image.jpg
 imageAlt: "An empty blue stage with ropes and pulleys visible backstage"
 cover: ../../assets/blog/headless-wordpress-clinic.png
-description: "An endoscopy center kept WordPress for its staff and moved it out of the way of patients. Here is how publishing works now, and why the site stays up."
+description: "Staff like WordPress but the site is slow or fragile? Keep WordPress for editing and take it out of the visitor's path. Here is what that involves."
 pubDate: 2026-10-14
 relatedPages: ["/case-studies/endoscopy-center", "/migrate-from-wordpress"]
 category: case-stories
 ---
 
-An outpatient endoscopy center kept WordPress for editing and moved its public site to static HTML, which patients load without touching WordPress. Staff still publish the way they always have, and the public pages keep loading even when WordPress is down.
+If your staff are happy editing in WordPress and the trouble is how the site behaves for visitors, you may not need to leave WordPress at all. You can keep it as the place people edit and stop it from assembling pages for every visitor. Pages load faster and stay up when WordPress has a bad day, and nobody has to learn a new tool.
 
-Before the rebuild, the site was a full WordPress install. Every time a patient opened a page, PHP, a database and a stack of plugins put that page together on the spot. The staff liked editing it. Nobody liked how it loaded. Replacing WordPress would have fixed the speed and taken away the one tool the office already knew, so we kept it for editing and changed everything in front of it.
+## Work out which problem you have
 
-## WordPress only runs when someone publishes
+Complaints about a WordPress site tend to fall into two groups. Some are about running it, like plugin updates nobody trusts and upkeep that eats into the week. Others are about what visitors get, which means slow pages and a site that breaks when something on the server misbehaves.
 
-The public site is now plain HTML pages, built ahead of time and served from Appwrite Sites on infrastructure we run. WordPress still holds all the content: pages, provider bios, procedures and the navigation menu. The site reads that content while it builds and then serves finished files. A patient loading a page never touches WordPress at all.
+If most of your complaints are in the first group, read [when it's time to leave WordPress](/blog/when-to-leave-wordpress). If they're mostly in the second and your editors like the tool, replacing it is usually the expensive answer, because it takes away the one thing that works.
 
-That one decision changes what can go wrong. A slow database, a plugin update or an expiring certificate on the editing side used to slow down or break the public site. Now each of those is an inconvenience for staff, and patients don't notice. The CMS could be down all week and the public pages would keep loading.
+The slowness and fragility have a specific cause. A standard WordPress install builds each page on the spot, every time someone opens it, with PHP, a database and whatever plugins you run. Anything that goes wrong in that chain goes wrong in front of a visitor.
 
-There is a cost, and we tell clients about it up front. The build does need WordPress reachable while it runs. If WordPress is down during a build, the build fails and the previous version of the site stays up. For a medical practice, that is the failure you want.
+## Build the pages before anyone asks for them
 
-## Publishing is still one button
+The alternative is to keep WordPress as the place content lives and build the public site from it ahead of time. The site reads pages, menus and everything else from WordPress while it builds, then serves plain HTML files. Visitors load those files and never touch WordPress. This is usually called headless WordPress.
 
-The whole point of keeping WordPress was that nobody on staff would have to learn anything new. So publishing works the way it always did. An editor changes a page, a provider bio or a menu item in WordPress and presses publish.
+An outpatient endoscopy center we worked with was in exactly this spot. Staff liked editing their site. Nobody liked how it loaded for patients. After the change, WordPress still holds the pages, provider bios, procedures and the navigation menu, and staff edit them the way they always did. A slow database, a plugin update or an expiring certificate on the editing side is now an inconvenience for staff that patients never see. WordPress could be down all week and the public pages would keep loading.
 
-Behind that button, a small plugin we wrote notices that published content changed. It waits ninety seconds so that a burst of edits turns into one job. Ten quick saves produce one rebuild. Then it asks the host to rebuild the site, and the new pages replace the old ones only once the whole set is ready. No developer and no deploy button are involved, and the editor doesn't need to know any of it is happening.
+## Publishing has to stay one button
 
-## A build that stops when something looks wrong
+If every edit now needs a developer to run a deploy, you have swapped a slow site for a slow publishing process. Before you agree to this setup, ask exactly what happens when an editor presses publish.
 
-Moving WordPress out of the way of patients moves the risk into the build, so most of the engineering went there.
+At the clinic, the answer is that nothing changes for the editor. A small plugin notices the published change, waits ninety seconds so that ten quick saves turn into one rebuild, and asks the host to build the site again. The new pages replace the old ones only once the whole set is ready. The trade is that an edit takes a minute or two to appear.
 
-Every piece of content WordPress sends is checked before it's used. If a field gets renamed or a content type changes shape, the build stops with a clear error and the live site stays as it was. A production build never fills a gap with placeholder text. If something can't be fetched, the page comes out as a not-found page, and those pages are kept out of search results.
+## The risk moves into the build
 
-HTML written in the editor is cleaned on the way in, with scripts, forms and embedded frames stripped out. Every change to the code is also built against a mock of the WordPress API before it goes anywhere near the live site, so a broken build never reaches patients.
+There is a cost, and it's worth knowing up front. The build needs WordPress reachable while it runs. If WordPress is down during a build, the build fails and the previous version of the site stays up. For a medical practice, that's the failure you want.
 
-## The small things editors used to fix by hand
+That only holds if the build is strict about what it accepts. Some things worth checking with whoever builds it for you:
 
-A few problems disappeared because the build now handles them:
+- Content from WordPress is checked before it's used, so a renamed field stops the build with a clear error and the live site stays as it was.
+- A missing piece of content never gets filled with placeholder text that looks real.
+- HTML from the editor is cleaned on the way in, with scripts, forms and embedded frames stripped out.
+- Every code change is built against a test copy of the WordPress content before it goes near the live site.
 
-- Images left over from the old site used to break or shift the page as they loaded. Old image addresses are now rewritten during the build, and every image gets its size set in advance and loads only when needed.
-- Meta descriptions, the summaries that appear in search results, used to be written by hand when they were written at all. Each page now gets one generated from its own content.
-- The navigation menu still comes from WordPress, so editors stay in control of it.
-
-We also did an accessibility pass covering contrast, keyboard navigation, a working skip link and reduced motion, and left automated tests in place so those fixes stay fixed.
+When something looks wrong, the worst outcome should be yesterday's site staying up a little longer.
 
 ## When this approach fits
 
-If your team is comfortable in WordPress and the problem is how the site performs for visitors, replacing the CMS is usually the expensive answer. Keeping it for editing and taking it out of the path of every visitor gets the speed and reliability without retraining anyone.
+It suits you if most of these are true:
 
-The [endoscopy center case study](/case-studies/endoscopy-center) has the full build, including the technical decisions. If your site is on WordPress and you're weighing your options, start with [when it's time to leave WordPress](/blog/when-to-leave-wordpress) and how we approach [moving off it](/migrate-from-wordpress), or [tell us what your team edits today](/contact).
+- Your editors are comfortable in WordPress and you don't want to retrain them.
+- The complaints are about speed and outages for visitors more than about editing.
+- The public site is mostly pages people read, without shopping carts or logged-in areas that need WordPress running for each visitor.
+- Waiting a minute or two for an edit to go live is acceptable.
+
+It also tends to clear up small chores along the way. At the clinic, old image links that used to break are now fixed during the build, and each page gets a search description written from its own content.
+
+The [endoscopy center case study](/case-studies/endoscopy-center) has the full build, including the technical decisions. If you're weighing your options, see how we approach [moving off WordPress](/migrate-from-wordpress), or [tell us what your team edits today](/contact).

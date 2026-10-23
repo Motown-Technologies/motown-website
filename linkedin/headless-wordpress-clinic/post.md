@@ -2,27 +2,29 @@
 
 ## Post 1: native text
 
-An endoscopy center's staff liked editing their website in WordPress. Nobody liked how it loaded for patients.
+If your staff like editing in WordPress and the problem is how the site loads for visitors, you may not need to leave WordPress.
 
-The usual fix is to replace WordPress. That also takes away the one tool the office already knows. We kept WordPress for editing and moved it out of the way of every patient.
+A standard WordPress site builds every page on the spot, each time someone opens it, with PHP, a database and a stack of plugins. Anything that goes wrong in that chain goes wrong in front of a visitor.
 
-The public site is now plain pages, built ahead of time. WordPress holds the content and only runs when someone publishes. A patient loading a page never touches it.
+You can keep WordPress as the place your team edits and build the public site from it ahead of time. Visitors load plain pages and never touch WordPress. This is usually called headless WordPress.
 
-That changes what can go wrong. A slow database or a plugin update on the editing side used to slow down the public site. Now it's an inconvenience for staff, and patients don't notice.
+An endoscopy center we worked with did this. Staff still edit the way they always did. A plugin update or a slow database on the editing side is now a staff inconvenience, and patients never see it.
 
-Publishing still works the way it always did. An editor presses publish, a small plugin waits ninety seconds so a burst of edits becomes one job, and the site rebuilds. If a build fails, the previous version stays up.
+Two questions to ask before you agree to this setup:
 
-The build also checks every piece of content before using it, so a renamed field stops the build with a clear error and the live site stays as it was.
+What happens when an editor presses publish? It should still be one button. At the clinic, a small plugin waits ninety seconds so ten quick saves become one rebuild.
 
-If your team is happy in WordPress and the problem is how the site performs, replacing the CMS is usually the expensive answer.
+What happens when the build hits a problem? It should stop with a clear error and leave the current site up. A build that fills gaps with placeholder text will eventually publish a wrong page.
+
+If your editors are happy and your visitors aren't, replacing the CMS is usually the expensive answer.
 
 Full write-up in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/headless-wordpress-clinic.pdf)
 
-Document title: WordPress for editors, static pages for patients
+Document title: Headless WordPress: keep the editor, speed up the site
 
-How an endoscopy center kept WordPress for its staff and stopped patients from waiting on it. Swipe through, and the full write-up is in the comments.
+Your team likes WordPress, but the site is slow or keeps breaking. You can keep it for editing and take it out of the visitor's path. Swipe through, and the full write-up is in the comments.
 
 ## First comment (both posts)
 
