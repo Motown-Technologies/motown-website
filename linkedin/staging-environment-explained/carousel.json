@@ -1,0 +1,25 @@
+{
+    "cover": "What a staging environment is, and why you need one",
+    "slides": [
+        {
+            "title": "A private copy of your live app",
+            "body": "Staging matches production as closely as you can afford. Every change runs there first, where only your team can see it."
+        },
+        {
+            "title": "A laptop is a poor guide to production",
+            "body": "Different database, settings that exist nowhere else, mocked integrations. Staging closes most of that gap."
+        },
+        {
+            "title": "Ten minutes, or an apology",
+            "body": "A reminder feature that sends every text twice is a quick fix on staging. In production, every patient gets it."
+        },
+        {
+            "title": "Where non-technical people sign off",
+            "body": "Your operations lead clicks through the new flow before it's live, instead of finding out on Monday."
+        },
+        {
+            "title": "Ask your developer",
+            "body": "Where do changes go before customers see them? How close is it to production? When did we last test a rollback?"
+        }
+    ]
+}
