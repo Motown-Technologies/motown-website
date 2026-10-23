@@ -1,0 +1,25 @@
+{
+    "cover": "Vector embeddings, explained without code",
+    "slides": [
+        {
+            "title": "Numbers that stand for meaning",
+            "body": "An embedding turns text into a list of numbers. Texts that mean similar things get similar numbers."
+        },
+        {
+            "title": "A map of your documents",
+            "body": "Picture a bookshop shelved by subject. A question lands next to the passages that answer it, even with no shared words."
+        },
+        {
+            "title": "Bad at exact strings",
+            "body": "Search for part HX-4410-B and the nearest match can be HX-4410-C. Running keyword search alongside fixes it."
+        },
+        {
+            "title": "Permissions don't come built in",
+            "body": "If the HR folder is indexed, anyone can surface it, unless access rules are checked on every search."
+        },
+        {
+            "title": "Test it with real questions",
+            "body": "Collect a few dozen questions your team asks, with the right answers, and score every version against them."
+        }
+    ]
+}
