@@ -1,0 +1,29 @@
+{
+    "cover": "How to read a software quote before you sign",
+    "slides": [
+        {
+            "title": "A fixed price fixes a number to a scope",
+            "body": "The developer prices in a margin for the unknown. Anything the scope doesn't name becomes a change request."
+        },
+        {
+            "title": "Time and materials bills the real hours",
+            "body": "You can change direction without renegotiating. Only your own attention stops the total from growing."
+        },
+        {
+            "title": "Ask who pays when the estimate is wrong",
+            "body": "Fixed price: the developer, plus the margin you paid up front. Time and materials: you, and you keep any savings."
+        },
+        {
+            "title": "Check what “done” means",
+            "body": "Look for testing, deployment, handover and support. Some quotes stop at “code delivered” and bill the rest separately."
+        },
+        {
+            "title": "Make sure you own the result",
+            "body": "Repository, hosting and domain in your name. That decides whether you can take the work elsewhere."
+        },
+        {
+            "title": "Can't describe it yet? Discover first",
+            "body": "Pay for a short fixed-price discovery, then quote the build once the open questions have answers."
+        }
+    ]
+}
