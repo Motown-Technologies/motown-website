@@ -152,12 +152,17 @@ const faqs = [
                                 class="block font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-2"
                                 >Project Details</label
                             >
+                            <p id="message-hint" class="text-sm text-ink-muted mb-1">
+                                A few lines is plenty: how it works today, what you
+                                want it to do instead, and when you need it.
+                            </p>
                             <textarea
                                 id="message"
                                 name="message"
                                 rows="5"
+                                aria-describedby="message-hint"
                                 class="w-full bg-transparent border-0 border-b border-ink/30 py-3 text-ink placeholder:text-ink-muted/50 focus:outline-hidden focus:border-ink focus:shadow-[0_1px_0_0_var(--color-ink)] transition-colors resize-none"
-                                placeholder="Tell us about your project..."
+                                placeholder="Today: orders come in by email and get retyped into a spreadsheet.&#10;Instead: one place to track them, with alerts when stock runs low.&#10;When: before the spring rush."
                                 required></textarea>
                         </div>
 
