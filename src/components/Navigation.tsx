@@ -1,5 +1,5 @@
 import { ChevronDown, Menu, X } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import logo from "../img/motown_solutions_logo.png"
 
 // "/about/" and "/about" are the same page.
@@ -19,6 +19,19 @@ export function Navigation({ pathname: initialPath = "/" }: { pathname?: string 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [pathname, setPathname] = useState(normalize(initialPath))
   const [isServicesOpen, setIsServicesOpen] = useState(pathname.startsWith("/services"))
+  const menuButton = useRef<HTMLButtonElement>(null)
+
+  // Esc closes the mobile menu and hands focus back to its toggle.
+  useEffect(() => {
+    if (!isMobileMenuOpen) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return
+      setIsMobileMenuOpen(false)
+      menuButton.current?.focus()
+    }
+    document.addEventListener("keydown", onKey)
+    return () => document.removeEventListener("keydown", onKey)
+  }, [isMobileMenuOpen])
 
   useEffect(() => {
     setPathname(normalize(window.location.pathname))
@@ -142,6 +155,7 @@ export function Navigation({ pathname: initialPath = "/" }: { pathname?: string 
 
             {/* Mobile button */}
             <button
+              ref={menuButton}
               onClick={() => setIsMobileMenuOpen((v) => !v)}
               className="md:hidden text-ink p-2 -mr-2"
               aria-label="Toggle menu"

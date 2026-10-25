@@ -113,6 +113,16 @@ const organization = {
                 }
             }
 
+            /* In-page jumps (skip link, #anchors) land below the fixed nav. */
+            html {
+                scroll-padding-top: 4rem;
+            }
+            @media (min-width: 768px) {
+                html {
+                    scroll-padding-top: 5rem;
+                }
+            }
+
             /* Scroll reveal: initial hidden state, revealed via data attr.
                Entrances use ease-out — `ease` delays the first frame, which is
                the frame being watched. No will-change: these are full sections,
@@ -328,9 +338,16 @@ const organization = {
         </style>
     </head>
     <body class="font-sans bg-paper text-ink antialiased">
+        <a
+            href="#main"
+            class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-ink focus:text-paper focus:px-5 focus:py-3 font-mono text-xs uppercase tracking-[0.15em]"
+            >Skip to content</a
+        >
         <Navigation client:load pathname={Astro.url.pathname} />
-        <slot />
-        <RelatedPosts />
+        <main id="main" tabindex="-1" class="outline-none">
+            <slot />
+            <RelatedPosts />
+        </main>
         <!-- Footer -->
         <footer class="border-t-2 border-ink bg-paper">
             <div class="max-w-7xl mx-auto px-6 py-16">
