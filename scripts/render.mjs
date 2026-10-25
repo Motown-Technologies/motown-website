@@ -43,3 +43,24 @@ export async function renderPng(tree, width, height) {
     const svg = await satori(tree, { width, height, fonts: await fonts });
     return new Resvg(svg).render().asPng();
 }
+
+// The 1200x630 social card: eyebrow, title, site name, over contour lines
+// seeded by `seed` so each page gets its own pattern.
+export function titleCard({ eyebrow, title, seed }) {
+    const size = title.length <= 40 ? 84 : title.length <= 70 ? 68 : 54;
+
+    return el("div", { width: 1200, height: 630, display: "flex", position: "relative", background: C.paper, borderBottom: `14px solid ${C.ink}` }, [
+        contourLayer(seed, 1200, 630),
+        el("div", { display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", padding: "64px 72px" }, [
+            el("div", { display: "flex", alignItems: "center", gap: 16, fontFamily: "JetBrains Mono", fontSize: 20, letterSpacing: 3.5, color: C.muted }, [
+                el("div", { width: 40, height: 2, background: C.ink }),
+                eyebrow,
+            ]),
+            words(title, { fontFamily: "Space Grotesk", fontSize: size, lineHeight: 1.02, letterSpacing: -size * 0.015, color: C.ink, maxWidth: 1000 }),
+            el("div", { display: "flex", alignItems: "center", gap: 20, fontFamily: "JetBrains Mono", fontSize: 20, letterSpacing: 3, color: C.ink }, [
+                el("div", { width: 72, height: 8, background: C.accent }),
+                "MOTOWNTECH.COM",
+            ]),
+        ]),
+    ]);
+}
