@@ -1,0 +1,28 @@
+---
+// A process as numbered steps joined by a line: left to right on large
+// screens, top to bottom below that.
+interface Props {
+    steps: { t: string; d: string }[];
+}
+
+const { steps } = Astro.props;
+---
+
+<ol class="grid lg:grid-flow-col lg:auto-cols-fr">
+    {
+        steps.map((step, i) => (
+            <li class="flex lg:flex-col gap-5 lg:gap-6">
+                <div class="flex flex-col lg:flex-row lg:items-center shrink-0">
+                    <span class="grid place-items-center size-11 border-2 border-ink bg-paper font-mono text-sm font-bold">
+                        {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {i < steps.length - 1 && <span aria-hidden class="flex-1 self-center lg:self-auto w-0.5 lg:w-auto lg:h-0.5 bg-ink" />}
+                </div>
+                <div class="pb-10 lg:pb-0 lg:pr-10">
+                    <h3 class="font-display text-2xl font-bold tracking-tight leading-tight mb-2">{step.t}</h3>
+                    <p class="text-ink-muted leading-relaxed">{step.d}</p>
+                </div>
+            </li>
+        ))
+    }
+</ol>

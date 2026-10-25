@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectSummary from "../../components/ProjectSummary.astro";
 
 // Reuse existing icons you already created
 import MobileIcon from "../../components/icons/MobileIcon.astro";
@@ -348,6 +349,8 @@ const techBlocks = [
         </div>
     </section>
 
+    <ProjectSummary href="/case-studies/senior-care-concierge" />
+
     <!-- Final CTA -->
     <section
         id="contact"
@@ -360,7 +363,7 @@ const techBlocks = [
             <h2
                 class="font-display font-bold text-display text-paper text-balance mb-10 max-w-5xl leading-[0.95]"
             >
-                Tell us what it needs to <span class="italic text-accent">do</span>.
+                Tell us what it needs to do.
             </h2>
             <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
                 Tell us about your project, and we'll tell you how we'd build it.

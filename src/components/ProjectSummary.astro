@@ -1,0 +1,43 @@
+---
+// One case study as proof on a service page: the problem it started with,
+// what changed, and a link. Content comes from src/data/caseStudies.ts.
+import { studies } from "../data/caseStudies";
+
+interface Props {
+    href: string;
+}
+
+const study = studies.find((s) => s.href === Astro.props.href);
+if (!study) throw new Error(`no case study at ${Astro.props.href}`);
+---
+
+<section class="border-t-2 border-ink bg-paper-2" data-reveal>
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-20 grid grid-cols-12 gap-y-8 md:gap-x-10">
+        <div class="col-span-12 md:col-span-5">
+            <p class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-4">
+                From our work · {study.sector}
+            </p>
+            <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight leading-tight text-balance">
+                {study.title}
+            </h2>
+            <a href={study.href} class="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-eyebrow link-underline">
+                <span aria-hidden>→</span>
+                Read the case study
+            </a>
+        </div>
+        <dl class="col-span-12 md:col-span-7 border-t border-ink">
+            <div class="py-5 border-b border-ink/30">
+                <dt class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-2">What we built</dt>
+                <dd class="leading-relaxed">{study.body}</dd>
+            </div>
+            {
+                study.result && (
+                    <div class="py-5 border-b border-ink/30">
+                        <dt class="font-mono text-[11px] uppercase tracking-eyebrow text-accent mb-2">What changed</dt>
+                        <dd class="font-medium leading-relaxed">{study.result}</dd>
+                    </div>
+                )
+            }
+        </dl>
+    </div>
+</section>
