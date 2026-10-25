@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getPosts } from "../../lib/posts";
 import PostArt from "../../components/PostArt.astro";
+import Toc from "../../components/Toc.astro";
 
 export async function getStaticPaths() {
     const posts = await getPosts();
@@ -11,7 +12,8 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const sections = headings.filter((h) => h.depth === 2);
 const { title, description, cover, image, imageAlt } = post.data;
 
 const article = {
@@ -45,6 +47,14 @@ const article = {
             )
         }
     </div>
+
+    {
+        sections.length >= 4 && (
+            <div class="max-w-3xl mx-auto px-6 pt-12 md:pt-16">
+                <Toc items={sections} />
+            </div>
+        )
+    }
 
     <article class="post max-w-3xl mx-auto px-6 py-16 md:py-20">
         <Content />

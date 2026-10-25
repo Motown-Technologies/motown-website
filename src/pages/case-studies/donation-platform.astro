@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Toc from "../../components/Toc.astro";
 
 const outcomes = [
     {
@@ -94,6 +95,13 @@ const rigor = [
         risk: "A deploy ships code nobody committed",
         undo: "The container image builds from the committed tree, and the README says so plainly next to the command that would otherwise mislead you",
     },
+];
+
+const sections = [
+    { slug: "six-places-the-obvious-version-is-wrong", text: "Six places the obvious version is wrong." },
+    { slug: "compliance-as-architecture", text: "Compliance as architecture." },
+    { slug: "six-problems-and-what-they-cost", text: "Six problems and what they cost." },
+    { slug: "the-discipline-is-built-into-the-tooling", text: "The discipline is built into the tooling." },
 ];
 ---
 
@@ -221,11 +229,15 @@ const rigor = [
         </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-6 pt-12 md:pt-16">
+        <Toc items={sections} label="In this case study" />
+    </div>
+
     <!-- Before / after -->
     <section id="outcomes" class="py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="six-places-the-obvious-version-is-wrong"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Six places the
@@ -283,7 +295,7 @@ const rigor = [
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
                 <div class="col-span-12 md:col-span-7">
-                    <h2
+                    <h2 id="compliance-as-architecture"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Compliance as
@@ -342,7 +354,7 @@ const rigor = [
     <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="six-problems-and-what-they-cost"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Six problems and
@@ -380,7 +392,7 @@ const rigor = [
     <section class="border-t-2 border-ink bg-paper-2 py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="the-discipline-is-built-into-the-tooling"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         The discipline is

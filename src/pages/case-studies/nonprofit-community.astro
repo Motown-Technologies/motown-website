@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Toc from "../../components/Toc.astro";
 
 const outcomes = [
     {
@@ -94,6 +95,13 @@ const rigor = [
         risk: "An admin action can't be traced afterwards",
         undo: "Audit logging throughout, with destructive and lifecycle actions restricted to the highest role",
     },
+];
+
+const sections = [
+    { slug: "both-halves-built-at-once", text: "Both halves, built at once." },
+    { slug: "what-the-audience-changed-about-the-build", text: "What the audience changed about the build." },
+    { slug: "where-the-care-turns-into-code", text: "Where the care turns into code." },
+    { slug: "a-team-of-four-can-t-debug-this-at-midnight", text: "A team of four can't debug this at midnight." },
 ];
 ---
 
@@ -218,11 +226,15 @@ const rigor = [
         </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-6 pt-12 md:pt-16">
+        <Toc items={sections} label="In this case study" />
+    </div>
+
     <!-- Before / after -->
     <section id="outcomes" class="py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="both-halves-built-at-once"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Both halves,
@@ -281,7 +293,7 @@ const rigor = [
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
                 <div class="col-span-12 md:col-span-7">
-                    <h2
+                    <h2 id="what-the-audience-changed-about-the-build"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         What the audience
@@ -335,7 +347,7 @@ const rigor = [
     <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="where-the-care-turns-into-code"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Where the care
@@ -374,7 +386,7 @@ const rigor = [
     <section class="border-t-2 border-ink bg-paper-2 py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="a-team-of-four-can-t-debug-this-at-midnight"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         A team of four

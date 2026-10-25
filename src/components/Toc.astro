@@ -1,0 +1,29 @@
+---
+// "In this article": plain anchor links to a page's sections, so it works
+// without JavaScript.
+interface Props {
+    items: { slug: string; text: string }[];
+    label?: string;
+    class?: string;
+}
+
+const { items, label = "In this article", class: className = "" } = Astro.props;
+---
+
+<nav aria-labelledby="toc-heading" class:list={["border-y border-ink/30 py-6", className]}>
+    <p id="toc-heading" class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-4">
+        {label}
+    </p>
+    <ol class="grid gap-2 md:grid-cols-2 md:gap-x-10">
+        {items.map((item, i) => (
+            <li class="flex gap-3">
+                <span class="font-mono text-[11px] text-ink-muted pt-1 shrink-0" aria-hidden>
+                    {String(i + 1).padStart(2, "0")}
+                </span>
+                <a href={`#${item.slug}`} class="link-underline leading-snug">
+                    {item.text}
+                </a>
+            </li>
+        ))}
+    </ol>
+</nav>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Toc from "../../components/Toc.astro";
 
 const outcomes = [
     {
@@ -117,6 +118,14 @@ const timeline = [
         title: "Publish-to-build",
         body: "The WordPress plugin went live, so an editor's publish is what builds the site, with no developer or deploy button involved. A nondiscrimination notice was added.",
     },
+];
+
+const sections = [
+    { slug: "nothing-changed-for-staff-everything-changed-for-visitors", text: "Nothing changed for staff. Everything changed for visitors." },
+    { slug: "three-rules-the-build-runs-on", text: "Three rules the build runs on." },
+    { slug: "making-a-build-time-dependency-safe", text: "Making a build-time dependency safe." },
+    { slug: "what-happens-when-an-editor-hits-save", text: "What happens when an editor hits save." },
+    { slug: "six-moves-one-decision", text: "Six moves, one decision." },
 ];
 ---
 
@@ -242,11 +251,15 @@ const timeline = [
         </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-6 pt-12 md:pt-16">
+        <Toc items={sections} label="In this case study" />
+    </div>
+
     <!-- Before / after -->
     <section id="outcomes" class="py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="nothing-changed-for-staff-everything-changed-for-visitors"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Nothing changed for staff.
@@ -308,7 +321,7 @@ const timeline = [
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
                 <div class="col-span-12 md:col-span-7">
-                    <h2
+                    <h2 id="three-rules-the-build-runs-on"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Three rules the
@@ -367,7 +380,7 @@ const timeline = [
     <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="making-a-build-time-dependency-safe"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Making a build-time
@@ -411,7 +424,7 @@ const timeline = [
     >
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="what-happens-when-an-editor-hits-save"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         What happens when
@@ -453,7 +466,7 @@ const timeline = [
     <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="six-moves-one-decision"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Six moves,

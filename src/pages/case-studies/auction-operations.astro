@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Toc from "../../components/Toc.astro";
 
 const outcomes = [
     {
@@ -98,6 +99,13 @@ const rigor = [
         risk: "Cataloging stalls because a phone or a service is having a bad day",
         undo: "Photos upload from the floor as the normal path, and a failing provider stops the queue instead of poisoning the batch",
     },
+];
+
+const sections = [
+    { slug: "same-work-one-place-it-now-lives", text: "Same work. One place it now lives." },
+    { slug: "three-ideas-the-whole-system-is-built-on", text: "Three ideas the whole system is built on." },
+    { slug: "the-decisions-nobody-sees", text: "The decisions nobody sees." },
+    { slug: "every-operation-has-one-this-is-what-it-costs", text: "Every operation has one. This is what it costs." },
 ];
 ---
 
@@ -221,11 +229,15 @@ const rigor = [
         </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-6 pt-12 md:pt-16">
+        <Toc items={sections} label="In this case study" />
+    </div>
+
     <!-- Before / after -->
     <section id="outcomes" class="py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="same-work-one-place-it-now-lives"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Same work.
@@ -285,7 +297,7 @@ const rigor = [
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
                 <div class="col-span-12 md:col-span-7">
-                    <h2
+                    <h2 id="three-ideas-the-whole-system-is-built-on"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Three ideas the whole
@@ -340,7 +352,7 @@ const rigor = [
     <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="the-decisions-nobody-sees"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         The decisions
@@ -380,7 +392,7 @@ const rigor = [
     <section class="border-t-2 border-ink bg-paper-2 py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="every-operation-has-one-this-is-what-it-costs"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Every operation has one.

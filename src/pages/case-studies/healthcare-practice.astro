@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Toc from "../../components/Toc.astro";
 
 const outcomes = [
     {
@@ -91,6 +92,13 @@ const reversibility = [
         risk: "Something surfaces a week later",
         undo: "The old tables were kept a month past cutover, alongside a database snapshot",
     },
+];
+
+const sections = [
+    { slug: "same-site-nothing-underneath-it-is-the-same", text: "Same site. Nothing underneath it is the same." },
+    { slug: "three-things-we-were-actually-trying-to-fix", text: "Three things we were actually trying to fix." },
+    { slug: "three-years-five-moves", text: "Three years, five moves." },
+    { slug: "every-scary-step-had-one-move-back", text: "Every scary step had one move back." },
 ];
 ---
 
@@ -224,11 +232,15 @@ const reversibility = [
         </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-6 pt-12 md:pt-16">
+        <Toc items={sections} label="In this case study" />
+    </div>
+
     <!-- Before / after -->
     <section id="outcomes" class="py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="same-site-nothing-underneath-it-is-the-same"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Same site.
@@ -289,7 +301,7 @@ const reversibility = [
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-12 gap-6 mb-12 md:mb-16">
                 <div class="col-span-12 md:col-span-7">
-                    <h2
+                    <h2 id="three-things-we-were-actually-trying-to-fix"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Three things we were
@@ -345,7 +357,7 @@ const reversibility = [
     <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="three-years-five-moves"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Three years,
@@ -388,7 +400,7 @@ const reversibility = [
     <section class="border-t-2 border-ink bg-paper-2 py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-10 md:mb-12">
-                <h2
+                <h2 id="every-scary-step-had-one-move-back"
                         class="font-display font-bold text-h2 tracking-tight text-balance"
                     >
                         Every scary step
