@@ -10,6 +10,8 @@ import sitemap from "@astrojs/sitemap";
 
 import markdownPages from "./markdown-pages.mjs";
 
+import unpublishedLinks from "./unpublished-links.mjs";
+
 // https://astro.build/config
 export default defineConfig({
   // Required for sitemap + canonical URLs. Change if this deploys elsewhere.
@@ -18,7 +20,8 @@ export default defineConfig({
   // when the markup puts them on their own line ("a <span>x</span> app.").
   compressHTML: false,
   server: { host: '0.0.0.0' },
-  integrations: [mdx(), react(), sitemap(), markdownPages()],
+  // unpublishedLinks runs first so the markdown copies get the cleaned HTML.
+  integrations: [mdx(), react(), sitemap(), unpublishedLinks(), markdownPages()],
   vite: {
     plugins: [tailwindcss()]
   }
