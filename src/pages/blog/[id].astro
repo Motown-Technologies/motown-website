@@ -84,5 +84,8 @@ const article = {
     .post :global(:not(pre) > code) { font-family: var(--font-mono); font-size: 0.9em; background: var(--color-paper-2); padding: 0.1em 0.35em; }
     .post :global(pre) { font-family: var(--font-mono); font-size: 0.9rem; padding: 1.25em; overflow-x: auto; border: 1px solid var(--color-ink); }
     .post :global(img) { border: 1px solid var(--color-ink); }
+    .post :global(table) { display: block; overflow-x: auto; border-collapse: collapse; font-size: 1rem; line-height: 1.5; }
+    .post :global(th), .post :global(td) { border: 1px solid var(--color-ink); padding: 0.6em 0.9em; text-align: left; vertical-align: top; }
+    .post :global(th) { font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; background: var(--color-paper-2); }
     .post :global(hr) { border-color: color-mix(in srgb, var(--color-ink) 30%, transparent); margin-block: 3em; }
 </style>

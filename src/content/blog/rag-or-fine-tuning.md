@@ -11,7 +11,7 @@ category: ai
 
 A team wants an AI assistant to answer questions about its policies, contracts or product manuals. The documents change, people have different access rights and an answer needs to show where it came from. Those requirements matter more than whether the proposal calls the system RAG or fine-tuning.
 
-For current company information, start with retrieval: look up the relevant passages each time a question is asked. Fine-tuning is usually a separate decision about the model's behavior, such as its format or tone.
+For current company information, start with retrieval: look up the relevant passages each time a question is asked. Fine-tuning is usually a separate decision about the model's behavior, such as its format or tone. If the terms are new to you, start with [what RAG and fine-tuning do to a model](/blog/rag-and-fine-tuning-explained).
 
 ## What's the difference between RAG and fine-tuning?
 

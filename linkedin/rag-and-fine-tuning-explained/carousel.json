@@ -1,0 +1,29 @@
+{
+    "cover": "RAG and fine-tuning, in plain terms",
+    "slides": [
+        {
+            "title": "The model doesn't know your documents",
+            "body": "It learned from public text up to a cutoff date. Your policies, manuals and contracts were never part of that."
+        },
+        {
+            "title": "RAG looks things up",
+            "body": "The system searches your documents for relevant passages and hands them to the model along with the question."
+        },
+        {
+            "title": "Like an open-book exam",
+            "body": "The model writes the answer, the facts come from your documents, and you can check the passage it used."
+        },
+        {
+            "title": "Fine-tuning changes the model",
+            "body": "Training on hundreds of agreed examples builds in a format or tone, so it no longer needs long instructions."
+        },
+        {
+            "title": "A poor place to keep facts",
+            "body": "A tuned model keeps what it learned at training time and can't show where an answer came from."
+        },
+        {
+            "title": "Try a better prompt first",
+            "body": "Clear instructions and a few good examples are often enough, and they give you a baseline to measure against."
+        }
+    ]
+}
