@@ -1,21 +1,21 @@
 ---
-title: "When a spreadsheet should become a real database"
+title: "When the spreadsheet only one person understands runs the business"
 image: ../../assets/blog/when-a-spreadsheet-should-become-a-database-image.jpg
 imageAlt: "A leaning tower of loose paper beside a closed blue steel filing cabinet"
 cover: ../../assets/blog/when-a-spreadsheet-should-become-a-database.png
-description: "The signs a spreadsheet has outgrown its job, what a database does differently, and how to move without losing data or stopping work."
+description: "How to recognize when a shared spreadsheet needs a different home, and how to move the work without losing the knowledge inside it."
 pubDate: 2027-01-13
 relatedPages: ["/spreadsheet-to-app", "/database-design"]
 category: software
 ---
 
-A spreadsheet should become a database when several people depend on it to run the business and the data has to stay correct while they all change it. Size matters less than most people think. Shared editing, linked records and the cost of a mistake are what usually tip it.
+One person understands the formulas, knows which tab is current and can explain why a number looks wrong. Everyone else uses the sheet carefully and waits for them when something breaks. Their holiday becomes a planning problem.
 
-Spreadsheets are a good tool. They're quick to start, everyone knows how to use one, and plenty of businesses run well on them for years. Trouble starts when a sheet that began as one person's tracker turns into the system the whole company relies on.
+Dependence on one person's knowledge is a reason to consider a database, even if the workbook is small. Before replacing the sheet, understand the process and the exceptions it holds. Much of the business knowledge you need is already there.
 
 ## Signs a spreadsheet has outgrown its job
 
-You'll probably recognize some of these:
+Look for recurring problems such as:
 
 - The same customer or order appears in several tabs or files, and they don't always agree.
 - People email copies around, and more than one file has "final" in its name.
@@ -25,23 +25,23 @@ You'll probably recognize some of these:
 - Only one person really understands how it works, and their holidays make everyone nervous.
 - It's getting slow, or you've started splitting it into separate files to keep it usable.
 
-One or two of these is normal. If several sound familiar, the spreadsheet is doing a database's job without any of a database's protections.
+A single problem may be fixable in the workbook. If several keep recurring, compare improving the sheet and its permissions with moving the shared work into an app.
 
 ## What a database does differently
 
-In a spreadsheet, anyone can type anything into any cell. A database is built around rules about what the data is allowed to be.
+A spreadsheet can have validation and protected cells, but those rules need care as a workbook changes hands. A database lets the team define rules about the records themselves, with an app controlling how people work with them.
 
 A status field can only hold one of a fixed list of values, so "Active", "active " and "???" can't all turn up in the same column. An order has to belong to a customer who exists. A required field can't be left blank. The database enforces these rules itself, so a rushed edit late on a Friday can't break them without anyone noticing.
 
 Related data lives in linked tables. A customer is stored once, and every order points to that record. Change the customer's address and every order sees the change, with no stale copy left in another tab.
 
-A database is also designed for many people working at once, each seeing current data, and it can record who changed what and when. With a proper app in front of it, each person gets their own login, screens for their part of the job, and only the permissions they need.
+A database is also designed for many people working at once. Recording who changed what and when is something the team needs to build into the system and check. With a proper app in front of it, each person gets their own login, screens for their part of the job, and only the permissions they need.
 
 ## Is size the reason to move?
 
-Usually not. Excel's [published limit](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3) is 1,048,576 rows per worksheet, and Google Sheets allows [up to 20 million cells](https://support.google.com/drive/answer/37603) in a spreadsheet. Most business spreadsheets run into trouble long before either limit, because heavy formulas and lookups across tabs slow a sheet down well before it runs out of rows.
+Excel's [published limit](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3) is 1,048,576 rows per worksheet, and Google Sheets allows [up to 20 million cells](https://support.google.com/drive/answer/37603) in a spreadsheet. Most business spreadsheets run into trouble long before either limit, because heavy formulas and lookups across tabs slow a sheet down well before it runs out of rows.
 
-A slow sheet is one sign. The stronger signs have to do with people, and with whether anyone still trusts the numbers.
+Speed matters less than whether the team can maintain the sheet and trust its numbers.
 
 ## When a spreadsheet is still the right tool
 
@@ -56,8 +56,6 @@ Say a property management company tracks units, tenants, leases and repairs in o
 3. Build the screens. People get forms and views shaped around their tasks, along with logins and roles.
 4. Import, check and run both side by side. The existing data is cleaned and imported, and the team keeps the spreadsheet until they trust the new system.
 
-The data model is the step to get right. Screens can be redesigned in a week, but a database with years of records in it is much harder to restructure, so we spend time on the schema first.
+Spend time on the data model before importing the records. The team needs to agree what an order, tenant or repair means and which relationships must stay intact. A new screen won't resolve disagreement about the underlying records.
 
-We did this for an auction house that ran its inventory across spreadsheets, a shared photo folder and a group chat. The [write-up of that project](/blog/auction-house-spreadsheets) shows what moving to one system of record changed for them.
-
-Most spreadsheet-to-app projects take roughly four to eight weeks. Our [spreadsheet to app](/spreadsheet-to-app) page covers how we run them, and [database design](/database-design) covers the schema work underneath. If several of the signs above sound familiar, [show us the spreadsheet](/contact).
+Ask the person who knows the workbook to walk through a normal day and a difficult one. Record the exceptions as well as the formulas, and agree how staff will check the imported data before giving up the old sheet. The [auction house project](/blog/auction-house-spreadsheets) shows one version of that move.

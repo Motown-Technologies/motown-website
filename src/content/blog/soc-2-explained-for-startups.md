@@ -1,17 +1,17 @@
 ---
-title: "SOC 2 explained: what it is and when startups need it"
+title: "A customer asked for SOC 2. What happens next?"
 image: ../../assets/blog/soc-2-explained-for-startups-image.jpg
 imageAlt: "A small folded white letter on a stone block, closed with a blue wax seal much larger than the letter itself"
 cover: ../../assets/blog/soc-2-explained-for-startups.png
-description: "What a SOC 2 report is, Type 1 versus Type 2, and the signs a startup needs one, explained for founders who sell to larger companies."
+description: "What a SOC 2 request means for a startup, how the report types differ and why the customer deadline may not match the audit timeline."
 pubDate: 2026-11-25
 relatedPages: ["/soc-2-readiness"]
 category: software
 ---
 
-SOC 2 is an independent audit report showing that a company protects its customers' data with controls that work as described. A startup needs one when larger customers ask for it before they'll sign, usually once you're selling software that stores or handles their data.
+A larger prospect is ready to buy, then its security team asks for your SOC 2 report. If you don't have one, the next conversation needs to cover what the buyer will accept and how much time you actually have.
 
-If nobody has asked yet, you probably don't need the report. You may still want to start the groundwork, because the report that most buyers want takes months to earn.
+SOC 2 is an independent audit report about a company's controls. The report buyers request can require months of evidence. Check the timeline before promising a date during the sales conversation.
 
 ## What SOC 2 actually is
 
@@ -19,7 +19,7 @@ SOC 2 is a framework from the [AICPA](https://www.aicpa-cima.com/topic/audit-ass
 
 The criteria are the AICPA's [Trust Services Criteria](https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022), grouped into five categories: security, availability, processing integrity, confidentiality and privacy. Security is in every SOC 2 report. You add the others only if they matter to what you sell. A hosting provider might add availability, and a company handling sensitive records might add confidentiality.
 
-In practice, "controls" means ordinary habits written down and followed. Who gets access to production and who reviews that access. How code changes are approved before they ship. Whether data is encrypted, whether backups are tested, and what happens when someone leaves the company.
+In practice, "controls" include written procedures for granting and reviewing production access, approving code changes and removing access when someone leaves. Encryption and backup tests also need to be documented and followed.
 
 ## Type 1 versus Type 2
 
@@ -46,7 +46,7 @@ If you sell mostly to consumers or small businesses and nobody has asked, a SOC 
 
 ## What getting ready involves
 
-The audit is the last step. Readiness is everything before it, and it's where most of the effort goes.
+Most of the preparation happens before the auditor arrives, in the work usually called readiness.
 
 First, decide the scope: which systems, which criteria and which type of report. Keeping scope tight saves money, because everything inside it has to be documented and tested.
 
@@ -54,7 +54,7 @@ Next, find the gaps. Compare how the company works today against the criteria an
 
 Then close them. That means writing policies that match how your team really works, because the auditor checks whether you follow them. It also means putting technical controls in the systems themselves: access management, logging, encryption, change approval and handling of vulnerabilities.
 
-Finally, collect evidence. The cheapest way to survive a Type 2 window is to gather evidence automatically from the systems, so nobody spends the last week of every quarter taking screenshots.
+Finally, collect evidence. During a Type 2 window, gather evidence automatically where possible so the team doesn't have to spend the last week of every quarter taking screenshots.
 
 ## Common mistakes
 
@@ -64,8 +64,8 @@ Another is copying a template policy set that describes a company you aren't. An
 
 A third is treating it as a one-off. Buyers usually ask for a current report each year, so the controls have to keep running after the first report is issued.
 
-## Where we fit
+## Separate getting ready from the audit
 
-We aren't auditors and can't be; a CPA firm issues the report. Our job is the readiness work: scoping, the gap assessment, policies, technical controls and evidence collection, so the audit firm has little to write up. The details are on our [SOC 2 readiness](/soc-2-readiness) page.
+A CPA firm issues the report. Readiness work comes before that: deciding scope, closing gaps and collecting evidence. If you bring in help, ask who is responsible for each part and what your own team will need to do.
 
-If a prospect has asked for your SOC 2 report, [tell us who's asking and by when](/contact), and we'll tell you honestly whether the date is achievable.
+Ask the buyer which report type and scope it requires, and by when. Then compare that request with the controls and evidence you already have. If the dates don't fit, explain the gap early and ask what the buyer's security team can review in the meantime.

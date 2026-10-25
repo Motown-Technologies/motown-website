@@ -1,21 +1,21 @@
 ---
-title: "Fractional vs. full-time CTO: which a startup needs"
+title: "Who makes the technical decisions when nobody owns them?"
 image: ../../assets/blog/fractional-cto-for-startups-image.jpg
 imageAlt: "A brass compass on a blue surface casting a long shadow"
 cover: ../../assets/blog/fractional-cto-for-startups.png
-description: "What a startup without a senior technical lead is missing, what a part-time CTO takes on, and how to tell when you need one."
+description: "How founders can recognize a gap in technical leadership and decide whether it needs a senior hire, part-time help or clearer ownership."
 pubDate: 2026-08-28
 relatedPages: ["/fractional-cto", "/startup-consulting"]
 category: software
 ---
 
-Most seed-stage companies we talk to don't need a full-time CTO yet. They need someone senior to make the four or five technical calls a month that are expensive to get wrong, and to stand behind those calls afterwards.
+The engineers disagree about a rewrite, and the founder has no clear way to settle it. Meanwhile, a customer is waiting for a security answer before signing. Work continues, but the decisions don't have an owner.
 
-A team can ship for a long time without that person. The cost usually shows up later, during a fundraise or a rewrite, when decisions nobody owned at the time have to be explained or undone.
+A team can keep shipping while those decisions wait, but the founder still needs answers about whether the product can support the next stage of growth. Before hiring a CTO, work out whether the problem is missing experience, unclear authority or simply no time to do the work.
 
 ## What goes unowned without a technical lead
 
-At almost every startup we see without senior technical leadership, the same work has no owner:
+A leadership gap can leave work like this without a clear owner:
 
 - What to build, what to skip and in what order, planned against the runway.
 - Architecture and stack choices the team can still defend in two years, made for its size, budget and realistic scale.
@@ -24,40 +24,34 @@ At almost every startup we see without senior technical leadership, the same wor
 - Security and compliance, including the [SOC 2 questions](/soc-2-readiness) enterprise buyers raise before they sign.
 - Scoping the first engineering roles and running the technical screens.
 
-None of these gaps look like mistakes at the time. Six months of building before talking to a user feels like progress. So does picking a stack because a blog post recommended it, or letting an agency build something nobody in-house can maintain. Undoing those choices later takes far longer than making them did.
+These gaps can be hard to recognize while the team is busy. Six months of building before talking to a user may feel productive. A stack choice based on a blog post or an agency build that nobody in-house can maintain can also seem reasonable until the team has to live with it. Reversing those choices takes time.
 
 ## What a part-time CTO does
 
-A fractional CTO does the job a full-time one would, for a day or two a week. In our engagements that starts with the hard calls: rewrite or refactor, build or buy, one service or several. Each decision gets made and written down with its tradeoffs, so it doesn't drift to the next sprint.
+A fractional CTO takes responsibility for technical leadership on a part-time basis, often a day or two a week. That can include calls about rewriting or refactoring, building or buying, and how to divide the system. The decision and its tradeoffs need to be written down, so it doesn't drift to the next sprint.
 
-The role also covers the engineers. That means one-to-ones, code review standards and mentoring for a team that has never had anyone senior to escalate to. It covers hiring too: scoping the role, writing the brief, screening candidates and running the technical interviews alongside the founders. A first senior hire is a guess with a six-figure downside, and a second opinion from someone who has run those interviews helps.
+The role also covers the engineers. That means one-to-ones, code review standards and mentoring for a team that has never had anyone senior to escalate to. It covers hiring too: scoping the role, writing the brief, screening candidates and running the technical interviews alongside the founders. For a founder who cannot assess the technical work themselves, an experienced interviewer can help test what the role actually requires.
 
 Then there's spend (cloud bills, overlapping tools and contractor rates) and risk: security posture, compliance questionnaires, single points of failure, and the parts of the system only one person understands. And there's the technical section of the board update, written by someone who can answer the follow-up questions.
 
-An advisor tells you what they would do. A fractional CTO makes the call, puts their name on it, and is still there when it plays out.
+Check whether the proposed role includes owning decisions and following through, or only giving advice. Either can be useful, but they leave the founder with different responsibilities.
 
-## How an engagement starts
+## Define the authority before hiring the person
 
-Founders usually get in touch at one of three moments: with an idea and no product yet, with a team but no senior technical lead, or while preparing to raise or sell. The shape of the work depends on which.
+A senior person can review the stack, team and roadmap and still leave the founder with the same unresolved decisions. Before bringing someone in, agree which calls they can make, who controls the budget and how disagreements will be settled.
 
-We start every engagement with a two-week audit: a fixed-scope review of the stack, the team and the roadmap that ends with written findings and a prioritized list of what to fix first. It suits founders who suspect something is wrong but can't name it, and it carries no obligation to continue.
+Separate a bounded problem from an ongoing role. A migration or a first engineering hire has an end. Supporting engineers, reviewing spend and owning architecture decisions continue as long as the company needs them. A short project won't fill that continuing gap by itself.
 
-From there, a sprint of four to eight weeks fits a known problem that needs closing out, such as a migration, a re-architecture, a compliance push or a first engineering hire. A retainer of a day or two a week fits a gap that will stay open until you hire a full-time CTO.
+## How to tell whether the arrangement helps
 
-## What a month on retainer produces
+Look for decisions that have been made and written down, with the tradeoffs and an owner. Ask the engineers whether they have someone to escalate to and whether code reviews are helping them move work forward.
 
-Retainers go bad when nobody can point at the output, so ours produce the same things every month whether or not anything went wrong:
-
-- Decision records, with the reasoning behind each call
-- A standing review of what's being built
-- One-to-ones and code review standards for the team
-- A spend report covering what you're paying for and what to cut
-- A technical summary ready for the board
+A monthly summary should make the spend and outstanding risks understandable to the founder. It should also say what needs a business decision. If the same technical disagreement returns every sprint, look at why the reviews and updates aren't helping the team resolve it.
 
 ## Fractional or full-time: how to tell
 
-Hire a full-time CTO when the gap stops being occasional. While the need is the four or five calls a month that are expensive to get wrong, a fractional CTO covers it. A retainer is meant to hold the role until you make that hire, and we can help scope it and run its technical interviews.
+Part-time leadership can fit when the decisions are occasional and the team can carry out the work between them. A full-time role becomes worth considering when leadership is needed throughout the week and waiting for the next scheduled day holds people up.
 
-Until then, the signs are easy to spot. If nobody on the team can settle a technical disagreement, if architecture gets decided by whoever argues hardest, or if the board asks about scale and the answer is improvised, that is the gap a fractional CTO fills.
+Check the team you already have, too. A senior engineer may need clearer authority or protected time rather than another person above them. If nobody can settle a technical disagreement or answer the board's questions, establish why before choosing the arrangement.
 
-Read more about how we work as a [fractional CTO](/fractional-cto) or through [startup consulting](/startup-consulting). If you'd like to talk through where your company is, [book a founder call](/contact).
+Look back at the last few technical decisions that stalled. Write down who could have made each call and what prevented them. Use those responsibilities to define the role before choosing its title.

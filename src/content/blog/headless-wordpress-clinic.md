@@ -1,9 +1,9 @@
 ---
-title: "Headless WordPress: keep the editor, speed up the site"
+title: "Your website is slow. Does your team need a new editor too?"
 image: ../../assets/blog/headless-wordpress-clinic-image.jpg
 imageAlt: "An empty blue stage with ropes and pulleys visible backstage"
 cover: ../../assets/blog/headless-wordpress-clinic.png
-description: "Staff like WordPress but the site is slow or fragile? Keep WordPress for editing and take it out of the visitor's path. Here is what that involves."
+description: "An endoscopy center kept WordPress for editing while changing how its public pages were delivered. The benefits and publishing tradeoffs."
 pubDate: 2026-10-14
 relatedPages: ["/case-studies/endoscopy-center", "/migrate-from-wordpress"]
 category: case-stories
@@ -23,7 +23,7 @@ The slowness and fragility have a specific cause. A standard WordPress install b
 
 The alternative is to keep WordPress as the place content lives and build the public site from it ahead of time. The site reads pages, menus and everything else from WordPress while it builds, then serves plain HTML files. Visitors load those files and never touch WordPress. This is usually called headless WordPress.
 
-An outpatient endoscopy center we worked with was in exactly this spot. Staff liked editing their site. Nobody liked how it loaded for patients. After the change, WordPress still holds the pages, provider bios, procedures and the navigation menu, and staff edit them the way they always did. A slow database, a plugin update or an expiring certificate on the editing side is now an inconvenience for staff that patients never see. WordPress could be down all week and the public pages would keep loading.
+An outpatient endoscopy center we worked with was in exactly this spot. Staff liked editing their site but were unhappy with how it loaded for patients. After the change, WordPress still holds the pages, provider bios, procedures and the navigation menu, and staff edit them the way they always did. A slow database, a plugin update or an expiring certificate on the editing side is now an inconvenience for staff that patients never see. WordPress could be down all week and the public pages would keep loading.
 
 ## Publishing has to stay one button
 
@@ -33,7 +33,7 @@ At the clinic, the answer is that nothing changes for the editor. A small plugin
 
 ## The risk moves into the build
 
-There is a cost, and it's worth knowing up front. The build needs WordPress reachable while it runs. If WordPress is down during a build, the build fails and the previous version of the site stays up. For a medical practice, that's the failure you want.
+The cost is that the build needs WordPress reachable while it runs. If WordPress is down during a build, the build fails and the previous version of the site stays up. That lets patients keep using the published pages while the editing system is repaired.
 
 That only holds if the build is strict about what it accepts. Some things worth checking with whoever builds it for you:
 
@@ -42,7 +42,7 @@ That only holds if the build is strict about what it accepts. Some things worth 
 - HTML from the editor is cleaned on the way in, with scripts, forms and embedded frames stripped out.
 - Every code change is built against a test copy of the WordPress content before it goes near the live site.
 
-When something looks wrong, the worst outcome should be yesterday's site staying up a little longer.
+If the build rejects a change, the previous published site should remain available.
 
 ## When this approach fits
 
@@ -53,6 +53,6 @@ It suits you if most of these are true:
 - The public site is mostly pages people read, without shopping carts or logged-in areas that need WordPress running for each visitor.
 - Waiting a minute or two for an edit to go live is acceptable.
 
-It also tends to clear up small chores along the way. At the clinic, old image links that used to break are now fixed during the build, and each page gets a search description written from its own content.
+The clinic's build handles a few other publishing chores too. Old image links that used to break are now fixed during the build, and each page gets a search description written from its own content.
 
-The [endoscopy center case study](/case-studies/endoscopy-center) has the full build, including the technical decisions. If you're weighing your options, see how we approach [moving off WordPress](/migrate-from-wordpress), or [tell us what your team edits today](/contact).
+The [endoscopy center case study](/case-studies/endoscopy-center) has the full build. If you're considering the same approach, ask to see a complete publishing cycle, including a failed build. Your editors need to know how they will notice a failure and who will help them publish again.

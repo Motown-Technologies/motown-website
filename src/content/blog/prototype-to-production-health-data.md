@@ -1,9 +1,9 @@
 ---
-title: "HIPAA and your prototype: what changes for health data"
+title: "The care team likes the prototype. Can it hold real patient records?"
 image: ../../assets/blog/prototype-to-production-health-data-image.jpg
 imageAlt: "A paper model house next to the same house cast in concrete"
 cover: ../../assets/blog/prototype-to-production-health-data.png
-description: "A low-code or AI-built prototype can get a care workflow right and still be unsafe for patient records. Here is what has to change before it holds them."
+description: "A senior-care prototype got the workflow right but needed different access controls and audit records before handling health data."
 pubDate: 2026-08-19
 relatedPages: ["/case-studies/senior-care-concierge", "/prototype-to-production"]
 category: case-stories
@@ -15,15 +15,15 @@ If your low-code or AI-built prototype is about to hold patient or resident reco
 
 A prototype your staff already use has answered the hardest product questions: which screens exist, what goes on them and how a person actually works a case. Starting over "properly" throws that away.
 
-A multi-facility senior-care operator we worked with ran its concierge team on a low-code prototype. The workflow was right. But the "submitted by" field was a dropdown of six hard-coded names, because the demo had no users, and every facility's records were visible to everyone. We wrote the rebuild in two halves: reproduce the workflow faithfully, then add what the demo had skipped. Staff who knew the prototype needed no retraining.
+A multi-facility senior-care operator we worked with ran its concierge team on a low-code prototype. The workflow suited the team, but the demo had no user accounts: "submitted by" was a dropdown of six hard-coded names, and everyone could see every facility's records. We wrote the rebuild in two halves: reproduce the workflow faithfully, then add what the demo had skipped. Staff who knew the prototype needed no retraining.
 
-Our [general checklist of what prototypes skip](/blog/what-your-prototype-skipped) covers sign-in, data and deploys. What follows is what health data adds.
+The [general prototype checklist](/blog/what-your-prototype-skipped) covers sign-in, data and deploys. Handling health data adds requirements around access, logging and vendors.
 
 ## Put the access boundary below the screens
 
 The obvious way to restrict records is screen by screen, with each page filtering to the user's facility. That works until someone adds a page on a deadline and forgets the filter.
 
-Put the rule where every query passes through it instead. In the senior-care rebuild, facility separation sits underneath every database query. Internal staff see across all facilities, a facility user sees only their own, and an account linked to no facility sees nothing at all. That last case matters. When something is misconfigured, the safe failure is an empty screen.
+Put the rule where every query passes through it instead. In the senior-care rebuild, facility separation sits underneath every database query. Internal staff see across all facilities, a facility user sees only their own, and an account linked to no facility sees nothing at all, so a configuration mistake shows an empty screen rather than another facility's records.
 
 It also helps to decide which screens should carry protected information at all. Lobby wallboards in that project show aggregate figures only, never a resident's name, so they can run on a simple read-only link.
 
@@ -37,7 +37,7 @@ The same goes for history. A prototype usually records nothing about who changed
 
 HIPAA often says what to do without saying how. Automatic logoff is a good example: sessions have to end after inactivity, but the rule names no duration. Someone has to pick the numbers and the behavior.
 
-The senior-care app uses three layers: an idle timeout, a hard cap on session length, and a countdown warning about a minute before sign-out. When it signs someone out, it says why and offers a link back to where they were. Write down each choice like this and the reason for it. Your privacy officer will ask.
+The senior-care app uses three layers: an idle timeout, a hard cap on session length, and a countdown warning about a minute before sign-out. When it signs someone out, it says why and offers a link back to where they were. Document these choices and their reasons for review with your privacy officer.
 
 ## Know where the data lives and who has signed for it
 
@@ -56,6 +56,6 @@ Test with realistic data before anyone signs in. Two reviews of that rebuild, ru
 - Have you written down your session timeouts and why you chose them?
 - Does every vendor holding the data have a signed agreement?
 
-If several answers are no, the prototype still has value. It just needs a different foundation before it can hold anyone's records.
+Unresolved items need work before the prototype holds real records; the workflow can still be useful while that foundation is rebuilt.
 
-The [senior care case study](/case-studies/senior-care-concierge) has the full technical detail. If you have a prototype of your own, read how we approach [taking a prototype to production](/prototype-to-production), or [send us what you've built](/contact).
+Keep the workflow your staff helped establish, but review the data boundaries separately. Ask someone to demonstrate what an external facility account can see, including an account set up incorrectly. The [senior care case study](/case-studies/senior-care-concierge) describes the rebuild and the findings that review uncovered.

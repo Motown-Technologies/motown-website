@@ -9,7 +9,7 @@ relatedPages: ["/migrate-from-wordpress"]
 category: software
 ---
 
-Leave WordPress when keeping the site alive takes more of your team's time than writing for it. That usually shows up years in, after enough plugins, themes and quick fixes that upkeep has become a job of its own. If updates go through cleanly and pages load fast on a phone, staying is fine.
+Leave WordPress when keeping the site alive takes more of your team's time than writing for it. Years of plugins, theme changes and quick fixes can leave the team spending more time on upkeep than on writing. If updates go through cleanly and pages load fast on a phone, staying is fine.
 
 ## The signs it's time
 
@@ -17,38 +17,31 @@ These are the complaints we hear on first calls about WordPress sites:
 
 - A dozen plugins are waiting on updates, and nobody is sure which one will break the site.
 - Bots hammer `/wp-admin` all day.
-- PHP and a database run on every page view, and mobile PageSpeed scores are in the red.
+- Visitors report slow pages, and nobody has established what is causing the delay.
 - The theme is something only the original developer understands.
 
-Each of these has a cost. Plugin updates eat into your team's week. Every plugin adds code that attackers can probe. And pages get slower as the plugin list grows.
+Investigate which parts of the setup are causing these problems. Find out which updates are difficult, what is slowing the site and whether another developer could maintain the theme. Compare the cost of those repairs with the disruption of a move.
 
 ## When staying is fine
 
 If your site runs a handful of plugins, updates go through without drama and pages load quickly on a phone, WordPress is doing its job. A migration takes real work, and we wouldn't spend it on a site that isn't causing problems.
 
-## What leaving looks like
+## Compare the disruption as well as the technology
 
-You can keep the editor your team already knows. We rebuild the site as pages built ahead of time and served as plain HTML. Visitors never touch PHP or a database, so pages load fast and there is far less to attack. No plugins run on the public site.
+Replacing the public site doesn't always require replacing the editor. WordPress can remain the place staff write while the public pages are built ahead of time and served separately. Or the team can move the content to another CMS.
 
-For editing, there are two routes. WordPress can stay on as a back office that only your editors see, or you can move to a newer CMS. We help you pick based on who edits and how often. Either way, when an editor hits publish, the site rebuilds itself, and nobody on your team has to think about it.
+The first option keeps a familiar editing tool but adds a build process to maintain. The second may remove frustrations with editing, but staff need to learn it and the content has to be checked in its new home. Ask the people publishing the site to try that workflow before choosing.
 
-Contact forms, analytics and newsletter signups get rebuilt without plugins. The theme nobody understood is replaced with clean code that we document and hand over.
+Inventory the things around the pages too: contact forms, newsletter signups, media and analytics. Decide who will operate each after the move, since a simpler site for visitors can still create new tasks for staff.
 
-## Keeping your search rankings
+## Make a plan for the existing URLs
 
-The biggest worry is usually SEO. We crawl the old site, map every URL to its new address and set up 301 redirects, so your rankings carry over. Posts, pages, media, categories and custom fields come over in bulk by script, and we check them against the original.
+Record the old URLs and their destinations before moving content. Where an address changes, plan a redirect and test it. Check the imported pages and media against the originals, then monitor Search Console after launch for changes in search performance.
 
-## How the move runs
-
-1. Audit the site. We inventory every page, plugin, form and redirect, and work out which plugins you actually need.
-2. Choose the CMS: WordPress kept as a back office, or a new one.
-3. Rebuild and migrate. We build the new front end and import your content, so you review real pages with real content.
-4. Redirect and launch. Every old URL gets a 301, and after launch we check the redirects and watch Search Console for crawl errors.
-
-Most migrations take roughly 4 to 8 weeks. Your current site stays live the whole time, and we only switch DNS once the new one checks out.
+Keep the current site running while the replacement is reviewed. Agree who can approve the switch and what would trigger a rollback. The schedule should include content checking and editor training alongside development.
 
 ## Example: a clinic that kept WordPress for editing
 
 An endoscopy center's site ran on a full WordPress install. We rebuilt it as static pages that pull content from WordPress at build time. Patients never touch WordPress, and staff still edit in the admin they know. We wrote up [how that rebuild works](/blog/headless-wordpress-clinic), and the [endoscopy center case study](/case-studies/endoscopy-center) has the technical details.
 
-If you're weighing a move, [send us your site's URL](/contact). We'll look at what it runs on, tell you what moving would involve and give you a realistic timeline. The [WordPress migration page](/migrate-from-wordpress) covers how we do it.
+Before deciding to move, list the maintenance and publishing problems you want to solve, then compare fixing the existing site with replacing it. Include the work your editors would have to learn.

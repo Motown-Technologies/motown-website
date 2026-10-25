@@ -1,62 +1,46 @@
 ---
-title: "What to build first in an MVP, and what to leave out"
+title: "How a sensible feature list turns into a launch that never happens"
 image: ../../assets/blog/mvp-what-to-build-first-image.jpg
 imageAlt: "A small wooden stool alone on a blue floor, with a stack of blank cards set aside in the corner"
 cover: ../../assets/blog/mvp-what-to-build-first.png
-description: "How we scope a first version: find the one user journey that proves the idea, build it properly, and park everything else in writing."
+description: "How to choose the user journey a first version needs to prove, make difficult scope decisions and keep useful ideas for later."
 pubDate: 2026-08-13
 relatedPages: ["/mvp-development"]
 category: software
 ---
 
-Build the one user journey that proves your idea, build it properly, and write everything else on a list for later. That keeps a first version to eight to twelve weeks.
+A potential customer asked for one feature, and a competitor has another. The team can explain why each belongs in the first version, yet the release date keeps moving as the list grows.
 
-Founders often arrive with a feature list built from every conversation they've had about the product. Each item came from someone worth listening to, and each makes sense on its own. Together they add up to a launch date that keeps moving. In our experience, an MVP stalls when nobody decides what isn't in it, so that's where we start.
+Choosing an MVP means deciding which question the first version needs to answer and which work can wait. Expect some disagreement: people need to understand why an idea they value will have to wait.
 
 ## Find the one loop
 
 An MVP is the smallest thing that answers the question your business depends on. Usually that question is whether people will do a particular thing, and pay for it, if you make it easy enough.
 
-The first week of a build is a scope workshop where we look for that single user journey: the loop that proves the idea works. We build that loop. Everything else goes into a written list and waits.
+Describe the journey from the user's starting problem to the point where they receive value. For each proposed feature, ask whether that journey can be completed without it. Put the rest on a written list with the reason it was deferred.
 
-A feature that has been cut, and that everyone knows has been cut, stops coming back in every meeting. When a good idea turns up mid-build, it goes on the list for the next cycle, and the launch date stays where it was.
+Record the cuts so people can refer back to the decision instead of reopening it at each meeting. When a good idea turns up mid-build, it goes on the list for the next cycle, and the launch date stays where it was.
 
-## Build the loop properly
+## Small scope still needs to work
 
-A small scope is a reason to build the parts you keep well, because those are the parts your first users will touch. For us that means:
+A shorter feature list leaves more room to make the chosen journey usable. People need to understand the screens, reach them on the devices they have and recover when something goes wrong.
 
-- A responsive, accessible interface your first users won't need you to apologize for.
-- Sign-up, login, roles and payments.
-- A database designed for the questions you'll want to ask in six months, with migrations and backups from day one.
-- A deploy pipeline with staging, rollbacks and error alerts, so shipping an update is routine.
+Include the foundations the journey actually needs: appropriate sign-in and permissions, reliable data storage, and a way to release and roll back changes. Payments belong in the first version if payment is part of the question you are testing.
 
-We build responsive web by default. A native app makes sense when the product really needs the camera, push notifications or a place in the app store. Otherwise the web version is the product.
+A responsive web version is a useful starting point when users can complete the task in a browser. If the product needs something more from a phone, work through [whether it needs an installed app](/blog/native-cross-platform-or-web-app) before committing to one.
 
-## Leave out the scale you don't have yet
+## The feature you leave out needs an explanation
 
-We build for the users you'll have in year one, in a way that can be rewritten once the product has earned it.
+Writing "later" beside a feature doesn't settle the disagreement that put it on the list. Record who needs it, what they would do without it and what evidence would bring it back into scope.
 
-You also get a cost model: what the product costs to run at 100 users and at 10,000. You can plan around real numbers without paying for capacity you don't need.
+If a new request arrives during the build, compare it with the agreed journey. If it must be included, make the effect on the date, budget or another feature explicit.
 
-## What a typical build looks like
+## Plan for the users you are trying to reach
 
-A first version usually takes eight to twelve weeks:
+Estimate what the first version will cost to run and what changes at a larger number of users. This helps identify the next constraint without committing to capacity the product may never need.
 
-1. Scope workshop (week 1)
-2. Flows and design (week 2)
-3. Core build (weeks 3 to 6)
-4. Integrations (weeks 6 to 8)
-5. Beta with real users (weeks 8 to 10)
-6. Launch and handover (week 10 onward)
-
-## You own it from the first commit
-
-Everything lives in your accounts and under your name from the start: the repository, the hosting and the deploy button. At handover you get the live app on your domain, the source with readable setup notes, the pipeline and monitoring, the cost model, and a prioritized backlog for the next 90 days.
-
-If you hire an engineer the month after launch, they should be able to pick it up without calling us. If you need senior technical judgment after launch but not a full-time hire yet, read about [when a fractional CTO makes sense](/blog/fractional-cto-for-startups).
+The handover matters as well. Keep the repository and hosting in the company's accounts, with setup notes and a record of deferred work, so the first version stays usable when the original builder moves on.
 
 ## Before you start
 
-If you're working out your first version, two questions help more than any feature list. What is the one thing a user has to do for this business to work? And what are you willing to write down and leave for later?
-
-If you already have something, such as a no-code build or an AI-generated prototype, the work is different, and we cover it on our [prototype to production](/prototype-to-production) page. Otherwise, read how we run an [MVP build](/mvp-development), or [send us the idea](/contact) in whatever shape it's in.
+At the next scope discussion, ask what a first user must be able to finish and what you need to learn from that experience. Write down the excluded features alongside the included ones, so everyone leaves with the same understanding of the release.

@@ -1,25 +1,25 @@
 ---
-title: "Fixed price or time and materials: reading a software quote"
+title: "Why two software quotes can mean very different things"
 image: ../../assets/blog/fixed-price-or-time-and-materials-image.jpg
 imageAlt: "A blue steel bar cut to an exact length next to a loose coil of off-white string"
 cover: ../../assets/blog/fixed-price-or-time-and-materials.png
-description: "How fixed-price and time-and-materials software quotes differ, where the risk sits in each, and what to check before you sign either one."
+description: "How to compare fixed-price and time-and-materials quotes by scope, uncertainty and who pays when the estimate is wrong."
 pubDate: 2027-01-20
 relatedPages: ["/mvp-development", "/technical-due-diligence"]
 category: software
 ---
 
-A fixed-price quote moves the risk of the unknown onto the developer, who prices that risk into the number. Time and materials leaves the risk with you and charges for the hours actually worked. Neither is cheaper by default, and the right one depends on how well the work can be described before it starts.
+One developer offers a fixed price. Another quotes an hourly rate and a range. The totals look comparable, but you still don't know whether they include the same work or what happens when the project changes.
 
-Most owners compare two quotes by the total at the bottom. That total means something different in each model, so it helps to know what you're actually buying before you put the two side by side.
+A fixed price attaches a number to a scope, with a margin for uncertainty. Time and materials charges for the hours worked. To compare them, you need to understand the assumptions behind each quote and who carries the cost when those assumptions turn out wrong.
 
 ## What a fixed-price quote actually fixes
 
-A fixed price fixes a number against a scope. The scope is the part to read closely, because everything outside it becomes a change request with its own price.
+Read the scope closely. The agreed price covers that work; anything outside it becomes a separately priced change request.
 
 When a developer commits to a fixed price, they're guessing how long the work will take and adding a margin for what they can't see yet. If the work goes smoothly, that margin is profit. If it doesn't, they absorb the overrun, and a team absorbing an overrun has every reason to read the scope as narrowly as it can.
 
-That works well when the work is known. A two-week audit with a defined list of documents at the end is easy to fix, which is why our [technical due diligence](/technical-due-diligence) runs on a fixed scope. A website rebuilt from an existing design is similar. Nobody needs to find anything out before quoting it.
+That works best when the work is understood. An audit with defined deliverables or a rebuild against an agreed design is easier to scope than an unfamiliar integration. There can still be unknowns, so ask the developer which assumptions the fixed price depends on.
 
 ## What time and materials actually charges for
 
@@ -31,16 +31,16 @@ The risk is that nothing stops the total from growing except your own attention.
 
 ## Where the risk sits in each model
 
-The question underneath both models is who pays when the estimate turns out wrong.
+The models put the cost of an inaccurate estimate in different places.
 
 - Fixed price: the developer pays for underestimates, and you pay up front for the margin that covers them. You also pay for anything the scope didn't name.
 - Time and materials: you pay for underestimates directly, and you keep the savings when the work goes faster.
 
-Neither one makes the unknown disappear. Say a clinic wants a booking system that talks to its existing practice software, and nobody has looked at that software's API yet. A fixed quote has to price the worst case for that integration. A time-and-materials quote can only give a range until someone has looked.
+An unfamiliar integration remains uncertain under either model. Say a clinic wants a booking system that talks to its existing practice software, and nobody has looked at that software's API yet. A fixed quote has to price the worst case for that integration. A time-and-materials quote can only give a range until someone has looked.
 
 ## How to read the quote in front of you
 
-Whichever model it uses, a good quote answers the same questions.
+Check these details in either kind of quote.
 
 ### What exactly is included?
 
@@ -66,10 +66,10 @@ On time and materials, ask what the weekly report shows. On a fixed price, ask w
 
 Many projects split the work: a short fixed-price discovery phase to answer the open questions, followed by a build quoted once those answers exist.
 
-Another approach fixes the date and the budget and lets the scope be the thing that moves. That's how we run an [MVP build](/mvp-development). Scope and launch date are agreed when the build starts, and new ideas go onto a written list for the next cycle. The cost of an idea that turns up mid-build is a decision about what to leave out, and the invoice doesn't change. We wrote more about that list in [what to build first in an MVP](/blog/mvp-what-to-build-first).
+Another approach fixes the date and budget and allows the scope to move. If a new requirement comes in, something else has to leave or wait. That requires a person with authority to make the tradeoff, plus a record everyone can refer to. The post on [choosing an MVP scope](/blog/mvp-what-to-build-first) goes through that decision.
 
 ## Which one to choose
 
-Choose a fixed price when you can describe the finished thing in enough detail that two developers would build roughly the same product from your description. Choose time and materials when the work involves finding things out, such as an unknown integration, a legacy system nobody has documented or a product still looking for its users. If you can't describe it yet, pay for a short discovery first and decide after. In our experience, the quote that holds up best comes from the developer who asked you the most questions before writing it.
+Choose a fixed price when you can describe the finished thing in enough detail that two developers would build roughly the same product from your description. Choose time and materials when the work involves finding things out, such as an unknown integration, a legacy system nobody has documented or a product still looking for its users. If you can't describe it yet, pay for a short discovery first and decide after. In our experience, detailed questions before quoting help surface the assumptions that otherwise cause disputes later.
 
-If you have a quote in front of you and want a second read, or want us to quote the work, [get in touch](/contact).
+Before choosing, ask both developers to price the same first phase and list their assumptions and exclusions. If the quotes still differ, you will have something concrete to discuss beyond the number at the bottom.

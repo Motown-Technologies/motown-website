@@ -1,21 +1,21 @@
 ---
-title: "Single sign-on (SSO) explained for growing companies"
+title: "Someone left the company. What can they still access?"
 image: ../../assets/blog/single-sign-on-explained-image.jpg
 imageAlt: "A blue lever switch on a stone wall wired to a row of small white lamps, all lit"
 cover: ../../assets/blog/single-sign-on-explained.png
-description: "What single sign-on is, how SAML and OpenID Connect fit in, and when a growing company should require SSO from vendors or add it to its own software."
+description: "How single sign-on helps with staff access, what it leaves to account provisioning and what to check before buying another business tool."
 pubDate: 2027-01-06
 relatedPages: ["/web-application-development", "/soc-2-readiness"]
 category: software
 ---
 
-Single sign-on (SSO) lets your staff log in once, with one company account, and get into every tool they're allowed to use. When someone leaves, you switch off that one account and their access to everything connected to it goes too.
+When someone leaves, who knows every tool they could sign in to? Email may be on the offboarding list, while the CRM, accounting tool and a smaller app have separate accounts. Closing the company account may not close all of them.
 
-With a few people and a few tools, separate passwords are an annoyance. As the company grows they become a security and admin problem, because nobody can say for sure who still has access to what.
+Single sign-on, or SSO, lets connected tools use one company identity. It can make access easier to manage, but signing in, removing accounts and ending existing access are details you still need to check.
 
 ## How single sign-on works
 
-SSO has two sides. The identity provider holds your staff accounts and checks who someone is. For most companies that's the directory that came with their email, such as Google Workspace or Microsoft Entra ID, or a dedicated service like Okta. The service providers are the apps people sign in to: your CRM, your accounting tool, your own custom software.
+SSO connects an identity provider with the apps staff use. The identity provider holds your staff accounts and checks who someone is. For most companies that's the directory that came with their email, such as Google Workspace or Microsoft Entra ID, or a dedicated service like Okta. The service providers are the apps people sign in to: your CRM, your accounting tool, your own custom software.
 
 When someone opens an app, it sends them to the identity provider. They sign in there, usually with a password and a second factor, and the identity provider sends them back with a signed message saying who they are. The app trusts that message and lets them in, without ever seeing or storing their password.
 
@@ -24,11 +24,11 @@ Two standards do most of this work:
 - [SAML 2.0](https://www.oasis-open.org/standard/saml/), an older XML-based standard maintained by OASIS, which most business software supports.
 - [OpenID Connect](https://openid.net/developers/how-connect-works/), a newer standard built on OAuth 2.0 and common in modern web and mobile apps.
 
-Either does the job. Your identity provider and the app just need to support the same one.
+Your identity provider and the app need to support the same standard.
 
 ## What SSO gives a growing company
 
-Offboarding is the biggest gain. Without SSO, when someone leaves, a person has to remember every tool they had an account in and close each one, and something usually gets missed. With SSO, disabling one account locks them out of every connected app at once.
+Offboarding is one of the main reasons companies adopt SSO. Without SSO, when someone leaves, a person has to remember every tool they had an account in and close each one, and something usually gets missed. With SSO, disabling one account locks them out of every connected app at once.
 
 Security rules get set once. If you require a second factor in the identity provider, every connected app inherits it, so you aren't relying on each tool's settings or each person's password habits. People also have fewer passwords to forget, reset and reuse.
 
@@ -57,6 +57,6 @@ If you build software, SSO usually comes up in one of two ways. Your own staff w
 
 Say a logistics company has a custom dispatch app used by its own staff and by people at three partner firms. Each partner wants its people to sign in with their own company accounts. The app now has to accept more than one identity provider and map each person to the right role and to their own company's data.
 
-The sign-in itself is the easy part. The harder decisions come after it: which roles exist, who can approve what, and what gets logged. We work these out as part of the permissions model in our [web application development](/web-application-development) projects, and access management is one of the controls we implement in [SOC 2 readiness](/soc-2-readiness) work.
+Beyond signing in, the team needs to decide which roles exist, who can approve what and what gets logged. Write down those decisions with the teams using the app.
 
-If your team is juggling more logins than it should, or a customer has asked whether your product supports SSO, [tell us about it](/contact).
+Use the next offboarding review to test the whole process with your IT team. Check which apps require the company login, which allow a separate password and which accounts still need to be removed by hand. Keep that list with the person responsible for access.

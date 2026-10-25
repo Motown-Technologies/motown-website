@@ -1,17 +1,17 @@
 ---
-title: "Native, cross-platform or web app: how to choose"
+title: "Does your business need an app people have to download?"
 image: ../../assets/blog/native-cross-platform-or-web-app-image.jpg
 imageAlt: "A teacup, a glass beaker and an enamel mug on a blue table, each filled with milk to the same level"
 cover: ../../assets/blog/native-cross-platform-or-web-app.png
-description: "How to choose between a native app, a cross-platform app and a web app, based on what the product needs from the phone and who will maintain it."
+description: "How to choose a web, cross-platform or native app based on what users need to do and who will maintain it after launch."
 pubDate: 2026-11-11
 relatedPages: ["/services/mobile-development", "/cross-platform-app-development"]
 category: software
 ---
 
-Start with a web app unless the product needs something only an installed app can do well: the camera as a core feature, reliable push notifications, offline work, or a listing in the app stores. If it does need an app, build it cross-platform, and keep fully native code for the few parts that require it.
+A tenant reporting a repair needs to describe the problem, attach a photo and find out what happens next. Asking them to install an app first is another step. A field worker who uses the same tool all day without a reliable signal has a different problem.
 
-That's the default we use. The rest of this post covers how to tell which case you're in.
+Start with those situations before choosing between web, cross-platform and native development. Ask what people need from the phone, how often they will use the product and who will maintain it.
 
 ## What the three options mean
 
@@ -23,9 +23,9 @@ A cross-platform app is written once in a framework such as [React Native](https
 
 ## When a web app is enough
 
-Say a property manager wants tenants to report repairs, attach a photo and check on progress. That's a form, an upload and a status page, and a browser handles all three. A web app also avoids store review, installs and the work of persuading people to download something they'll use twice a year.
+For the tenant reporting a repair, the task is a form, a photo upload and a status page. A browser can cover that workflow without a store review or installation. For something used infrequently, the work of persuading people to download an app belongs in the comparison too.
 
-Push notifications used to be a reason to go native. Since iOS 16.4, a web app that someone has added to their home screen can [ask for permission to send push notifications](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/). The catch is that step: most people never add a website to their home screen, so for notifications that people actually need to see, an installed app is still more dependable.
+Push notifications used to be a reason to go native. Since iOS 16.4, a web app that someone has added to their home screen can [ask for permission to send push notifications](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/). The user has to add the site to their home screen first. Most people don't take that step, so an installed app is still more dependable for notifications they need to see.
 
 For a first version we build responsive web by default. We explain why in our post on [what to build first in an MVP](/blog/mvp-what-to-build-first).
 
@@ -42,9 +42,9 @@ One warning on store listings. Apple's review guidelines say an app should do mo
 
 ## Why cross-platform is usually the right app
 
-Once you know you need an app, the next question is whether to write it twice. For most business products the answer is no.
+Once you know you need an app, the next question is whether to write it twice. For most business products, maintaining two full codebases is hard to justify.
 
-In a typical app, most of the code is business rules, data handling and talking to the server. Those parts behave the same on both platforms, so a cross-platform framework lets you write them once. Each feature is built once, each bug is fixed once, and one team can maintain the whole thing.
+In a typical app, most of the code is business rules, data handling and talking to the server. Those parts behave the same on both platforms, so a cross-platform framework lets you write them once. One team can maintain the shared features and fixes across both platforms.
 
 The risk is an app that feels slightly wrong on both platforms. We handle that by keeping each platform's conventions where users would notice the difference, such as navigation, gestures and typography. That list is usually shorter than people expect.
 
@@ -58,7 +58,7 @@ Writing two native apps makes sense in a narrower set of cases:
 - Performance is the product, as in heavy graphics, real-time audio or advanced camera work.
 - A key hardware or partner SDK only ships for native code and drives most of the app.
 
-Even then, a single native-only requirement rarely justifies two full codebases. Usually we write a small native module for that one part and keep everything else shared.
+A single native-only requirement can often be handled without maintaining two full codebases. Usually we write a small native module for that one part and keep everything else shared.
 
 ## The questions to answer first
 
@@ -72,4 +72,4 @@ Before anyone picks a framework, answer these:
 
 If the first answer is "nothing" and the last is "no," build a web app. If not, build cross-platform and go native only for the parts that need it.
 
-We cover how we build and launch apps on our [mobile development](/services/mobile-development) page, and how we handle shared code, native modules and store submission on the [cross-platform apps](/cross-platform-app-development) page. If you're weighing this decision now, [tell us what the app has to do](/contact).
+Write down the tasks people need to complete on a phone, including the awkward ones: poor signal, a missed notification or an update waiting for approval. Choose the approach that handles those tasks within the team's budget and maintenance skills.

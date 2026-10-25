@@ -1,17 +1,17 @@
 ---
-title: "Backups vs disaster recovery for business software"
+title: "We have backups. How long would getting back to work take?"
 image: ../../assets/blog/backups-vs-disaster-recovery-image.jpg
 imageAlt: "A blue spare tire on a stone surface with a car jack and wheel wrench laid out beside it"
 cover: ../../assets/blog/backups-vs-disaster-recovery.png
-description: "A backup is a copy of your data. Disaster recovery is the tested plan for running again after a failure. How they differ, and what to decide."
+description: "A successful backup job does not tell you when staff could work again. How to plan and rehearse recovery from a business software failure."
 pubDate: 2026-12-16
 relatedPages: ["/database-design", "/cloud-application-development"]
 category: software
 ---
 
-A backup is a copy of your data. Disaster recovery is the tested plan for getting your software, and the business that runs on it, working again after something goes badly wrong. You need both, and having backups doesn't mean you have a recovery plan.
+The backup dashboard is green, but suppose the booking system stops at four in the afternoon. You still need to know who can restore it, where it would run and whether today's appointments would be there.
 
-Many companies find this out on the worst possible day. The backups were running every night, but nobody knew how to restore one, how long it would take, or what else the app needed besides the data.
+A backup is a copy of your data. Disaster recovery is the tested plan for getting the software, and the people who depend on it, working again. Work through those questions while the system is still available.
 
 ## What a backup is
 
@@ -19,19 +19,15 @@ A backup is a copy of your data stored separately from the original, so that if 
 
 The usual rule of thumb, which [CISA recommends to small and medium businesses](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/back-up-business-data), is 3-2-1: three copies of important data, on two different types of storage, with one copy off site. For a cloud app, off site usually means a different account or region from the one the app runs in, so one compromised login or one outage can't take out the data and its backup together.
 
-A backup tells you that a copy of the data exists. It doesn't tell you how to use it.
-
 ## What disaster recovery is
 
-Disaster recovery covers how you get back to working, and how fast.
-
-Restoring the data is only part of that. To run again, an app needs somewhere to run, its configuration and secrets, its connections to payment, email and accounting tools, and a domain pointing at the right place. Someone has to know the steps and have the access to carry them out. A disaster recovery plan writes all of that down, and gets rehearsed before anyone needs it.
+Getting back to work takes more than restoring the data. To run again, an app needs somewhere to run, its configuration and secrets, its connections to payment, email and accounting tools, and a domain pointing at the right place. Someone has to know the steps and have the access to carry them out. A disaster recovery plan writes all of that down, and gets rehearsed before anyone needs it.
 
 The events it covers vary. Someone deletes the wrong records, a bad release corrupts data, a cloud region goes down, or an attacker gets into the account. Each calls for a slightly different response, and the plan should cover the ones that would hurt you most.
 
 ## Two numbers to decide
 
-Recovery planning comes down to two numbers, and choosing them is a business decision more than a technical one.
+The business needs to choose two recovery targets based on the work it can afford to lose and how long it can be without the system.
 
 The recovery point objective (RPO) is, in [NIST's definition](https://csrc.nist.gov/glossary/term/rpo), "the point in time to which data must be recovered after an outage." Put simply, it's how much recent work you can afford to lose. If you back up once a night, a failure at 4pm can cost you a day of orders, bookings or notes.
 
@@ -55,10 +51,8 @@ For most business software, we set up:
 - A short written runbook saying who does what, in what order, with which access.
 - Restore drills on a schedule, with the time each one took written down.
 
-None of this is unusual. It tends to get skipped because the app is running fine and there's always something more pressing.
+It's easy to postpone this work while the app is running fine and other requests feel more urgent.
 
 ## Where to start
 
 If you're not sure where you stand, ask whoever runs your software three questions. When was a backup last restored, and how long did it take? How much data would we lose if the database failed right now? If the hosting account were locked tomorrow, what would we do?
-
-Backup and recovery is part of our [database design](/database-design) work, and the infrastructure side sits under [cloud application development](/cloud-application-development). For a second opinion on your setup, [get in touch](/contact).

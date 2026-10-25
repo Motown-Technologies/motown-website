@@ -1,17 +1,17 @@
 ---
-title: "RAG or fine-tuning: how to give an AI your company's data"
+title: "How do you get AI to answer from your company documents?"
 image: ../../assets/blog/rag-or-fine-tuning-image.jpg
 imageAlt: "A blue library card cabinet with one drawer pulled out, next to a potter's wheel holding a half-formed clay pot"
 cover: ../../assets/blog/rag-or-fine-tuning.png
-description: "When an AI should look up your documents (RAG), when to fine-tune a model instead, and why most companies need the first one."
+description: "When to use document retrieval, when fine-tuning helps and what to settle about sources and access before connecting company data."
 pubDate: 2026-10-02
 relatedPages: ["/rag-development", "/llm-fine-tuning"]
 category: ai
 ---
 
-If you want an AI to answer questions from your company's documents, use retrieval-augmented generation (RAG): the system looks up the relevant passages each time someone asks and gives them to the model along with the question. Fine-tuning changes how a model behaves, such as its format, tone and judgment, and it is a poor way to teach a model facts.
+A team wants an AI assistant to answer questions about its policies, contracts or product manuals. The documents change, people have different access rights and an answer needs to show where it came from. Those requirements matter more than whether the proposal calls the system RAG or fine-tuning.
 
-Many teams that ask us for fine-tuning turn out to need retrieval, and a few need both. Here is how we tell them apart.
+For current company information, start with retrieval: look up the relevant passages each time a question is asked. Fine-tuning is usually a separate decision about the model's behavior, such as its format or tone.
 
 ## What's the difference between RAG and fine-tuning?
 
@@ -19,20 +19,18 @@ With RAG, the model itself stays as it is. Your documents are indexed, usually w
 
 Fine-tuning trains an existing model further on examples you supply, so the model's behavior changes. You show it hundreds or thousands of inputs paired with the outputs you want, and it learns to produce that kind of output without being told each time.
 
-A rough way to remember it: RAG controls what the model knows when it answers, and fine-tuning controls how it answers.
-
 ## When is RAG the right choice?
 
 RAG fits when the answer depends on information that lives in your documents and changes over time. Policies, contracts, product manuals, price lists and past support tickets all fall into that group.
 
-It has practical advantages for a business:
+That lets the system handle changing information and access rules:
 
 - When a document changes, you update the index, and the next answer uses the new version.
 - Every answer can point to the passage it came from, so people can check it.
 - Access rules can be checked at search time, so a staff member only gets answers from documents they're allowed to open.
 - Removing a document from the system means deleting it from the index.
 
-Our [RAG development](/rag-development) page goes through the parts of a retrieval system that decide whether people trust it, such as how documents are split and how results are re-ranked.
+Ask to see what happens when a policy has been replaced or when no relevant document is found. A confident answer from an old passage is still the wrong result.
 
 ## When is fine-tuning the right choice?
 
@@ -46,11 +44,11 @@ A fine-tuned model absorbs its training examples at training time. If your retur
 
 ## Where can you fine-tune in 2026?
 
-The options have shifted this year. OpenAI is winding down its fine-tuning platform. Its [deprecations page](https://developers.openai.com/api/docs/deprecations) says new organizations lost access in May 2026 and that existing customers can't create new fine-tuning jobs after January 6, 2027. Fine-tuned models keep running until their base models are retired.
+OpenAI is winding down its fine-tuning platform. Its [deprecations page](https://developers.openai.com/api/docs/deprecations) says new organizations lost access in May 2026 and that existing customers can't create new fine-tuning jobs after January 6, 2027. Fine-tuned models keep running until their base models are retired.
 
 Other routes remain. Google Cloud offers [supervised fine-tuning for Gemini models](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini-supervised-tuning), and open-weight models can be tuned and hosted on infrastructure you control.
 
-Base models get replaced every year or so, and sometimes the provider's tuning service changes too. For that reason we treat the dataset and the evaluation set as what you're paying for, and we document the training pipeline, so moving to a new base model means running the same pipeline again. That approach is on our [LLM fine-tuning](/llm-fine-tuning) page.
+Base models get replaced every year or so, and sometimes the provider's tuning service changes too. Keep the dataset, evaluation set and training instructions under your control, so a change of base model can be tested against the same work.
 
 ## Can you use both?
 
@@ -58,13 +56,11 @@ Yes, and for some products it is the best setup. A tuned model handles the forma
 
 ## How to decide
 
-Four questions settle most cases:
+Use these questions to narrow the choice:
 
 1. Does the right answer depend on documents that change? Use RAG.
 2. Do people need to see the source of an answer? Use RAG.
 3. Does the model know the right thing but say it in the wrong shape or style? Consider fine-tuning.
 4. Do you have hundreds of examples of good output that people agree on? Without them, tuning has nothing to learn from.
 
-Whichever way it goes, we build the test set first: a fixed list of real questions or tasks with agreed answers, scored the same way on every version. Without one, nobody can tell an improvement from a lucky run.
-
-If you're weighing this for your own data, [tell us what the AI needs to know](/contact) and where it falls short today.
+Whichever way it goes, we build the test set first: a fixed list of real questions or tasks with agreed answers, scored the same way on every version. Comparing versions against those cases helps distinguish a real improvement from a lucky run.

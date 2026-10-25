@@ -1,17 +1,17 @@
 ---
-title: "Core Web Vitals: what Google measures about your site"
+title: "Why your website feels slow even when it loads fine for you"
 image: ../../assets/blog/core-web-vitals-explained-image.jpg
 imageAlt: "Three blue spinning tops on an off-white surface with long shadows, one of them tilting"
 cover: ../../assets/blog/core-web-vitals-explained.png
-description: "The three Core Web Vitals in plain words: what each one measures, the score that counts as good, and what usually fixes a failing page."
+description: "What Core Web Vitals reveal about the delay, unresponsive buttons and moving content your visitors experience on your website."
 pubDate: 2027-02-03
 relatedPages: ["/website-maintenance", "/ecommerce-development"]
 category: software
 ---
 
-Core Web Vitals are three measurements Google takes from real visits to your site: how fast the main content appears, how quickly the page responds when someone taps or clicks, and how much the layout jumps around while it loads. Google [recommends good scores](https://developers.google.com/search/docs/appearance/core-web-vitals) for success in Search, and they also describe what your visitors put up with.
+Your site may feel quick on your laptop while a customer waits on a phone. Or the page appears promptly, but the booking button does nothing when they tap it. Those are different problems, and a single speed score can hide the distinction.
 
-The names are technical, but each one measures something you've felt as a visitor on someone else's site.
+Core Web Vitals measure three parts of that experience: when the main content appears, how quickly the page reacts and how much the layout moves while loading. They give you a way to discuss a visitor's complaint more precisely than "the website feels slow."
 
 ## The three measurements
 
@@ -33,7 +33,7 @@ CLS measures how much content moves around after it first appears. A good score 
 
 The scores that count come from real Chrome users visiting your site, collected in the Chrome User Experience Report. Google looks at the 75th percentile of visits, split by mobile and desktop. In plain terms, three out of four visits need to meet the target for the page to pass.
 
-That matters because your own experience of the site is usually the best case. You probably visit on a fast laptop on office wifi, and your customers may be on a mid-range phone on mobile data. On our [ecommerce builds](/ecommerce-development) we measure load time on exactly that kind of phone for this reason.
+Your own visit may be one of the faster ones. You probably visit on a fast laptop on office wifi, and your customers may be on a mid-range phone on mobile data. Include that kind of phone when checking an important customer journey.
 
 ## Where to check your scores
 
@@ -46,13 +46,11 @@ The lab test and the real-visitor scores often disagree. The lab test runs once 
 
 ## How much they affect search rankings
 
-Less than many SEO pitches suggest. Google's [page experience guidance](https://developers.google.com/search/docs/appearance/page-experience) says good Core Web Vitals results don't guarantee a top ranking, and that Search "always seeks to show the most relevant content, even if the page experience is sub-par."
+Google's [page experience guidance](https://developers.google.com/search/docs/appearance/page-experience) says good Core Web Vitals results don't guarantee a top ranking, and that Search "always seeks to show the most relevant content, even if the page experience is sub-par."
 
 Going by that, a fast page with thin content shouldn't expect to beat a slower page that answers the question better. Speed counts most when pages are otherwise similar, and it affects what visitors do once they arrive, whatever brought them there. A slow checkout loses sales regardless of where it ranks.
 
 ## What usually causes poor scores
-
-Every site is different, but the same causes come up again and again.
 
 ### Slow LCP
 
@@ -60,7 +58,7 @@ Oversized images are the most common culprit, especially a large hero photo serv
 
 ### Poor INP
 
-Too much JavaScript running in the browser. Chat widgets, tracking tags, heatmap tools and marketing pixels each add a little, and together they keep the browser busy when a visitor tries to tap something.
+The browser may be busy running too much JavaScript. Chat widgets, tracking tags, heatmap tools and marketing pixels each add a little, and together they keep the browser busy when a visitor tries to tap something.
 
 ### High CLS
 
@@ -68,8 +66,8 @@ Images and embeds without reserved space, so the page reflows when they arrive. 
 
 ## Why scores get worse over time
 
-A site that passes on launch day rarely stays that way untouched. Say a dental practice launches a fast site. Over the next year someone adds a booking widget, marketing adds two tracking tags, and the new team photos go up straight from the camera. Each change looks harmless and the scores drift down without anyone deciding they should.
+A site that passes on launch day rarely stays that way untouched. Say a dental practice launches a fast site. Over the next year someone adds a booking widget, marketing adds two tracking tags, and the new team photos go up straight from the camera. The scores can drift down as those changes accumulate, even if nobody noticed a problem when making each one.
 
-That's why our [website maintenance](/website-maintenance) plans track Core Web Vitals over time, so a gradual slide gets caught while it's still a small fix.
+Give someone responsibility for reviewing the scores after changes.
 
-If your scores are failing and you'd like to know why, [send us the URL](/contact).
+Check one important page on a real phone and compare it with the reporting tools. Try the task a visitor came to do, such as booking or checking out. Keep a record of the scores before adding another widget or tracking tag, so you can see whether that change made the experience worse.

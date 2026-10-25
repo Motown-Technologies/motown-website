@@ -1,21 +1,21 @@
 ---
-title: "Vector embeddings explained for people who don't code"
+title: "Why your company search cannot find the answer"
 image: ../../assets/blog/vector-embeddings-explained-image.jpg
 imageAlt: "Paper index cards on a blue floor gathered into separate clusters, with one card on its own between two groups"
 cover: ../../assets/blog/vector-embeddings-explained.png
-description: "What a vector embedding is, how it lets software search by meaning, where it falls short, and what to decide before you use one."
+description: "How search by meaning can help people find company information, and why exact identifiers and access permissions still matter."
 pubDate: 2026-09-18
 relatedPages: ["/rag-development", "/services/ai-development"]
 category: ai
 ---
 
-A vector embedding is a list of numbers that stands for the meaning of a piece of text. Texts that mean similar things get similar numbers, so software can match "how do I get my money back" to a page that only says "refund policy."
+A customer types "how do I get my money back" while the help page is called "refund policy." A staff member knows the answer is somewhere in a contract folder but can't remember the wording. Both searches depend on guessing wording the documents may not use.
 
-That idea sits under most of the AI search and "chat with your documents" tools on the market. If someone is proposing one to you, it helps to know what the numbers do and where they go wrong.
+Vector embeddings help software search by meaning. They represent text as lists of numbers that can be compared, so similar ideas can be matched even when they use different words. Exact codes and identifiers need a different approach.
 
 ## What is a vector embedding?
 
-An embedding model reads a sentence, a paragraph or a page and returns a long list of numbers. OpenAI's current models, for example, return 1,536 or 3,072 numbers for each piece of text by default, according to [OpenAI's embeddings guide](https://developers.openai.com/api/docs/guides/embeddings). Nobody reads those numbers. Together they work as a position, like coordinates on a map that has far more than two directions.
+An embedding model reads a sentence, a paragraph or a page and returns a long list of numbers. OpenAI's current models, for example, return 1,536 or 3,072 numbers for each piece of text by default, according to [OpenAI's embeddings guide](https://developers.openai.com/api/docs/guides/embeddings). Software treats those numbers as a position, like coordinates on a map with many more than two dimensions.
 
 Picture a bookshop that shelves books by what they're about instead of by title. A book on sourdough sits next to one on bread machines and a long way from a biography of a general. An embedding puts every paragraph of your documents on a map like that. The model learned where things belong by reading a very large amount of text, so it places "terminate the agreement" close to "cancel the contract" even though the two phrases share no words.
 
@@ -37,7 +37,7 @@ We usually start with the database a client already has. A separate system means
 
 Embeddings are good at meaning and bad at exact strings. Say a parts distributor builds a search tool for its catalog, and a technician types the part number HX-4410-B. To the embedding model that looks almost the same as HX-4410-C, so the closest match can be the wrong part. Policy codes, names, order numbers and dates have the same problem.
 
-The fix is to run keyword search alongside embedding search and combine the results, which is called hybrid search. It is the default in our [RAG development](/rag-development) work, because the part-number miss is usually the first failure people notice.
+Combining keyword and embedding search, usually called hybrid search, helps handle that problem. Test exact identifiers separately from questions phrased in ordinary language; the system needs to handle both.
 
 A few other limits are worth knowing before you buy anything:
 
@@ -48,17 +48,17 @@ A few other limits are worth knowing before you buy anything:
 
 ## What should a business owner decide?
 
-You don't need to pick an embedding model yourself. You do need to answer the questions only your business can answer:
+The business needs to settle these questions before the team chooses the search setup:
 
 1. What should people be able to find, and where does it live today? A shared drive, a wiki, a ticketing system, an inbox.
 2. Which searches involve exact identifiers? If staff look things up by order number or part code, plan for hybrid search from the start.
 3. Who is allowed to see what? Write this down before anything is indexed.
 4. How will you know it works? Collect a few dozen real questions people ask, along with the right answers, and test every version against that list.
 
-The last one is the most useful thing to bring to a first conversation with any vendor, us included. Without a fixed set of test questions, search quality gets judged by reading a handful of answers, and a system can look fine that way while getting the hard questions wrong.
+Bring those test questions to a first conversation with any vendor, us included. Without a fixed set of test questions, search quality gets judged by reading a handful of answers, and a system can look fine that way while getting the hard questions wrong.
 
 ## Embeddings are one part of the system
 
-Most of the quality in an AI search tool comes from the steps around the embeddings: how documents are split, how results are re-ranked and how answers cite their sources. Our [AI development](/services/ai-development) page covers the wider work, from retrieval systems to agents and fine-tuned models.
+Most of the quality in an AI search tool comes from the steps around the embeddings: how documents are split, how results are re-ranked and how answers cite their sources. Ask to see which passages were retrieved when an answer is wrong. That helps distinguish a search failure from a problem in the written answer.
 
-If your team keeps searching a pile of documents by hand, [tell us where they live](/contact) and what people keep asking.
+Collect the searches people have actually given up on, along with the passages they should have found. Include part numbers or policy codes if your team uses them. That gives you a useful test of any proposed search system before you move the whole document collection.

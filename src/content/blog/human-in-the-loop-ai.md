@@ -1,23 +1,23 @@
 ---
-title: "Human in the loop AI: where a person should sign off"
+title: "Who checks the AI when approving everything becomes a job?"
 image: ../../assets/blog/human-in-the-loop-ai-image.jpg
 imageAlt: "A train of off-white toy carriages stopped on a curving track in front of a raised black signal arm on a blue floor"
 cover: ../../assets/blog/human-in-the-loop-ai.png
-description: "Where to put a person in an AI workflow: before anything irreversible, costly or customer-facing, with a review step people can actually keep up with."
+description: "Where human review belongs in an AI workflow, and how to keep it useful when people face a queue of near-identical approvals."
 pubDate: 2026-11-18
 relatedPages: ["/ai-agent-development", "/case-studies/auction-operations"]
 category: ai
 ---
 
-Put a person in the loop wherever the AI's output becomes something hard to undo: money moving, a message reaching a customer, a record changing in a system other people rely on. Let the AI do the reading, sorting and drafting, and have someone approve before any of that takes effect.
+An AI tool drafts the work, and a person approves it. That sounds reassuring until the person has a hundred near-identical items to review and a full day of other work.
 
-That rule covers most cases. The hard part is placing the checkpoint so it catches real mistakes without turning a person into a rubber stamp.
+The review step needs as much thought as the draft. Put the checkpoint before a consequential action, show the evidence needed to check it and make corrections easy. A long approval queue can leave people clicking through without checking the work.
 
 ## Why AI workflows need a checkpoint
 
 Ordinary software fails loudly. A form throws an error, a payment is declined. A language model fails differently: it gives an answer that reads well and is wrong, with the same confidence it uses when it's right. You can't tell the two apart from the tone.
 
-So the question to ask is what happens if this output is wrong and nobody looks. If the answer is "someone rewrites a draft," the cost is small. If it's "a refund goes out" or "a patient gets the wrong instructions," a person needs to see it first.
+Work out what happens if the output is wrong and nobody checks it. If the answer is "someone rewrites a draft," the cost is small. If it's "a refund goes out" or "a patient gets the wrong instructions," a person needs to see it first.
 
 ## Where to put the person
 
@@ -25,7 +25,7 @@ We sort every action an AI system can take into three groups.
 
 ### Things it can do alone
 
-Reading documents, searching, summarizing, tagging, sorting a queue and drafting text that nobody outside sees yet. If the output is wrong, nothing has happened, and the person who uses it later will notice.
+Reading documents, searching, tagging and preparing drafts can be candidates for less review when their consequences are limited. Check what uses that output next. An internal summary can still mislead someone, so visibility alone doesn't determine the risk.
 
 ### Things it prepares and a person approves
 
@@ -45,7 +45,7 @@ That split worked because the slow part, writing copy for thousands of items, we
 
 ## Make the review step something people can keep up with
 
-A checkpoint only helps if the person at it is paying attention. Show someone a hundred near-identical approvals a day and they'll start clicking through. That's a design problem, and it has design fixes:
+Make it possible for the reviewer to spot and correct a mistake without reading every item from scratch:
 
 - Show the reviewer what the AI used to reach its answer, such as the source document, the photo or the customer's original message, next to the draft.
 - Make editing as easy as approving, so fixing a small mistake doesn't feel like more work than letting it through.
@@ -64,6 +64,4 @@ You also need a way to stop it. That can be a switch an operator flips, a spendi
 
 Starting with more review than you need is fine. After a few weeks, the approval records tell you which kinds of output a person almost never changes. Those are candidates to let through on their own, perhaps with spot checks. The kinds that still get edited keep their checkpoint.
 
-We'd rather loosen a checkpoint with evidence than discover one was missing after a mistake reached a customer.
-
-If you have a process you'd like AI to help with, describe it the way you'd explain it to a new hire and [send it to us](/contact). We'll tell you what an AI system can safely own and where a person should sign off.
+Ask the person doing the reviewing to show you a routine approval and a difficult one. Can they see why the draft was produced? Can they correct it without starting over? Use what they show you to decide whether the review step gives them enough information and time.

@@ -1,21 +1,21 @@
 ---
-title: "Software maintenance after launch: the work and the cost"
+title: "The software launched. Who is looking after it now?"
 image: ../../assets/blog/software-maintenance-after-launch-image.jpg
 imageAlt: "A small blue bonsai on a stone block, ringed by miniature watering cans, shears and an oil can on a blue background"
 cover: ../../assets/blog/software-maintenance-after-launch.png
-description: "What software maintenance after launch involves, what makes it cost more or less, and how to budget for it before the build ends."
+description: "The work and budget needed after launch, including updates, incident ownership and small fixes that otherwise fall between teams."
 pubDate: 2027-01-27
 relatedPages: ["/website-maintenance", "/app-maintenance-and-support"]
 category: software
 ---
 
-After launch, software needs regular work just to keep doing what it did on day one: security updates, platform changes, monitoring, backups and the small fixes users find. What that costs depends less on how big the product is and more on how many moving parts it depends on and how well it was built to be changed.
+The build is finished and the software works. Then a browser changes, a payment connection needs an update or the contact form stops sending messages. Who gets the alert, and is fixing it part of anyone's budget?
 
-Most build quotes end at launch, and that leaves a gap in the budget for the years after it. Here is what fills that gap and what makes it larger or smaller.
+Launch often closes a project without settling those responsibilities. Maintenance covers the work needed to keep the software useful and safe, while new features need their own budget and decisions.
 
 ## What maintenance actually is
 
-Maintenance is the work that keeps a product where it is. New features are a separate budget line, even when the same people do both.
+Budget separately for keeping the existing product running and adding features, even if the same people do both jobs.
 
 ### Security and dependency updates
 
@@ -23,7 +23,7 @@ Every modern application is built on dozens or hundreds of open source packages,
 
 ### Platform changes you don't control
 
-Browsers, operating systems, hosting providers and app stores all change on their own schedules. A mobile app faces two operating system releases a year and store policies that change without much warning. Our [app maintenance](/app-maintenance-and-support) work starts with testing against platform betas before they reach users, because the alternative is finding out from one-star reviews.
+Browsers, operating systems, hosting providers and app stores all change on their own schedules. A mobile app faces two operating system releases a year and store policies that change without much warning. Ask who checks the app against upcoming releases and how much time is allowed for fixes.
 
 ### Monitoring, backups and restores
 
@@ -31,11 +31,11 @@ Someone has to notice when the checkout or contact form stops working. Uptime an
 
 ### Bug fixes and small changes
 
-Real users find problems that testing missed, and the business keeps changing. A new price, a new staff member, a report the finance team needs. On our [website maintenance](/website-maintenance) plans, these small edits get handled without raising a project, so they don't sit in a queue for months.
+Users find problems that testing missed, and the business needs small changes: a new price, a staff update or a report for finance. Agree which of these requests belong in maintenance and which need a separate estimate, so they don't sit between the two budgets.
 
 ## What drives the cost up or down
 
-Two products of the same size can have very different maintenance bills. These are the things we look at when we estimate one.
+Two products of the same size can have very different maintenance bills. When estimating one, we look at the dependencies and the work needed to change them safely.
 
 ### How many moving parts it depends on
 
@@ -43,7 +43,7 @@ Every integration, plugin and third-party service is something that can change u
 
 ### Whether it was built to be changed
 
-Automated tests, a staging environment and a repeatable deploy make every later change cheaper, because each update can be checked before it goes live. Without them, every change is tested by hand or not tested at all, and both cost money in different ways. If you've taken over a product without these, we wrote about [inheriting a codebase that still works](/blog/inherited-codebase).
+Automated tests, a staging environment and a repeatable deploy make every later change cheaper, because each update can be checked before it goes live. Without them, the team has to test changes by hand or risk releasing them unchecked. If you've taken over a product without these, we wrote about [inheriting a codebase that still works](/blog/inherited-codebase).
 
 ### How sensitive the data is
 
@@ -61,7 +61,7 @@ Maintenance costs least when it's continuous. A product that went two years with
 
 Most maintenance runs on a monthly plan covering a defined set of work, or on a block of hours used as needed, or on some mix of the two. A plan is easier to budget for. A block of hours suits products that change rarely but sometimes need a burst of work.
 
-Whichever you choose, ask what the monthly report contains. Ours covers what was patched, what broke, what was fixed and what needs a decision, written for someone who doesn't read code. If you never hear anything from your maintenance provider, you can't tell whether the work is happening.
+Whichever you choose, ask what the monthly report contains. It should cover what was patched, what broke, what was fixed and what needs a decision, in language the owner can use. If you never hear anything from your maintenance provider, you can't tell whether the work is happening.
 
 ## How to budget for it before launch
 
@@ -69,4 +69,4 @@ The cheapest time to plan maintenance is before the build ends. Ask your develop
 
 Then put a monthly line in the budget from the first month after launch, sized to the moving parts, and treat new features as a separate decision.
 
-If you have software in production and nobody is clearly looking after it, [tell us what it runs on](/contact).
+Before the build team moves on, write down who receives alerts, who can approve urgent work and what the maintenance budget covers. Give that document to the person running the business as well as the person running the software.

@@ -23,7 +23,7 @@ Contractor-built code with no assignment on file is one of the gaps a [technical
 
 ## The code repository
 
-The code should live in a repository owned by your company, for example a GitHub or GitLab organization that you created, with the contractor added as a member. A zip file of the finished code doesn't replace this. The history of changes shows who did what and why, and it's what the next engineer will use to understand the code.
+The code should live in a repository owned by your company, for example a GitHub or GitLab organization that you created, with the contractor added as a member. A zip file of the finished code leaves out that history. The history of changes shows who did what and why, and it's what the next engineer will use to understand the code.
 
 If the repository already sits in the contractor's account, it can be moved. GitHub's guide to [transferring a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) explains that the commit history, issues and pull requests move with it.
 
@@ -47,9 +47,9 @@ Keep the passwords and keys in a company password manager, shared with the contr
 
 ## Documentation
 
-Documentation is the part people forget to ask for. At minimum it should explain how to run the software on a new machine, how to deploy a change, where each secret is stored, and which outside services the software uses and why. A short note on how the system is put together, and why any unusual decisions were made, saves the next team weeks.
+Include documentation in the agreed handover. At minimum it should explain how to run the software on a new machine, how to deploy a change, where each secret is stored, and which outside services the software uses and why. A short note on how the system is put together, and why any unusual decisions were made, saves the next team weeks.
 
-A practical test: could a new engineer you hire next month pick this up without calling the contractor? We wrote about what that handover looks like from the receiving end in [taking over someone else's codebase](/blog/inherited-codebase).
+Check whether a new engineer could set it up next month without calling the contractor. We wrote about what that handover looks like from the receiving end in [taking over someone else's codebase](/blog/inherited-codebase).
 
 ## A checklist for your next contract
 
@@ -60,8 +60,6 @@ A practical test: could a new engineer you hire next month pick this up without 
 5. Credentials in a password manager you control.
 6. Setup, deployment and architecture notes as a deliverable, with a date.
 
-## How we handle it
+## If the work has already started
 
-On our [MVP builds](/mvp-development), the repository, the accounts and the deploy pipeline are in the client's name from the first commit, and the handover includes readable setup notes. On longer engagements with a [dedicated development team](/dedicated-development-team), we write the handover as we go, so changing the size of the team doesn't take knowledge with it.
-
-If you're about to hire a contractor, or you aren't sure who holds the keys to software you already paid for, [get in touch](/contact) and we'll help you work out what you own.
+Use the checklist to find the accounts and documents your company still needs to control. Agree the handover while the contractor is still available to answer questions, including who will run a fresh setup and deployment in front of you.

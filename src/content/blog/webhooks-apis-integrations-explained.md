@@ -1,15 +1,17 @@
 ---
-title: "Webhooks, APIs and integrations explained for operators"
+title: "Why your team keeps entering the same information twice"
 image: ../../assets/blog/webhooks-apis-integrations-explained-image.jpg
 imageAlt: "Two tin-can telephones joined by a taut string with a small brass bell hanging from the middle, on a blue floor"
 cover: ../../assets/blog/webhooks-apis-integrations-explained.png
-description: "What APIs, webhooks and integrations are, how they differ, and the decisions that keep two business systems agreeing with each other."
+description: "What APIs and webhooks do, and the ownership and failure decisions needed to keep business tools in agreement."
 pubDate: 2026-08-25
 relatedPages: ["/data-integration-services", "/api-development"]
 category: software
 ---
 
-An API is a set of requests one system agrees to answer, so another system can ask it for data or tell it to do something. A webhook runs the other way: a system sends a message to another system the moment something happens. An integration is what you build from the two to keep your tools in agreement, along with the checks that tell you when they stop agreeing.
+A payment clears in one tool, but someone still has to mark the booking as paid in another. A customer changes their address, and two departments update different copies. Connecting the tools sounds straightforward until both contain information the business relies on.
+
+APIs let one system ask another for data or an action. Webhooks let a system send a message when something happens. An integration uses those connections, plus rules about ownership and failure, to keep the tools in agreement.
 
 ## What an API is
 
@@ -17,7 +19,7 @@ An API (application programming interface) is a list of requests a piece of soft
 
 With an API, whoever wants something has to ask. If your CRM needs to know whether an invoice was paid, it calls the accounting system's API and checks. When that check runs on a schedule, every five minutes or every night, it's called polling.
 
-APIs come with rules. A key or login proves who is asking, limits cap how many requests a caller can make, and permissions decide what each caller can see. Permissions matter more than most people expect. A key that can read everything is a serious problem if it leaks, so we scope keys as narrowly as the job allows.
+APIs come with rules. A key or login proves who is asking, limits cap how many requests a caller can make, and permissions decide what each caller can see. A leaked key can expose everything it is allowed to read, so we limit its permissions to what the job needs.
 
 ## What a webhook is
 
@@ -38,20 +40,20 @@ The people using the system never see any of this, so it often gets skipped in a
 
 An integration is the whole job of keeping two systems in agreement. Most use both tools: webhooks for events that need to arrive quickly, and API calls to fetch the full record, fill gaps and catch anything a webhook missed.
 
-The connection itself is rarely the hard part. The hard part is a handful of decisions:
+Before building the connection, agree how the two systems should handle the data:
 
 - Which system is the source of truth for each piece of data? If a customer's address changes in the CRM and in the accounting system on the same day, one of them has to win.
 - How do the fields map? "Client", "account" and "customer" might mean the same thing in three tools, or they might not.
 - What happens when a call fails? The options are to retry, queue it, alert someone, or some mix of these.
 - How will you know it's working? We add a reconciliation check that compares totals on both sides, so a silent failure shows up the same day instead of at month end.
 
-Write the answers down. The meaning of a field shouldn't live only in the head of whoever built the connection. Our [data integration](/data-integration-services) work starts with that document.
+Document these decisions for the people who will support the connection later, including what each field means in each system.
 
 ## Zapier, built-in connectors or custom code
 
 Many tools ship with built-in connectors, and services like Zapier link popular apps without any code. For a simple one-way flow, such as adding new form submissions to a mailing list, these are the right choice and cost very little.
 
-They get harder to trust when the flow carries money or sensitive data, when it needs the duplicate and ordering handling described above, when several steps have to succeed or fail together, or when you need a record of what happened to each item. That's when we write the integration as code, with logging and alerts. Sometimes we also build an [API](/api-development) of your own, so partners and other tools have one stable way into your system.
+They get harder to trust when the flow carries money or sensitive data, when it needs the duplicate and ordering handling described above, when several steps have to succeed or fail together, or when you need a record of what happened to each item. Compare the connector's handling of those cases with what your process needs. A custom integration may be justified, but it also needs someone to maintain its code and respond to its alerts.
 
 ## Questions to ask before you connect two tools
 
@@ -60,6 +62,4 @@ They get harder to trust when the flow carries money or sensitive data, when it 
 3. What should happen when one side is down for an hour?
 4. Who gets told when something fails, and how?
 
-If nobody can answer the last question, the integration will eventually fail without anyone noticing, and you'll hear about it from a customer.
-
-If your team copies data between systems by hand, or a connection keeps failing without warning, [tell us which tools are involved](/contact).
+If nobody owns the alerts, a failed connection can go unnoticed until a customer reports it.

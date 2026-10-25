@@ -11,13 +11,13 @@ category: case-stories
 
 When you take over a codebase that still works, make it reproducible first, change one thing at a time for a reason you can name, and keep a way back from every step. That is how we handled a multi-site healthcare practice that came to us in August 2023 with a website someone else had built.
 
-Nothing about it was broken. Underneath, every part of it was fragile, and every fragile part was holding something up. That is a harder handover than a site that has fallen over. A broken system tells you where to start. A working one makes every change feel like a risk, so it is tempting to leave it alone until something forces your hand.
+The site still worked, but the systems underneath it made changes difficult and risky. There was no obvious failure to begin with. We had to establish what could be changed safely while keeping the practice's site running.
 
 ## What we were handed
 
 The site was a React app copied to cloud storage by a one-line shell script. It talked to a Django API, and that API's admin panel was doing the job of a content management system. There were no drafts, no preview, no scheduling and no media library. Publishing a change meant asking a developer to run the deploy script. A production key sat in the repository, and the list of dependencies couldn't be rebuilt the same way twice.
 
-Our first month produced no new features. We spent it making the system runnable, deployable and reproducible, so that any later change could be made and undone on purpose. Clients rarely see that month, and it is the part we would skip last.
+Our first month produced no new features. We spent it making the system runnable, deployable and reproducible, so that any later change could be made and undone on purpose. That work was largely invisible to the client, but the later changes depended on it.
 
 ## Why each rebuild happened
 
@@ -35,7 +35,7 @@ The CMS move came in June 2026. Django 4.2 reached end of support that April, so
 
 ## Making each step easy to undo
 
-Moving content between systems is where things go missing, so we planned every step to be reversible:
+To make missing or incorrect content easier to recover, we planned reversible migration steps:
 
 - The old API stayed running, frozen, and nothing was removed to make the new one work.
 - Rolling the site back to the old API meant changing one setting.
@@ -47,10 +47,10 @@ Moving content between systems is where things go missing, so we planned every s
 
 The site is 352 pages of real HTML, built ahead of time and served from a CDN. Nothing is fetched while a visitor is on the page, so the site stays up even when the API doesn't. When an editor hits publish, the site rebuilds on its own. Every change goes through an automated build first, and a change that would break the site fails there and never reaches production.
 
-Patients see the same site they always did. The editors, who used to wait on a developer, now publish their own content.
+Patients see the same site, while the editors can now publish content without waiting for a developer.
 
 ## If you've inherited a codebase
 
-A working system you didn't build is worth taking seriously before anyone touches it. A buyer runs a similar review before a deal, which we cover in [what technical due diligence checks](/blog/technical-due-diligence-explained). When the old system has to be replaced outright, see how we approach [legacy system modernization](/legacy-system-modernization).
+A working system you didn't build is worth taking seriously before anyone touches it. A buyer runs a similar review before a deal, which we cover in [what technical due diligence checks](/blog/technical-due-diligence-explained). A review should distinguish what needs replacing from what can safely keep running.
 
-The [healthcare practice case study](/case-studies/healthcare-practice) has the full timeline. If you are sitting on a codebase someone else wrote, [tell us what you have](/contact).
+The [healthcare practice case study](/case-studies/healthcare-practice) has the full timeline. If you're taking over a working system, ask the incoming team to demonstrate a deploy and a rollback before agreeing on new features.

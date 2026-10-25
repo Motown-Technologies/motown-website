@@ -1,15 +1,17 @@
 ---
-title: "AI agent harness: what it is and why it decides quality"
+title: "Why an AI agent can get the task right and still cause trouble"
 image: ../../assets/blog/ai-agent-harness-explained-image.jpg
 imageAlt: "A stone sphere held in a blue leather and brass harness, tethered by one strap to an iron ring in a pale floor"
 cover: ../../assets/blog/ai-agent-harness-explained.png
-description: "An agent harness is the software around an AI model: its tools, limits, memory and checks. Here is what it does and why it shapes how well an agent works."
+description: "The tools, permissions and checks around an AI model decide what happens when it makes a mistake. What to ask before connecting one to your business."
 pubDate: 2026-09-05
 relatedPages: ["/ai-agent-development"]
 category: ai
 ---
 
-An AI agent harness is the software around a language model that turns it into an agent. It gives the model tools, runs it in a loop, sets what it may do, keeps track of the work and checks the results. Two products built on the same model can behave very differently, and the harness is usually the reason.
+Suppose an insurance broker asks an AI agent to sort incoming claims emails. Reading a policy number is useful, but it leaves some uncomfortable questions. Can the agent change the policy record? Who reviews a large claim? What happens when an attachment won't open?
+
+Those decisions live in the software around the model, often called the agent harness. It gives the model tools, keeps track of the work and checks the results. Two products using the same model can behave very differently because of how that surrounding software is built.
 
 ## What an AI agent harness is
 
@@ -17,7 +19,7 @@ On its own, a language model takes text in and gives text back. It can't look up
 
 The term is now common in the industry. Anthropic, for example, calls its Claude Agent SDK a "general-purpose agent harness" in its engineering write-up on [harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents).
 
-The model does the reasoning. The harness decides what the model sees, what it can touch, when it stops and what counts as finished.
+The model reasons from what the harness gives it. The harness controls the available information and tools, when the work stops and how the result is checked.
 
 ## What a harness does
 
@@ -32,24 +34,24 @@ The details vary, but most harnesses handle the same jobs:
 
 ## Why the harness decides agent quality
 
-When an agent fails in production, the model is seldom the main cause. More often the agent had access to the wrong data, a tool returned an error it couldn't interpret, nothing checked the result, or there was no rule for when to stop, so it kept trying.
+A production failure needs investigation beyond the model's answer. Check whether it received the right data, whether a tool returned an error, whether anything checked the result and whether it had a rule for stopping. Changing models will not necessarily repair those gaps.
 
-Checks matter most. In a follow-up article on [harness design](https://www.anthropic.com/engineering/harness-design-long-running-apps), Anthropic notes that "agents reliably skew positive when grading their own work." Their answer was a separate evaluator agent that clicked through the running app the way a user would and rejected work that failed its criteria. The same lesson holds for any agent: something other than the agent should check its work.
+In a follow-up article on [harness design](https://www.anthropic.com/engineering/harness-design-long-running-apps), Anthropic notes that "agents reliably skew positive when grading their own work." Their answer was a separate evaluator agent that clicked through the running app the way a user would and rejected work that failed its criteria.
 
-Say an insurance broker wants an agent to sort incoming claims emails. Any capable model can read an email and pull out a policy number. Whether the system is safe depends on the harness. Can the agent only read the policy system, or can it change records? Does a claim above a set amount go to a person? Is every action logged with what prompted it? And what happens when an email arrives in a format nobody planned for?
+For the claims email example, test a case the agent cannot finish. A missing attachment or an unavailable policy system should lead to a defined stopping point or a handoff. Check the resulting record as well as the agent's reply.
 
 ## Does the harness matter more than the model?
 
 For most business uses, it matters at least as much. Models improve every few months, and moving to a newer one is often a small change. Your business rules, permissions and checks live in the harness, and that work carries over from one model to the next.
 
-Anthropic makes a related point: "every component in a harness encodes an assumption about what the model can't do on its own," and those assumptions "can quickly go stale as models improve." So a harness should be reviewed when the model changes. Some scaffolding may no longer be needed. The checks that protect your customers stay.
+Anthropic makes a related point: "every component in a harness encodes an assumption about what the model can't do on its own," and those assumptions "can quickly go stale as models improve." So a harness should be reviewed when the model changes. Review which scaffolding is still needed while keeping the checks that protect customers.
 
-## What we build into an agent harness
+## What to look for around the model
 
-When we build [AI agents](/ai-agent-development), most of the design time goes into the harness:
+For the task you want the agent to handle, look for:
 
 - Scoped permissions that say what the agent may do alone, what needs approval and what it must never attempt.
-- Tools with the same access a person in that role would get, and no more.
+- Tools limited to the access a person in that role would need.
 - Step budgets, timeouts and a defined failure state, so the agent stops when it's stuck.
 - An audit trail of every action, with its inputs and reasoning.
 - Scored test runs against realistic scenarios, including the awkward ones, before the agent goes near a real inbox.
@@ -63,6 +65,4 @@ Whether you're buying an agent product or having one built, ask:
 3. Who checks its work, and is that check separate from the agent?
 4. Can you see a log of every action it took?
 
-Vague answers to these questions usually point to a weak harness, whatever model sits inside it.
-
-If you're planning an agent and want the harness designed before anything ships, [tell us what it needs to do](/contact).
+Try these questions against one task your team wants an agent to handle. If nobody can explain what happens when a tool fails or the agent gets stuck, settle that before giving it access to a real inbox.

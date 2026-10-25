@@ -1,51 +1,46 @@
 ---
-title: "Signs your team has outgrown its spreadsheets"
+title: "When the spreadsheet, photo folder and group chat disagree"
 image: ../../assets/blog/auction-house-spreadsheets-image.jpg
 imageAlt: "Loose paper slips and blank photos scattered across a blue surface, turning into a neat column of paper tags on the right"
 cover: ../../assets/blog/auction-house-spreadsheets.png
-description: "Spreadsheets fail quietly, when the same fact lives in several places and nobody can say who changed it. Here is how to spot it and what replaces it."
+description: "An auction house had three versions of the same inventory status. What moving to one record changed, and what still needed a person."
 pubDate: 2026-10-21
 relatedPages: ["/case-studies/auction-operations", "/spreadsheet-to-app"]
 category: case-stories
 ---
 
-Spreadsheets rarely fail all at once. They fail the day two people disagree about where something stands and there is no way to settle it. If the same status lives in a spreadsheet, a shared folder and a group chat, you have already reached that point, even if nobody has argued about it yet.
+An item could be marked "photographed" in the spreadsheet, "still in storage" in the group chat, and have two differently named pictures in the shared folder. At an auction house we worked with, each tool held part of the inventory process. Working out which version to trust was another job in itself.
+
+The tools left people maintaining the same information in several places, without a way to keep those copies in agreement.
 
 ## Every copy is a chance to disagree
 
-A spreadsheet can tell you where an item is, as long as someone remembered to update it. It can't tell you who changed a cell or when. That's fine while one person owns the sheet. It stops being fine once the same fact is kept in three places by three people.
+A spreadsheet can tell you where an item is, as long as someone remembered to update it. Even if you can trace changes in that file, it doesn't explain a different status in the chat or photo folder. That disagreement becomes harder to resolve when several people maintain separate copies.
 
-An auction house we worked with ran its inventory exactly this way: a set of spreadsheets, a photo folder and a group chat. Each one worked on its own. But an item could be "photographed" in the sheet, "still in storage" in the chat, and have two photos with two different names in the folder. Everyone could point to their own copy, and nothing said which one was current.
+Each tool worked on its own. The trouble was finding out whether the person making the next decision had the current information. A naming convention could help someone find a photo, but it couldn't update the item's status in the chat.
 
-Nobody was careless. The tools just had no way to agree with each other.
-
-## The fix is one record, not a better spreadsheet
+## Agree which record everyone works from
 
 Tidier tabs, color coding and stricter naming rules all help for a while. They don't fix the underlying problem, which is that the same fact is stored more than once.
 
-What fixes it is a single record for each thing you track, which every screen and report reads from. For the auction house that meant one record per item, following it from intake through photography, cataloging and sale. Status isn't typed in by anyone. It comes from what has actually happened to the item, so two screens can't show two different answers.
+Every screen and report needs to read the same record for an item. For the auction house that meant one record per item, following it from intake through photography, cataloging and sale. The item's status follows what has happened to it rather than a separate typed update, so the screens use the same answer.
 
-A single record also gives you two things a spreadsheet never will:
-
-- Every change is saved against the person who made it. A disagreement becomes something you look up instead of something you argue about.
-- A row deleted from a spreadsheet the week before a sale is gone. In a proper system it can be restored.
+The replacement system was designed to record who changed an item and let the team recover deleted records. Those protections need to be checked in whichever tool you choose.
 
 ## Let software take the tedious part, and keep the decision with people
 
 Replacing spreadsheets is also a good moment to look at the repetitive typing around them. At the auction house, catalogers used to write every title and description by hand. Now an AI model drafts that copy from the photos, and a cataloger reads, corrects and approves every draft before it goes anywhere.
 
-That split is what we'd recommend for most [internal automation](/workflow-automation): the model does the first pass, a person makes the call.
-
 ## Signs you've outgrown your spreadsheets
 
-None of this is specific to auctions. If several of these sound familiar, the spreadsheet has probably stopped being the right tool:
+The same problems can appear outside auctions. Look for:
 
 - The same status lives in more than one place, and they don't always agree.
 - When something goes wrong, nobody can say who changed it or when.
-- Deleting the wrong row means the data is gone.
+- Nobody is confident they could recover a mistaken deletion.
 - Real decisions happen in a chat thread and never make it back into a record.
 - One person is the only one who really understands the sheet.
 
-You don't have to replace everything at once. Most teams start with the one process where disagreements cost the most, and most of these projects take roughly 4 to 8 weeks.
+Start with a recent disagreement about an item or order. Trace where each version came from and decide who should own that information. You may be able to fix part of the process before replacing any software.
 
-The [auction operations case study](/case-studies/auction-operations) covers the full build. If this sounds like your team, read how we approach [turning spreadsheets into an app](/spreadsheet-to-app), or [tell us what you're working with](/contact).
+The [auction operations case study](/case-studies/auction-operations) describes the inventory system and the catalogers' review step in more detail.

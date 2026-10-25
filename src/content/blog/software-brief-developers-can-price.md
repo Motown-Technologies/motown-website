@@ -9,15 +9,13 @@ relatedPages: ["/mvp-development", "/web-application-development"]
 category: software
 ---
 
-A brief a developer can price says who will use the software, what each of those people needs to get done in it, what data and systems it touches, and what is fixed: budget, deadline and any rules you have to follow. It describes the problem in your words and leaves the technical design to the people quoting.
+You send the same description to three developers and get three very different quotes. Before deciding which one is overpriced, check whether they imagined the same product. "We need an app for our field team" leaves room for anything from a form to a scheduling system with offline sync.
 
-You don't need a technical background to write one, and it rarely needs to be longer than two pages.
+A brief helps developers estimate the same work. Describe who needs help, what they do today, the systems involved and the limits on the project. You can do that in your own words, usually in a couple of pages.
 
 ## Why most software briefs can't be priced
 
-A one-line brief ("we need an app for our field team") forces every developer to guess. One imagines a simple form, another imagines a full scheduling system with offline sync, and their quotes reflect those guesses. When three quotes for the same brief are far apart, the developers have usually priced three different projects.
-
-A clearer brief won't make the quotes identical, but it narrows the guessing, so the differences you see come from the developers rather than from the gaps in what you sent them.
+A quote contains assumptions about the users, data and exceptions, even if the developer hasn't written them down. A clearer brief makes more of those assumptions visible. The prices may still differ, but you can ask each developer about the same pieces of work.
 
 ## Start with the problem and who has it
 
@@ -37,7 +35,7 @@ Each of these lines is a piece of work someone can estimate. Roles also tell the
 
 ## Show the data and the systems it touches
 
-Attach the real artifacts: the spreadsheet you use now, the paper form, a screenshot of the report you build by hand every Monday. Remove anything sensitive, but keep the columns and the messy parts. A developer learns more from your actual spreadsheet than from a description of it.
+Attach the real artifacts: the spreadsheet you use now, the paper form, a screenshot of the report you build by hand every Monday. Remove anything sensitive, but keep the columns and the messy parts. The actual spreadsheet lets the developer inspect details that a description may leave out.
 
 Then list every system the software has to talk to, such as your accounting package, your CRM, your online store or a supplier's portal. Integrations are often where estimates go wrong, so say what you know: which product it is, whether data needs to flow one way or both, and how often. If you don't know whether a system can connect to anything, say so, and a good developer will find out before quoting.
 
@@ -51,7 +49,7 @@ Give the date and the reason for it. "Live before our busy season starts in Marc
 
 ## Separate what you need now from what can wait
 
-Mark each feature as needed for launch or useful later. This list does more to control the price than anything else in the brief, and it is the hardest part to write, because every feature on it came from a good conversation. We wrote about how we make those cuts in [what to build first in an MVP](/blog/mvp-what-to-build-first).
+Mark each feature as needed for launch or useful later. This list helps control the price, but it can be difficult to write when each feature has someone who wants it included. We wrote about how we make those cuts in [what to build first in an MVP](/blog/mvp-what-to-build-first).
 
 ## What to leave out
 
@@ -72,8 +70,6 @@ You also don't need a fifty-page specification. A long spec can still miss the o
 
 ## What a good developer does with it
 
-Expect questions back, and treat that as a good sign. A developer who quotes a vague brief without asking anything has filled the gaps with assumptions you haven't seen.
+Expect questions about anything the brief leaves open. A developer who quotes a vague brief without asking anything has filled the gaps with assumptions you haven't seen.
 
-For larger projects, the useful answer is often a fixed price for a first phase and a range for what follows. Our [MVP builds](/mvp-development) start with a one-week scope workshop that turns a brief like this into a plan, and internal tools follow the same pattern on our [web application development](/web-application-development) page.
-
-If you have a brief in any state, [send it to us](/contact) and we'll tell you what we'd need to price it.
+For larger projects, ask for a defined first phase and a range for what follows, with the open questions attached. You should be able to see what you are paying to learn before committing to the whole build.

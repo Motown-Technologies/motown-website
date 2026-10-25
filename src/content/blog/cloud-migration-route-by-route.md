@@ -1,15 +1,17 @@
 ---
-title: "Cloud migration: lowering your bill without a risky cutover"
+title: "Your cloud bill went up. Do you actually need to move?"
 image: ../../assets/blog/cloud-migration-route-by-route-image.jpg
 imageAlt: "Taped cardboard moving boxes floating above a blue floor, one box resting on the ground"
 cover: ../../assets/blog/cloud-migration-route-by-route.png
-description: "Most cloud bills pay for egress and idle capacity. How to read yours, decide what moves and migrate one route at a time instead of all at once."
+description: "How to investigate a rising cloud bill, weigh the disruption of moving and decide which workloads should stay where they are."
 pubDate: 2026-09-03
 relatedPages: ["/cloud-migration-services"]
 category: software
 ---
 
-If your cloud bill has grown faster than your traffic, the cause is rarely compute. It's egress on files users download, servers sized for a peak that hardly ever comes, and managed services priced for a company bigger than yours. Moving to a cheaper platform can fix that, as long as the move itself doesn't become the risky part.
+A cloud bill can rise without an obvious change in the business. Find out which charges increased before planning a move. Moving everything to a cheaper platform is a lot of work if the expensive part is a database you still need to keep.
+
+Start with a recent invoice and a rough map of what runs where. File downloads, idle servers and managed services are worth examining. A move should follow a cost comparison that includes the work of migrating and looking after the new setup.
 
 ## Read the invoice before you plan the move
 
@@ -29,14 +31,14 @@ List everything the application runs, then put each item into one of three group
 - It needs a bridge, so it keeps running where it is while the rest moves around it.
 - It belongs where it is and should stay.
 
-Be honest about the third group. GPU workloads, long-running stateful services and anything behind a compliance boundary that took real effort to get right are usually best left alone. A plan that insists on moving everything tends to turn into the rewrite nobody wants to sign off on.
+Leave room for workloads that should stay. GPU workloads, long-running stateful services and anything behind a compliance boundary that took real effort to get right are usually best left alone. Moving those workloads as well can turn a cost-saving project into a much larger rewrite.
 
-## Know where each piece usually lands
+## Mapping workloads to Cloudflare
 
-If the destination is Cloudflare, the mapping is fairly predictable:
+For a move to Cloudflare, this is a starting map of the options to investigate. Check the fit and limits of each workload before treating it as a migration plan:
 
 - API routes and the glue between services become Workers. They're billed per request and scale to zero when traffic is quiet, so there are no instances to size.
-- Static sites and server-rendered frontends go to Pages, with the CDN, TLS and preview environments included. For apps built this way from the start, see [cloud application development](/cloud-application-development).
+- Static sites and server-rendered frontends go to Pages, with the CDN, TLS and preview environments included.
 - Files in S3 move to R2, which uses the same S3 API and charges no egress fees. For an app that serves a lot of files, that line item alone is often the whole business case.
 - Small relational databases can move to D1. Postgres or MySQL databases that need to stay put get Hyperdrive in front of them, so a request doesn't pay for a cold connection every time.
 - Scheduled jobs become Cron Triggers and background work goes on Queues. The server whose only job was running crontab can be shut down.
@@ -45,23 +47,23 @@ Whatever stays behind gets Cloudflare in front of it, so the rest can move witho
 
 ## Move one route at a time
 
-The risky way to migrate is a single weekend where everything switches at once, and any problem reaches every user. You can avoid that because your traffic already flows through DNS you control. Routes can move to the new platform one at a time while the rest keep running on the old setup.
+Switching everything in one weekend makes it harder to isolate a problem. Where the traffic setup supports it, move individual routes while the rest keep running on the old platform. Ask the migration team to demonstrate how that split and its rollback will work before relying on it.
 
 Each step is small enough to check on its own. Users keep the same URLs the whole way through, including for files that now come from R2, and most of them never notice that anything changed.
 
-A sensible order is to start where the savings are largest and the risk is smallest. File storage is often a good first move, because shifting it to R2 removes egress fees without touching application code.
+Start with a move that offers worthwhile savings at a manageable risk. File storage may be a useful first candidate if downloads account for a large share of the bill. Check the storage connections and URLs before assuming it can move without application changes.
 
 ## Questions to answer before you commit
 
 - Which few line items make up most of the bill, and does another platform actually charge less for them?
 - Which workloads have to stay, and what will sit in front of them?
-- Can traffic be split by route at the DNS level, so pieces can move one at a time?
+- Can the traffic setup split routes between platforms, so pieces can move one at a time?
 - What would the bill look like with only the easy moves done?
 
 If the answers point to real savings, you can start with the easy moves and decide on the rest once you see the new bill.
 
-## One way to get started
+## Count the work after the move
 
-When a company asks us to look at its cloud costs, we start the same way: a recent invoice and a rough map of what runs where. From that we can say what moves, what stays and what the bill should look like afterward. We can also structure the engagement against the savings we find, so the audit costs nothing if there's nothing to save.
+A lower hosting bill is only part of the comparison. The team still has to maintain the new deployment, understand its limits and support the pieces left behind. Make sure someone can own that setup before approving a move.
 
-Read how we approach [cloud migration](/cloud-migration-services), or [send us your bill and tell us what runs where](/contact).
+Price the smaller moves separately from the more involved ones. For each, write down the expected saving, the migration work and what it would take to reverse it. If the saving is small or the workload is difficult to move, leaving it alone is a reasonable decision.

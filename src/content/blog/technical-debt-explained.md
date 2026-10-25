@@ -9,13 +9,15 @@ relatedPages: ["/legacy-system-modernization", "/technical-due-diligence"]
 category: software
 ---
 
-Technical debt is the extra cost of changing software that was built faster or more simply than what you now ask of it. You pay it like interest: every new feature takes longer, and breaks more, than it would in a cleaner system.
+Adding one field to a form has become a two-week job. A routine release breaks a report nobody changed. The team says there's technical debt, and the owner hears another request to spend money before getting anything new.
+
+Technical debt is the extra work involved in changing software whose earlier design or shortcuts no longer fit what you need. Ask where the extra work is happening and which repairs would reduce it.
 
 ## Where the term technical debt comes from
 
 The programmer Ward Cunningham introduced the metaphor in 1992, in a conference report about a financial software project. Martin Fowler's [summary of technical debt](https://martinfowler.com/bliki/TechnicalDebt.html) puts it in money terms: "The extra effort that it takes to add new features is the interest paid on the debt." Cleaning up the code pays off the principal.
 
-The comparison works because some debt is a sensible choice. Shipping a simpler version to find out whether customers want it can be the right call, as long as someone plans to pay it back.
+Some debt is a sensible choice. Shipping a simpler version to find out whether customers want it can be the right call, as long as someone plans to pay it back.
 
 ## What technical debt looks like from outside the code
 
@@ -38,21 +40,21 @@ Most of it builds up without anyone deciding. The business changed and the softw
 
 ## Why the business pays for technical debt
 
-Engineers feel technical debt every day, but the business pays for it. The bill arrives as features that cost more and ship later, bugs and outages that reach customers, and good engineers leaving because the work is frustrating. It also shows up when you raise money or sell the company, because a buyer's [technical due diligence](/technical-due-diligence) will find it and price it in.
+Technical debt affects both the engineers doing the work and the business paying for it. The bill arrives as features that cost more and ship later, bugs and outages that reach customers, and good engineers leaving because the work is frustrating. It also shows up when you raise money or sell the company, because a buyer's [technical review](/blog/technical-due-diligence-explained) may affect how they assess the product.
 
-The interest also compounds. A shortcut that costs an hour a week this year costs more next year, once other code has been built on top of it.
+A shortcut that costs an hour a week can become more expensive as other code is built on top of it.
 
 ## How to pay down technical debt without stopping everything
 
 A full rewrite is tempting and usually the wrong first move. It freezes new work for months, and the new system has to rediscover every rule the old one handled without anyone noticing.
 
-What we do instead:
+A more manageable approach:
 
 1. Find where it hurts. Look at which parts of the system change most often and break most often. Debt in code nobody touches costs almost nothing. Debt in the checkout flow costs you every week.
 2. Write tests that capture what the system does today, including the odd behavior people now depend on, before changing anything.
 3. Pay down debt where you're already working. When a feature touches a messy part of the code, clean up that part as part of the feature.
 4. Set a steady budget. Reserve part of every development cycle for maintenance and upgrades, so the work gets done before it becomes urgent.
-5. Replace older systems in pieces. We move one part at a time behind a layer that sends each request to the old or the new code, and run both until the results match. Our [legacy system modernization](/legacy-system-modernization) page describes the approach.
+5. Replace older systems in pieces where possible. Keep a way to compare results and return to the old behavior while each part is checked. The team needs to understand the existing rules before removing the code that implements them.
 
 ## Questions to ask your development team
 
@@ -63,6 +65,4 @@ You can manage technical debt without being technical. Ask your team:
 3. Which of our dependencies are out of date or no longer supported?
 4. How long does it take a new engineer to ship their first change?
 
-The answers turn a vague complaint into a list you can prioritize and budget for.
-
-If your software has become slow to change, or you've inherited a system nobody wants to touch, [tell us what's slowing you down](/contact).
+Use the answers to put costs and priorities against specific repairs.
