@@ -1,0 +1,59 @@
+---
+// Home / Section / This page, for pages one level or more inside a section
+// that has an index of its own. The trail comes from the URL, so a page
+// gets it by living under one of these paths.
+const SECTIONS: Record<string, string> = {
+    services: "Services",
+    "case-studies": "Case Studies",
+    blog: "Blog",
+};
+
+interface Props {
+    pathname: string;
+    title: string;
+}
+
+const { pathname, title } = Astro.props;
+const [section, ...rest] = pathname.split("/").filter(Boolean);
+const show = section in SECTIONS && rest.length > 0;
+
+const trail = [
+    { name: "Home", href: "/" },
+    { name: SECTIONS[section], href: `/${section}` },
+    { name: title.replace(/\s*\|\s*Motown Solutions$/, ""), href: pathname },
+];
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((t, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: t.name,
+        item: new URL(t.href, Astro.site).href,
+    })),
+};
+---
+
+{
+    show && (
+        <nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-6 pt-6 md:pt-8">
+            <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted">
+                {trail.map((t, i) =>
+                    i < trail.length - 1 ? (
+                        <li class="flex items-center gap-2">
+                            <a href={t.href} class="link-underline hover:text-ink">
+                                {t.name}
+                            </a>
+                            <span aria-hidden>/</span>
+                        </li>
+                    ) : (
+                        <li aria-current="page" class="hidden md:block text-ink">
+                            {t.name}
+                        </li>
+                    ),
+                )}
+            </ol>
+            <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+        </nav>
+    )
+}

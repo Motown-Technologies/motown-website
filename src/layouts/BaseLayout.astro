@@ -2,6 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 import { Navigation } from "../components/Navigation";
 import RelatedPosts from "../components/RelatedPosts.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import logo from "../img/logo.png";
 
 import "../styles/global.css";
@@ -345,6 +346,7 @@ const organization = {
         >
         <Navigation client:load pathname={Astro.url.pathname} />
         <main id="main" tabindex="-1" class="outline-none">
+            <Breadcrumbs pathname={Astro.url.pathname} title={meta_title} />
             <slot />
             <RelatedPosts />
         </main>
