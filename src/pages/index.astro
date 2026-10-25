@@ -4,8 +4,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import NumberedRow from "../components/NumberedRow.astro";
 import { Image } from "astro:assets";
 import { getPosts } from "../lib/posts";
+import { studies } from "../data/caseStudies";
 
-const latestPosts = (await getPosts()).slice(0, 6);
+// Three posts that answer a buyer's questions, in this order. Unpublished
+// slugs drop out and the newest posts fill the gap.
+const FEATURED_POSTS = ["software-brief-developers-can-price", "what-to-own-when-a-contractor-builds-your-software", "ai-agent-or-automation"];
+const posts = await getPosts();
+const featured = FEATURED_POSTS.map((id) => posts.find((p) => p.id === id)).filter((p) => p !== undefined);
+const homePosts = [...featured, ...posts.filter((p) => !featured.includes(p))].slice(0, 3);
+
+const SELECTED_WORK = ["/case-studies/auction-operations", "/case-studies/senior-care-concierge", "/case-studies/donation-platform"];
+const selectedWork = SELECTED_WORK.map((href) => studies.find((s) => s.href === href)!);
 
 const whyChoose = [
     {
@@ -90,10 +99,10 @@ const whyChoose = [
                             >
                         </a>
                         <a
-                            href="/services"
+                            href="/case-studies"
                             class="inline-flex items-center gap-2 bg-transparent text-ink font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-ink hover:bg-ink hover:text-paper transition-colors"
                         >
-                            Explore Services
+                            See Our Work
                         </a>
                     </div>
                 </div>
@@ -120,6 +129,50 @@ const whyChoose = [
         </div>
     </section>
 
+    <!-- Selected work: evidence before the service list -->
+    <section class="py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10 md:mb-14 flex flex-wrap items-end justify-between gap-6">
+                <div>
+                    <h2 class="font-display font-bold text-h2 tracking-tight text-balance">Selected work.</h2>
+                    <p class="mt-5 max-w-xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty">
+                        Three systems we built, the problem each one started with, and what changed.
+                    </p>
+                </div>
+                <a href="/case-studies" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-eyebrow link-underline">
+                    <span aria-hidden>→</span>
+                    All case studies
+                </a>
+            </div>
+            <div data-stagger class="grid gap-12 md:gap-8 md:grid-cols-3">
+                {
+                    selectedWork.map((s) => (
+                        <a href={s.href} class="group flex flex-col border-t-2 border-ink pt-6">
+                            {s.image && (
+                                <Image
+                                    src={s.image}
+                                    alt={s.imageAlt ?? ""}
+                                    widths={[400, 800]}
+                                    sizes="(min-width: 768px) 400px, 100vw"
+                                    class="w-full aspect-[4/3] object-cover object-top border border-ink/30 group-hover:border-ink transition-colors mb-6"
+                                />
+                            )}
+                            <span class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-3">{s.sector}</span>
+                            <h3 class="font-display text-2xl font-bold tracking-tight leading-tight mb-4 text-balance group-hover:text-accent transition-colors">
+                                {s.title}
+                            </h3>
+                            <p class="text-ink-muted leading-relaxed mb-5">{s.body}</p>
+                            <div class="mt-auto border-t border-ink/30 pt-4">
+                                <span class="block font-mono text-[11px] uppercase tracking-eyebrow text-accent mb-1.5">What changed</span>
+                                <p class="font-medium leading-snug">{s.result}</p>
+                            </div>
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
     <!-- Services showroom -->
     <section class="py-20 md:py-28" data-reveal>
         <div class="max-w-7xl mx-auto px-6">
@@ -132,16 +185,9 @@ const whyChoose = [
                 <p
                         class="mt-5 max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
                     >
-                        We build custom software, websites, mobile apps and
-                        automation tools, and we advise on the strategy behind
-                        them. On the AI side, we build agents that handle
-                        repetitive work and add AI features to products you
-                        already run, then test them against real cases before
-                        customers use them. Every project starts with what
-                        you're trying to solve. We pick the simplest approach
-                        that works, and sometimes that doesn't involve AI at
-                        all. Pick a service below to see what we build and how
-                        we work.
+                        Every project starts with the problem, and the simplest
+                        approach that solves it. Sometimes that isn't AI. Pick a
+                        service to see what we build and how we work.
                     </p>
             </div>
 
@@ -202,16 +248,16 @@ const whyChoose = [
         </div>
     </section>
 
-    <!-- Latest posts: hidden until something is published -->
+    <!-- Featured posts: hidden until something is published -->
     {
-        latestPosts.length > 0 && (
+        homePosts.length > 0 && (
             <section class="border-t-2 border-ink" data-reveal>
                 <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
                     <div class="mb-12 md:mb-16">
                         <h2 class="font-display font-bold text-h2 tracking-tight text-balance">From the blog.</h2>
                     </div>
                     <div class="grid gap-10 md:gap-x-8 md:gap-y-14 md:grid-cols-3">
-                        {latestPosts.map((post) => (
+                        {homePosts.map((post) => (
                             <a href={`/blog/${post.id}`} class="group flex flex-col">
                                 {post.data.image && (
                                     <Image
