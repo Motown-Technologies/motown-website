@@ -13,9 +13,9 @@ People who come to your organization after a loss need to be able to reach its h
 
 ## Ask for less, in smaller pieces
 
-Someone who lost her mother last month may close a long form intending to come back later, even if she would have completed it on an ordinary day. Breaking an application into one group of questions at a time makes it feel manageable, and it suits a phone, which is where most people will fill it in.
+Someone who lost a parent last month may close a long form intending to come back later, even if they would have completed it on an ordinary day. Breaking an application into one group of questions at a time makes it feel manageable, and it suits a phone, which is where most people will fill it in.
 
-Empty text boxes deserve the same thought. A grief-support nonprofit we worked with lets members leave a memorial wish for someone else in the community. The app offers a few preset phrases first, and a member can still write her own. Finding words for someone else's loss is hard, and a place to start helps.
+Empty text boxes deserve the same thought. A grief-support nonprofit we worked with lets members leave a memorial wish for someone else in the community. The app offers a few preset phrases first, and a member can still write their own. Finding words for someone else's loss is hard, and a place to start helps.
 
 Also check that nothing important happens on a single tap without a chance to stop.
 
@@ -35,18 +35,18 @@ For this nonprofit, that date is the Yahrtzeit, the anniversary of a parent's de
 
 Ask about important dates and calendars early enough to build them into the data and reminders.
 
-## Treat each member's record as hers
+## Treat each member's record as theirs
 
 People share a lot with an organization that supports them through something hard. Build the permissions on the assumption that what they share belongs to them. A few questions worth answering before launch:
 
 - Can staff see a real member's account? At the nonprofit, staff who need to preview the members' app on real data sign in as a dedicated test account that can't reach any real member, and every visit goes in the audit log.
-- What happens when someone leaves? Closing an account is the member's request. Erasing her personal details is a separate step an admin takes later, and the memorial she made for her parent stays in place.
-- Which emails can she turn off? Every kind of bulk email. Only messages about her own account always arrive.
+- What happens when someone leaves? Closing an account is the member's request. Erasing their personal details is a separate step an admin takes later, and the memorial they made for their parent stays in place.
+- Which emails can they turn off? Every kind of bulk email. Only messages about their own account always arrive.
 
 ## Let the software keep the rules
 
 Most organizations doing this work are small. This one has a team of four and no engineers on staff, so wherever we could, a rule became something the software enforces itself. Every change has to pass the full test suite before it can be merged. Text never drops below a 4.5:1 contrast ratio, placeholders included. Every admin action is logged, and the destructive ones are limited to a single role. These checks reduce what the team has to remember during a busy week.
 
-A member should be able to apply, find an event and remember her parent without thinking about the software at all.
+A member should be able to apply, find an event and remember their parent without thinking about the software at all.
 
 The [nonprofit community case study](/case-studies/nonprofit-community) documents the wider build. For a review of your own forms, read each question as someone arriving after a loss: why do we need this now, and could we ask it later?
