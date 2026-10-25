@@ -64,6 +64,18 @@ const organization = {
 <meta name="twitter:card" content="summary_large_image" />
 <script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
 {noindex && <meta name="robots" content="noindex" />}
+<script is:inline>
+    // Vercel Web Analytics custom events: va() queues until the script loads.
+    // Events need a Pro plan; on Hobby they're accepted and dropped.
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    if (!window.__motownContactClicks) {
+        window.__motownContactClicks = true;
+        document.addEventListener("click", (e) => {
+            const a = e.target.closest?.('a[href^="mailto:"], a[href^="tel:"]');
+            if (a) va("event", { name: a.protocol === "tel:" ? "Phone click" : "Email click", data: { page: location.pathname } });
+        });
+    }
+</script>
 {import.meta.env.PROD && <script is:inline defer src="/_vercel/insights/script.js" />}
 <slot name="head" />
         <ClientRouter />
