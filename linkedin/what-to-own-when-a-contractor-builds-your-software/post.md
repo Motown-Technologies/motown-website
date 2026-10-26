@@ -27,4 +27,4 @@ Go through this with your contractor while they're still around to answer questi
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/what-to-own-when-a-contractor-builds-your-software?utm_source=linkedin&utm_medium=social&utm_campaign=what-to-own-when-a-contractor-builds-your-software
+https://motowntech.com/go/what-to-own-when-a-contractor-builds-your-software

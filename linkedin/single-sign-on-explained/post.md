@@ -26,4 +26,4 @@ Use the first four cards when a vendor demo gets to security, and the last two o
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/single-sign-on-explained?utm_source=linkedin&utm_medium=social&utm_campaign=single-sign-on-explained
+https://motowntech.com/go/single-sign-on-explained

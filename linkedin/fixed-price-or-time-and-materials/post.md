@@ -24,4 +24,4 @@ Two quotes with similar totals can cover different work and leave the cost of a 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/fixed-price-or-time-and-materials?utm_source=linkedin&utm_medium=social&utm_campaign=fixed-price-or-time-and-materials
+https://motowntech.com/go/fixed-price-or-time-and-materials

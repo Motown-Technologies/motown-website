@@ -22,4 +22,4 @@ Bring these to your next planning meeting if you approve engineering budgets but
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/technical-debt-explained?utm_source=linkedin&utm_medium=social&utm_campaign=technical-debt-explained
+https://motowntech.com/go/technical-debt-explained

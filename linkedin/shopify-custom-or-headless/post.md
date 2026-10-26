@@ -22,4 +22,4 @@ Save this for the next time someone pitches a platform rebuild to fix falling sa
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/shopify-custom-or-headless?utm_source=linkedin&utm_medium=social&utm_campaign=shopify-custom-or-headless
+https://motowntech.com/go/shopify-custom-or-headless

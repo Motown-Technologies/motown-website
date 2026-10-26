@@ -28,4 +28,4 @@ Fill this in for one process before anyone quotes you for an AI agent. You'll se
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/ai-agent-or-automation?utm_source=linkedin&utm_medium=social&utm_campaign=ai-agent-or-automation
+https://motowntech.com/go/ai-agent-or-automation

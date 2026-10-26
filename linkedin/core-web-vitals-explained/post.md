@@ -26,4 +26,4 @@ Your site can feel quick on your laptop and still let customers down on a phone.
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/core-web-vitals-explained?utm_source=linkedin&utm_medium=social&utm_campaign=core-web-vitals-explained
+https://motowntech.com/go/core-web-vitals-explained

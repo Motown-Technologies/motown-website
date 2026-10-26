@@ -22,4 +22,4 @@ Go through these before anyone builds the connection. Each one's a decision the 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/webhooks-apis-integrations-explained?utm_source=linkedin&utm_medium=social&utm_campaign=webhooks-apis-integrations-explained
+https://motowntech.com/go/webhooks-apis-integrations-explained

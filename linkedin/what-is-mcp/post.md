@@ -22,4 +22,4 @@ Use this before you connect an AI assistant to a system with real data in it. Th
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/what-is-mcp?utm_source=linkedin&utm_medium=social&utm_campaign=what-is-mcp
+https://motowntech.com/go/what-is-mcp

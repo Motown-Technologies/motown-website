@@ -27,4 +27,4 @@ A green dashboard won't tell you when your team could work again. Take these que
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/backups-vs-disaster-recovery?utm_source=linkedin&utm_medium=social&utm_campaign=backups-vs-disaster-recovery
+https://motowntech.com/go/backups-vs-disaster-recovery

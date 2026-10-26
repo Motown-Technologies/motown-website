@@ -26,4 +26,4 @@ Keep this next to the next AI proposal you're asked to approve, so words like we
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/rag-and-fine-tuning-explained?utm_source=linkedin&utm_medium=social&utm_campaign=rag-and-fine-tuning-explained
+https://motowntech.com/go/rag-and-fine-tuning-explained

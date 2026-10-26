@@ -28,4 +28,4 @@ If an AI tool you run reads email, documents or web pages, go through these six 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/prompt-injection-explained?utm_source=linkedin&utm_medium=social&utm_campaign=prompt-injection-explained
+https://motowntech.com/go/prompt-injection-explained

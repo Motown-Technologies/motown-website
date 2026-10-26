@@ -31,4 +31,4 @@ Answer these before anyone picks a framework, and you'll know whether you need a
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/native-cross-platform-or-web-app?utm_source=linkedin&utm_medium=social&utm_campaign=native-cross-platform-or-web-app
+https://motowntech.com/go/native-cross-platform-or-web-app

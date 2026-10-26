@@ -24,4 +24,4 @@ If someone's pitching you an AI agent, or your team wants to build one, ask thes
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/ai-agent-harness-explained?utm_source=linkedin&utm_medium=social&utm_campaign=ai-agent-harness-explained
+https://motowntech.com/go/ai-agent-harness-explained

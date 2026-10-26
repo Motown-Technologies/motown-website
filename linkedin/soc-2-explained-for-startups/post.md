@@ -22,4 +22,4 @@ Keep this for the day a prospect's security team asks for your SOC 2 report, bef
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/soc-2-explained-for-startups?utm_source=linkedin&utm_medium=social&utm_campaign=soc-2-explained-for-startups
+https://motowntech.com/go/soc-2-explained-for-startups

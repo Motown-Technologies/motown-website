@@ -27,4 +27,4 @@ A subscription and a one-off build price cover different time spans and responsi
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/build-vs-buy-software?utm_source=linkedin&utm_medium=social&utm_campaign=build-vs-buy-software
+https://motowntech.com/go/build-vs-buy-software

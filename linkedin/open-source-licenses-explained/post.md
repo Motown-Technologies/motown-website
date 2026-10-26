@@ -26,4 +26,4 @@ Use this to sort your dependency list into licenses that just need a notice and 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/open-source-licenses-explained?utm_source=linkedin&utm_medium=social&utm_campaign=open-source-licenses-explained
+https://motowntech.com/go/open-source-licenses-explained

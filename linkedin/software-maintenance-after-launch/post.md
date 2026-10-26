@@ -22,4 +22,4 @@ Go through these with your developer before the build ends, while they've still 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/software-maintenance-after-launch?utm_source=linkedin&utm_medium=social&utm_campaign=software-maintenance-after-launch
+https://motowntech.com/go/software-maintenance-after-launch

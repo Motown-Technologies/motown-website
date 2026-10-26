@@ -24,4 +24,4 @@ Start collecting these before a raise or sale puts a date on them. Each card is 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/technical-due-diligence-explained?utm_source=linkedin&utm_medium=social&utm_campaign=technical-due-diligence-explained
+https://motowntech.com/go/technical-due-diligence-explained

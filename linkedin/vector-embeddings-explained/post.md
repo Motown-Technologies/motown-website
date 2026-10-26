@@ -25,4 +25,4 @@ Answer these before a vendor demo, so you're judging search on your own question
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/vector-embeddings-explained?utm_source=linkedin&utm_medium=social&utm_campaign=vector-embeddings-explained
+https://motowntech.com/go/vector-embeddings-explained

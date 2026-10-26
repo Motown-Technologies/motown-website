@@ -22,4 +22,4 @@ Run this checklist before a low-code or AI-built prototype holds patient or resi
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/prototype-to-production-health-data?utm_source=linkedin&utm_medium=social&utm_campaign=prototype-to-production-health-data
+https://motowntech.com/go/prototype-to-production-health-data

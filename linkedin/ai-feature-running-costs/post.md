@@ -28,4 +28,4 @@ Fill this in before you approve an AI feature, once at expected usage and once a
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/ai-feature-running-costs?utm_source=linkedin&utm_medium=social&utm_campaign=ai-feature-running-costs
+https://motowntech.com/go/ai-feature-running-costs

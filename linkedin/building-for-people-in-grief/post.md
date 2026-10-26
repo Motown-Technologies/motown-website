@@ -25,4 +25,4 @@ Use this when you review the forms, emails and reminders people see after a loss
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/building-for-people-in-grief?utm_source=linkedin&utm_medium=social&utm_campaign=building-for-people-in-grief
+https://motowntech.com/go/building-for-people-in-grief

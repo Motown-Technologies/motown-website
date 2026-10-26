@@ -26,4 +26,4 @@ Go through this with your developer to see how close your staging copy really is
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/staging-environment-explained?utm_source=linkedin&utm_medium=social&utm_campaign=staging-environment-explained
+https://motowntech.com/go/staging-environment-explained

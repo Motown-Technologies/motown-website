@@ -24,4 +24,4 @@ Run through this before anyone signs off an AI feature because the demo looked g
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/testing-ai-features?utm_source=linkedin&utm_medium=social&utm_campaign=testing-ai-features
+https://motowntech.com/go/testing-ai-features

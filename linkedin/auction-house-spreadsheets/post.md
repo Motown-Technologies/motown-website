@@ -26,4 +26,4 @@ Run through this next time two people disagree about where something stands. It 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/auction-house-spreadsheets?utm_source=linkedin&utm_medium=social&utm_campaign=auction-house-spreadsheets
+https://motowntech.com/go/auction-house-spreadsheets

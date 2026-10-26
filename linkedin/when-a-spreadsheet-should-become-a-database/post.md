@@ -24,4 +24,4 @@ Do this before anyone designs screens for the replacement. Your workbook already
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/when-a-spreadsheet-should-become-a-database?utm_source=linkedin&utm_medium=social&utm_campaign=when-a-spreadsheet-should-become-a-database
+https://motowntech.com/go/when-a-spreadsheet-should-become-a-database

@@ -28,4 +28,4 @@ If you've inherited software someone else built, run these checks before anyone 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/inherited-codebase?utm_source=linkedin&utm_medium=social&utm_campaign=inherited-codebase
+https://motowntech.com/go/inherited-codebase

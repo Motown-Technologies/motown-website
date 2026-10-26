@@ -24,4 +24,4 @@ Run these in a test environment with dummy data before a vibe-coded or no-code p
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/what-your-prototype-skipped?utm_source=linkedin&utm_medium=social&utm_campaign=what-your-prototype-skipped
+https://motowntech.com/go/what-your-prototype-skipped

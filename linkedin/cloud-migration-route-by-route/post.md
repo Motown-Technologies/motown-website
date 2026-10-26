@@ -27,4 +27,4 @@ Fill this in before anyone quotes you for a migration. It shows how much of the 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/cloud-migration-route-by-route?utm_source=linkedin&utm_medium=social&utm_campaign=cloud-migration-route-by-route
+https://motowntech.com/go/cloud-migration-route-by-route

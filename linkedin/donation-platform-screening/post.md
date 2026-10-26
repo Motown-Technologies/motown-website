@@ -27,4 +27,4 @@ Settle these before money starts moving, ideally in one sitting with whoever han
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/donation-platform-screening?utm_source=linkedin&utm_medium=social&utm_campaign=donation-platform-screening
+https://motowntech.com/go/donation-platform-screening

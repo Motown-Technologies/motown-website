@@ -155,9 +155,13 @@ or sees if the article or a case study says it; never invent a habit like
   caption of two sentences at most saying why the reader would want it. The
   carousel is a practical tool (checklist, worksheet, questions, template),
   not a shorter copy of Post 1.
-- **First comment (both posts):**
-  `https://motowntech.com/blog/<slug>?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>`
-  (the tracking code shows LinkedIn visits in Vercel Web Analytics).
+- **First comment (both posts):** the short link
+  `https://motowntech.com/go/<slug>`. Never put a link with `utm_` codes
+  in a LinkedIn post or comment: the `/go/:slug` redirect in `vercel.json`
+  forwards to `/blog/<slug>` and adds `utm_source=linkedin`,
+  `utm_medium=social` and `utm_campaign=<slug>` itself, so LinkedIn visits
+  still show in Vercel Web Analytics and readers see a clean link. Add the
+  post to `linkedin/schedule.md` with the same short link.
 
 `carousel.json` holds the slide text:
 

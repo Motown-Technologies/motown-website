@@ -24,4 +24,4 @@ If your MVP's feature list keeps growing and the launch date keeps moving, fill 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/mvp-what-to-build-first?utm_source=linkedin&utm_medium=social&utm_campaign=mvp-what-to-build-first
+https://motowntech.com/go/mvp-what-to-build-first

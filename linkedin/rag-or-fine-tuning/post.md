@@ -24,4 +24,4 @@ For when an AI proposal lands on your desk: each card is a requirement and the a
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/rag-or-fine-tuning?utm_source=linkedin&utm_medium=social&utm_campaign=rag-or-fine-tuning
+https://motowntech.com/go/rag-or-fine-tuning

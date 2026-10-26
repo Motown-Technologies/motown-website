@@ -22,4 +22,4 @@ Work through this before you commit to a migration. It weighs fixing the site yo
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/when-to-leave-wordpress?utm_source=linkedin&utm_medium=social&utm_campaign=when-to-leave-wordpress
+https://motowntech.com/go/when-to-leave-wordpress

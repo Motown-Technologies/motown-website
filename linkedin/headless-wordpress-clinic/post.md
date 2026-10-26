@@ -22,4 +22,4 @@ Going headless fixes some WordPress problems and leaves others alone. Use this c
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/headless-wordpress-clinic?utm_source=linkedin&utm_medium=social&utm_campaign=headless-wordpress-clinic
+https://motowntech.com/go/headless-wordpress-clinic

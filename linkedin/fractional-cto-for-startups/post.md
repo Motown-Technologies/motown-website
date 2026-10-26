@@ -28,4 +28,4 @@ If technical decisions keep stalling on your team, a new title won't help until 
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/fractional-cto-for-startups?utm_source=linkedin&utm_medium=social&utm_campaign=fractional-cto-for-startups
+https://motowntech.com/go/fractional-cto-for-startups

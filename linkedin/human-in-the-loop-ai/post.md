@@ -24,4 +24,4 @@ Use this when you're deciding which steps of an AI workflow can run alone and wh
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/human-in-the-loop-ai?utm_source=linkedin&utm_medium=social&utm_campaign=human-in-the-loop-ai
+https://motowntech.com/go/human-in-the-loop-ai

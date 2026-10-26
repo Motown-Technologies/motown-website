@@ -26,4 +26,4 @@ Fill this in before you ask anyone for a quote, so every developer prices the sa
 
 ## First comment (both posts)
 
-https://motowntech.com/blog/software-brief-developers-can-price?utm_source=linkedin&utm_medium=social&utm_campaign=software-brief-developers-can-price
+https://motowntech.com/go/software-brief-developers-can-price
