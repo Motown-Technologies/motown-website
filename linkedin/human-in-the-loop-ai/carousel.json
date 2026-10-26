@@ -1,29 +1,29 @@
 {
-    "cover": "Where a person should sign off on AI work",
+    "cover": "Sort every action your AI can take",
     "slides": [
         {
-            "title": "Check where mistakes get hard to undo",
-            "body": "Money moving, a customer message, a shared record changing. A person approves before any of those take effect."
+            "title": "Ask: what if it's wrong and nobody checks?",
+            "body": "If the answer is \"someone rewrites a draft,\" the cost is small. If it's \"a refund goes out,\" a person sees it first."
         },
         {
-            "title": "Let it read, sort and draft alone",
-            "body": "If the output is wrong and nothing has happened yet, the person who uses it later will notice."
+            "title": "Alone: reading, searching, drafting",
+            "body": "These can get less review when the stakes are low. Check what uses that output next."
         },
         {
-            "title": "Some actions stay out of reach",
-            "body": "Deleting data or changing permissions isn't left to a prompt. The AI's permissions simply don't allow it."
+            "title": "Prepared by AI, approved by a person",
+            "body": "Customer emails, record updates, price changes, refunds, official filings. A person reads the result and presses the button."
         },
         {
-            "title": "Design the review so people keep up",
-            "body": "Show the source beside the draft, make editing as easy as approving, and make unusual cases look different."
+            "title": "Never: outside its permissions",
+            "body": "Deleting data, moving money above a set limit, changing permissions. The AI can suggest it, and its permissions block the action."
         },
         {
-            "title": "Keep a record and a stop button",
-            "body": "Log what the AI saw and produced, and who approved it. Halt the queue automatically when errors pile up."
+            "title": "Check the review screen",
+            "body": "Source beside the draft, editing as easy as approving, unusual items that look unusual, routine ones batched."
         },
         {
-            "title": "Loosen checkpoints with evidence",
-            "body": "When the records show people almost never change a kind of output, let it through with spot checks."
+            "title": "Revisit the line after a few weeks",
+            "body": "Output people almost never change can move to spot checks. Kinds that still get edited keep their checkpoint."
         }
     ]
 }

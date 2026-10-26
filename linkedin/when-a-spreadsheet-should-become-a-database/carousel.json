@@ -1,25 +1,29 @@
 {
-    "cover": "When your spreadsheet should become a database",
+    "cover": "Map your workbook before you replace it",
     "slides": [
         {
-            "title": "Size is rarely the reason",
-            "body": "Excel allows over a million rows per sheet. Most business spreadsheets get into trouble long before that."
+            "title": "List every tab and formula",
+            "body": "Write down each tab, formula, macro and workaround. Together they describe how the business works."
         },
         {
-            "title": "The same record, three versions",
-            "body": "One customer in several tabs or files, and they don't agree. Nobody knows which one is right."
+            "title": "Walk a normal day and a hard one",
+            "body": "Ask the person who knows the workbook to show you both. Record the exceptions as well as the formulas."
         },
         {
-            "title": "Nobody knows who changed it",
-            "body": "A spreadsheet can't show who edited a number or when, so a wrong figure has nothing to settle it."
+            "title": "Agree what each record means",
+            "body": "What's an order, a tenant, a repair? Which links between them must stay intact?"
         },
         {
-            "title": "A database enforces the rules",
-            "body": "A status comes from a fixed list. An order needs a real customer. A rushed edit can't quietly break that."
+            "title": "Find the duplicates",
+            "body": "Where does the same customer appear twice, and which copy is right? Decide how to fix each before import."
         },
         {
-            "title": "Start with the data model",
-            "body": "Screens can change in a week. A database with years of records in it is much harder to restructure."
+            "title": "Plan the check",
+            "body": "Agree how staff will check the imported data, and run both side by side until the team trusts the new system."
+        },
+        {
+            "title": "Or keep the sheet",
+            "body": "If one person owns it, it's for analysis, or the process changes weekly, a spreadsheet is still the right tool."
         }
     ]
 }

@@ -1,25 +1,29 @@
 {
-    "cover": "What to build first in your MVP",
+    "cover": "A scope worksheet for your first version",
     "slides": [
         {
-            "title": "Find the one loop",
-            "body": "The single user journey that proves the idea works. That is what goes into the first version."
+            "title": "The question you're testing",
+            "body": "Will people do this, and pay for it, if it's easy enough? Write your own version of that sentence first."
         },
         {
-            "title": "Write the rest down",
-            "body": "Every other feature goes on a written list. Good ideas mid-build go there too, so the launch date holds."
+            "title": "The journey, from problem to value",
+            "body": "List each step from the user's starting problem to the moment they get value. That journey is the first version."
         },
         {
-            "title": "Build the loop properly",
-            "body": "Accounts, payments, backups and a deploy pipeline from day one, even in a small first version."
+            "title": "For each feature: needed for the journey?",
+            "body": "If the journey works without it, it moves to the later list with the reason it's waiting."
         },
         {
-            "title": "Skip the scale you don't have",
-            "body": "Build simply, with a cost model for 100 and 10,000 users, and rewrite once the product has earned it."
+            "title": "For each feature that waits",
+            "body": "Who needs it? What would they do without it? What evidence would bring it back into scope?"
         },
         {
-            "title": "Own it from the first commit",
-            "body": "The repo, accounts and deploy button are yours, so a new engineer can pick it up without calling us."
+            "title": "Foundations the journey needs",
+            "body": "Sign-in and permissions, storage you can trust, a way to release and roll back. Payments, if payment is part of the test."
+        },
+        {
+            "title": "A new request mid-build",
+            "body": "Compare it with the journey. If it goes in, write down what it costs: the date, the budget or another feature."
         }
     ]
 }

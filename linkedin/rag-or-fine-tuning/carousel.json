@@ -1,25 +1,29 @@
 {
-    "cover": "RAG or fine-tuning: which one your data needs",
+    "cover": "RAG or fine-tuning? A decision table",
     "slides": [
         {
-            "title": "RAG controls what it knows",
-            "body": "The system looks up relevant passages each time someone asks, and the model answers from them."
+            "title": "Do the documents change?",
+            "body": "Use retrieval. Update the index and the next answer uses the new version. A tuned model keeps the old one until retrained."
         },
         {
-            "title": "Fine-tuning controls how it answers",
-            "body": "Training on examples changes format, tone and judgment. It is a poor way to teach a model facts."
+            "title": "Do people need to see the source?",
+            "body": "Use retrieval. Each answer can cite the passage it came from, so someone can check it."
         },
         {
-            "title": "Facts change, tuned models don't",
-            "body": "Update a policy and a tuned model keeps the old one until you retrain it. RAG uses the new version on the next question."
+            "title": "Do access rights differ by person?",
+            "body": "Use retrieval, with permissions checked at search time. A tuned model can repeat its training data to anyone."
         },
         {
-            "title": "When tuning earns its place",
-            "body": "The model knows the right thing but says it in the wrong shape, thousands of times a day."
+            "title": "Right facts, wrong shape or style?",
+            "body": "Fine-tuning may help, if it happens across thousands of requests and a careful prompt still falls short."
         },
         {
-            "title": "The platforms are shifting",
-            "body": "OpenAI closed fine-tuning to new organizations in May 2026. Keep your dataset and test set so you can move."
+            "title": "No agreed examples of good output?",
+            "body": "Hold off on tuning. Without hundreds of examples people agree on, training has nothing to learn from."
+        },
+        {
+            "title": "Current facts in a fixed format?",
+            "body": "Use both: a tuned model for the format, and retrieval for the facts at question time."
         }
     ]
 }

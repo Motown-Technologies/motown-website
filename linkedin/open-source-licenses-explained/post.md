@@ -2,27 +2,27 @@
 
 ## Post 1: native text
 
-Almost every piece of software your business runs on includes open source code, and every piece of that code comes with a license.
+Every open source package in your software has a license saying what you can do with it, and a typical web app pulls in hundreds.
 
-Most of those licenses ask very little. Permissive licenses like MIT and Apache 2.0 let you use the code in a closed, commercial product as long as you keep the copyright notice.
+Most ask little. Permissive licenses like MIT and Apache 2.0 let you use the code in a closed commercial product if you keep the copyright notice.
 
-Copyleft licenses like the GPL ask more. If you distribute software built on GPL code, you have to make the source available under the same license. Software that only runs on your own servers generally isn't treated as distributed.
+Copyleft licenses like the GPL ask more. Distribute software built on GPL code and you have to make your source available under the same license. Code that only runs on your own servers generally doesn't count.
 
-The AGPL closes that gap. It treats network use as distribution, so if you modify AGPL code and offer it over the web, your users can ask for your modified source. It's the one to check first in a web app or SaaS product.
+The AGPL closes that gap by counting network use as distribution. Change AGPL code and offer it over the web, and you have to share your changed source with its users. In a web app, it's the license to check first.
 
-Then there's source-available code under licenses like the SSPL or the Business Source License. The code is public, but the Open Source Initiative doesn't recognize these licenses as open source, and they often restrict commercial hosting.
-
-You don't need to read every license. You need a generated list of dependencies and their licenses, a short rule about which ones get reviewed before they're added, and another look at that list before any sale, raise or big customer contract.
+Source-available licenses like the SSPL and the Business Source License publish the code but often restrict commercial hosting, and the Open Source Initiative doesn't count them as open source.
 
 (General information from a software team, not legal advice.)
 
-Full write-up in the comments.
+Day to day, licenses rarely cause trouble. They come up when you sell or raise money, in a big customer's procurement questionnaire, or once you ship software to customers. If a clinic commissions a patient portal and later licenses it to other clinics, code that was harmless in one private system now ships to other organizations.
+
+Ask your developers for a tool-generated list of your dependencies and licenses this week, while there's time to swap one out or check its terms with a lawyer.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/open-source-licenses-explained.pdf)
 
-Document title: Open source licenses: what they ask of you
+Document title: A license triage table for your dependencies
 
-Permissive, copyleft, AGPL and source-available licenses in six slides, plus how to keep track of what your software depends on. Not legal advice. The full write-up is in the comments.
+Use this to sort your dependency list into licenses that just need a notice and ones someone should review before they're added. It's general information, not legal advice, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

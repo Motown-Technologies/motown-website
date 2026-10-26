@@ -1,25 +1,29 @@
 {
-    "cover": "Webhooks, APIs and integrations, explained",
+    "cover": "Before you connect two business tools",
     "slides": [
         {
-            "title": "An API answers when you ask",
-            "body": "Your CRM asks the accounting system whether an invoice was paid. Asking on a schedule is called polling."
+            "title": "Does each tool support it?",
+            "body": "Is there a documented API? Does it send webhooks for the events you care about, such as a payment or a new order?"
         },
         {
-            "title": "A webhook tells you when it happens",
-            "body": "A deposit clears and the payment provider tells your booking system at once, so nothing has to keep asking."
+            "title": "Which system owns each field?",
+            "body": "If an address changes in the CRM and in accounting on the same day, one has to win. Write down which."
         },
         {
-            "title": "Webhooks need careful receiving",
-            "body": "Verify the signature, expect duplicates, don't rely on order, and reply fast before doing the work."
+            "title": "Do the words mean the same?",
+            "body": "\"Client\", \"account\" and \"customer\" might be one thing in three tools, or they might not. Map each field."
         },
         {
-            "title": "Decide which system wins",
-            "body": "If an address changes in two tools on the same day, one has to be the source of truth. Write it down."
+            "title": "What if one side is down?",
+            "body": "Retry, queue, alert someone, or a mix. Decide what happens when a call fails for an hour."
         },
         {
-            "title": "Know when it breaks",
-            "body": "A daily check that totals match on both sides catches a silent failure the same day, not at month end."
+            "title": "Is the receiver built for webhooks?",
+            "body": "Messages verified, duplicates caught by event ID, no reliance on order, a quick reply with the work done from a queue."
+        },
+        {
+            "title": "Who hears when it breaks?",
+            "body": "Name who gets the alert. Without a daily check that totals match, a failure can sit unnoticed until month end."
         }
     ]
 }

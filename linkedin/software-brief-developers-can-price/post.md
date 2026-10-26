@@ -2,28 +2,27 @@
 
 ## Post 1: native text
 
-If three developers quote your project at wildly different prices, they've usually priced three different projects.
+You send the same description to three developers and get three very different quotes. Before deciding who's overcharging, check they pictured the same product.
 
-A one-line brief makes everyone guess. One pictures a simple form, another pictures a scheduling system that works offline, and the quotes follow the guesses.
+"We need an app for our field team" could mean anything from a form to a scheduling system that works offline. Every quote carries guesses about users, data and exceptions, written down or not.
 
-A brief a developer can price fits on two pages and covers:
+A brief someone can price usually fits on a couple of pages, in your own words. Start with the problem and its cost. "Our dispatchers spend the first hour of every day copying jobs from email into a spreadsheet, and drivers call in to ask where they're going next" says far more than "we need a dispatch system."
 
-• The problem today, and what it costs you in hours or mistakes.
-• Each type of user and what they do in the software. "A driver sees today's jobs on a phone and marks each one done" is something a developer can estimate.
-• Your real spreadsheet, form or report, with the messy parts left in.
-• Every system it has to connect to. Integrations are where estimates most often go wrong.
-• A budget range, the deadline and the reason for it.
-• What's needed at launch, and what can wait.
+Then name each type of user and what they do. "A driver sees today's jobs on a phone, marks each one done and adds a photo" is work someone can estimate.
 
-Leave out the choice of programming language unless you have a reason, and skip the polished screen designs. Rough sketches are enough.
+Attach the real spreadsheet, messy parts and all. List every system it has to talk to, since that's often where estimates go wrong. Give a budget range, the deadline and why it's the deadline. Mark what's needed at launch and what can wait.
 
-Then expect questions back. A developer who quotes a vague brief without asking anything has filled the gaps with assumptions you haven't seen.
+Skip the programming language unless you've got a real reason, and the polished mockups. Same for a fifty-page spec, which can still miss the one exception your staff handle by email every week.
+
+The quotes may still differ, but now you can ask each developer about the same pieces.
+
+Link's in the comments, with a one-page outline you can copy.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/software-brief-developers-can-price.pdf)
 
-Document title: How to write a software brief a developer can price
+Document title: Software brief template: fill in the blanks
 
-What to put in a brief so the quotes you get back are for the same project. Swipe through, and the full write-up is in the comments.
+Fill this in before you ask anyone for a quote, so every developer prices the same project. Each card is one section of a brief that fits on a couple of pages, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

@@ -2,30 +2,23 @@
 
 ## Post 1: native text
 
-If your low-code or AI-built prototype is about to hold patient or resident records, keep the screens. The work is underneath them.
+If your low-code or AI-built prototype is about to hold patient or resident records, keep the screens. The work's underneath.
 
-A senior-care operator we worked with had a prototype whose workflow was right. But the "submitted by" field was a dropdown of six hard-coded names, and every facility could see every other facility's records.
+A multi-facility senior-care operator we worked with ran its concierge team on a prototype with the right workflow. But "submitted by" was a dropdown of six hard-coded names, and every facility could see all the others' records. We rebuilt in two halves: copy the workflow faithfully, then add what the demo skipped. Staff who knew the prototype needed no retraining.
 
-Here's what health data adds before a prototype like that can go live:
+Facility separation now sits under every database query, so a page someone adds on deadline can't forget a filter it never had to apply. An account linked to no facility sees nothing. Lobby wallboards show totals only, never a resident's name, so they can run on a read-only link. Facility logins and Wi-Fi keys stay encrypted and hidden until an owner or admin reveals one, and each reveal is logged.
 
-• Enforce access in one place, below every screen. A page someone adds on a deadline can't forget a filter it never had to apply.
-• Make a misconfigured account see nothing.
-• Hide secrets and sensitive fields until someone deliberately reveals them, and log the reveal.
-• Keep an append-only audit log, so "who looked at this?" has an answer.
-• Pick your session timeouts and write down why. HIPAA requires automatic logoff but names no duration.
-• Confirm every vendor holding the data will sign a business associate agreement.
+Some rules needed a judgment call. HIPAA calls automatic logoff "addressable": you assess whether it fits your system and write down your decision, and it names no time limit. The app uses an idle timeout, a hard cap on session length and a warning about a minute before sign-out.
 
-Then test with realistic data before anyone signs in. In that rebuild, a review turned up external accounts appearing in lists meant for internal staff. Left alone, that could eventually have sent a resident's name outside the organization. It was fixed before launch.
+Two reviews ran against realistic data before anyone signed in. The biggest catch was outside accounts showing up in internal staff lists, which could eventually have sent a resident's name outside the organization. It got fixed before launch.
 
-A working prototype still has real value. The workflow is the hard part, and it's already done.
-
-Full write-up in the comments.
+Link's in the comments for the six questions to answer first.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/prototype-to-production-health-data.pdf)
 
-Document title: What your prototype needs before it holds health data
+Document title: Before your prototype holds health data
 
-A low-code or AI-built prototype can get the workflow right and still be unsafe for patient records. Here's what has to change underneath the screens first. Full write-up in the comments.
+Run this checklist before a low-code or AI-built prototype holds patient or resident records. Anything still open needs work first, and the workflow can stay useful while you rebuild what's underneath.
 
 ## First comment (both posts)
 

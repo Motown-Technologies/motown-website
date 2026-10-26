@@ -2,28 +2,23 @@
 
 ## Post 1: native text
 
-If you've noticed "connectors" showing up in every AI tool this year, most of them run on MCP, the Model Context Protocol.
+Someone on your team wants to ask an AI assistant which of last week's orders haven't shipped, so it needs a connection to your order system. If you switch AI tools later, does that connection get built again?
 
-MCP is a shared standard for connecting AI applications to other software. Before it, hooking an assistant up to your CRM or database meant an integration built for that one assistant. Connecting a second AI tool meant building it again.
+Before MCP (Model Context Protocol), it usually did. Each assistant needed its own.
 
-With MCP, the system that holds the data runs an MCP server, and any AI tool that supports MCP can use it. Claude, ChatGPT, Visual Studio Code and Cursor are among the tools that do.
+MCP is a shared standard for those connections. The system holding the data runs an MCP server, the AI app runs a client, and any client can talk to any server. Put one server in front of your order system and any AI tool that supports MCP can use it, so switching tools doesn't mean rebuilding it.
 
-Anthropic created it, and in December 2025 donated it to the Agentic AI Foundation under the Linux Foundation. For a business deciding whether to build on it, that matters: supporting MCP doesn't tie you to one AI vendor.
+Anthropic created MCP in late 2024 and in December 2025 donated it to the Agentic AI Foundation, a fund under the Linux Foundation co-founded by Anthropic, Block and OpenAI. No single AI vendor owns it, so it doesn't tie you to one.
 
-What it means in practice:
+What the assistant may do is still your call, since it gets whatever access the connection allows. A server that only needs to read orders shouldn't be able to cancel them, so start read-only and add tools that change things one at a time. Install local servers only from sources you trust, because each runs on your computer with your permissions. An email or web page coming through a tool can carry hidden instructions.
 
-• If you sell software, customers will expect to use your product from inside their AI assistant. An MCP server is how you offer that, and it's only as good as the API underneath.
-• If you want AI connected to internal systems, one MCP server makes them available to whichever AI tool you use, and you can switch tools later without rebuilding.
-
-The security questions are the ordinary ones, asked more carefully. Expose read access first and add write actions one at a time. Install local servers only from sources you trust. And remember that content arriving through a tool can carry hidden instructions.
-
-Full write-up in the comments.
+Selling software? Your MCP server will usually sit on your API and is only as good as it. If yours is thin or inconsistent, start there.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/what-is-mcp.pdf)
 
-Document title: MCP explained in five slides
+Document title: Checklist for reviewing an MCP connection
 
-What the Model Context Protocol is, who controls it, and what it means if you want AI connected to your own systems. Swipe through, and the full write-up is in the comments.
+Use this before you connect an AI assistant to a system with real data in it. The standard makes the connection reusable, and these questions cover the access decisions that are still yours to make.
 
 ## First comment (both posts)
 

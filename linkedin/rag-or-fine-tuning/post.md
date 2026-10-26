@@ -2,27 +2,25 @@
 
 ## Post 1: native text
 
-If you want an AI to answer from your company's documents, you almost certainly want retrieval (RAG), and fine-tuning probably won't help.
+Your team wants an AI assistant that answers from your policies, contracts and product manuals. The proposal mentions fine-tuning. Should it?
 
-RAG looks up the relevant passages each time someone asks and hands them to the model. Fine-tuning trains the model on examples so it behaves differently: format, tone, judgment.
+Your documents change. Replace a policy and the next answer should use the new one. Retrieval (RAG) means updating the index. A fine-tuned model keeps the old policy until someone retrains it.
 
-Why fine-tuning is a poor place to keep facts:
+Access differs too. Retrieval can check it at search time, so people only get answers from documents they're allowed to open. A tuned model can repeat anything it was trained on to anyone who asks the right way.
 
-• When your policy changes, a tuned model keeps the old one until you retrain it.
-• It can't show which document an answer came from.
-• It can't enforce access rules. What it learned, it can repeat to anyone.
+Answers need to show where they came from. Retrieval can cite the passage. Fine-tuning spreads what it learned through the model, leaving no passage to point to.
 
-Fine-tuning earns its place when the model knows the right thing but says it in the wrong shape, thousands of times a day. Sorting emails into fixed categories in a fixed format is a good example. Some products use both.
+So the documents go into retrieval. Fine-tuning is about behavior: the model knows the right thing but says it in the wrong shape across thousands of requests, and you've got hundreds of agreed examples of good output. An insurance broker sorting every incoming email into one of fifteen categories, in a fixed format for its claims system, fits. It could use both: retrieval pulls the customer's policy wording into each tuned summary.
 
-Where you can fine-tune has also changed this year. OpenAI closed its fine-tuning platform to new organizations in May, and existing customers can't start new jobs after January 6, 2027. Google Cloud still offers tuning for Gemini, and open-weight models can be tuned on your own infrastructure.
+If you tune, keep the dataset and test set yourself. OpenAI is winding down its fine-tuning platform, and base models get replaced every year or so.
 
-Either way, the dataset and the test set are what you're paying for. Keep them yours.
+First, build the test set: real questions with agreed answers, scored the same way on every version. Then ask to see what happens with a replaced policy, and with a question no document covers.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/rag-or-fine-tuning.pdf)
 
-Document title: RAG or fine-tuning: which one your data needs
+Document title: RAG or fine-tuning: a decision table
 
-How to tell whether your AI needs to look things up or learn a new behavior, and why most companies start with the first. Swipe through, and the full write-up is in the comments.
+For when an AI proposal lands on your desk: each card is a requirement and the approach it points to. The full write-up, with the test set we build first, is in the comments.
 
 ## First comment (both posts)
 

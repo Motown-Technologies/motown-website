@@ -2,26 +2,26 @@
 
 ## Post 1: native text
 
-A vector embedding is a list of numbers that stands for what a piece of text means.
+Your refund policy is written down. So why can't your company search find it?
 
-Texts that mean similar things get similar numbers. That's how an AI search tool can match "how do I get my money back" to a page that only says "refund policy."
+Often because the customer typed "how do I get my money back" and the page is called "refund policy." Keyword search matches words, and those two share none.
 
-Think of a bookshop that shelves books by subject instead of by title. Embeddings put every paragraph of your documents on a map like that, and a question lands next to the passages that answer it.
+Vector embeddings let software search by meaning. A model turns each passage into a long list of numbers that works like a spot on a map. Passages that mean similar things land close together, so "terminate the agreement" sits near "cancel the contract." Your question becomes numbers too, and the search returns whatever's nearest.
 
-What owners should know before buying one:
+That's the search half of most AI assistants built on company documents. Its limits are worth knowing before you buy one:
 
-• Embeddings are good at meaning and bad at exact strings. A search for part number HX-4410-B can come back with HX-4410-C. Running keyword search alongside fixes it.
+• It's bad at exact strings. To the model, part HX-4410-B looks almost the same as HX-4410-C. Running keyword search alongside it helps (vendors call it hybrid search).
+• It always returns something, even when nothing relevant exists. The system needs a way to say it came up empty.
 • If the HR folder is indexed, anyone who can ask a question can surface it, unless access rules are checked on every search.
-• Search by meaning always returns something, even when nothing relevant exists. The system needs a way to say so.
-• Switching embedding models later means re-embedding everything.
+• Results from different models can't be compared, so switching models later means processing all your documents again.
 
-The most useful thing you can bring to a vendor is a list of a few dozen real questions your team asks, with the right answers. Test every version against it.
+Before you talk to a vendor, collect a few dozen searches your team gave up on, plus the passages they should've found. Throw in part numbers or policy codes if you use them, then test every version against that list.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/vector-embeddings-explained.pdf)
 
-Document title: Vector embeddings, explained without code
+Document title: Questions to settle before you buy AI search
 
-What a vector embedding is, how it lets software search by meaning, and the four places it goes wrong. Swipe through, and the full write-up is in the comments.
+Answer these before a vendor demo, so you're judging search on your own questions instead of a few nice-looking answers. Link's in the comments.
 
 ## First comment (both posts)
 

@@ -2,23 +2,23 @@
 
 ## Post 1: native text
 
-WordPress is easy to start with. Years later, keeping it running can turn into a job of its own.
+Leave WordPress when keeping the site alive takes more of your team's time than writing for it.
 
-These are the complaints we hear on first calls: a dozen plugins waiting on updates and nobody sure which one breaks the site, bots hammering /wp-admin all day, and mobile PageSpeed scores in the red.
+On first calls we hear about a dozen plugins waiting on updates with nobody sure which one breaks the site, bots hammering the admin login all day, slow pages that tuning plugins or caching hasn't fixed, and a theme only the original developer understands.
 
-If none of that sounds like your site, stay where you are. A migration takes real work, and a WordPress site with a few plugins and fast pages is doing its job.
+If none of that sounds like your site, stay put. A migration is real work, and a WordPress site with a few plugins and fast pages on a phone is doing its job.
 
-If it does sound familiar, your editors can keep the admin they know: WordPress stays on as a back office. Visitors get pages built ahead of time and served as plain HTML, so they never touch PHP or a database. When an editor hits publish, the site rebuilds itself.
+If it does, decide what to replace. An endoscopy center we worked with ran its public site on WordPress. Staff liked editing in it, and nobody liked how it loaded. A new content system would've fixed the public site but taken away the tool staff knew, so WordPress stayed as the back office. The public pages are now built ahead of time and served as plain HTML. Patients never touch WordPress, and if it's slow or down, only staff notice.
 
-The usual worry is search rankings. We map every old URL to its new address with a 301 redirect, and the old site stays live until the new one checks out.
+That route adds a build process someone must maintain. Before you pick it, have the people who publish try the workflow, and decide who'll run forms, newsletter signups and analytics afterward.
 
-Full write-up in the comments.
+Then plan your URLs. Write down every old address and where it goes, and add a 301 redirect (a permanent forward) wherever one changes, which keeps the search signals the old pages built up. Keep the old site running until the new one checks out.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/when-to-leave-wordpress.pdf)
 
-Document title: When it's time to leave WordPress
+Document title: Stay, fix or move: a WordPress worksheet
 
-The signs that WordPress upkeep has outgrown the site, when staying put is the right call, and what a move involves. Swipe through, and the full write-up is in the comments.
+Work through this before you commit to a migration. It weighs fixing the site you have against the hassle of moving, including what your editors would have to learn.
 
 ## First comment (both posts)
 

@@ -1,25 +1,29 @@
 {
-    "cover": "Shopify, custom or headless?",
+    "cover": "Fix the store or change the platform?",
     "slides": [
         {
-            "title": "Start with what loses sales",
-            "body": "A slow product page, search that fails on a typo, a checkout that demands an account. Fix those first."
+            "title": "Product page slow on a phone?",
+            "body": "Fix it on the platform: a custom theme, fewer apps, and no scripts loading on pages that don't need them."
         },
         {
-            "title": "Shopify can do more than you think",
-            "body": "Custom themes, Functions and checkout extensions cover most of what stores assume the platform can't do."
+            "title": "Search fails on a typo?",
+            "body": "Start with search and filters in the current store. Look further only if platform search misses much of your catalog."
         },
         {
-            "title": "Most stores need fewer apps",
-            "body": "A dozen apps, several doing the same job, all loading on every page. Cutting them makes the store faster."
+            "title": "Checkout long or demanding?",
+            "body": "Shorten it on the platform: guest checkout, saved addresses and the wallets customers already have on their phones."
         },
         {
-            "title": "Headless when the platform is the limit",
-            "body": "The theme can't render the brand, or you run a separate store per market. Then it earns its complexity."
+            "title": "A separate store for every market?",
+            "body": "Headless can serve several locales, currencies and brands from one storefront. That can justify the extra system."
         },
         {
-            "title": "When we'd talk you out of it",
-            "body": "A two-person team, a theme that is mostly fine, or a six-week deadline. A custom theme ships sooner."
+            "title": "Marketing waits on a developer?",
+            "body": "A headless front end with a content system lets marketing publish landing pages without waiting on a developer."
+        },
+        {
+            "title": "Two people, or six weeks?",
+            "body": "Keep the platform's front end. Headless adds a codebase, a deploy pipeline and a content system someone has to own."
         }
     ]
 }

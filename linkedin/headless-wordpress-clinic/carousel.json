@@ -1,25 +1,29 @@
 {
-    "cover": "Keep WordPress for editing, out of visitors’ way",
+    "cover": "Before you go headless with WordPress",
     "slides": [
         {
-            "title": "Which problem do you have?",
-            "body": "If editors like WordPress and the complaints are about slow pages and outages, the editor isn’t the problem."
+            "title": "Your editors like WordPress",
+            "body": "They’re comfortable in it and you don’t want to retrain them. If editing’s the main complaint, look at leaving instead."
         },
         {
-            "title": "Build pages ahead of time",
-            "body": "WordPress holds the content. The site is built from it as plain pages, so visitors never touch WordPress."
+            "title": "The complaints come from visitors",
+            "body": "Slow pages and outages for visitors, more than plugin updates nobody trusts and upkeep that eats into the week."
         },
         {
-            "title": "Publishing stays one button",
-            "body": "At a clinic we worked with, a small plugin waits ninety seconds after a publish, so ten quick saves become one rebuild."
+            "title": "Visitors mostly read pages",
+            "body": "No shopping carts or logged-in areas that need WordPress running for each visitor."
         },
         {
-            "title": "A failed build changes nothing",
-            "body": "If WordPress is down during a build, the build fails and yesterday’s site stays up."
+            "title": "A minute or two to go live is fine",
+            "body": "Edits appear after a rebuild. At a clinic we worked with, a plugin waits ninety seconds so ten quick saves become one rebuild."
         },
         {
-            "title": "Make the build strict",
-            "body": "Content is checked first. A renamed field stops the build with a clear error before anything goes live."
+            "title": "Ask the builder: how strict is the build?",
+            "body": "A renamed field should stop it with a clear error. Missing content should never get filled with placeholder text."
+        },
+        {
+            "title": "Ask to see a failed build",
+            "body": "The previous site should stay up. Find out how editors will notice the failure and who helps them publish again."
         }
     ]
 }

@@ -1,25 +1,29 @@
 {
-    "cover": "Inheriting a codebase that still works",
+    "cover": "Taking over a codebase that still works",
     "slides": [
         {
-            "title": "Nothing was broken",
-            "body": "The site worked. Underneath, every fragile part was holding something up, so every change felt risky."
+            "title": "Can it be rebuilt the same way twice?",
+            "body": "Pinned dependencies, no production keys in the repository, a deploy you can repeat. Fix this before anyone adds a feature."
         },
         {
-            "title": "The first month shipped nothing",
-            "body": "We made the system runnable, deployable and reproducible before touching a feature."
+            "title": "Can you name the reason for each change?",
+            "body": "Search engines that can't read the pages, a framework leaving support, editors waiting on a developer."
         },
         {
-            "title": "Every rebuild had a reason",
-            "body": "Search engines couldn't see the pages, a framework was nearing end of support, and editors waited on a developer."
+            "title": "Does the old version stay running?",
+            "body": "Keep the old API up and frozen, and remove nothing from it to make the new one work."
         },
         {
-            "title": "Every step could be undone",
-            "body": "The old API stayed running, rollback was one setting, and the migration copied without deleting."
+            "title": "Is rollback one setting?",
+            "body": "Pointing the site back at the old system should take one setting."
         },
         {
-            "title": "A site that publishes itself",
-            "body": "352 static pages. Editors hit publish, the site rebuilds, and a broken build never reaches production."
+            "title": "Does the migration copy, never delete?",
+            "body": "It should re-run safely, every record should point to its source row, and old tables should stay a month after the switch."
+        },
+        {
+            "title": "Have you seen a deploy and a rollback?",
+            "body": "Ask the incoming team to demonstrate both before agreeing on new features."
         }
     ]
 }

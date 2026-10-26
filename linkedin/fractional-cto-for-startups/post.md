@@ -2,31 +2,29 @@
 
 ## Post 1: native text
 
-Most seed-stage startups don't need a full-time CTO.
+Your engineers ship every week. They also can't settle an argument about a rewrite, and a customer won't sign until someone answers their security questions.
 
-They need someone senior making the four or five technical calls a month that are expensive to get wrong, and standing behind them afterwards.
+That team can deliver. It's missing someone who owns the technical decisions, so they wait while work carries on. And you still need to know if the product can handle the next stage of growth.
 
-A team can ship for a long time without that person. The cost tends to show up during a raise or a rewrite, when nobody can explain why the stack looks the way it does.
+The calls that tend to go unowned:
 
-Here's what usually goes unowned without a technical lead:
+• What to build, skip or do first, planned against the cash you have left
+• Tech choices the team can still defend in two years
+• The technical part of the fundraising deck, and code that holds up when investors look at it
+• Security and compliance questions big customers ask before they sign
+• Scoping the first engineering hires and running their technical interviews
 
-• Which features to build first, planned against the runway
-• Stack choices the team can still defend in two years
-• The first engineering hires, which carry a six-figure downside if they go wrong
-• Security questions from enterprise buyers
-• The technical section of the board update
+A fractional CTO takes that on part time, often a day or two a week. Decisions get written down with their tradeoffs instead of sliding to the next sprint. Engineers get someone senior to go to, and board updates come from someone who can field the follow-ups.
 
-A fractional CTO covers that for a day or two a week. Decisions get written down with their tradeoffs, hires get a proper technical screen, and the board hears from someone who can handle the follow-up questions.
+Whoever you bring in, full time or fractional, agree first which calls they can make, who controls the budget and how disagreements get settled. Without that, a senior person can review your tech, team and roadmap and still leave the same decisions open.
 
-We start every engagement with a two-week audit of the stack, the team and the roadmap. It ends with written findings, and there's no obligation to continue.
-
-Full write-up in the comments.
+This week, list the last few technical decisions that stalled, who could've made each call and what stopped them. Shape the role from that before picking a title.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/fractional-cto-for-startups.pdf)
 
-Document title: Do you need a CTO, or a CTO's judgment?
+Document title: Define the technical lead role before you hire
 
-What a startup without a senior technical lead is missing, and what a part-time CTO takes on. The full write-up is in the comments.
+If technical decisions keep stalling on your team, a new title won't help until you know which calls the role owns. Fill in this worksheet before you choose between a fractional and a full-time CTO, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

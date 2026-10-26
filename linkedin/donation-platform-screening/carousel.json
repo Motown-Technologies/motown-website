@@ -1,25 +1,29 @@
 {
-    "cover": "Sanctions screening for platforms that take payments",
+    "cover": "Walk through a flagged payment with compliance",
     "slides": [
         {
-            "title": "Screen where every payment passes",
-            "body": "A check beside the main flow gets skipped the day someone adds a new way to pay."
+            "title": "Does every payment route hit the check?",
+            "body": "Including routes added later. On one platform it sits in the function that identifies the donor, before any payment exists."
         },
         {
-            "title": "If the check fails, decline",
-            "body": "When the lists can’t be reached, a check that switches itself off protects nobody."
+            "title": "What if the lists can’t be reached?",
+            "body": "Declining is the safe default. If you’d rather let payments through, record who decided that and why."
         },
         {
-            "title": "Don’t say why",
-            "body": "Telling someone they matched a sanctions list is itself a violation, so the decline stays neutral."
+            "title": "What does the donor see?",
+            "body": "A neutral decline that never mentions a watchlist. Most flags are possible matches, and a person judges how strong the match is."
         },
         {
-            "title": "Record the passes too",
-            "body": "A log of blocks alone can’t show you screened everyone. Keep the clears on record."
+            "title": "Who reviews it, and what’s kept?",
+            "body": "Name the person who reviews a possible match, and decide what evidence you keep about the case."
         },
         {
-            "title": "Test matching on ordinary names",
-            "body": "A naive check flagged six of twenty everyday donor names. One extra word of slack brought it to three."
+            "title": "Are the passes on record?",
+            "body": "A log of blocks alone can’t show you screened everyone. Keep the clears on record too."
+        },
+        {
+            "title": "Has matching been tested on real names?",
+            "body": "A naive check flagged six of twenty ordinary donor names. One extra word of slack brought it to three. Write down the gaps."
         }
     ]
 }

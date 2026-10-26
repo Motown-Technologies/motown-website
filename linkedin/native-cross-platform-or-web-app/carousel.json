@@ -1,25 +1,29 @@
 {
-    "cover": "Native, cross-platform or web app?",
+    "cover": "Five questions before you build a mobile app",
     "slides": [
         {
-            "title": "Start with what it needs from the phone",
-            "body": "If a browser can do everything the product needs, build a web app. No store review, no install, and updates reach everyone at once."
+            "title": "What does it need that a browser can't give?",
+            "body": "Daily camera or location use, working without a signal, notifications people rely on. If it's nothing, lean web."
         },
         {
-            "title": "Signs you need an installed app",
-            "body": "Daily camera or location use, work without a signal, notifications people rely on, or customers who expect you in the app stores."
+            "title": "Do users need to work offline?",
+            "body": "Working in a warehouse or out in the field, with changes syncing later? That points to an installed app."
         },
         {
-            "title": "Web push needs the home screen",
-            "body": "On iPhone, a web app can send push notifications only after someone adds it to the home screen. Most people never do."
+            "title": "Would people add you to the home screen?",
+            "body": "On iPhone, web push works only after they do. Most don't, so notifications people must see favor an app."
         },
         {
-            "title": "Need an app? Build it once",
-            "body": "React Native or Flutter shares the business rules and data handling across iOS and Android, so one team maintains one codebase."
+            "title": "Who maintains it a year from now?",
+            "body": "A team that writes JavaScript or TypeScript fits React Native. Flutter uses Dart and draws its own interface."
         },
         {
-            "title": "Go native only where it counts",
-            "body": "One native-only requirement rarely justifies two codebases. A small native module covers it and the rest stays shared."
+            "title": "Do customers expect you in an app store?",
+            "body": "Then build a real app. Apple's review guidelines say an app should do more than repackage a website."
+        },
+        {
+            "title": "Reading your answers",
+            "body": "Nothing needed from the phone and no store expected: build web. Otherwise build cross-platform, native only where needed."
         }
     ]
 }

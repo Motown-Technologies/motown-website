@@ -1,29 +1,29 @@
 {
-    "cover": "How to test an AI feature before customers do",
+    "cover": "A checklist for your first AI test set",
     "slides": [
         {
-            "title": "AI features fail without errors",
-            "body": "A wrong answer looks as confident as a right one, and nothing crashes. The feature just gets worse on cases nobody tried."
+            "title": "Start from real inputs",
+            "body": "Past support tickets, real documents, questions customers have asked. New feature? Write them with the people doing the job today."
         },
         {
-            "title": "They change when your code doesn't",
-            "body": "A model update, a prompt tweak or new documents can fix one thing and break others. You only know if you measure."
+            "title": "Cases to include",
+            "body": "Common questions as customers phrase them, typos included. Questions it should decline. Look-alike questions with different answers."
         },
         {
-            "title": "An eval is a fixed test set",
-            "body": "Realistic inputs, a way to grade each answer the same way every time, and a score you track from version to version."
+            "title": "Cases people forget",
+            "body": "Messages telling it to ignore its instructions. Every real mistake after launch, added so it can't come back unnoticed."
         },
         {
-            "title": "Fill it with the awkward cases",
-            "body": "Typos, questions it should decline, look-alike questions with different answers, and every real mistake after launch."
+            "title": "Pick a grader for each case",
+            "body": "Category, number or fixed format: check in code. Open-ended reply: a different model with a written rubric. Judgment calls: a person."
         },
         {
-            "title": "Use the simplest grader that works",
-            "body": "Code for categories and numbers. A second model with a rubric for open answers. People for the judgment calls."
+            "title": "Before any change ships",
+            "body": "Run the full set and compare scores. A failed must-pass case blocks the change, whatever the overall score."
         },
         {
-            "title": "No change ships if the score drops",
-            "body": "Every prompt, model or data change runs the full set first. Pin the cases you can't afford to get wrong."
+            "title": "After launch",
+            "body": "If customers start asking things your test set doesn't cover, old scores look fine while quality slips. Review real failures and add them."
         }
     ]
 }

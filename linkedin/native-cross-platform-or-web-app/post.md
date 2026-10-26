@@ -2,30 +2,32 @@
 
 ## Post 1: native text
 
-Most products that ask us for a mobile app should start as a web app.
+A web app runs in the phone's browser. A native app is written twice, once for iPhone and once for Android. A cross-platform app is written once, in something like React Native or Flutter, and goes to both stores.
 
-The question that decides it is what the product needs from the phone that a browser can't give.
+It depends on what your product needs from the phone.
 
-A tenant reporting a repair needs a form, a photo upload and a status page. A browser handles all of that, with no store review and no asking people to install something they'll open twice a year.
+A tenant reporting a repair needs a form, a photo upload and a status page. A browser handles that with no store review, and nobody installs an app for something they do now and then.
 
-An installed app earns its place when:
+An app earns its place when:
 
 • The camera or location is central and used every day.
 • People work without a signal and need changes to sync later.
-• Notifications are part of how the product works.
+• Notifications are part of how the product works, like a reminder to take a dose.
 • Customers expect to find you in the App Store or Google Play.
 
-Web push does work on iPhone now, but only after someone adds the site to their home screen, and most people never do.
+Since iOS 16.4, web apps can send notifications on iPhone, but only once someone adds them to their home screen, which most people don't.
 
-If you do need an app, build it once in React Native or Flutter. Business rules, data handling and the server code behave the same on both platforms, so one codebase and one team cover iOS and Android. Fully native code goes only where the framework can't reach.
+If you do need an app, does it need writing twice? Most of it is business rules, data and talking to the server, which work the same on both platforms, so one team writes them once. When one feature needs native code, we usually write a small native piece and share the rest.
 
-And if you plan to wrap a website in a thin shell to get a store listing, Apple's review guidelines say an app should do more than a repackaged website.
+A website in a thin app wrapper tends to fail Apple's review. Need the store listing? Build a real app.
+
+Link's in the comments for the five questions to answer before picking a framework.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/native-cross-platform-or-web-app.pdf)
 
-Document title: Native, cross-platform or web app?
+Document title: Five questions before you build a mobile app
 
-How we decide what kind of mobile app a product needs, starting with what it needs from the phone. Swipe through, and the full write-up is in the comments.
+Answer these before anyone picks a framework, and you'll know whether you need a web app, a cross-platform app or native code. The last slide shows how to read your answers.
 
 ## First comment (both posts)
 

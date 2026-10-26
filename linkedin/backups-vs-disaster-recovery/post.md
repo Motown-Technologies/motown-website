@@ -2,30 +2,28 @@
 
 ## Post 1: native text
 
-A backup is a copy of your data. Disaster recovery is the tested plan for getting the business running again.
+If your booking system went down at 4pm today, how long until you're back?
 
-Plenty of companies have the first and assume it covers the second. They find out otherwise on the worst possible day, when nobody knows how to restore the backup, how long it takes, or what else the app needs to run.
+The backup dashboard is probably green, which is good. But someone still has to know how to restore it, where it'd run, and whether today's appointments would be there.
 
-To run again, an app needs somewhere to run, its settings and secrets, its connections to payment and accounting tools, and someone with the access and the steps to bring it all back. A recovery plan writes that down.
+A backup is a copy of your data. Getting back to work also takes somewhere for the app to run, its settings and passwords, its links to payments and email, and a person who knows the steps.
 
-It also comes down to two numbers, and they're business decisions:
+Two questions decide what you need, and lower answers cost more:
 
-• How much recent work can you afford to lose? (recovery point objective)
-• How long can the system be down? (recovery time objective)
+• How much recent work could you lose and live with?
+• How long could you be down?
 
-A dental practice might want to lose minutes of bookings at most, while an hour of downtime is survivable. A wholesaler taking orders around the clock might weigh it the other way. Lower numbers cost more, so pick them on purpose.
+A dental practice might want to lose a few minutes of bookings at most, because the alternative is phoning patients one by one. An hour offline is annoying but survivable. A wholesaler taking orders around the clock might weigh it the other way.
 
-The gap we see most is a backup that has never been restored. The job runs and the dashboard shows green, but until someone restores it and times the restore, nobody knows it works.
+The gap we see most often is a backup nobody has ever restored. We schedule restore tests, time them, and treat a failed one as an incident.
 
-Three questions for whoever runs your software: When was a backup last restored? How much data would we lose right now? If the hosting account were locked tomorrow, what would we do?
-
-Full write-up in the comments.
+Easiest test there is: restore a backup and time it. Then you know.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/backups-vs-disaster-recovery.pdf)
 
-Document title: Backups vs disaster recovery: you need both
+Document title: Questions for your next recovery rehearsal
 
-How a backup differs from a recovery plan, the two numbers to decide, and three questions to ask about your own setup. The full write-up is in the comments.
+A green dashboard won't tell you when your team could work again. Take these questions into a restore drill and write down how long each step took. Link's in the comments.
 
 ## First comment (both posts)
 

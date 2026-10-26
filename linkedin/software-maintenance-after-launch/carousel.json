@@ -1,29 +1,29 @@
 {
-    "cover": "What software maintenance covers after launch",
+    "cover": "Maintenance handover: settle these before launch",
     "slides": [
         {
-            "title": "Launch is when the upkeep starts",
-            "body": "Security updates, platform changes, monitoring and small fixes keep the product doing what it did on day one."
+            "title": "Who receives the alerts?",
+            "body": "Uptime and error monitoring only helps if a named person reads it and knows what to do next."
         },
         {
-            "title": "Every integration is a moving part",
-            "body": "Each payment provider, plugin or outside API can change underneath you. More of them means more upkeep."
+            "title": "Who approves urgent work?",
+            "body": "A known vulnerability in a package holding patient data can't wait for the next monthly cycle."
         },
         {
-            "title": "Tests make every later change cheaper",
-            "body": "With automated tests and a staging site, each update gets checked before it goes live, not tested by hand."
+            "title": "What does the budget cover?",
+            "body": "Agree which bug fixes and small changes count as maintenance and which need their own estimate."
         },
         {
-            "title": "Sensitive data can't wait a month",
-            "body": "Health records or payment details need faster patching and access reviews, so the plan must allow urgent work."
+            "title": "What depends on outside services?",
+            "body": "Each payment provider, calendar service or API can change underneath you. List them while the builders still remember."
         },
         {
-            "title": "Neglect costs the most",
-            "body": "Two years without updates usually means a catch-up project, sometimes a framework upgrade, before routine work starts."
+            "title": "When was a backup last restored?",
+            "body": "Restoring one is the only way to know it works. Ask how long recovery takes."
         },
         {
-            "title": "Budget for it before the build ends",
-            "body": "Ask what depends on outside services while your developer still knows the whole system, then set a monthly line."
+            "title": "How are updates tested?",
+            "body": "Automated tests and a staging site cut the manual checking on each update. Ask which checks are still done by hand."
         }
     ]
 }

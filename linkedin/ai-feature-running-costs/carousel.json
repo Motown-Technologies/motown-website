@@ -1,29 +1,29 @@
 {
-    "cover": "What an AI feature costs to run",
+    "cover": "A fill-in budget for an AI feature",
     "slides": [
         {
-            "title": "You pay per token",
-            "body": "A token is roughly four characters of English. You pay for what goes in and what comes back, and output costs more."
+            "title": "Requests per month",
+            "body": "Write down expected usage and a higher volume that'd make you nervous. Count every model call a single click makes."
         },
         {
-            "title": "Model choice moves the bill most",
-            "body": "On Anthropic's price list, Opus 5.5 input costs forty times what Haiku 5.5 costs for shorter requests."
+            "title": "Tokens in, tokens out",
+            "body": "Instructions, documents, conversation and question all go in. A token is about four characters of English."
         },
         {
-            "title": "Cache what repeats",
-            "body": "Put fixed instructions and documents first. Cached input is billed at a fraction of the normal rate."
+            "title": "Price per million tokens",
+            "body": "Input and output for the model you tested. Output costs more, and the gap between models is bigger still."
         },
         {
-            "title": "Batch work that can wait",
-            "body": "Anthropic and OpenAI both offer batch processing at about half the normal price, with results later."
+            "title": "Multiply it out",
+            "body": "Example: 3,000 tokens in, 500 out, 10,000 drafts a month. About $110 on Sonnet 5.5, about $5.50 on Haiku 5.5."
         },
         {
-            "title": "Send less context",
-            "body": "The three most relevant articles, not the whole knowledge base. Every token you send is billed."
+            "title": "Subtract what you can",
+            "body": "Cache the repeated opening block. Batch work that can wait, at about half price. Trim the context you send."
         },
         {
-            "title": "Set limits before launch",
-            "body": "A budget per customer stops one heavy user or a looping bug from running up a bill nobody sees."
+            "title": "Limits and an owner",
+            "body": "A spending alert, a budget per customer, and a named person who acts when the limit is reached."
         }
     ]
 }

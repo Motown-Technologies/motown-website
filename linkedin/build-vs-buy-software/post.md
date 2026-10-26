@@ -2,32 +2,28 @@
 
 ## Post 1: native text
 
-Most businesses should buy most of their software. The hard decision is about the one or two systems at the center of how you make money.
+A home-care agency buys a scheduling app. Two years on, the coordinators still use it, but every morning they export a spreadsheet to check certifications and paste visit notes back by hand.
 
-Buy when the work is the same everywhere. Payroll, email and accounting are solved problems, and the vendor has already met the edge cases you haven't.
+The app works. It just doesn't cover the whole job, and the workarounds never show up on an invoice.
 
-Build when the process is what sets you apart, or when your team spends more time working around the tool than working in it.
+Most businesses should buy most of their software. Payroll, email and accounting are much the same everywhere, and the vendor's already hit the odd cases you haven't. It's harder when a team works around a tool daily. The signs we look for:
 
-The signs we look for:
-
-• A spreadsheet sits open beside the tool to do the part it can't.
+• A spreadsheet sits open beside the tool doing the part it can't.
 • You pay for a higher tier, or a second tool, to fill one gap.
-• The data for one decision lives in three places and someone reconciles it by hand.
+• One decision needs data from three places, matched up by hand.
 • The vendor's roadmap decides what your team can do next.
 
-When you compare costs, the monthly subscription is the smallest part. Add migration, per-seat growth, renewal increases, the hours spent on workarounds, and what it would cost to leave. On the build side, add maintenance every year, because custom software needs looking after for as long as you use it.
+One of these is normal. Three or more usually means the tool costs more than its invoice says.
 
-Often the answer is both: buy the standard parts and build a thin layer for what's specific to you, connected through the tools' APIs. Check that a tool has a decent API and lets you export your data before you sign, even if you have no plans to build.
+You don't have to replace the app. The agency could keep it and build a small system for certifications and visit notes that reads from and writes back to the app. No more morning exports, and the parts that work stay put. That needs a decent API (so other software can connect) and a way to get your data out. Check both before you sign.
 
-If the workarounds have a cost you can write down, that number usually settles the question.
-
-Full write-up in the comments.
+Then add up what the workarounds cost a month and compare it with a small addition or a replacement, including upkeep and who'll look after it.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/build-vs-buy-software.pdf)
 
-Document title: Build or buy: when custom software beats a SaaS tool
+Document title: Build or buy: a side-by-side cost worksheet
 
-When to buy the subscription, when to build your own, and the signs that a tool has started costing more than its invoice. Swipe through, and the full write-up is in the comments.
+A subscription and a one-off build price cover different time spans and responsibilities, so the quotes don't compare as written. This worksheet lines both options up row by row, and the link's in the comments.
 
 ## First comment (both posts)
 

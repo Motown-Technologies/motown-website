@@ -1,25 +1,29 @@
 {
-    "cover": "Cut your cloud bill without a risky cutover",
+    "cover": "Before you move clouds: a workload sorting sheet",
     "slides": [
         {
-            "title": "Read the invoice first",
-            "body": "The big lines are usually egress, servers sized for a rare peak, and services that each bill separately."
+            "title": "Group the invoice by what it pays for",
+            "body": "Look for download transfer fees, servers sized for a rare peak, and a load balancer, firewall, CDN and TLS billed separately."
         },
         {
-            "title": "Sort every workload",
-            "body": "Each one moves as it is, needs a bridge, or stays where it is."
+            "title": "Mark each workload: moves as it is",
+            "body": "There's a natural home for it on the new platform, and it can go without changes."
         },
         {
-            "title": "Be honest about what stays",
-            "body": "GPU work, stateful services and hard-won compliance boundaries are often best left alone."
+            "title": "Mark it: needs a bridge",
+            "body": "It keeps running where it is while the rest moves around it."
         },
         {
-            "title": "Move one route at a time",
-            "body": "Behind the DNS you already control, so users keep the same URLs throughout."
+            "title": "Mark it: stays",
+            "body": "GPU work, always-on services that hold their own data, and hard-won compliance setups are usually best left alone."
         },
         {
-            "title": "Start with the easy savings",
-            "body": "File storage is often first: moving it removes egress fees without touching application code."
+            "title": "For each move, write down three things",
+            "body": "The expected saving, the migration work, and what it would take to reverse it."
+        },
+        {
+            "title": "Answer these before you commit",
+            "body": "Can traffic be split by route? What would the bill be with only the easy moves done? Who'll own the new setup?"
         }
     ]
 }

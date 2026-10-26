@@ -2,28 +2,27 @@
 
 ## Post 1: native text
 
-Single sign-on means your staff log in once, with one company account, and reach every tool they're allowed to use.
+Someone left the company yesterday. Which tools can they still get into?
 
-The biggest gain shows up when someone leaves. Without SSO, someone has to remember every tool that person had an account in and close each one, and something usually gets missed. With SSO, you disable one account and they're locked out of everything connected to it.
+Email's usually on the offboarding list. The CRM, accounting tool and smaller apps each have their own accounts, which closing the company account may not close.
 
-You also set security rules once. Require a second factor in your identity provider and every connected app inherits it.
+Single sign-on (SSO) connects those apps to one company login, held in an identity provider like Google Workspace, Microsoft Entra ID or Okta. Staff sign in there, and the app gets a signed message saying who they are, without ever seeing their password.
 
-Two things to know before you buy software:
+When someone leaves, you disable that one account and they can't sign in to anything connected to it. Revoke their active sessions at the same time, because an app they're already signed in to can keep them in until that session ends.
 
-• SSO handles signing in. It doesn't always remove the accounts inside each app. That's provisioning, usually done with a standard called SCIM. Ask about both.
-• Many vendors only include SSO on their higher plans. Check before you sign, not after.
+There are gaps. SSO handles signing in, and may not remove the accounts inside each app. That's provisioning, usually done with a standard called SCIM. And if an app still allows password login, someone who's left may have a way back in that SSO never closed.
 
-And ask whether you can turn off password login entirely. If staff can still sign in with a password, someone who has left may still have a way back in.
+You also set security rules once. Require a second sign-in step in the identity provider and every connected app inherits it. Plenty of vendors keep SSO for pricier plans, so check before you sign.
 
-If you build your own software, SSO tends to come up when a larger customer asks for it. The sign-in itself is the easy part. The harder decisions are which roles exist, who can approve what, and what gets logged.
+At your next offboarding review, sit down with IT and list which apps require the company login, which allow a separate password and which accounts still get removed by hand.
 
-Full write-up in the comments.
+The article has four questions to ask a vendor before you buy. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/single-sign-on-explained.pdf)
 
-Document title: Single sign-on, explained for growing companies
+Document title: SSO and offboarding: a checklist
 
-What SSO does, how it differs from provisioning, and four questions to ask a vendor before you buy. The full write-up is in the comments.
+Use the first four cards when a vendor demo gets to security, and the last two on the day someone leaves. The full write-up's in the comments.
 
 ## First comment (both posts)
 

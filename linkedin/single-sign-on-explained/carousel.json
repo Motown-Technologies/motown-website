@@ -1,25 +1,29 @@
 {
-    "cover": "Single sign-on, explained for growing companies",
+    "cover": "SSO and offboarding: a checklist",
     "slides": [
         {
-            "title": "One login for every tool",
-            "body": "Staff sign in once with their company account. Each app trusts the identity provider and never sees the password."
+            "title": "Which standard does it support?",
+            "body": "SAML or OpenID Connect, and does it work with our identity provider?"
         },
         {
-            "title": "Offboarding in one step",
-            "body": "Disable one account and the person is locked out of every connected app, with no list of tools to remember."
+            "title": "Is SSO on the plan we're buying?",
+            "body": "Plenty of vendors keep it for pricier plans. Ask before you sign."
         },
         {
-            "title": "Security rules set once",
-            "body": "Require a second factor in the identity provider and every connected app inherits it."
+            "title": "Does it support SCIM?",
+            "body": "Without it, accounts inside the app get created and removed by hand, even after sign-in's blocked."
         },
         {
-            "title": "Sign-in isn't provisioning",
-            "body": "SSO may not remove accounts inside each app. SCIM does that automatically. Ask vendors about both."
+            "title": "Can we turn off password login?",
+            "body": "If staff can still sign in with a password, someone who has left may still have a way back in."
         },
         {
-            "title": "Before you buy, ask",
-            "body": "Is SSO on our plan or only a higher one? Can we turn off password login so SSO is the only way in?"
+            "title": "When someone leaves",
+            "body": "Disable their account in the identity provider and revoke their active sessions in the same step."
+        },
+        {
+            "title": "At each offboarding review",
+            "body": "List which apps require the company login, which allow a password and which accounts are removed by hand."
         }
     ]
 }

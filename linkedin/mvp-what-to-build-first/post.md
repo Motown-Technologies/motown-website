@@ -2,25 +2,25 @@
 
 ## Post 1: native text
 
-An MVP usually stalls for one reason: nobody decided what wasn't in it.
+A potential customer asked for one feature, and a competitor has another. Your team can explain why each belongs in the first version, and the launch date slips every time the list grows.
 
-Founders arrive with a feature list built from every conversation they've had. Each item makes sense on its own. Together they push the launch date back every time someone has a good idea.
+An MVP is your first version: the smallest thing that answers the question your business depends on. Usually that's whether people will do something, and pay for it, if you make it easy enough. It tests that question. It won't settle every doubt about the idea.
 
-When we scope a first version, we look for one thing: the single user journey that proves the idea works. We build that loop, and we build it properly, with accounts, payments, backups and a deploy pipeline from day one.
+Map out the journey from the user's starting problem to where they get value. For each proposed feature, ask if the journey works without it. If it does, the feature goes on a written list, with why it's waiting.
 
-Everything else goes on a written list. A feature that has been cut, and that everyone knows has been cut, stops coming back in every meeting. New ideas mid-build go on the list for the next cycle, and the date holds.
+Writing "later" next to a feature doesn't settle the argument that put it there. Write down who needs it, what they'd do without it and what evidence would bring it back. Then people can point to the decision instead of reopening it.
 
-We also leave out the scale you don't have yet. You get a cost model for 100 and 10,000 users, and a codebase simple enough to rewrite once the product has earned it.
+A shorter list leaves room to make that journey work properly, with sign-in and permissions that fit, storage you can trust and a way to release and roll back changes. Payments belong in the first version if paying is part of what you're testing.
 
-A typical first version takes eight to twelve weeks, and you own the repo and the accounts from the first commit.
+When a new request shows up mid-build, hold it up against the journey. If it has to go in, say what it costs: the date, the budget or another feature.
 
-Full write-up in the comments.
+Link's in the comments if you want questions for your next scope meeting.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/mvp-what-to-build-first.pdf)
 
-Document title: What to build first in your MVP
+Document title: A scope worksheet for your first version
 
-Five decisions that keep a first version small enough to launch. Swipe through, and the full write-up is in the comments.
+If your MVP's feature list keeps growing and the launch date keeps moving, fill this in at your next scope meeting. Each feature ends up as a decision people can point back to.
 
 ## First comment (both posts)
 

@@ -1,29 +1,29 @@
 {
-    "cover": "What your prototype needs before it holds health data",
+    "cover": "Before your prototype holds health data",
     "slides": [
         {
-            "title": "Keep the screens",
-            "body": "A prototype your staff already use has the workflow right. The work is in who can sign in and which records they can reach."
+            "title": "Is every user a real, invited account?",
+            "body": "Each person traced to an invitation, with two-factor sign-in. No dropdown of hard-coded names."
         },
         {
-            "title": "Enforce access below every screen",
-            "body": "Put the access rule where every query passes through it. A misconfigured account should see nothing at all."
+            "title": "Is access enforced in one place?",
+            "body": "Below every screen, where every query passes through it. An account that's set up wrong should see nothing."
         },
         {
-            "title": "Make secrets a deliberate reveal",
-            "body": "Encrypt logins and keys, hide them by default, and log every time someone shows one."
+            "title": "Are secrets a deliberate reveal?",
+            "body": "Sensitive fields hidden by default, shown only on purpose, with every reveal logged."
         },
         {
-            "title": "Answer “who looked at this?”",
-            "body": "An append-only audit log keeps a timeline on every record and every user."
+            "title": "Can you answer “who looked at this?”",
+            "body": "A log nobody can edit shows who viewed or changed any record, and when, with a timeline per record and per user."
         },
         {
-            "title": "Turn vague rules into decisions",
-            "body": "HIPAA requires automatic logoff but names no duration. Pick the numbers, and write down why."
+            "title": "Are your session timeouts written down?",
+            "body": "HIPAA treats automatic logoff as addressable and names no duration. Assess it, pick the numbers, and record why."
         },
         {
-            "title": "Test with realistic data first",
-            "body": "One pre-launch review found external accounts in lists meant for internal staff. Fixed before anyone signed in."
+            "title": "Will every vendor sign a BAA?",
+            "body": "Confirm every vendor touching the data will sign a business associate agreement before you build."
         }
     ]
 }

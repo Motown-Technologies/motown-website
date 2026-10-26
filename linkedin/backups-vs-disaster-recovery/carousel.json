@@ -1,25 +1,29 @@
 {
-    "cover": "Backups vs disaster recovery: you need both",
+    "cover": "Questions for your next recovery rehearsal",
     "slides": [
         {
-            "title": "A backup is a copy of your data",
-            "body": "It tells you a copy exists. It doesn't tell you how to use it, how long that takes, or who does it."
+            "title": "When was a backup last restored?",
+            "body": "And how long did the restore take with real data? That time is your actual recovery time."
         },
         {
-            "title": "Recovery is the plan to run again",
-            "body": "Hosting, settings, secrets, integrations and the steps to bring them back, written down and rehearsed."
+            "title": "How much would we lose right now?",
+            "body": "Back up nightly and a 4pm failure can cost a day of orders. Compare that with the loss you agreed you could accept."
         },
         {
-            "title": "How much work can you lose?",
-            "body": "That's your recovery point objective. Back up nightly and a 4pm failure can cost a day of orders."
+            "title": "Where would the app run?",
+            "body": "Data isn't enough. Check hosting, settings and secrets, the payment, email and accounting connections, and the domain."
         },
         {
-            "title": "How long can you be down?",
-            "body": "That's your recovery time objective. Lower numbers cost more, so choose them on purpose."
+            "title": "Who does each step, with what access?",
+            "body": "The runbook should say who does what, in what order. Check that those people can actually get in."
         },
         {
-            "title": "Restore it, or it's a guess",
-            "body": "A backup nobody has restored may not work. A timed restore test also gives you your real recovery time."
+            "title": "What if the hosting account is locked?",
+            "body": "Backups kept in a separate account or region, with their own access controls, stop one bad login taking out both."
+        },
+        {
+            "title": "What went wrong this time?",
+            "body": "Write down the time each drill took. Treat a failed restore as an incident and fix it."
         }
     ]
 }

@@ -1,29 +1,29 @@
 {
-    "cover": "When it's time to leave WordPress",
+    "cover": "Stay, fix or move: a WordPress worksheet",
     "slides": [
         {
-            "title": "Plugins nobody dares update",
-            "body": "A dozen updates waiting, and nobody sure which one breaks the site. Every plugin is more code to attack."
+            "title": "Which updates are hard?",
+            "body": "List the plugins waiting on updates. Note which ones nobody dares run, and why."
         },
         {
-            "title": "Every page view runs PHP",
-            "body": "A database behind every visit, and mobile PageSpeed scores in the red."
+            "title": "What's making pages slow?",
+            "body": "Find the cause first. If tuning plugins or caching fixes speed on a phone, you might not need to move."
         },
         {
-            "title": "When staying is fine",
-            "body": "A few plugins, painless updates and fast pages on a phone. Then WordPress is doing its job."
+            "title": "Can someone else run the theme?",
+            "body": "If only the original developer understands it, find out whether another developer could take it on."
         },
         {
-            "title": "Keep the editor you know",
-            "body": "WordPress can stay as the back office. Visitors get pre-built pages and never touch it."
+            "title": "Keep the editor or replace it?",
+            "body": "Keeping WordPress for editing adds a build process. A new CMS means training staff and checking every page."
         },
         {
-            "title": "Every URL kept",
-            "body": "Each old URL maps to its new address with a 301 redirect, so search rankings carry over."
+            "title": "Who runs what afterward?",
+            "body": "Contact forms, newsletter signups, media and analytics. Name who operates each one after the move."
         },
         {
-            "title": "The old site stays live",
-            "body": "We switch DNS only once the new site checks out."
+            "title": "What happens to every URL?",
+            "body": "Record old URLs and destinations, 301-redirect any that change, and watch Search Console after launch."
         }
     ]
 }

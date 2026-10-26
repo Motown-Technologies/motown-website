@@ -2,31 +2,23 @@
 
 ## Post 1: native text
 
-Engineers feel technical debt every day. The business pays for it.
+Technical debt is the extra work of changing software whose earlier design or shortcuts no longer fit. Ward Cunningham coined the metaphor in 1992. Martin Fowler puts it in money terms: the extra effort to add features is the interest.
 
-Technical debt is the extra cost of changing software that was built faster or more simply than what you now ask of it. You pay it like interest: every new feature takes longer, and breaks more, than it would in a cleaner system.
+Some of it's a sensible choice. Shipping a simpler version to see if customers want it can be right, if someone plans to pay it back. Most of it builds up without anyone deciding. The business changed and the software got bent to fit, its outside code fell years behind, or tests never got written.
 
-You don't need to read code to spot it:
+You can spot it without reading code. Adding one form field becomes a two-week job. A routine release breaks a report nobody touched. Estimates keep growing, only one person understands part of the system, and updates get put off because the code feels unsafe to touch. Each can have other causes, but several at once usually mean debt.
 
-• Adding one field to a form turns into a project.
-• Every release breaks something unrelated.
-• Only one person understands part of the system, and everyone waits for them.
-• Library updates keep getting postponed because the code feels unsafe to touch.
-• New engineers take months to ship anything.
+A full rewrite is tempting, and usually the wrong first move. It freezes new work for months, and the new system has to rediscover every rule the old one handled.
 
-A full rewrite is tempting and usually the wrong first move. It freezes new work for months, and the new system has to rediscover every rule the old one handled.
+Start where the system changes and breaks most, since debt in code nobody touches costs almost nothing. Write tests capturing what it does today, odd behavior included. Clean up the messy part a feature already touches, and set aside part of every cycle for maintenance.
 
-What works better is steadier. Find the parts that change and break most often, because debt in code nobody touches costs almost nothing. Write tests around what the system does today. Clean up the messy code a feature already touches. Reserve part of every cycle for maintenance so it happens before it's urgent.
-
-If you're not technical, ask your team one question: which part of the system are you most nervous about changing, and why? The answer is usually where the debt is.
-
-Full write-up in the comments.
+Not technical? Ask your team which part they're most nervous about changing, and why. Then cost and rank the fixes they name.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/technical-debt-explained.pdf)
 
-Document title: Technical debt, explained for the people who pay for it
+Document title: Technical debt: questions for your team
 
-What technical debt is, how to spot it without reading code, and how to pay it down without stopping everything for a rewrite. Swipe through, and the full write-up is in the comments.
+Bring these to your next planning meeting if you approve engineering budgets but don't read code. Each answer gives you a specific fix to cost and rank, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

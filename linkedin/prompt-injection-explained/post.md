@@ -2,29 +2,29 @@
 
 ## Post 1: native text
 
-If your AI assistant reads email, documents or web pages, anyone who can write one of those can try to give it orders.
+Prompt injection is when someone hides instructions for your AI inside something it's reading.
 
-That's prompt injection. A language model receives your instructions and the content it's reading as one stream of text, and it has no reliable way to tell which part is an instruction and which part is data. OWASP lists it first in its Top 10 for LLM Applications 2025.
+A CV hides a line telling a recruiting assistant to rank that applicant first. An email tells an operations assistant to change an order's delivery address. The AI takes in your instructions and that text as one stream, and can't reliably tell which part to obey.
 
-Say an operations team has an agent that reads incoming email and can update orders. Someone sends an email that tells it to change the delivery address on an open order. Nobody on the team typed anything malicious, and the agent may still do it.
+The hidden part can be white text on white or tucked in a file's details, so whoever's using the tool never sees it. Whoever forwarded the email was just doing their job.
 
-There's no complete fix yet. The defense is to make being fooled cheap:
+There's no complete fix yet, so we plan for the AI being fooled and make that cheap:
 
-• Give the AI the least access that does the job. An assistant that drafts replies doesn't need to send them.
-• Put a person in front of refunds, deletions, payments and messages to customers.
-• Enforce permissions in code, outside the model. If it never receives the confidential file, it can't leak it.
-• Validate what comes out like any other user input.
+• Give it the least access the job needs. If it drafts replies, it doesn't need to send them.
+• Have a person approve refunds, deletions, payments and customer messages.
+• Enforce permissions in code, outside the AI. If it never gets the confidential file, it can't leak it.
+• Check its output like any other user input.
 • Try the attacks yourself before launch, and log what the AI does after.
 
-A good question for any AI feature: what does it read, what can it see, and what can it do? If it reads outside content and can act, make sure the worst thing it can do alone is something you could live with.
+Be most careful when one tool reads outside content, sees private data and can send things out, even through a link it shows. That mix lets an attacker pull your data out.
 
-Full write-up in the comments.
+For each AI feature, jot down what it reads, what private data it sees and what it can do. If it reads outside content and can act, make sure the worst it can do alone is something you can live with.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/prompt-injection-explained.pdf)
 
-Document title: Prompt injection, explained for business owners
+Document title: Prompt injection: audit your AI feature
 
-What prompt injection is, why it matters most once AI can take actions, and the design choices that limit the damage. Swipe through, and the full write-up is in the comments.
+If an AI tool you run reads email, documents or web pages, go through these six questions before you give it more access. The full write-up's in the comments.
 
 ## First comment (both posts)
 

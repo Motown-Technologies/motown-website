@@ -2,27 +2,25 @@
 
 ## Post 1: native text
 
-Put a person in the loop wherever an AI's output becomes hard to undo.
+An AI tool drafts the work and a person approves it. Sounds safe, until they've got a hundred near-identical items and a full day of other work.
 
-Money moving, a message reaching a customer, a record changing in a system other people rely on. Everything before that point, the AI can usually do alone.
+AI sounds just as confident when it's wrong, so your reviewer can't judge a draft by its tone.
 
-A language model gives a wrong answer in the same confident tone it uses for a right one, so you can't spot mistakes from how it sounds. The useful question is what happens if this output is wrong and nobody looks.
+First, decide where the person goes. What happens if this output's wrong and nobody checks? If the answer is "someone rewrites a draft," that's cheap. If it's "a refund goes out," a person sees it first. Some actions, like deleting data or changing permissions, are off-limits to the AI entirely, so a misread instruction can't reach them.
 
-We sort every action an AI system can take into three groups:
+Then make the review easy to keep up with. Put the photo, document or customer's message beside the draft. Make editing as easy as approving, so a small fix isn't more work than letting it through. A refund twice the usual size should stand out.
 
-• Things it does alone: reading, searching, sorting and drafting text nobody outside sees yet.
-• Things it prepares and a person approves: customer emails, refunds, record updates.
-• Things it never does: deleting data, changing permissions, moving money above a limit. Its permissions enforce this, so a misread prompt can't change it.
+In a system we built for an auction house, an AI reads item photos and drafts the catalog title, description and keywords. A cataloger reviews each, asks for a redo with feedback when it's off, and approves it into inventory. The AI never publishes on its own, and if the provider is failing, the queue stops instead of retrying.
 
-A checkpoint only helps if the reviewer is paying attention. Show the source next to the draft, make editing as easy as approving, and make the unusual cases look unusual.
+Start with more review than you need. Within a few weeks, approval records show what people almost never change, and that can move to spot checks.
 
-In an auction house system we built, a vision model drafts catalog copy from photos and a cataloger approves every draft before it becomes inventory. The model never publishes anything on its own.
+Link's in the comments for our three groups of AI actions and the review screen checklist.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/human-in-the-loop-ai.pdf)
 
-Document title: Where a person should sign off on AI work
+Document title: Sort every action your AI can take
 
-How we decide which steps of an AI workflow run on their own and which wait for a person. Swipe through, and the full write-up is in the comments.
+Use this when you're deciding which steps of an AI workflow can run alone and which should wait for a person. One question sorts each action, and the last two slides cover the review screen and when to loosen it.
 
 ## First comment (both posts)
 

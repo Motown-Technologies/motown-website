@@ -1,29 +1,29 @@
 {
-    "cover": "RAG and fine-tuning, in plain terms",
+    "cover": "AI proposal terms, defined in plain English",
     "slides": [
         {
-            "title": "The model doesn't know your documents",
-            "body": "It learned from public text up to a cutoff date. Your policies, manuals and contracts were never part of that."
+            "title": "Weights",
+            "body": "The billions of numbers where a model stores what it learned in training. Broad, and it doesn't update when your prices change."
         },
         {
-            "title": "RAG looks things up",
-            "body": "The system searches your documents for relevant passages and hands them to the model along with the question."
+            "title": "Context",
+            "body": "What you send with each question: instructions, a pasted document, the conversation so far. Read fresh each time, up to a limit."
         },
         {
-            "title": "Like an open-book exam",
-            "body": "The model writes the answer, the facts come from your documents, and you can check the passage it used."
+            "title": "RAG (retrieval-augmented generation)",
+            "body": "Searches your documents for the passages that matter and adds them to the context. Change a policy, re-index, and it's current."
         },
         {
-            "title": "Fine-tuning changes the model",
-            "body": "Training on hundreds of agreed examples builds in a format or tone, so it no longer needs long instructions."
+            "title": "Embeddings",
+            "body": "How passages get found by meaning as well as by exact words. RAG's search by meaning usually relies on them."
         },
         {
-            "title": "A poor place to keep facts",
-            "body": "A tuned model keeps what it learned at training time and can't show where an answer came from."
+            "title": "Fine-tuning",
+            "body": "More training on reviewed input and output examples. It changes the weights, so it's better for format and tone than for changing facts."
         },
         {
-            "title": "Try a better prompt first",
-            "body": "Clear instructions and a few good examples are often enough, and they give you a baseline to measure against."
+            "title": "Baseline prompt",
+            "body": "Clear instructions plus a few good examples. Try it first: it's often enough, and it's what you measure anything else against."
         }
     ]
 }

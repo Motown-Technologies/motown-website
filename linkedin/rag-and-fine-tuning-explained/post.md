@@ -2,21 +2,27 @@
 
 ## Post 1: native text
 
-An AI model doesn't know your refund policy. It learned from public text up to a cutoff date, and your documents were never part of that.
+AI proposals usually offer two ways to make a model work with your company's information: RAG or fine-tuning. They change different things.
 
-There are two common ways to change what it does, and AI proposals often mention both.
+RAG (retrieval-augmented generation) changes what the model reads. Your documents get split into passages and indexed. Ask a question and the system finds the relevant ones and hands them to the model, with an instruction to answer from them and say which ones it used. Think open-book exam.
 
-RAG (retrieval-augmented generation) looks things up. Your documents are split into passages and indexed. When someone asks a question, the system finds the relevant passages and hands them to the model with the question. It works like an open-book exam: the model writes the answer, the facts come from your documents, and you can check the passage it used. Update a document and the next answer uses the new version.
+So when your refund policy changes, you update the index and the next question gets the new wording, with no change to the model.
 
-Fine-tuning trains the model further on examples you supply, each one an input paired with the output you want. After hundreds or thousands of them, the model follows that pattern without long instructions. It suits consistent format and tone. It's a poor way to store facts, because whatever it learned stays as it was at training time and it can't point to a source.
+Finding the right passage doesn't guarantee a right answer, so check the reply and the passages behind it. Pull up an old policy and it'll still write a convincing answer.
 
-Before either, try clear instructions with a few good examples in the prompt. For many tasks that's enough, and it gives you a baseline to measure against.
+Fine-tuning changes the model's weights. You keep training an existing model on examples, each one an input paired with the reviewed output you want. It's more like training a new hire on how your firm writes, so every support reply acknowledges the request, explains the policy and gives a next step, with a shorter prompt.
+
+It's a bad place to keep a policy that changes. Updating it takes another training run, and training alone can't trace an answer back to a source.
+
+You can use both. There's also a cheaper step before either: clear instructions and a few good examples in the prompt. That often does the job, and it gives you a baseline to measure against.
+
+Side-by-side table's in the article. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/rag-and-fine-tuning-explained.pdf)
 
-Document title: RAG and fine-tuning, explained in plain terms
+Document title: A glossary for AI proposals
 
-What each approach changes about an AI model, and what each can and can't do for your business. Swipe through, and the full write-up is in the comments.
+Keep this next to the next AI proposal you're asked to approve, so words like weights, context and fine-tuning mean something specific. The full explanation's linked in the comments.
 
 ## First comment (both posts)
 

@@ -2,30 +2,25 @@
 
 ## Post 1: native text
 
-Two software quotes with different totals aren't always pricing the same risk.
+One developer quotes a fixed price. Another quotes an hourly rate and a range.
 
-A fixed price moves the risk of the unknown onto the developer, who prices that risk into the number. Time and materials leaves the risk with you and bills for the hours the work actually takes. Neither is cheaper by default.
+The totals look close, but you can't tell if they cover the same work or what happens when plans change.
 
-Fixed price works when the finished thing can be described before anyone starts: an audit with a defined list of documents, or a site rebuilt from an existing design. Everything outside the written scope becomes a change request, so read the scope more closely than the total.
+A fixed price puts a number on a set scope. The developer guesses how long it'll take and adds a margin for the unknowns. If it runs over, they eat the cost, so they'll read the scope narrowly and treat anything it doesn't name as a change request.
 
-Time and materials works when the job involves finding things out, like an undocumented legacy system or an integration nobody has looked at yet. You can change direction without renegotiating, but only your own attention stops the total from growing.
+Time and materials bills for the hours the work takes. You can change direction without renegotiating. If your first users show you the reporting screen matters more than onboarding, the team switches and the invoice follows. The catch is that nothing keeps the total down except someone on your side who reads the weekly report and asks why a task took twice the estimate.
 
-Whichever model a quote uses, ask it the same questions:
+If a clinic wants a booking system that talks to its practice software, and nobody's checked how that software connects yet, a fixed quote has to price the worst case. An hourly quote can only give a range until someone looks.
 
-• What exactly is included, down to screens, roles and integrations?
-• How are changes priced and approved?
-• Does "done" include testing, deployment and support after launch?
-• Are the repository, hosting and domain in your name?
+Fixed price suits work you can describe well enough that two developers would build roughly the same thing. Time and materials suits work where you're still finding things out. Can't describe it yet? Pay for a short discovery and get the build quoted after.
 
-If you can't describe the work in enough detail for two developers to build roughly the same thing, pay for a short discovery first and get the build quoted after.
-
-Full write-up in the comments.
+Link's in the comments if you want the questions to ask either kind of quote.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/fixed-price-or-time-and-materials.pdf)
 
-Document title: How to read a software quote before you sign
+Document title: Questions to ask any software quote
 
-Fixed price and time and materials put the risk in different places. Six slides on what each model really charges for and the questions to ask either one. The full write-up is in the comments.
+Two quotes with similar totals can cover different work and leave the cost of a bad estimate with different people. Here are six questions to ask before you sign either kind, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

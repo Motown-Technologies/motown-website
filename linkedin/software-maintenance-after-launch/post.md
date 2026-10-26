@@ -2,26 +2,23 @@
 
 ## Post 1: native text
 
-Software needs regular work after launch just to keep doing what it did on day one.
+The build's done and working. Then a browser changes, a payment connection needs an update or the contact form stops sending. Who gets the alert, and is fixing it in anyone's budget?
 
-Most build quotes stop at launch, so the years after it often have no line in the budget. Here's what goes into that line:
+Launch often ends the project with that unsettled. Maintenance keeps the software you already have useful and safe, and needs its own budget line, separate from new features.
 
-• Security and dependency updates. Every application sits on dozens or hundreds of open source packages, and each one ships fixes.
-• Platform changes. Browsers, operating systems, hosts and app stores all change on their own schedules.
-• Monitoring and backups. Someone has to notice the broken contact form, and backups only count once you've restored one.
-• Bug fixes and small changes, like a new price or a report finance needs.
+The biggest steady part is updates. Every modern app sits on dozens or hundreds of open source packages that put out security fixes. Skip a year and they pile up, each harder to apply than it would've been on time. Browsers, operating systems, hosts and app stores change on their own schedules too.
 
-Two products of the same size can have very different maintenance bills. The cost goes up with every integration and plugin that can change underneath you, every extra platform, sensitive data that needs faster patching, and code with no tests or staging environment. It goes up most when the product was left alone for a couple of years and needs a catch-up project first.
+Monitoring only helps if a person reads the alerts. And the only way to know a backup works is to restore it.
 
-The cheapest time to plan for it is before the build ends. Ask your developer which parts depend on outside services and what a new developer would need to know to take over, then budget a monthly amount from the first month after launch.
+Two same-size products can cost very different amounts to look after. Every integration is an outside company that can change on you. Automated tests, a test copy of the site and a repeatable release process let each update be checked before going live, with less testing by hand. Health or payment data needs faster patching. Each extra platform adds its own updates, and a product left alone for two years usually needs a catch-up project before routine work starts.
 
-Full write-up in the comments.
+Before the build team moves on, write down who gets alerts, who can approve urgent work and what the maintenance budget covers. Give a copy to whoever runs the business and whoever runs the software.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/software-maintenance-after-launch.pdf)
 
-Document title: What software maintenance covers after launch
+Document title: Maintenance handover: settle these before launch
 
-The work that keeps software running after launch, and the five things that make it cost more or less. The full write-up is in the comments.
+Go through these with your developer before the build ends, while they've still got the whole system in their heads. Each one's a gap that otherwise falls between teams, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

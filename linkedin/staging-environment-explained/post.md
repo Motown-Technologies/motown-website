@@ -2,33 +2,27 @@
 
 ## Post 1: native text
 
-A staging environment is a private copy of your live app where every change runs before customers see it.
+Where does your team test a change before customers see it?
 
-When a developer asks for budget for one, it can sound like paying twice for something that already works. Here's what it actually buys you.
+If it's a developer's laptop, the test misses a lot. It often runs a different database, has settings found nowhere else and talks to stand-ins for the payment or accounting tools. If it's the live app, your customers are part of the experiment.
 
-A developer's laptop is a poor guide to how the live app behaves. It often runs a different database, holds settings that exist nowhere else, and connects to mock versions of the payment or accounting tools.
+A staging environment is a private copy of your app, as close to the live one as you can afford. Only your team sees it, and changes go there first.
 
-Say a clinic's booking app gets a new reminder feature. On the laptop it sends one test text. On staging, with realistic appointments and the text provider's test mode, it sends every reminder twice. Catching that on staging costs ten minutes. In production it costs an apology to every patient.
+A clinic's booking app gets a new reminder feature. On the laptop it sends one test text. On staging, loaded with realistic appointments and on the text provider's test mode, it sends every reminder twice. That's a ten-minute fix on staging. On the live app, it's an apology to every patient.
 
-Staging is also where non-technical people sign off. Your operations lead clicks through the new flow before it goes live, instead of finding out on Monday what it does.
+Staging's also where the software's users sign off. Your operations lead clicks through the new flow and whoever asked for a report checks the numbers, before Monday morning.
 
-A good staging setup has:
+The release itself is worth rehearsing too. On a donation platform we're building, staging updates automatically once the tests pass. The live site updates only when someone tags a version, so going live is a deliberate step naming exactly what ships.
 
-• The same hosting and database versions as production, on smaller machines
-• Deploys from the same pipeline, so the release itself gets rehearsed
-• Realistic data with personal details removed
-• Integrations pointed at test accounts
-• A rollback that has been tried
+If more than a few people rely on the app, or it takes payments, holds customer records or connects to other systems, it needs staging. A prototype nobody relies on yet can wait.
 
-If more than a handful of people depend on your app, or it takes payments or holds customer records, it needs one.
-
-Full write-up in the comments.
+Link's in the comments, with four questions to ask your developer about releases.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/staging-environment-explained.pdf)
 
-Document title: What a staging environment is, and why you need one
+Document title: Does your staging match production? A checklist
 
-What staging is, what it catches before your customers do, and four questions to ask your developer about it. The full write-up is in the comments.
+Go through this with your developer to see how close your staging copy really is to the live app, because one that's drifted gives false confidence. The full write-up's in the comments.
 
 ## First comment (both posts)
 

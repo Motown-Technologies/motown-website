@@ -2,29 +2,27 @@
 
 ## Post 1: native text
 
-Spreadsheets rarely fail all at once. They fail the day two people disagree about where something stands and nothing can settle it.
+An item was "photographed" in the spreadsheet, "still in storage" in the group chat, with two differently named photos in the shared folder. Which one was right?
 
-A spreadsheet can tell you where an item is, if someone remembered to update it. It can't tell you who changed it or when. Keep the same status in a sheet, a shared folder and a group chat, and the three drift apart.
+That was a normal week at an auction house we worked with, and nobody was careless. Each tool held part of the inventory process, and working out which version to trust had become a job of its own.
 
-An auction house we worked with ran its inventory exactly like that. Nobody was careless. The tools just had no way to agree with each other.
+No single place recorded who'd changed an item or when. Getting a deleted row back meant restoring an older file, wiping everyone's later edits.
 
-Tidier tabs and stricter naming help for a while. What fixes it is one record for each thing you track, which every screen and report reads from:
+Tidier tabs and stricter naming help for a while, but the same fact still lives in more than one place. What fixed it was one record per item, following it through seven stages from intake to sold:
 
-• Status comes from what actually happened to the item, so two screens can't disagree.
-• Every change is saved against the person who made it.
-• A deleted record can be restored instead of rebuilt from memory.
+• The status comes from what's actually happened to the item, so every screen gives the same answer.
+• Every change is saved with who made it.
+• Deleted records come back in bulk from a recently-deleted screen instead of being rebuilt from memory.
 
-It's also a good moment to look at the typing around the spreadsheet. At the auction house, an AI model now drafts catalog copy from the photos and a cataloger approves every draft. The model does the first pass and a person makes the call.
+We looked at the typing around the spreadsheet too. Catalogers used to write every title and description by hand. Now an AI model drafts them from the photos, and a cataloger reads, fixes and approves every draft before it goes into the inventory.
 
-If the same status lives in more than one place on your team, that's usually the sign.
-
-Full write-up in the comments.
+To test your own setup, take a recent disagreement about an item or order, trace where each version came from and decide who should own that information. You might fix part of the process before replacing any software.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/auction-house-spreadsheets.pdf)
 
-Document title: Signs your business has outgrown its spreadsheets
+Document title: Has your team outgrown its spreadsheets?
 
-Four signs a spreadsheet has stopped being the right tool, from an auction house that ran on three of them at once. Swipe through, and the full write-up is in the comments.
+Run through this next time two people disagree about where something stands. It comes from an auction house that kept its inventory in a sheet, a photo folder and a group chat all at once (link's in the comments).
 
 ## First comment (both posts)
 

@@ -1,25 +1,29 @@
 {
-    "cover": "Designing software for people in grief",
+    "cover": "Review your forms for people arriving after a loss",
     "slides": [
         {
-            "title": "Ask for less, in smaller pieces",
-            "body": "One group of questions at a time feels manageable on a hard day, and it suits the phone most people use."
+            "title": "Why do we need this now?",
+            "body": "Ask it of every question, and move what can wait to later. Show one group of questions at a time, sized for a phone."
         },
         {
-            "title": "Give people words to start from",
-            "body": "Offer a few preset phrases before an empty box. Finding words for someone else’s loss is hard."
+            "title": "Is there somewhere to start?",
+            "body": "Before an empty text box, offer a few preset phrases. Finding words for someone else’s loss is hard."
         },
         {
-            "title": "Write down the tones to avoid",
-            "body": "One brief named four: clinical, corporate, greeting-card and funereal. Check every screen against the list."
+            "title": "Does any screen sound like the list?",
+            "body": "One brief named four tones to avoid: clinical, corporate, greeting-card and funereal. Check each screen against yours."
         },
         {
-            "title": "Get the dates exactly right",
-            "body": "An anniversary kept on the Hebrew calendar moves every year. Work it out fresh, and remind people before the day."
+            "title": "Will the date be right next year?",
+            "body": "An anniversary kept on the Hebrew calendar falls on a different date every year. Ask about calendars before you build reminders."
         },
         {
-            "title": "Her record is hers",
-            "body": "Closing an account is her request. Erasing her details later leaves the memorial to her parent in place."
+            "title": "Can anything happen on one tap?",
+            "body": "Nothing important should happen without a chance to stop."
+        },
+        {
+            "title": "Who can see a member’s record?",
+            "body": "Staff preview the app as a test account that can’t reach real members, and every visit goes in the audit log."
         }
     ]
 }

@@ -2,28 +2,23 @@
 
 ## Post 1: native text
 
-A startup needs a SOC 2 report when a larger customer asks for one before they'll sign.
+SOC 2 is an audit report on your company's controls (the checks you say you run), written by a licensed CPA firm against published criteria. Nobody gets certified, and the version most buyers want can take months of evidence.
 
-If nobody has asked yet, you probably don't need the report. You may still want to start preparing, because the version most buyers want takes months to earn.
+The report describes your system, lists your controls and records what the auditor tested and found. Security's always in. Availability, processing integrity, confidentiality and privacy get added when they matter to what you sell.
 
-SOC 2 is an audit report from a licensed CPA firm, against criteria the AICPA publishes. It describes your system and your controls, and records what the auditor tested and found. Nobody gets certified.
+There are two types. Type 1 checks your controls are designed properly at one point in time. Type 2 asks whether they worked throughout a period, often several months. If you say you review access every quarter, the auditor asks for every review in that window, dated and signed off. Miss one and the report lists an exception.
 
-There are two kinds:
+Most enterprise buyers want Type 2, and that's where startups get caught. A deal hangs on the report, and the observation period hasn't even started. Controls have to be running before it opens, then it runs its course.
 
-• Type 1 checks that your controls are designed properly at a single point in time.
-• Type 2 checks that they actually worked over a period, often several months.
+Two other common mistakes: copied template policies describe a company you aren't, and every policy you don't follow becomes a finding. Buyers usually want a fresh report every year too, so the controls keep running after the first.
 
-Most enterprise buyers want Type 2. If you say you review access every quarter, the auditor asks for every review in the window, dated and signed off. That's why scrambling the week before the audit doesn't work: the window has to run its course with the controls already in place.
-
-The signs you'll need one soon: deals stalling in security review, long questionnaires answered by hand, and team members giving different answers to the same security question.
-
-The most common mistake we see is starting the work after the deal already depends on the report.
+When a prospect asks, find out which type and scope they need, and by when. Compare it with the controls and evidence you already have. If the dates don't fit, say so early and ask what their security team can review meanwhile.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/soc-2-explained-for-startups.pdf)
 
-Document title: SOC 2 for startups, explained
+Document title: A customer asked for SOC 2: what to check
 
-What a SOC 2 report is, Type 1 versus Type 2, and when a startup actually needs one. Swipe through, and the full write-up is in the comments.
+Keep this for the day a prospect's security team asks for your SOC 2 report, before anyone promises a date. It covers what to ask the buyer and how to size the work, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

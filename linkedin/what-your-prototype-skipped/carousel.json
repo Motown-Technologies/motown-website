@@ -1,25 +1,29 @@
 {
-    "cover": "What your AI-built prototype skipped",
+    "cover": "Tests to run on your prototype before launch",
     "slides": [
         {
-            "title": "Data that survives a redeploy",
-            "body": "A real schema, migrations and backups, so the data stays consistent and is still there after the next deploy."
+            "title": "Two accounts, each other's data",
+            "body": "Sign in as two people and try to open each other's records, including by calling the app directly."
         },
         {
-            "title": "Real sign-in and permissions",
-            "body": "Proper authentication, role-based access and secrets kept out of the code, so only the right people can sign in."
+            "title": "Database rules from outside",
+            "body": "Test exposed tables without signing in, then with an account that should have limited access."
         },
         {
-            "title": "The paths a demo never takes",
-            "body": "Background jobs, queues and error handling, tested under real load so the second user doesn't break it."
+            "title": "Search for secrets",
+            "body": "Check the code and its history for payment keys and passwords. Rotate anything that reached the repo or the browser."
         },
         {
-            "title": "The services it depends on",
-            "body": "Payments, sign-in providers, email and monitoring, each connected properly and hardened."
+            "title": "Restart it",
+            "body": "Restart the app and check the records are still there. Make sure someone's actually restored a backup at least once."
         },
         {
-            "title": "A way to ship and roll back",
-            "body": "Automated deploys with monitoring, so a release is routine and a bad one can be undone."
+            "title": "Break an outside service",
+            "body": "Make payments, email or sign-in slow or unavailable and see what users get. Submit a form twice while you're at it."
+        },
+        {
+            "title": "Ship and roll back",
+            "body": "Have someone other than the builder deploy a release and roll it back, then check the records and screens."
         }
     ]
 }

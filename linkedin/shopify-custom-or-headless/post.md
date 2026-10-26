@@ -2,27 +2,23 @@
 
 ## Post 1: native text
 
-Most online stores pay for traffic and then lose it at the last step.
+You pay to bring people to your store, then watch them leave before checkout. The usual pitch is a new platform.
 
-A slow product page, a search box that can't handle a typo, or a checkout that asks for an account before it takes the money.
+A rebuild might not touch the reason they left. A slow product page, search that fails on a typo and a long checkout each need a different repair, and plenty can happen on Shopify. Find where the journey breaks, then compare fixing that with rebuilding.
 
-When store owners bring us that problem, the question is usually about platforms. Stay on Shopify, rebuild the storefront on what you have, or go headless?
+On your current platform, a custom theme built around your brand can replace a premium theme carrying code from four other themes. Shopify Functions and checkout UI extensions handle discount, shipping and payment rules where Shopify allows, and custom apps cover what no plugin does.
 
-• Shopify does more than most people assume. Custom themes, Shopify Functions and checkout extensions cover a lot of what stores think the platform can't do.
-• A surprising amount of the work is removing things. Many stores carry a dozen apps, several doing the same job, all loading on every page.
-• Headless makes sense when the platform itself is the limit: the theme can't render the brand, or you're running a separate store for every market.
+Before adding another app, check the installed ones for overlaps and for scripts loading where they're not needed. Remove one at a time and test a purchase after each. Every app was there for something.
 
-And we'll talk people out of headless when their team is two people, the theme is mostly fine, or the deadline is six weeks away. It adds a codebase someone has to own.
+Headless keeps Shopify for carts, orders and tax and swaps out the front end. It's worth a look when the theme can't show what the brand needs, you run a separate store per market, or marketing waits on a developer for every landing page. It also adds a codebase, a deploy pipeline and a content system someone has to look after. With a two-person team or a six-week deadline, that's usually more than the store needs.
 
-Start with what's losing you sales. Most of the time that can be fixed on the platform you already have.
-
-Full write-up in the comments.
+This week, buy something on a mid-range phone and note everywhere finding a product or checking out gets hard. Then ask which ones your current store can fix.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/shopify-custom-or-headless.pdf)
 
-Document title: Shopify, custom or headless?
+Document title: Fix the store or change the platform? A checklist
 
-How we help stores choose between building on Shopify, a custom storefront and headless commerce, and the three situations where we'd talk you out of headless. Full write-up in the comments.
+Save this for the next time someone pitches a platform rebuild to fix falling sales. Each card pairs a symptom with where it usually gets fixed, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

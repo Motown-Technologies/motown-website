@@ -1,25 +1,29 @@
 {
-    "cover": "MCP explained in five slides",
+    "cover": "Checklist for reviewing an MCP connection",
     "slides": [
         {
-            "title": "One standard for AI connections",
-            "body": "MCP lets a system offer one connection that works in any AI tool that supports it, instead of one integration per tool."
+            "title": "Which AI tools will use it?",
+            "body": "Test the connection with the applications people plan to use, including their sign-in and permissions."
         },
         {
-            "title": "Servers offer, AI tools use",
-            "body": "An MCP server offers tools (actions), resources (information) and prompts. The AI app lists them and calls them when needed."
+            "title": "Read before write",
+            "body": "A server that only reads orders shouldn't be able to cancel them. Start read-only, then add write tools one at a time."
         },
         {
-            "title": "No single vendor owns it",
-            "body": "Anthropic created MCP and in December 2025 donated it to the Agentic AI Foundation, under the Linux Foundation."
+            "title": "Where did the server come from?",
+            "body": "A local MCP server runs on your computer with your permissions. Install it like any software, from sources you trust."
         },
         {
-            "title": "It's only as good as your API",
+            "title": "What will the AI read?",
+            "body": "An email or web page arriving through a tool can carry hidden instructions. Plan for that before you connect it."
+        },
+        {
+            "title": "Who owns the agent's limits?",
+            "body": "Decide what it may do alone, what needs approval and what gets logged. Name an owner before exposing write tools."
+        },
+        {
+            "title": "Is the API underneath good enough?",
             "body": "An MCP server usually sits on an API you already have. If that API is thin or inconsistent, start there."
-        },
-        {
-            "title": "Start with read access",
-            "body": "A server that only needs to read orders shouldn't be able to cancel them. Add write actions one at a time."
         }
     ]
 }

@@ -2,27 +2,25 @@
 
 ## Post 1: native text
 
-An AI-built prototype can work perfectly in a demo and break on the second user.
+In one prototype we rebuilt, "submitted by" was a dropdown of six hard-coded names. It showed the workflow fine, but it couldn't tell anyone who'd actually submitted a record, and anyone with the link could submit as anyone.
 
-A demo only has to handle one person following one path through the screens. Real customers bring the second sign-in, the unexpected click and the redeploy that resets the data.
+It was a senior-care operator's low-code proof of concept, and the workflow was right. So the spec was written in two halves: rebuild the screens the team already knew, then add what the demo had been allowed to skip. The dropdown became invite-only accounts, with permissions checked on the server for every request. Staff who'd used the prototype didn't need retraining.
 
-Whether a prototype was vibe-coded, generated with AI or built on a no-code platform, these are the layers we add before it can run for real:
+Vibe-coded, AI-built and no-code prototypes tend to skip the same things. Before yours holds real customer data, check:
 
-• Data with a real schema, migrations and backups, so it survives the next deploy.
-• Proper sign-in, role-based access and secrets kept out of the code.
-• Background jobs, queues and error handling for everything off the happy path.
-• Payments, sign-in providers and other services connected properly and hardened.
-• Automated deploys with monitoring and a way to roll back a bad release.
+• Is hiding a button the only thing stopping an action? Call the app directly, outside the screens, and see what the server accepts.
+• Do secret keys sit in the code or reach the browser? Rotate any that leaked, since deleting them leaves them in the code's history.
+• Does the data survive a restart, and has anyone restored a backup?
+• What do users see when payments, email or sign-in is slow or down?
+• Can someone other than the builder release an update and roll it back?
 
-A prototype that works is a good place to start, because the idea has already been tested. The work is in everything the demo was allowed to skip.
-
-Full write-up in the comments.
+You can start this week in a test environment with dummy data. Sign in as two different people and try to open each other's records, then restart the app and check the records are still there.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/what-your-prototype-skipped.pdf)
 
-Document title: What your prototype skipped
+Document title: Six tests to run on your prototype before launch
 
-Five layers a no-code or AI-built prototype usually leaves out, and what we add before it goes in front of customers. Swipe through, and the full write-up is in the comments.
+Run these in a test environment with dummy data before a vibe-coded or no-code prototype holds real customer records. Each one checks something a demo never touches.
 
 ## First comment (both posts)
 

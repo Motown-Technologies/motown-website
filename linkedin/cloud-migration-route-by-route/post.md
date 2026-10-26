@@ -2,28 +2,28 @@
 
 ## Post 1: native text
 
-If your cloud bill has grown faster than your traffic, the cause is rarely compute.
+Your cloud bill went up. Do you really need to move?
 
-Look at a recent invoice. The big lines are usually egress on every file users download, servers sized for a peak that hardly ever comes, and a load balancer, firewall and CDN that each bill separately.
+Find out which charges grew first. A full move is a lot of work if the expensive part is a database you're keeping anyway.
 
-A cheaper platform can fix that. The worry is the move itself: one weekend where everything switches at once and any problem reaches every user.
+Group a recent invoice by what each line pays for. The big ones are often fees on every file users download, servers sized for a peak that hardly ever comes, and a load balancer, firewall and CDN that each bill separately. If so, a platform that bills differently can help a lot. If it's mostly GPU time or a big database that has to stay, moving saves less.
 
-You don't have to migrate that way. A few things make it gradual:
+If you do move, it doesn't have to be one big weekend switchover:
 
-• List every workload and sort it into three groups: moves as it is, needs a bridge, or stays where it is.
-• Be honest about what stays. GPU work, long-running stateful services and hard-won compliance boundaries are often best left alone.
-• Move one route at a time behind the DNS you already control, so users keep the same URLs throughout.
-• Start where savings are high and risk is low. File storage is often first, because moving it removes egress fees without touching application code.
+• Sort every workload: moves as it is, needs a bridge, or stays put.
+• Be honest about what stays. GPU work, always-on services that hold their own data, and hard-won compliance setups are often best left alone.
+• Move one route at a time where your setup allows it. Ask the migration team to show you the split and the way back first.
+• Start where the saving's worth it and the risk is manageable. File storage can be a good first pick when downloads are a big share of the bill.
 
-Then look at the bill after the easy moves and decide on the rest.
+A lower hosting bill is only part of the comparison. Someone still has to look after the new setup and whatever's left behind.
 
-We wrote up how to read the invoice and decide what moves. Link in the comments.
+We've written up the questions to answer first, plus a starting map for moving to Cloudflare. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/cloud-migration-route-by-route.pdf)
 
-Document title: Cut your cloud bill without a risky cutover
+Document title: Before you move clouds: a workload sorting sheet
 
-Most cloud bills pay for egress and idle capacity more than compute. How to read yours, decide what moves and migrate one route at a time. The full write-up is in the comments.
+Fill this in before anyone quotes you for a migration. It shows how much of the bill a move can actually touch and which workloads should stay put (link's in the comments).
 
 ## First comment (both posts)
 

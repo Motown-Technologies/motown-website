@@ -2,32 +2,25 @@
 
 ## Post 1: native text
 
-Two AI agents built on the same model can behave very differently. The difference is usually the harness, the software around the model.
+Two AI agents on the same model can behave nothing alike. The difference is usually the harness, the software around the model.
 
-The model does the reasoning. The harness decides what it sees, which tools it can call, what it's allowed to change, when it stops and what counts as finished.
+The model does the thinking. The harness decides what it sees, which tools it can use, what it's allowed to change, when it stops and how its work gets checked.
 
-When an agent fails in production, the model is seldom the main cause. More often:
+An insurance broker wants an agent to sort incoming claims emails. Reading a policy number is easy. Can it change the policy record? Who looks at a big claim? What if an attachment won't open? That's all harness.
 
-• It had access to the wrong data, or to too much.
-• A tool returned an error it couldn't interpret.
-• Nothing checked the result.
-• There was no rule for when to stop, so it kept trying.
+When an agent goes wrong, look past the model's answer. Did it get the right data? Did a tool throw an error it couldn't read? Did anything check the result? Did it know when to stop? A newer model won't necessarily fix any of that.
 
-Checks matter most. Anthropic's engineering team wrote that agents reliably rate their own work too highly. Their fix was a separate evaluator that used the app the way a person would and rejected work that failed. Whatever you build, something other than the agent should check its work.
+Checks matter most. Anthropic's engineering team wrote that agents "reliably skew positive when grading their own work." Their fix was a separate checker that clicked through the running app like a user would and rejected work that failed.
 
-The harness is also the part you keep. Models improve every few months and swapping one in is often a small change. Your permissions, business rules, approval points and audit trail live in the harness and carry over.
+The harness is also the part you keep. Models improve every few months and swapping one in is often a small change. Your permissions, business rules and checks carry over.
 
-Before you buy or build an agent, ask four things. What tools can it use, and with whose permissions? What does it do when it isn't sure? Who checks its work? Can you see a log of every action?
-
-Vague answers usually point to a weak harness, whatever model is inside.
-
-Full write-up in the comments.
+If you've got an agent running, give it a case it can't finish, like a missing attachment or a policy system that's down. It should stop at a set point or hand off to a person. Check the record it left, as well as its reply.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/ai-agent-harness-explained.pdf)
 
-Document title: What an AI agent harness is, and why it decides quality
+Document title: Questions to ask before you trust an AI agent
 
-The software around the model decides whether an agent is safe to use. Here is what a harness does and what to ask before you trust one. Swipe through, and the full write-up is in the comments.
+If someone's pitching you an AI agent, or your team wants to build one, ask these before it touches real work. They're all about the software around the model, and the link's in the comments.
 
 ## First comment (both posts)
 

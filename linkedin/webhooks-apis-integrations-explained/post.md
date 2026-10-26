@@ -2,35 +2,23 @@
 
 ## Post 1: native text
 
-An API lets one system ask another for data. A webhook lets a system announce that something just happened. Most business integrations need both.
+A deposit clears in Stripe, and someone still marks the booking as paid by hand. A customer changes their address, and two departments update different copies of it.
 
-Say a dental practice takes deposits through Stripe. With a webhook, Stripe tells the booking system the moment a deposit clears and the appointment confirms itself. Without one, someone checks by hand.
+Connecting tools sounds simple until both hold information you rely on. An API lets one system ask another for data or an action. A webhook lets a system send a message the moment something happens, so Stripe tells your booking system the deposit cleared and the appointment confirms itself.
 
-Webhooks are fast, but the receiving side has to be built for them:
+The receiving side has to be built for that. It should check every message is genuine, because anyone can send a request to your web address, and a forged "payment succeeded" could mark an order as paid. It should expect the same event twice, not count on events arriving in order, and reply at once, doing the work later from a queue.
 
-• Verify every message, because anyone can send a request to your web address.
-• Expect the same event to arrive twice.
-• Don't assume events arrive in order.
-• Reply straight away and do the work from a queue, so retries don't pile up.
+Users never see any of this, so quick builds skip it, and you get the occasional double charge or a booking that never confirmed.
 
-Users never see any of this, so it gets skipped in quick builds. The result is the occasional double charge, or a booking that never confirmed and nobody can explain.
+Once it works, most of the effort is decisions. If an address changes in the CRM and in accounting on the same day, one system has to win. "Client" in one tool may or may not mean "customer" in another. Someone has to hear when a call fails, and without a daily check that totals match on both sides, a quiet failure can sit until month end.
 
-The connection itself is rarely the hard part of an integration. The decisions are harder:
-
-• Which system wins when both change the same record?
-• Does "client" in one tool mean "customer" in the other?
-• What happens when one side is down for an hour?
-• Who gets told when something fails?
-
-If nobody can answer that last one, the integration will eventually fail without anyone noticing, and you'll hear about it from a customer.
-
-Full write-up in the comments.
+Link's in the comments: questions to answer before connecting two tools, and when Zapier or a built-in connector is enough.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/webhooks-apis-integrations-explained.pdf)
 
-Document title: Webhooks, APIs and integrations, explained for operators
+Document title: Questions to answer before you connect two tools
 
-What each one is, how they work together, and the questions to answer before you connect two business systems. Swipe through, and the full write-up is in the comments.
+Go through these before anyone builds the connection. Each one's a decision the integration will need, and they're much easier to make before data starts moving.
 
 ## First comment (both posts)
 

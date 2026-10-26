@@ -1,29 +1,29 @@
 {
-    "cover": "How to read a software quote before you sign",
+    "cover": "Questions to ask any software quote",
     "slides": [
         {
-            "title": "A fixed price fixes a number to a scope",
-            "body": "The developer prices in a margin for the unknown. Anything the scope doesn't name becomes a change request."
+            "title": "What exactly is included?",
+            "body": "The quote should list the screens, user roles, integrations and data it covers. “Booking system” alone gets argued over later."
         },
         {
-            "title": "Time and materials bills the real hours",
-            "body": "You can change direction without renegotiating. Only your own attention stops the total from growing."
+            "title": "How are changes priced and approved?",
+            "body": "A pricey change process can make a fixed quote cost more than paying by the hour would have."
         },
         {
-            "title": "Ask who pays when the estimate is wrong",
-            "body": "Fixed price: the developer, plus the margin you paid up front. Time and materials: you, and you keep any savings."
+            "title": "What does “done” mean?",
+            "body": "Look for testing, deployment, a handover and support after launch. Some quotes stop at “code delivered”."
         },
         {
-            "title": "Check what “done” means",
-            "body": "Look for testing, deployment, handover and support. Some quotes stop at “code delivered” and bill the rest separately."
+            "title": "Who owns the result?",
+            "body": "The repository, hosting accounts and domain should be in your name. That's what lets you take the work elsewhere."
         },
         {
-            "title": "Make sure you own the result",
-            "body": "Repository, hosting and domain in your name. That decides whether you can take the work elsewhere."
+            "title": "How will you see progress?",
+            "body": "Hourly: what does the weekly report show? Fixed price: when will you see working software? A fixed-price project can still run late."
         },
         {
-            "title": "Can't describe it yet? Discover first",
-            "body": "Pay for a short fixed-price discovery, then quote the build once the open questions have answers."
+            "title": "What's the price built on?",
+            "body": "Ask both developers to price the same first phase and list their assumptions and exclusions. Compare those, not just the totals."
         }
     ]
 }

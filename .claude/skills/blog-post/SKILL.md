@@ -133,16 +133,28 @@ which is fine.
 ## 7. LinkedIn post and carousel
 
 Everything for LinkedIn lives in `linkedin/<slug>/` (see
-`linkedin/auction-house-spreadsheets/` for a finished example). Run the
+`linkedin/backups-vs-disaster-recovery/` for the voice to match). Run the
 `humanizer` skill on all of it.
+
+Voice: a friendly "we" talking to one reader as "you". Use contractions and
+plain words, drop acronyms and jargon a business owner wouldn't use, and keep
+paragraphs to one to three sentences. Avoid formal set-ups ("Suppose…",
+"It also comes down to…", "The article covers…"). Only say what Motown does
+or sees if the article or a case study says it; never invent a habit like
+"we ask every client…".
 
 `post.md` holds two LinkedIn posts and the first comment:
 
-- **Post 1, native text:** the point in the first two lines (that is all
-  LinkedIn shows before "see more"), 150-300 words that stand on their own,
-  no "read more at the link", no URL.
+- **Post 1, native text:** a story or an argument, usually opening on the
+  reader's business situation, with the point in the first two lines (that
+  is all LinkedIn shows before "see more"). 120-250 words that stand on
+  their own, no URL. Where the article has a client story, include one
+  specific decision. End on something the reader can do, or a short line
+  saying what the article gives them; vary it across posts.
 - **Post 2, carousel:** a document title (the carousel's cover line) and a
-  2-3 sentence caption.
+  caption of two sentences at most saying why the reader would want it. The
+  carousel is a practical tool (checklist, worksheet, questions, template),
+  not a shorter copy of Post 1.
 - **First comment (both posts):**
   `https://motowntech.com/blog/<slug>?utm_source=linkedin&utm_medium=social&utm_campaign=<slug>`
   (the tracking code shows LinkedIn visits in Vercel Web Analytics).

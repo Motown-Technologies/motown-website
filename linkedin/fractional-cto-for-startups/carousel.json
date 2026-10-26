@@ -1,25 +1,29 @@
 {
-    "cover": "Do you need a CTO, or a CTO's judgment?",
+    "cover": "Define the technical lead role before you hire",
     "slides": [
         {
-            "title": "You may not need a full-time CTO",
-            "body": "You need someone senior making the few technical calls a month that are expensive to get wrong."
+            "title": "List the decisions that stalled",
+            "body": "Take the last few technical calls that sat unresolved. For each one, write who could have made it and what stopped them."
         },
         {
-            "title": "Hard calls get made and written down",
-            "body": "Rewrite or refactor, build or buy. Each decision is recorded with its tradeoffs."
+            "title": "Name the calls the role can make",
+            "body": "Rewrite or refactor, build or buy, how to divide the system. Agree which of these the new person decides."
         },
         {
-            "title": "Hiring stops being a guess",
-            "body": "We scope the role, write the brief and run technical interviews alongside the founders."
+            "title": "Settle budget and disagreements",
+            "body": "Who controls the budget? How does a disagreement between engineers, or with you, get settled?"
         },
         {
-            "title": "The board gets a straight answer",
-            "body": "The technical update comes from someone who can answer the follow-up questions."
+            "title": "Separate projects from the role",
+            "body": "A migration or a first hire has an end. Supporting engineers, reviewing spend and owning architecture keep going."
         },
         {
-            "title": "It starts with a two-week audit",
-            "body": "A fixed-scope review of stack, team and roadmap, with written findings and no obligation."
+            "title": "Part time or full time?",
+            "body": "Part time fits occasional decisions. If people are stuck waiting for the next scheduled day, full time may fit better."
+        },
+        {
+            "title": "Check that it's working",
+            "body": "Decisions are written down with an owner, engineers have someone to escalate to, and the same argument stops coming back."
         }
     ]
 }

@@ -1,29 +1,29 @@
 {
-    "cover": "Write a software brief a developer can price",
+    "cover": "Software brief template: fill in the blanks",
     "slides": [
         {
-            "title": "Start with the problem",
-            "body": "Say what goes wrong today and what it costs. That tells a developer more than naming the system you think you need."
+            "title": "1. The problem today",
+            "body": "Today, ______ spends ______ doing ______. It costs us ______ in hours, mistakes or lost sales."
         },
         {
-            "title": "List each user and their job",
-            "body": "“A driver marks each job done from a phone” is a piece of work someone can estimate."
+            "title": "2. Who uses it",
+            "body": "A ______ (role) uses it to ______. Write one line for each type of user."
         },
         {
-            "title": "Attach the real spreadsheet",
-            "body": "Keep the columns and the messy parts. A developer learns more from your actual sheet than from a description of it."
+            "title": "3. What we use now",
+            "body": "Attached: our current ______ (spreadsheet, form, report), sensitive data removed, messy parts kept."
         },
         {
-            "title": "Name every system it touches",
-            "body": "Accounting, CRM, online store. Integrations are where estimates most often go wrong."
+            "title": "4. Systems it connects to",
+            "body": "______ (product). Data flows ______ (one way or both), ______ (how often). We don’t know yet: ______."
         },
         {
-            "title": "Give a budget range and a date",
-            "body": "With a range, developers can tell you what fits inside it. With the reason for the date, they can plan a smaller first release."
+            "title": "5. Launch, later and limits",
+            "body": "Needed at launch: ______. Can wait: ______. Budget: ______ to ______. Live by ______ because ______."
         },
         {
-            "title": "Mark what can wait",
-            "body": "Split features into needed at launch and useful later. That list controls the price more than anything else."
+            "title": "6. Rules and decisions",
+            "body": "Rules we follow: ______. Decisions come from ______, who can answer questions within ______."
         }
     ]
 }

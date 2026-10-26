@@ -1,25 +1,29 @@
 {
-    "cover": "Technical debt, explained for the people who pay",
+    "cover": "Technical debt: questions for your team",
     "slides": [
         {
-            "title": "You pay it as interest",
-            "body": "Every new feature takes longer and breaks more than it would in a cleaner system."
+            "title": "What are you most nervous to change?",
+            "body": "And why? Ask for the part of the system, then for what makes changing it risky."
         },
         {
-            "title": "Spot it without reading code",
-            "body": "Small changes take weeks, releases break unrelated things, and one person holds the knowledge."
+            "title": "What would you fix in two free weeks?",
+            "body": "The answer gives you a first repair to put a cost and a priority against."
         },
         {
-            "title": "A full rewrite is rarely the first move",
-            "body": "It freezes new work for months, and the new system has to rediscover every rule the old one handled."
+            "title": "Which outside code is out of date?",
+            "body": "Ask which are no longer supported, and why their updates keep getting put off."
         },
         {
-            "title": "Start where it hurts",
-            "body": "Debt in code nobody touches costs almost nothing. Debt in the checkout flow costs you every week."
+            "title": "Where does it change and break most?",
+            "body": "Start there. Debt in code nobody touches costs almost nothing. Debt in the checkout flow costs you every week."
         },
         {
-            "title": "Budget for it every cycle",
-            "body": "Clean up what each feature touches and reserve time for upgrades, so the work happens before it's urgent."
+            "title": "Do tests cover what it does today?",
+            "body": "Capture current behavior, including the odd parts people depend on, before anyone changes it."
+        },
+        {
+            "title": "How long until a new engineer ships?",
+            "body": "If it takes months to ship a first useful change, that's a sign of debt."
         }
     ]
 }

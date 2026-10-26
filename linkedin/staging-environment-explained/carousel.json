@@ -1,25 +1,29 @@
 {
-    "cover": "What a staging environment is, and why you need one",
+    "cover": "Does your staging match production?",
     "slides": [
         {
-            "title": "A private copy of your live app",
-            "body": "Staging matches production as closely as you can afford. Every change runs there first, where only your team can see it."
+            "title": "Same hosting and database versions",
+            "body": "As the live app, on smaller, cheaper machines. It can be switched off outside working hours if cost matters."
         },
         {
-            "title": "A laptop is a poor guide to production",
-            "body": "Different database, settings that exist nowhere else, mocked integrations. Staging closes most of that gap."
+            "title": "Deploys from the same pipeline",
+            "body": "Then every release to staging is also a rehearsal of the release to production."
         },
         {
-            "title": "Ten minutes, or an apology",
-            "body": "A reminder feature that sends every text twice is a quick fix on staging. In production, every patient gets it."
+            "title": "Realistic data, personal details removed",
+            "body": "Real customer records don't belong in a test environment, least of all in healthcare."
         },
         {
-            "title": "Where non-technical people sign off",
-            "body": "Your operations lead clicks through the new flow before it's live, instead of finding out on Monday."
+            "title": "Integrations on test accounts",
+            "body": "Payment and messaging providers in test mode, so testing never charges a card or emails a customer."
         },
         {
-            "title": "Ask your developer",
-            "body": "Where do changes go before customers see them? How close is it to production? When did we last test a rollback?"
+            "title": "A rollback you've tried",
+            "body": "Ask how long one takes, and when you last ran it."
+        },
+        {
+            "title": "A named person signs off",
+            "body": "Someone who uses the software completes the whole task on staging, including an exception from real work."
         }
     ]
 }

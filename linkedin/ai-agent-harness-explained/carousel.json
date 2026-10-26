@@ -1,25 +1,29 @@
 {
-    "cover": "What an AI agent harness is, and why it matters",
+    "cover": "Questions to ask before you trust an AI agent",
     "slides": [
         {
-            "title": "The model reasons, the harness acts",
-            "body": "The harness decides what the model sees, which tools it can call, when it stops and what counts as finished."
+            "title": "What tools can it use?",
+            "body": "And with whose permissions? Each tool should have only the access a person in that role would need."
         },
         {
-            "title": "Most agent failures aren't the model",
-            "body": "Wrong data, a tool error it couldn't read, no check on the result, or no rule for when to stop."
+            "title": "What may it do without asking?",
+            "body": "Get it in writing: what it does on its own, what needs a person's OK and what it must never try."
         },
         {
-            "title": "Don't let it grade its own work",
-            "body": "Agents tend to rate their own output too highly. A separate check should decide what counts as done."
+            "title": "What does it do when it isn't sure?",
+            "body": "Look for step limits, timeouts and a set point where it gives up, so it stops or hands off when it's stuck."
         },
         {
-            "title": "Limits and approvals",
-            "body": "Step budgets, timeouts, and a person confirming anything expensive or irreversible before it happens."
+            "title": "Who checks its work?",
+            "body": "Agents tend to rate their own work too highly. The check should be separate from the agent."
         },
         {
-            "title": "The harness is the part you keep",
-            "body": "Models change every few months. Your permissions, rules, checks and audit trail carry over."
+            "title": "Can you see every action it took?",
+            "body": "You want a log of every action, what it was given and why it acted."
+        },
+        {
+            "title": "Has it been tested on awkward cases?",
+            "body": "Ask for scored test runs on realistic cases, like a missing attachment, before it goes near a real inbox."
         }
     ]
 }

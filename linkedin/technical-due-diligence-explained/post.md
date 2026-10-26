@@ -2,32 +2,25 @@
 
 ## Post 1: native text
 
-Before a raise or an acquisition closes, someone reads your codebase looking for problems.
+An investor asks who owns the code. You know the contractor got paid, but you're not sure where the signed assignment is.
 
-It might be an investor's engineer, an acquirer's team or an enterprise buyer's security reviewer. What they find goes into a report, and the report affects the price.
+Then they ask what the platform will cost at ten times the load, and nobody knows.
 
-A problem you disclose is a line item. The same problem found by the other side in week three of the raise is leverage in their negotiation, and usually a discount.
+That's technical due diligence, the tech side of a raise or acquisition. The reviewer looks at whether the architecture can carry the next 18 months of roadmap, how much code a new engineer could safely change in their first month, security, running costs, which systems only one person understands, and who owns the code.
 
-A technical due diligence lets you read the code that way first. We run it as a two-week audit across six areas:
+Paying an invoice doesn't settle every ownership question. The reviewer needs evidence they can check: signed agreements handing contractor-built code to the company, and a list of licenses for the outside code you use.
 
-• Whether the architecture can carry the next 18 months of roadmap
-• How much of the code a new engineer could safely change in their first month
-• Security, the findings most likely to stall a deal late
-• What the platform costs today and at ten times the load
-• Which systems only one person understands
-• Who owns the code, and whether every dependency's license is acceptable to a buyer
+A known problem can be looked into, fixed or disclosed with a plan. One that surfaces late in the deal leaves both sides less time to understand it, and can sway the negotiation. So leave time before you open the data room, the shared folder reviewers work from. How much depends on what's missing. Tracking down a signed agreement runs on a different schedule from redesigning a system.
 
-Every finding comes with evidence, an estimated cost to fix and a plain sentence on why it matters.
+Before ordering a new report, ask your team to pull together the evidence they already have. Then rank the known gaps. Give each one an owner, an estimated cost and whether it gets fixed before the deal or after.
 
-If you're a founder, run it four to six weeks before you open a data room. If you're an investor, we can run the same audit on a company you're considering and report to you.
-
-Full write-up in the comments.
+Link's in the comments for what reviewers ask in each area and how to present findings.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/technical-due-diligence-explained.pdf)
 
-Document title: What technical due diligence checks
+Document title: What an investor will ask to see
 
-Six places a deal can go wrong in the codebase, and when to look for them yourself. Swipe through, and the full write-up is in the comments.
+Start collecting these before a raise or sale puts a date on them. Each card is evidence a technical reviewer's likely to ask for, and the full write-up's in the comments.
 
 ## First comment (both posts)
 

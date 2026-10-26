@@ -1,25 +1,29 @@
 {
-    "cover": "Build or buy: when custom software beats SaaS",
+    "cover": "Build or buy: a side-by-side cost worksheet",
     "slides": [
         {
-            "title": "Buy when the work is the same everywhere",
-            "body": "Payroll, email and accounting are solved problems. The vendor has already met the edge cases you haven't."
+            "title": "Getting started",
+            "body": "Buy: setup, data migration and training, running in days. Build: the build itself, weeks at best, and a first version that does less."
         },
         {
-            "title": "A spreadsheet sits beside the tool",
-            "body": "When people keep one open to do the part the tool can't, you're already running a second system by hand."
+            "title": "As you grow",
+            "body": "Buy: per-seat price as you hire, add-ons and price rises at renewal. Build: hosting, plus maintenance budgeted every year."
         },
         {
-            "title": "Count every cost, not the subscription",
-            "body": "Migration, seats as you hire, renewal increases, hours on workarounds, and what it would cost to leave."
+            "title": "Hours on workarounds",
+            "body": "Buy: the time your team spends working around the tool each week. Build: worth it only if it removes those hours."
         },
         {
-            "title": "Buy the standard parts, build your own",
-            "body": "Keep the tools that work and build a thin layer for what's specific to you, connected through their APIs."
+            "title": "Who keeps it current",
+            "body": "Buy: the vendor handles tax changes, security patches and new browsers. Build: you do, for as long as you use it."
         },
         {
-            "title": "Check the exit before you sign",
-            "body": "Make sure the tool has a decent API and lets you export your data, even if you have no plans to build yet."
+            "title": "Getting out",
+            "body": "Buy: getting your data out in a usable form, and contract terms that make leaving slow. Check the API and export first."
+        },
+        {
+            "title": "The middle row",
+            "body": "Buy the standard parts and build a thin layer for what's specific to you, reading and writing through the tools' APIs."
         }
     ]
 }

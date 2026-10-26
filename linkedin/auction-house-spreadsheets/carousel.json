@@ -1,29 +1,29 @@
 {
-    "cover": "Signs your business has outgrown its spreadsheets",
+    "cover": "Has your team outgrown its spreadsheets?",
     "slides": [
         {
-            "title": "The same status lives in three places",
-            "body": "An auction house we built for kept inventory in spreadsheets, a photo folder and a group chat. Over time the three stopped agreeing."
+            "title": "Does one status live in several places?",
+            "body": "At an auction house we built for, a sheet, a photo folder and a group chat each held part of an item's status. They drifted apart."
         },
         {
-            "title": "Nobody can say who changed it, or when",
-            "body": "A spreadsheet shows where an item is. It can't show who moved it or when, so a disagreement has nothing to settle it."
+            "title": "Can anyone settle who changed it?",
+            "body": "The status changed in a sheet, a folder and a chat. No one history covered all three, so nothing could settle a disagreement."
         },
         {
-            "title": "Deleting the wrong row means it's gone",
-            "body": "One mistake the week before a sale, and someone has to rebuild the record from memory."
+            "title": "Could you get a deleted row back?",
+            "body": "Restoring an older file version also undoes everyone's later edits. A mistake the week before a sale meant rebuilding from memory."
         },
         {
-            "title": "Real work happens in a chat thread",
-            "body": "Decisions made in the group chat never make it back into any record."
+            "title": "Do decisions stay in the chat?",
+            "body": "Decisions made in a chat thread never make it back into any record."
         },
         {
-            "title": "What we built instead",
-            "body": "One record per item through seven stages, from intake to sold. Every change is recorded against a person, and deletes can be undone."
+            "title": "Does only one person get the sheet?",
+            "body": "If only one person really understands it, that's a sign on its own."
         },
         {
-            "title": "AI drafts, a person approves",
-            "body": "Photos go in and catalog copy comes out. A cataloger reads and approves every draft before it reaches the inventory."
+            "title": "Then trace one recent disagreement",
+            "body": "Find where each version came from and decide who owns that information. You may fix part of it before replacing any software."
         }
     ]
 }

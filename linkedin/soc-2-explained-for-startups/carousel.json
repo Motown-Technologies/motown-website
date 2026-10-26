@@ -1,25 +1,29 @@
 {
-    "cover": "SOC 2 for startups, explained",
+    "cover": "A customer asked for SOC 2: what to check",
     "slides": [
         {
-            "title": "A report, not a certificate",
-            "body": "A licensed CPA firm tests your controls against AICPA criteria and writes up what it found. Security is in every report."
+            "title": "Ask the buyer",
+            "body": "Which report type do you need, Type 1 or Type 2? Which scope? By what date?"
         },
         {
-            "title": "Type 1 is a snapshot",
-            "body": "It checks that your controls are designed properly at one point in time. Quicker to get, and a useful first step."
+            "title": "Check the timeline",
+            "body": "A Type 2 window only opens once controls are running, then lasts months. Know that before you promise a date."
         },
         {
-            "title": "Type 2 covers a period",
-            "body": "It checks that controls worked throughout a window of months. Most enterprise buyers ask for this one."
+            "title": "Decide the scope",
+            "body": "Which systems, which criteria and which report type. Everything inside the scope gets documented and tested."
         },
         {
-            "title": "You need it when buyers ask",
-            "body": "Deals stall in security review, or questionnaires pile up. If nobody has asked, the report can usually wait."
+            "title": "Rank the gaps by time to fix",
+            "body": "Compare how you work today with the criteria. The slowest gap to close sets your timeline."
         },
         {
-            "title": "Start before the deal depends on it",
-            "body": "A Type 2 window can't be rushed. Controls have to be running before it opens, and then it has to run its course."
+            "title": "Check policies match reality",
+            "body": "The auditor tests whether you do what your policies say. A policy you don't follow becomes a finding."
+        },
+        {
+            "title": "Agree who does what",
+            "body": "A CPA firm issues the report. If you bring in readiness help, ask what your own team still has to do."
         }
     ]
 }

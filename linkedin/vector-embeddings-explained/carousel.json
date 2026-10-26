@@ -1,25 +1,29 @@
 {
-    "cover": "Vector embeddings, explained without code",
+    "cover": "Questions to settle before you buy AI search",
     "slides": [
         {
-            "title": "Numbers that stand for meaning",
-            "body": "An embedding turns text into a list of numbers. Texts that mean similar things get similar numbers."
+            "title": "What should people find?",
+            "body": "List the sources and where they live today: a shared drive, a wiki, a ticketing system, an inbox."
         },
         {
-            "title": "A map of your documents",
-            "body": "Picture a bookshop shelved by subject. A question lands next to the passages that answer it, even with no shared words."
+            "title": "Which searches use exact IDs?",
+            "body": "Order numbers, part codes, policy codes. If staff search by them, plan for hybrid search (meaning plus keywords) from day one."
         },
         {
-            "title": "Bad at exact strings",
-            "body": "Search for part HX-4410-B and the nearest match can be HX-4410-C. Running keyword search alongside fixes it."
+            "title": "Who's allowed to see what?",
+            "body": "Write it down before anything is indexed, and make sure the rules get checked on every search."
         },
         {
-            "title": "Permissions don't come built in",
-            "body": "If the HR folder is indexed, anyone can surface it, unless access rules are checked on every search."
+            "title": "What if nothing matches?",
+            "body": "Search by meaning always returns something. Ask how the system tells you it came up empty."
         },
         {
-            "title": "Test it with real questions",
-            "body": "Collect a few dozen questions your team asks, with the right answers, and score every version against them."
+            "title": "How will you know it works?",
+            "body": "A few dozen real questions with the right answers. Test every version against them, and exact IDs separately."
+        },
+        {
+            "title": "When an answer is wrong",
+            "body": "Ask to see which passages were retrieved. That shows whether the search failed or the written answer did."
         }
     ]
 }

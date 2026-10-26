@@ -1,25 +1,29 @@
 {
-    "cover": "What technical due diligence checks",
+    "cover": "What an investor will ask to see",
     "slides": [
         {
-            "title": "Can it carry the roadmap?",
-            "body": "Whether the system can absorb the next 18 months, or whether the plan assumes a rewrite nobody budgeted for."
+            "title": "Signed IP assignments",
+            "body": "Agreements assigning contractor-built code to the company. A paid invoice doesn't settle every ownership question."
         },
         {
-            "title": "Could a new engineer change it?",
-            "body": "Test coverage where it counts, and how much code someone new could safely change in their first month."
+            "title": "A list of outside code licenses",
+            "body": "Every license in the codebase, listed so a reviewer can check it."
         },
         {
-            "title": "Security findings stall deals",
-            "body": "Sign-in, access control, secrets, exposed data and vulnerable dependencies, checked before a buyer does."
+            "title": "Running costs, today and at 10x",
+            "body": "The current bill and a model at ten times the load, with assumptions and unmeasured line items marked."
         },
         {
-            "title": "Who owns the code?",
-            "body": "Contractor agreements that assign it, and no dependency license an acquirer won't accept."
+            "title": "Security evidence",
+            "body": "Sign-in, access control, stored secrets, exposed data and vulnerable dependencies, plus issues you already know about."
         },
         {
-            "title": "Find it first",
-            "body": "Run it four to six weeks before the data room. A problem you disclose arrives with a costed plan attached."
+            "title": "Who knows what",
+            "body": "Systems only one person understands, what's undocumented, and what happens if that person leaves mid-deal."
+        },
+        {
+            "title": "Architecture against the roadmap",
+            "body": "Whether the system can carry the next 18 months, and any plan that depends on an unbudgeted rewrite."
         }
     ]
 }
