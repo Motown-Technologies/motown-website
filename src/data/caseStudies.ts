@@ -2,6 +2,10 @@
 // `result` is the plain-language outcome shown on the homepage; clients
 // are anonymous and there are no hard numbers, so it describes what changed.
 import type { ImageMetadata } from "astro";
+// Screens are reconstructions with placeholder data, not client screenshots.
+import auctionImage from "../assets/work/auction-operations.png";
+import seniorCareImage from "../assets/work/senior-care-concierge.png";
+import donationImage from "../assets/work/donation-platform.png";
 
 export interface CaseStudy {
     href: string;
@@ -36,6 +40,8 @@ export const studies: CaseStudy[] = [
         body: "A concierge team's low-code proof of concept rebuilt as a production application with the same workflow, plus authentication, per-facility isolation, audit trails and PHI handled as PHI.",
         stack: "Laravel · Vue · Postgres",
         result: "Each facility sees only its own records, and every reveal of personal data is logged.",
+        image: seniorCareImage,
+        imageAlt: "Concierge request list for one facility, with resident names masked, a Reveal button noting that reveals are logged, and an audit timeline.",
     },
     {
         href: "/case-studies/auction-operations",
@@ -44,6 +50,8 @@ export const studies: CaseStudy[] = [
         body: "Spreadsheets, a photo folder and a group chat replaced by one auditable system of record that runs from intake to catalog to auction, with AI drafting the tedious part and a person approving all of it.",
         stack: "Laravel · Vue · Postgres",
         result: "One record per item from intake to sold, with every change attributed to a person.",
+        image: auctionImage,
+        imageAlt: "Catalog screen for one lot: four photos of a brass candlestick, an AI-drafted title and description waiting for approval, and a timeline of who changed what.",
     },
     {
         href: "/case-studies/nonprofit-community",
@@ -59,5 +67,7 @@ export const studies: CaseStudy[] = [
         body: "A giving platform that takes payments for other organizations, so sanctions screening, charity verification and retry-safe grants shaped the architecture from the start.",
         stack: "Node · Postgres · Cloudflare Workers",
         result: "Every donor is screened in about half a millisecond, and a flagged gift is declined without naming a watchlist.",
+        image: donationImage,
+        imageAlt: "A $250 donation showing screening cleared, the charity verified, the grant marked sent, and the screening logged.",
     },
 ];
