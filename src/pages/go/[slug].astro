@@ -1,0 +1,28 @@
+---
+// Short LinkedIn links: /go/<slug> forwards to the post with the LinkedIn
+// tracking codes, so a post shows a clean URL and Analytics still sees the
+// source. A static page because GitHub Pages has no server-side redirects.
+import { getPosts } from "../../lib/posts";
+
+export async function getStaticPaths() {
+    return (await getPosts()).map((post) => ({ params: { slug: post.id } }));
+}
+
+const { slug } = Astro.params;
+const target = `/blog/${slug}?utm_source=linkedin&utm_medium=social&utm_campaign=${slug}`;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="robots" content="noindex" />
+        <meta http-equiv="refresh" content={`0; url=${target}`} />
+        <link rel="canonical" href={new URL(`/blog/${slug}`, Astro.site)} />
+        <title>Redirecting…</title>
+        <script is:inline define:vars={{ target }}>location.replace(target);</script>
+    </head>
+    <body>
+        <a href={target}>Continue to the article</a>
+    </body>
+</html>

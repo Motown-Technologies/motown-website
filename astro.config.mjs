@@ -21,7 +21,7 @@ export default defineConfig({
   compressHTML: false,
   server: { host: '0.0.0.0' },
   // unpublishedLinks runs first so the markdown copies get the cleaned HTML.
-  integrations: [mdx(), react(), sitemap(), unpublishedLinks(), markdownPages()],
+  integrations: [mdx(), react(), sitemap({ filter: (page) => !page.includes("/go/") }), unpublishedLinks(), markdownPages()],
   vite: {
     plugins: [tailwindcss()]
   }

@@ -1,6 +1,6 @@
 # LinkedIn schedule
 
-Use the short link in the Link column, in the first comment or at the end of the post. It forwards to the article with the LinkedIn tracking codes added (the `/go/:slug` redirect in `vercel.json`), so never paste a link with `utm_` codes into LinkedIn. Post new blog posts in the afternoon (UTC), after the 11:00 UTC daily build has published them.
+Use the short link in the Link column, in the first comment or at the end of the post. It forwards to the article with the LinkedIn tracking codes added (`src/pages/go/[slug].astro` builds one for every published post), so never paste a link with `utm_` codes into LinkedIn. Post new blog posts in the afternoon (UTC), after the 11:00 UTC daily build has published them.
 
 Format: each post.md has a text post (a story or argument) and a carousel (a practical tool: a checklist, worksheet or set of questions). Publish the format in the Format column. The other one is optional; if you use it, post it at least a few weeks later, since it covers the topic from a different angle.
 

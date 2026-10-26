@@ -13,12 +13,5 @@
       "source": "/llms.txt",
       "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/go/:slug",
-      "destination": "/blog/:slug?utm_source=linkedin&utm_medium=social&utm_campaign=:slug",
-      "permanent": false
-    }
   ]
 }

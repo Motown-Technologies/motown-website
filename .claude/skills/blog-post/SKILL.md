@@ -157,8 +157,8 @@ or sees if the article or a case study says it; never invent a habit like
   not a shorter copy of Post 1.
 - **First comment (both posts):** the short link
   `https://motowntech.com/go/<slug>`. Never put a link with `utm_` codes
-  in a LinkedIn post or comment: the `/go/:slug` redirect in `vercel.json`
-  forwards to `/blog/<slug>` and adds `utm_source=linkedin`,
+  in a LinkedIn post or comment: `src/pages/go/[slug].astro` builds a page
+  for every published post that forwards to `/blog/<slug>` and adds `utm_source=linkedin`,
   `utm_medium=social` and `utm_campaign=<slug>` itself, so LinkedIn visits
   still show in Vercel Web Analytics and readers see a clean link. Add the
   post to `linkedin/schedule.md` with the same short link.
