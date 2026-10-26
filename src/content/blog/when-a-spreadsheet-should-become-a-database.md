@@ -20,7 +20,7 @@ Look for recurring problems such as:
 - The same customer or order appears in several tabs or files, and they don't always agree.
 - People email copies around, and more than one file has "final" in its name.
 - One wrong paste or a sorted column broke the formulas, and someone spent an afternoon working out what changed.
-- You can't tell who changed a number, or when.
+- With copies of the file going around, you can't tell who changed a number, or when.
 - Anyone with the link can see and edit everything, including pay rates or client details.
 - Only one person really understands how it works, and their holidays make everyone nervous.
 - It's getting slow, or you've started splitting it into separate files to keep it usable.

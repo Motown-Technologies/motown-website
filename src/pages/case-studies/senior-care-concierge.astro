@@ -58,7 +58,7 @@ const build = [
     },
     {
         title: "Logging you out without losing your place",
-        body: "HIPAA requires termination on inactivity but names no duration. Three layers: a rolling idle timeout, an absolute session cap, and a countdown warning about a minute out. The subtle part is that the browser heartbeats while idle so a graceful sign-out (with an explanation and a validated return link) beats the server session simply expiring underneath you.",
+        body: "HIPAA lists automatic logoff as an addressable safeguard and names no duration; for staff viewing resident records we implemented it. Three layers: a rolling idle timeout, an absolute session cap, and a countdown warning about a minute out. The subtle part is that the browser heartbeats while idle so a graceful sign-out (with an explanation and a validated return link) beats the server session simply expiring underneath you.",
     },
     {
         title: "Charts that survive a queue with no browser",

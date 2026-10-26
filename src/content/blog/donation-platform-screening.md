@@ -27,7 +27,7 @@ Sooner or later the lists won't be reachable. The safe answer is to decline the 
 
 ## Decline quietly and record everything
 
-When a payer does match, the message they see matters. Telling a designated person they matched a sanctions list is itself a violation, so the decline should be neutral and never mention a watchlist.
+When a payer does match, the message they see matters. Most screening hits are possible matches, and OFAC's guidance is to judge how strong a hit is before treating it as confirmed. The decline should stay neutral and never mention a watchlist while a person reviews the match.
 
 Keep a record of the donors who passed, too. A log of blocks alone can't show that anyone else was screened, and "we screen everyone" is only a claim you can defend later if the passes are on record.
 

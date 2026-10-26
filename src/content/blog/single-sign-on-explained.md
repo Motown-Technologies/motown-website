@@ -28,7 +28,7 @@ Your identity provider and the app need to support the same standard.
 
 ## What SSO gives a growing company
 
-Offboarding is one of the main reasons companies adopt SSO. Without SSO, when someone leaves, a person has to remember every tool they had an account in and close each one, and something usually gets missed. With SSO, disabling one account locks them out of every connected app at once.
+Offboarding is one of the main reasons companies adopt SSO. Without SSO, when someone leaves, a person has to remember every tool they had an account in and close each one, and something usually gets missed. With SSO, disabling one account stops them signing in to every connected app. Revoke their active sessions at the same time: an app they are already signed in to can keep them in until that session ends.
 
 Security rules get set once. If you require a second factor in the identity provider, every connected app inherits it, so you aren't relying on each tool's settings or each person's password habits. People also have fewer passwords to forget, reset and reuse.
 

@@ -35,7 +35,7 @@ The same goes for history. A prototype usually records nothing about who changed
 
 ## Turn vague rules into specific decisions
 
-HIPAA often says what to do without saying how. Automatic logoff is a good example: sessions have to end after inactivity, but the rule names no duration. Someone has to pick the numbers and the behavior.
+HIPAA often says what to do without saying how. Automatic logoff is a good example. It is an "addressable" specification, so you assess whether it is reasonable and appropriate for your system and document that decision, and the rule names no duration. Someone has to pick the numbers and the behavior.
 
 The senior-care app uses three layers: an idle timeout, a hard cap on session length, and a countdown warning about a minute before sign-out. When it signs someone out, it says why and offers a link back to where they were. Document these choices and their reasons for review with your privacy officer.
 

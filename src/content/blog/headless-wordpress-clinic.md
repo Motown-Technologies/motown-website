@@ -17,7 +17,7 @@ Complaints about a WordPress site tend to fall into two groups. Some are about r
 
 If most of your complaints are in the first group, read [when it's time to leave WordPress](/blog/when-to-leave-wordpress). If they're mostly in the second and your editors like the tool, replacing it is usually the expensive answer, because it takes away the one thing that works.
 
-The slowness and fragility have a specific cause. A standard WordPress install builds each page on the spot, every time someone opens it, with PHP, a database and whatever plugins you run. Anything that goes wrong in that chain goes wrong in front of a visitor.
+The slowness and fragility have a specific cause. Without a page cache in front of it, a WordPress install builds each page on the spot, every time someone opens it, with PHP, a database and whatever plugins you run. A cache speeds that up, but the public site still runs on the live install, so anything that goes wrong in that chain can still go wrong in front of a visitor.
 
 ## Build the pages before anyone asks for them
 
