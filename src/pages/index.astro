@@ -149,13 +149,16 @@ const whyChoose = [
                     selectedWork.map((s) => (
                         <a href={s.href} class="group flex flex-col border-t-2 border-ink pt-6">
                             {s.image && (
-                                <Image
-                                    src={s.image}
-                                    alt={s.imageAlt ?? ""}
-                                    widths={[400, 800]}
-                                    sizes="(min-width: 768px) 400px, 100vw"
-                                    class="w-full aspect-[4/3] object-cover object-top border border-ink/30 group-hover:border-ink transition-colors mb-6"
-                                />
+                                <>
+                                    <Image
+                                        src={s.image}
+                                        alt={s.imageAlt ?? ""}
+                                        widths={[400, 800]}
+                                        sizes="(min-width: 768px) 400px, 100vw"
+                                        class="w-full aspect-[4/3] object-cover object-top border border-ink/30 group-hover:border-ink transition-colors"
+                                    />
+                                    <span class="mt-2 mb-6 text-xs text-ink-muted">Illustrative mockup, not a screenshot of the client's system.</span>
+                                </>
                             )}
                             <span class="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted mb-3">{s.sector}</span>
                             <h3 class="font-display text-2xl font-bold tracking-tight leading-tight mb-4 text-balance group-hover:text-accent transition-colors">
