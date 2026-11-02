@@ -1,0 +1,29 @@
+{
+    "cover": "Should you leave Salesforce?",
+    "slides": [
+        {
+            "title": "What does it cost in total?",
+            "body": "Add up a year of licenses, add-ons, admin time and consultant hours. That's the number to compare."
+        },
+        {
+            "title": "Who needs a full seat?",
+            "body": "Count the people who only look records up, and note what each one needs to see."
+        },
+        {
+            "title": "Which customizations still matter?",
+            "body": "List the custom objects, Flows and Apex. Mark what people use and what nobody would miss."
+        },
+        {
+            "title": "Do the reports agree?",
+            "body": "Pick the numbers leadership checks most. Find out whether two reports ever give different answers."
+        },
+        {
+            "title": "What connects to it?",
+            "body": "List every integration, such as email, calendar, accounting, forms and payments. Each one has to move or be rebuilt."
+        },
+        {
+            "title": "When does the contract renew?",
+            "body": "Note the renewal date and the notice period. Any move should land before the contract rolls over."
+        }
+    ]
+}

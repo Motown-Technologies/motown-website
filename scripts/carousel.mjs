@@ -73,7 +73,7 @@ function ctaSlide(n) {
             el("div", { display: "flex", justifyContent: "space-between", alignItems: "center" }, [eyebrow("MOTOWN SOLUTIONS", "#a1a1a6", C.paper), counter(n, "#a1a1a6")]),
             el("div", { display: "flex", flexDirection: "column", gap: 40 }, [
                 words("Read the full write-up", display(84, C.paper)),
-                el("div", { display: "flex", fontFamily: "Inter", fontSize: 36, lineHeight: 1.45, color: "#a1a1a6" }, `motowntech.com/blog/${slug}`),
+                el("div", { display: "flex", fontFamily: "Inter", fontSize: 36, lineHeight: 1.45, color: "#a1a1a6" }, `motowntech.com/${existsSync(`src/content/blog/${slug}.md`) ? "blog/" : ""}${slug}`),
             ]),
             el("div", { display: "flex", alignItems: "center", gap: 18, ...mono(22, C.paper) }, [el("div", { width: 72, height: 8, background: C.accent }), "LINK IN THE COMMENTS"]),
         ]),

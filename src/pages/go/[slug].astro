@@ -5,11 +5,15 @@
 import { getPosts } from "../../lib/posts";
 
 export async function getStaticPaths() {
-    return (await getPosts()).map((post) => ({ params: { slug: post.id } }));
+    // Landing pages promoted on LinkedIn; their short link skips the /blog prefix.
+    const pages = ["salesforce-to-custom-crm"];
+    const posts = (await getPosts()).map((post) => ({ params: { slug: post.id }, props: { path: `/blog/${post.id}` } }));
+    return [...posts, ...pages.map((slug) => ({ params: { slug }, props: { path: `/${slug}` } }))];
 }
 
 const { slug } = Astro.params;
-const target = `/blog/${slug}?utm_source=linkedin&utm_medium=social&utm_campaign=${slug}`;
+const { path } = Astro.props;
+const target = `${path}?utm_source=linkedin&utm_medium=social&utm_campaign=${slug}`;
 ---
 
 <!doctype html>
@@ -18,7 +22,7 @@ const target = `/blog/${slug}?utm_source=linkedin&utm_medium=social&utm_campaign
         <meta charset="utf-8" />
         <meta name="robots" content="noindex" />
         <meta http-equiv="refresh" content={`0; url=${target}`} />
-        <link rel="canonical" href={new URL(`/blog/${slug}`, Astro.site)} />
+        <link rel="canonical" href={new URL(path, Astro.site)} />
         <title>Redirecting…</title>
         <script is:inline define:vars={{ target }}>location.replace(target);</script>
     </head>
