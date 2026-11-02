@@ -1,0 +1,518 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NumberedRow from "../components/NumberedRow.astro";
+import Faq from "../components/Faq.astro";
+
+import DatabaseIcon from "../components/icons/DatabaseIcon.astro";
+import SoftwareIcon from "../components/icons/SoftwareIcon.astro";
+import AnalyticsIcon from "../components/icons/AnalyticsIcon.astro";
+import AutomationIcon from "../components/icons/AutomationIcon.astro";
+import ApiIcon from "../components/icons/ApiIcon.astro";
+import ShieldIcon from "../components/icons/ShieldIcon.astro";
+
+// The hero panel: an org that has been customized for years.
+const orgRows = [
+    { label: "User licenses", value: "48 seats · renews in 60 days", bad: false },
+    { label: "Custom objects", value: "137", bad: false },
+    { label: "Apex classes", value: "212 · original author gone", bad: true },
+    { label: "Process Builder", value: "18 still active · support ended", bad: true },
+    { label: "Reports", value: "640 · 41 named \"do not use\"", bad: true },
+    { label: "Admin", value: "Contractor, billed hourly", bad: false },
+];
+
+// What the CRM becomes.
+const layers = [
+    {
+        title: "Your Data Model",
+        icon: DatabaseIcon,
+        desc: "Tables designed around how you sell, serve or fundraise, so nothing has to be forced into a standard object with custom fields.",
+    },
+    {
+        title: "Screens for Each Role",
+        icon: SoftwareIcon,
+        desc: "Sales, support and finance each get screens built for the work they do every day.",
+    },
+    {
+        title: "Reports You Trust",
+        icon: AnalyticsIcon,
+        desc: "The handful of numbers leadership checks, built on one definition each, plus a clean export for anything else.",
+    },
+    {
+        title: "Automation in Code",
+        icon: AutomationIcon,
+        desc: "Flows, triggers and Apex rewritten as tested, documented code, so changing a rule doesn't mean finding where it lives first.",
+    },
+    {
+        title: "Integrations Kept",
+        icon: ApiIcon,
+        desc: "Email, calendar, accounting, forms and payments connected again, so data flows in instead of getting re-keyed.",
+    },
+    {
+        title: "You Own It",
+        icon: ShieldIcon,
+        desc: "The code, the database and the documentation are yours, and adding the next person doesn't add a seat fee.",
+    },
+];
+
+// Salesforce vs. after: what we hear on first calls.
+const beforeAfter = [
+    {
+        before: "Paying for every seat, including people who only need to look something up",
+        after: "Add users without a license conversation",
+    },
+    {
+        before: "An admin or consultant needed for every field, layout and permission change",
+        after: "Routine changes made by your staff in admin screens, bigger ones in code your developers can read",
+    },
+    {
+        before: "Automation spread across workflow rules, Process Builder, Flows and Apex",
+        after: "Business rules in one place, with tests around them",
+    },
+    {
+        before: "Reports nobody trusts, because three of them define \"active customer\" differently",
+        after: "One definition per number, built into the system",
+    },
+    {
+        before: "Staff keeping a spreadsheet next to the CRM because the CRM doesn't fit the job",
+        after: "The workflow the spreadsheet was covering, built in",
+    },
+];
+
+// When the honest answer is to stay.
+const stayIf = [
+    "Your team is small and your sales process is standard. An off-the-shelf CRM is cheaper than anything we'd build.",
+    "You use Salesforce close to how it ships, and the bill is the only complaint. Renegotiate or move to a lighter CRM first.",
+    "You rely on the AppExchange packages or platform features you'd have to rebuild one by one.",
+];
+
+// How we get off Salesforce.
+const steps = [
+    {
+        title: "Audit the org",
+        desc: "We pull the metadata and list every object, field, automation, report and integration, then check which ones people still use.",
+    },
+    {
+        title: "Do the math",
+        desc: "We compare three years of Salesforce (licenses, add-ons, admin and consultant time) with three years of a custom CRM: building and migrating it, plus hosting, security updates, backups, support, training and future changes. If staying wins, we tell you.",
+    },
+    {
+        title: "Build & migrate",
+        desc: "We build the new system around the audit and move the records you chose to keep by script, with accounts, contacts, opportunities, activities and files still linked to each other, checked against the original.",
+    },
+    {
+        title: "Run side by side, then cut over",
+        desc: "Your team works in the new system with real data while Salesforce stays live. We plan around your renewal date and notice deadline, and cut over after a final sync, once your team has validated the replacement.",
+    },
+];
+
+const faqs = [
+    {
+        q: "What happens when we get in touch?",
+        a: "We start with a call about your seats, what you've built on top of Salesforce and when your contract renews. We usually reply within 24 hours. If moving looks worth a closer look, the next step is an audit. It ends with a written report: what your org contains and what people use, a three-year cost comparison, what would migrate or be archived, and a timeline set against your renewal.",
+    },
+    {
+        q: "Is a custom CRM cheaper than Salesforce?",
+        a: "Sometimes. It usually wins when you have enough seats that license fees add up, and you've customized Salesforce so heavily that you're already paying people to maintain it. It usually loses for small teams with a standard sales process. The audit compares both over three years, including what it costs to host, secure, back up, support and change a custom system, before you commit to anything.",
+    },
+    {
+        q: "Can we keep our history?",
+        a: "We assess your records, activity history, notes and files during the audit, then agree what to migrate and what to archive to a read-only export. Records move by script with their relationships intact, so a contact stays linked to its account, its deals and its activities. Access rules are set up again, so each role sees the records it should. Before cutover we check counts, samples and those links against the original.",
+    },
+    {
+        q: "How long does a move off Salesforce take?",
+        a: "It depends on how much the org does. A CRM that mostly tracks contacts and deals usually takes a few months. One with heavy automation, many integrations or custom apps on top takes longer. The audit gives you a realistic timeline, and Salesforce stays live until the new system checks out.",
+    },
+    {
+        q: "What about our Salesforce contract?",
+        a: "Find your renewal date and notice deadline first, since many contracts renew automatically. We plan the project around both. If the notice deadline comes before the new system is ready, you choose between renewing for another term and asking Salesforce about a shorter one. We lay out the timing so that choice is yours, and we never ask you to give notice on a system your team hasn't validated.",
+    },
+    {
+        q: "We're a nonprofit on NPSP. What are our options?",
+        a: "Salesforce still supports NPSP and says there's no requirement to move to Agentforce Nonprofit, formerly Nonprofit Cloud, until you're ready. NPSP no longer gets new features, though, and Salesforce recommends setting up Agentforce Nonprofit in a new org with a different data model, so moving is closer to a re-implementation than an upgrade. If you're weighing that project, it's worth pricing a custom donor CRM alongside it.",
+    },
+    {
+        q: "Custom software needs maintenance too. Who does it?",
+        a: "It does, and we plan for it from the start. During the audit we agree which routine changes your staff should make themselves, such as adding users, setting permissions, and editing dropdown options and email templates, and we build admin screens for those. New fields, new workflows, new integrations and security updates are development work, done by your developers or by us on a support plan. We document the code and the data model either way, and both belong to you.",
+    },
+];
+---
+
+<BaseLayout
+    og_image="/og/salesforce-to-custom-crm.png"
+    meta_title="Move From Salesforce to a Custom CRM | Motown Solutions"
+    meta_description="Replace an over-customized Salesforce org with a CRM built around how your team works. We audit the org, compare three years of costs, and plan the move around your renewal."
+>
+    <!-- Hero -->
+    <section class="relative overflow-hidden border-b-2 border-ink">
+        <!-- Grid-line decoration -->
+        <svg
+            aria-hidden
+            class="absolute inset-0 w-full h-full pointer-events-none opacity-[0.08] text-ink"
+            viewBox="0 0 1200 700"
+            preserveAspectRatio="xMidYMid slice"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+        >
+            {Array.from({ length: 13 }, (_, i) => <path d={`M${i * 100} 0 V700`} />)}
+            {Array.from({ length: 15 }, (_, i) => <path d={`M0 ${i * 50} H1200`} />)}
+        </svg>
+
+        <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 lg:col-span-7">
+
+                    <h1
+                        class="font-display font-bold text-hero text-ink text-balance"
+                    >
+                        Paying for Salesforce.
+                        <br />
+                        <span class="italic text-accent">Working around</span>
+                        it.
+                    </h1>
+
+                    <p
+                        class="mt-10 text-lg md:text-xl text-ink-muted leading-relaxed text-pretty max-w-xl"
+                    >
+                        Years of custom objects, Flows and Apex have turned your
+                        CRM into a system only one consultant understands, and
+                        the seat count keeps going up. We build a CRM around
+                        how your team works, move the records you want to
+                        keep, and plan around your renewal date and notice
+                        deadline. You switch over once your team has
+                        validated the replacement.
+                    </p>
+
+                    <div class="mt-10 flex flex-wrap gap-3">
+                        <a
+                            href="/contact"
+                            class="group inline-flex items-center gap-2 bg-accent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-accent hover:bg-paper hover:text-ink hover:border-ink transition-colors"
+                        >
+                            Talk through my org
+                            <span
+                                class="transition-transform group-hover:translate-x-0.5"
+                                aria-hidden>→</span
+                            >
+                        </a>
+                        <a
+                            href="#build"
+                            class="inline-flex items-center gap-2 bg-transparent text-ink font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-ink hover:bg-ink hover:text-paper transition-colors"
+                        >
+                            See what changes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- The org nobody wants to touch -->
+                <div class="col-span-12 lg:col-span-5 mt-12 lg:mt-0">
+                    <div
+                        class="border-2 border-ink bg-paper-2 lg:translate-y-2"
+                        data-reveal
+                    >
+                        <div
+                            class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
+                        >
+                            <span>Illustrative org · Setup</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> 3 flagged</span>
+                        </div>
+                        <table class="w-full font-mono text-xs border-collapse">
+                            <tbody>
+                                {
+                                    orgRows.map((row) => (
+                                        <tr>
+                                            <td class="px-4 py-3 text-ink-muted border-b border-r border-ink/30">
+                                                {row.label}
+                                            </td>
+                                            <td
+                                                class:list={[
+                                                    "px-4 py-3 border-b border-ink/30",
+                                                    row.bad && "text-accent bg-accent/10",
+                                                ]}
+                                            >
+                                                {row.value}
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metadata strip -->
+        <div class="relative border-t border-ink/40 bg-paper">
+            <div
+                class="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-[11px] md:text-xs uppercase tracking-eyebrow text-ink-muted"
+            >
+                <span>Accounts &amp; Contacts</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Opportunities</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Activity History</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Files</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Integrations</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10 md:mb-12">
+                <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        Signs you've outgrown
+                        <br />
+                        Salesforce.
+                    </h2>
+                <p
+                        class="mt-5 max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        Salesforce can be shaped into almost anything. After
+                        enough years of shaping, keeping it running becomes a
+                        job of its own.
+                    </p>
+            </div>
+
+            <div class="border-t border-ink">
+                <div
+                    class="hidden md:grid grid-cols-12 gap-8 py-4 border-b border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
+                >
+                    <span class="col-span-6">Salesforce</span>
+                    <span class="col-span-6">After</span>
+                </div>
+                {
+                    beforeAfter.map((row) => (
+                        <div class="grid grid-cols-12 gap-4 md:gap-8 items-center py-7 border-b border-ink">
+                            <div class="col-span-12 md:col-span-6 flex items-start gap-3 text-ink-muted">
+                                <span
+                                    aria-hidden
+                                    class="font-mono text-lg leading-none mt-[2px]"
+                                >
+                                    ×
+                                </span>
+                                <span class="leading-relaxed line-through decoration-ink/30">
+                                    {row.before}
+                                </span>
+                            </div>
+                            <div class="col-span-12 md:col-span-6 flex items-start gap-3">
+                                <span
+                                    aria-hidden
+                                    class="font-mono text-lg leading-none mt-[2px] text-accent"
+                                >
+                                    →
+                                </span>
+                                <span class="font-medium leading-relaxed">
+                                    {row.after}
+                                </span>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <!-- When to stay -->
+            <div class="mt-12 md:mt-16 border-2 border-ink bg-paper-2 p-8 md:p-10">
+                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-6">
+                    When to stay on Salesforce.
+                </h3>
+                <ul class="space-y-4">
+                    {
+                        stayIf.map((item) => (
+                            <li class="flex items-start gap-3">
+                                <span aria-hidden class="font-mono text-lg leading-none mt-[2px] text-accent">
+                                    ✓
+                                </span>
+                                <span class="leading-relaxed text-ink-muted">{item}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we build -->
+    <section id="build" class="border-t-2 border-ink bg-paper-2" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+            <div class="mb-10 md:mb-12">
+                <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        Your CRM,
+                        <br />
+                        shaped like your business.
+                    </h2>
+                <p
+                        class="mt-5 max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        Your records, history and integrations come with you.
+                        The license fees and the layers of old automation stay
+                        behind.
+                    </p>
+            </div>
+
+            <div data-stagger
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink bg-paper"
+            >
+                {
+                    layers.map((layer) => {
+                        const Icon = layer.icon;
+                        return (
+                            <div class="p-8 md:p-10 border-ink border-b border-r last:border-b-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0 md:[&:nth-child(even)]:border-r-0 lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(even)]:border-r">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <span class="w-10 h-10 border-[1.5px] border-ink flex items-center justify-center">
+                                        <Icon />
+                                    </span>
+                                </div>
+                                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-3">
+                                    {layer.title}
+                                </h3>
+                                <p class="text-ink-muted leading-relaxed">
+                                    {layer.desc}
+                                </p>
+                            </div>
+                        );
+                    })
+                }
+            </div>
+
+            <!-- Proof -->
+            <a
+                href="/case-studies/donation-platform"
+                class="group mt-12 md:mt-16 grid grid-cols-12 gap-y-6 md:gap-6 items-end border-2 border-ink bg-paper p-8 md:p-10 hover:bg-ink hover:text-paper transition-colors"
+            >
+                <div class="col-span-12 md:col-span-9">
+                    <span
+                        class="block font-mono text-xs uppercase tracking-eyebrow text-ink-muted group-hover:text-paper/60 mb-4"
+                        >Related work</span
+                    >
+                    <p class="text-lg md:text-xl leading-relaxed text-pretty">
+                        An example of a custom donor CRM we're building. On a
+                        donation platform for nonprofits, the donor CRM is part
+                        of the same system as card gifts, donor-advised-fund
+                        grants and receipts, so a gift, its receipt and the
+                        donor's record live together.
+                    </p>
+                </div>
+                <span
+                    class="col-span-12 md:col-span-3 md:justify-self-end inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em]"
+                >
+                    Read the case study
+                    <span
+                        class="transition-transform group-hover:translate-x-0.5"
+                        aria-hidden>→</span
+                    >
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10 md:mb-12">
+                <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        From Salesforce
+                        <br />
+                        to a CRM you own.
+                    </h2>
+                <p
+                        class="mt-5 max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        Salesforce stays live the whole time. We only switch
+                        over once your team has worked in the new system and
+                        it checks out.
+                    </p>
+            </div>
+
+            <div>
+                {
+                    steps.map((step, i) => (
+                        <NumberedRow
+                            title={`0${i + 1} ${step.title}`}
+                            description={step.desc}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <Faq items={faqs} heading="Questions about leaving Salesforce." />
+
+    <!-- Sources for the Salesforce lifecycle claims above -->
+    <section class="bg-paper-2">
+        <p class="max-w-7xl mx-auto px-6 pb-16 text-sm text-ink-muted leading-relaxed">
+            Sources, checked November 2026:
+            <a href="https://help.salesforce.com/s/articleView?id=000385150&language=en_US&type=1" class="link-underline">NPSP and Agentforce Nonprofit</a>
+            and
+            <a href="https://help.salesforce.com/s/articleView?id=000389396&language=en_US&type=1" class="link-underline">Process Builder end of support</a>
+            (Salesforce Help),
+            <a href="https://www.salesforceben.com/the-state-of-salesforce-nonprofit-offerings-in-2026/" class="link-underline">the end of new NPSP features</a>
+            (Salesforce Ben), and
+            <a href="https://missioninmotion.com/blog/npsp-to-nonprofit-cloud-migration-advisory" class="link-underline">moving to a new org</a>
+            (Mission in Motion).
+        </p>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-ink border-t-2 border-ink" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-24 md:py-36 flex flex-col items-start">
+            <h2
+                class="font-display font-bold text-display text-paper text-balance mb-10 max-w-5xl leading-[0.95]"
+            >
+                Your customers, minus
+                <span class="italic text-accent">the license fees</span>.
+            </h2>
+            <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
+                Start with a call. Tell us how many seats you pay for, what
+                you've built on top and when your contract renews, and we'll
+                tell you whether an audit is worth doing. The audit ends with
+                a written report: what your org contains and what people use,
+                a three-year cost comparison, what would migrate or be
+                archived, and a timeline set against your renewal. If staying
+                is cheaper, the report says so.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-12">
+                <a
+                    href="/contact"
+                    class="group inline-flex items-center gap-2 bg-accent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-accent hover:bg-paper hover:text-ink hover:border-paper transition-colors"
+                >
+                    Talk through my org
+                    <span
+                        class="transition-transform group-hover:translate-x-0.5"
+                        aria-hidden>→</span
+                    >
+                </a>
+                <a
+                    href="/case-studies/donation-platform"
+                    class="inline-flex items-center gap-2 bg-transparent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-paper hover:bg-paper hover:text-ink transition-colors"
+                >
+                    Read the case study
+                </a>
+            </div>
+
+            <!-- Contact strip -->
+            <div
+                class="w-full border-t border-paper/20 pt-8 flex flex-wrap items-center gap-x-10 gap-y-3 font-mono text-xs uppercase tracking-eyebrow text-paper/60"
+            >
+                <a
+                    href="https://motowntech.com"
+                    class="link-underline text-paper"
+                    >motowntech.com</a
+                >
+                <a href="tel:+18459252661" class="link-underline text-paper"
+                    >845-925-2661</a
+                >
+            </div>
+        </div>
+    </section>
+</BaseLayout>
