@@ -3,15 +3,42 @@
   "headers": [
     {
       "source": "/(.*)",
-      "headers": [{ "key": "Vary", "value": "Accept, Accept-Encoding" }]
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        }
+      ]
     },
     {
       "source": "/(.*)\\.md",
-      "headers": [{ "key": "Content-Type", "value": "text/markdown; charset=utf-8" }]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        }
+      ]
     },
     {
       "source": "/llms.txt",
-      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/go/salesforce-to-custom-crm",
+      "destination": "/salesforce-to-custom-crm?utm_source=linkedin&utm_medium=social&utm_campaign=salesforce-to-custom-crm",
+      "permanent": false
+    },
+    {
+      "source": "/go/:slug",
+      "destination": "/blog/:slug?utm_source=linkedin&utm_medium=social&utm_campaign=:slug",
+      "permanent": false
     }
   ]
 }
