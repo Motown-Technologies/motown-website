@@ -1,0 +1,510 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NumberedRow from "../components/NumberedRow.astro";
+import Faq from "../components/Faq.astro";
+
+import DatabaseIcon from "../components/icons/DatabaseIcon.astro";
+import MarketingIcon from "../components/icons/MarketingIcon.astro";
+import ConsultingIcon from "../components/icons/ConsultingIcon.astro";
+import ShieldIcon from "../components/icons/ShieldIcon.astro";
+import ApiIcon from "../components/icons/ApiIcon.astro";
+import CheckIcon from "../components/icons/CheckIcon.astro";
+
+// The hero panel: one answer with its source, one honest "not in the documents".
+const chat = [
+    { who: "user", text: "What's the refund window on annual plans?" },
+    { who: "bot", text: "30 days from purchase for a full refund. After that, refunds are prorated.", source: "Refund policy · section 2" },
+    { who: "user", text: "Can I give a client 20% off?" },
+    { who: "bot", text: "I can't find a discount policy in the documents I have. Finance can answer that one.", source: null },
+];
+
+// What we build.
+const layers = [
+    {
+        title: "Your Sources Connected",
+        icon: DatabaseIcon,
+        desc: "Policies, manuals, help articles, shared drives and past tickets, kept up to date on an agreed schedule, including changes and deletions.",
+    },
+    {
+        title: "Answers With Sources",
+        icon: MarketingIcon,
+        desc: "Every answer links to the passage it came from, so people can check it in a click.",
+    },
+    {
+        title: "Says When It Doesn't Know",
+        icon: ConsultingIcon,
+        desc: "If it can't find a supporting source, it says so and points to a person, and the question goes on a list of gaps to fill.",
+    },
+    {
+        title: "Respects Permissions",
+        icon: ShieldIcon,
+        desc: "Each person only gets answers from documents they're allowed to see. The rules are enforced outside the AI, so a clever question can't get around them.",
+    },
+    {
+        title: "Connected to Your Systems",
+        icon: ApiIcon,
+        desc: "It can look things up in the tools you run, such as an order's status or an account's plan, with only the access you choose.",
+    },
+    {
+        title: "Tested Before Launch",
+        icon: CheckIcon,
+        desc: "Your real questions, checked for correct answers, supporting sources, the right refusals and permission checks. We run them before launch and again whenever your documents or the AI model change.",
+    },
+];
+
+// Before / after: why teams want one.
+const beforeAfter = [
+    {
+        before: "The same questions landing on the same few people every week",
+        after: "Staff ask the chatbot first and get the answer with its source",
+    },
+    {
+        before: "Customers waiting for business hours to learn something your help center already says",
+        after: "Answers at any hour, with a link to the article",
+    },
+    {
+        before: "A generic chatbot that invents a policy you don't have",
+        after: "Answers backed by a cited source, and a plain \"I don't know\" when it can't find one",
+    },
+    {
+        before: "Answers spread across drives, a wiki and old email threads",
+        after: "One place to ask, whichever document holds the answer",
+    },
+    {
+        before: "No record of what people keep asking",
+        after: "A log of questions, including the ones it couldn't answer, so you know what to write next",
+    },
+];
+
+// When a product is the better buy.
+const useProduct = [
+    "Your content is public help articles and FAQs, and a chat box on your website is all you need. Tools like Chatbase or Intercom Fin can be set up without a development project.",
+    "Your volume is modest, so a monthly plan or a per-answer fee stays small.",
+    "The product already connects to the systems you need, and its access controls and hosting meet your requirements.",
+];
+
+const steps = [
+    {
+        title: "Collect the questions",
+        desc: "We gather real questions from your inbox, tickets and the people who answer them today. They become the test set the chatbot has to pass.",
+    },
+    {
+        title: "Connect the sources",
+        desc: "We identify the authoritative sources, remove outdated material, and agree which policy takes precedence when documents disagree. We also agree who may see what, and which systems the chatbot can look things up in.",
+    },
+    {
+        title: "Build & test",
+        desc: "We build it against the test set and check each answer for correctness, a supporting source, the right refusal when it should decline, and permissions. A small group of your staff tries it before anyone else does.",
+    },
+    {
+        title: "Launch & improve",
+        desc: "Once it's live, we review the questions it couldn't answer, help you fill the gaps in your documents, and rerun the tests when the documents or the model change.",
+    },
+];
+
+const faqs = [
+    {
+        q: "What happens when we get in touch?",
+        a: "We start with a call about who will ask questions, what they ask and where the answers live today. We usually reply within 24 hours. If an off-the-shelf tool fits, we'll tell you which kind and why. If a custom build makes sense, we'll describe what it would involve.",
+    },
+    {
+        q: "Is it actually trained on our data?",
+        a: "Not in the sense most people mean. The AI model doesn't permanently learn your documents. Each time someone asks, the chatbot finds the relevant passages in your documents and answers from them. We refresh the connected sources on an agreed schedule, so an updated document is picked up at the next refresh without retraining, and a deleted one drops out the same way.",
+    },
+    {
+        q: "Will our data be used to train someone else's AI?",
+        a: "Training and retention are separate questions. On training, we build on AI providers' business APIs, whose terms say API data isn't used to train their models by default. To write each answer, the question and the passages relevant to it are sent to the AI provider, while your full documents stay in a database set up for you. Providers keep API data for a limited time under their own terms, and we tell you which terms apply. In your own system, we agree before launch how long conversation logs are kept, and only the people you name can read them.",
+    },
+    {
+        q: "Can it make things up?",
+        a: "Any AI model can get things wrong, so we put controls around it. We connect the chatbot only to approved documents and systems, require a supporting source for each answer, and test how it handles missing or conflicting information. When it can't find a source, it says so. Every answer shows its source, so people can check it.",
+    },
+    {
+        q: "What if someone tries to trick it?",
+        a: "People will try, for example by telling it to ignore its instructions. Access rules are enforced in the code that fetches documents, outside the AI, so the model only receives passages the person asking is allowed to see. We include these attempts in the test set too.",
+    },
+    {
+        q: "Where can people use it?",
+        a: "Wherever they already ask questions: a chat box on your website, Slack or Microsoft Teams, or inside your own app or intranet. One chatbot can serve more than one place.",
+    },
+    {
+        q: "What does it cost to run?",
+        a: "Running costs include AI usage, hosting and ongoing support: keeping sources in sync, monitoring, and rerunning the tests after changes. We estimate these before you commit and agree whether support is a plan with us or work your team takes on. We also set usage limits and agree what happens when one is reached, such as alerting you first or pointing people to a contact form until the next month.",
+    },
+];
+---
+
+<BaseLayout
+    og_image="/og/custom-ai-chatbot.png"
+    meta_title="Custom AI Chatbot for Your Business Documents | Motown Solutions"
+    meta_description="An AI chatbot that answers customers or staff from your business documents, cites its sources, follows your access rules and is tested on your real questions."
+>
+    <!-- Hero -->
+    <section class="relative overflow-hidden border-b-2 border-ink">
+        <!-- Grid-line decoration -->
+        <svg
+            aria-hidden
+            class="absolute inset-0 w-full h-full pointer-events-none opacity-[0.08] text-ink"
+            viewBox="0 0 1200 700"
+            preserveAspectRatio="xMidYMid slice"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+        >
+            {Array.from({ length: 13 }, (_, i) => <path d={`M${i * 100} 0 V700`} />)}
+            {Array.from({ length: 15 }, (_, i) => <path d={`M0 ${i * 50} H1200`} />)}
+        </svg>
+
+        <div class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20 md:pb-28">
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 lg:col-span-7">
+
+                    <h1
+                        class="font-display font-bold text-hero text-ink text-balance"
+                    >
+                        Answers from your
+                        <br />
+                        <span class="italic text-accent">business documents</span>.
+                    </h1>
+
+                    <p
+                        class="mt-10 text-lg md:text-xl text-ink-muted leading-relaxed text-pretty max-w-xl"
+                    >
+                        We build an AI chatbot on your policies, manuals, help
+                        articles and past tickets. Customers or staff ask in
+                        plain language, each answer cites the document behind
+                        it, and the chatbot says so when it can't find one.
+                    </p>
+
+                    <div class="mt-10 flex flex-wrap gap-3">
+                        <a
+                            href="/contact"
+                            class="group inline-flex items-center gap-2 bg-accent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-accent hover:bg-paper hover:text-ink hover:border-ink transition-colors"
+                        >
+                            Plan my chatbot
+                            <span
+                                class="transition-transform group-hover:translate-x-0.5"
+                                aria-hidden>→</span
+                            >
+                        </a>
+                        <a
+                            href="#build"
+                            class="inline-flex items-center gap-2 bg-transparent text-ink font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-ink hover:bg-ink hover:text-paper transition-colors"
+                        >
+                            See what we build
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Illustrative conversation -->
+                <div class="col-span-12 lg:col-span-5 mt-12 lg:mt-0">
+                    <div
+                        class="border-2 border-ink bg-paper-2 lg:translate-y-2"
+                        data-reveal
+                    >
+                        <div
+                            class="flex items-center justify-between px-5 py-3 border-b-2 border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
+                        >
+                            <span>Illustrative chat</span>
+                            <span aria-hidden class="text-accent"><span class="status-dot">●</span> Your documents</span>
+                        </div>
+                        <div class="p-5 space-y-4 text-sm">
+                            {
+                                chat.map((m) =>
+                                    m.who === "user" ? (
+                                        <p class="ml-10 border border-ink/30 bg-paper px-4 py-3 leading-relaxed">
+                                            {m.text}
+                                        </p>
+                                    ) : (
+                                        <div class="mr-10 border-l-2 border-accent pl-4 py-1">
+                                            <p class="leading-relaxed">{m.text}</p>
+                                            <p class="mt-2 font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted">
+                                                {m.source ? `Source: ${m.source}` : "No source found · referred to Finance"}
+                                            </p>
+                                        </div>
+                                    ),
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metadata strip -->
+        <div class="relative border-t border-ink/40 bg-paper">
+            <div
+                class="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-[11px] md:text-xs uppercase tracking-eyebrow text-ink-muted"
+            >
+                <span>Policies</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Manuals</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Help Center</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Past Tickets</span>
+                <span class="hidden md:inline" aria-hidden>·</span>
+                <span>Shared Drives</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10 md:mb-12">
+                <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        Most answers are
+                        <br />
+                        already written down.
+                    </h2>
+                <p
+                        class="mt-5 max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        They sit in policies, help articles and old tickets,
+                        and people wait for whoever knows where to look. A
+                        chatbot built on those documents takes them straight to
+                        the answer.
+                    </p>
+            </div>
+
+            <div class="border-t border-ink">
+                <div
+                    class="hidden md:grid grid-cols-12 gap-8 py-4 border-b border-ink font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted"
+                >
+                    <span class="col-span-6">Today</span>
+                    <span class="col-span-6">With the chatbot</span>
+                </div>
+                {
+                    beforeAfter.map((row) => (
+                        <div class="grid grid-cols-12 gap-4 md:gap-8 items-center py-7 border-b border-ink">
+                            <div class="col-span-12 md:col-span-6 flex items-start gap-3 text-ink-muted">
+                                <span
+                                    aria-hidden
+                                    class="font-mono text-lg leading-none mt-[2px]"
+                                >
+                                    ×
+                                </span>
+                                <span class="leading-relaxed line-through decoration-ink/30">
+                                    {row.before}
+                                </span>
+                            </div>
+                            <div class="col-span-12 md:col-span-6 flex items-start gap-3">
+                                <span
+                                    aria-hidden
+                                    class="font-mono text-lg leading-none mt-[2px] text-accent"
+                                >
+                                    →
+                                </span>
+                                <span class="font-medium leading-relaxed">
+                                    {row.after}
+                                </span>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <!-- When a product is enough -->
+            <div class="mt-12 md:mt-16 border-2 border-ink bg-paper-2 p-8 md:p-10">
+                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-6">
+                    When an off-the-shelf chatbot is enough.
+                </h3>
+                <ul class="space-y-4">
+                    {
+                        useProduct.map((item) => (
+                            <li class="flex items-start gap-3">
+                                <span aria-hidden class="font-mono text-lg leading-none mt-[2px] text-accent">
+                                    ✓
+                                </span>
+                                <span class="leading-relaxed text-ink-muted">{item}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+                <p class="mt-6 leading-relaxed">
+                    A custom build is worth comparing when existing products
+                    can't meet your access rules, integrations, hosting
+                    requirements or workflow. We then compare the total cost
+                    of each over the same period, including running and
+                    supporting a custom system.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we build -->
+    <section id="build" class="border-t-2 border-ink bg-paper-2" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28">
+            <div class="mb-10 md:mb-12">
+                <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        Built on your data,
+                        <br />
+                        checked against it.
+                    </h2>
+                <p
+                        class="mt-5 max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        We connect the chatbot to approved documents and
+                        systems, require supporting sources, and test how it
+                        handles missing or conflicting information.
+                    </p>
+            </div>
+
+            <div data-stagger
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-ink bg-paper"
+            >
+                {
+                    layers.map((layer) => {
+                        const Icon = layer.icon;
+                        return (
+                            <div class="p-8 md:p-10 border-ink border-b border-r last:border-b-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0 md:[&:nth-child(even)]:border-r-0 lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-child(even)]:border-r">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <span class="w-10 h-10 border-[1.5px] border-ink flex items-center justify-center">
+                                        <Icon />
+                                    </span>
+                                </div>
+                                <h3 class="font-display text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-3">
+                                    {layer.title}
+                                </h3>
+                                <p class="text-ink-muted leading-relaxed">
+                                    {layer.desc}
+                                </p>
+                            </div>
+                        );
+                    })
+                }
+            </div>
+
+            <p class="mt-8 text-ink-muted leading-relaxed max-w-2xl">
+                For how the retrieval underneath works, see
+                <a href="/rag-development" class="link-underline font-medium text-ink"
+                    >RAG development</a
+                >. We also explain
+                <a href="/blog/rag-and-fine-tuning-explained" class="link-underline font-medium text-ink"
+                    >how AI uses your company's information</a
+                >
+                and
+                <a href="/blog/prompt-injection-explained" class="link-underline font-medium text-ink"
+                    >what happens when someone tells it to ignore the rules</a
+                >.
+            </p>
+
+            <!-- Related work -->
+            <a
+                href="/case-studies/auction-operations"
+                class="group mt-12 md:mt-16 grid grid-cols-12 gap-y-6 md:gap-6 items-end border-2 border-ink bg-paper p-8 md:p-10 hover:bg-ink hover:text-paper transition-colors"
+            >
+                <div class="col-span-12 md:col-span-9">
+                    <span
+                        class="block font-mono text-xs uppercase tracking-eyebrow text-ink-muted group-hover:text-paper/60 mb-4"
+                        >Related work</span
+                    >
+                    <p class="text-lg md:text-xl leading-relaxed text-pretty">
+                        An example of AI we've built into a working system. At an
+                        auction house, a vision model drafts catalog data from
+                        item photos, and a cataloger reviews and approves every
+                        draft before it becomes inventory. The model never
+                        publishes anything on its own.
+                    </p>
+                </div>
+                <span
+                    class="col-span-12 md:col-span-3 md:justify-self-end inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em]"
+                >
+                    Read the case study
+                    <span
+                        class="transition-transform group-hover:translate-x-0.5"
+                        aria-hidden>→</span
+                    >
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="border-t-2 border-ink py-20 md:py-28" data-reveal>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10 md:mb-12">
+                <h2
+                        class="font-display font-bold text-h2 tracking-tight text-balance"
+                    >
+                        From your questions
+                        <br />
+                        to a chatbot people use.
+                    </h2>
+                <p
+                        class="mt-5 max-w-2xl text-base md:text-lg text-ink-muted leading-relaxed text-pretty"
+                    >
+                        We start from the questions people ask today, and the
+                        chatbot is tested on them from the start.
+                    </p>
+            </div>
+
+            <div>
+                {
+                    steps.map((step, i) => (
+                        <NumberedRow
+                            title={`0${i + 1} ${step.title}`}
+                            description={step.desc}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <Faq items={faqs} heading="Questions about AI chatbots." />
+
+    <!-- Final CTA -->
+    <section class="section-ink border-t-2 border-ink" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 py-24 md:py-36 flex flex-col items-start">
+            <h2
+                class="font-display font-bold text-display text-paper text-balance mb-10 max-w-5xl leading-[0.95]"
+            >
+                Your documents,
+                <span class="italic text-accent">answering questions</span>.
+            </h2>
+            <p class="text-lg md:text-xl text-paper/70 max-w-xl mb-10">
+                Tell us what your team or customers keep asking and where the
+                answers live. We'll tell you whether an off-the-shelf tool will
+                do or a custom chatbot is worth building.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-12">
+                <a
+                    href="/contact"
+                    class="group inline-flex items-center gap-2 bg-accent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-accent hover:bg-paper hover:text-ink hover:border-paper transition-colors"
+                >
+                    Plan my chatbot
+                    <span
+                        class="transition-transform group-hover:translate-x-0.5"
+                        aria-hidden>→</span
+                    >
+                </a>
+                <a
+                    href="/case-studies/auction-operations"
+                    class="inline-flex items-center gap-2 bg-transparent text-paper font-mono text-xs uppercase tracking-[0.15em] px-6 py-4 border-2 border-paper hover:bg-paper hover:text-ink transition-colors"
+                >
+                    Read the case study
+                </a>
+            </div>
+
+            <!-- Contact strip -->
+            <div
+                class="w-full border-t border-paper/20 pt-8 flex flex-wrap items-center gap-x-10 gap-y-3 font-mono text-xs uppercase tracking-eyebrow text-paper/60"
+            >
+                <a
+                    href="https://motowntech.com"
+                    class="link-underline text-paper"
+                    >motowntech.com</a
+                >
+                <a href="tel:+18459252661" class="link-underline text-paper"
+                    >845-925-2661</a
+                >
+            </div>
+        </div>
+    </section>
+</BaseLayout>
