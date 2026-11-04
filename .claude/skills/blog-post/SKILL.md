@@ -64,7 +64,7 @@ topics, `software` for everything else), `relatedPages` (the site paths the post
   client as one example inside the argument. Leave the build inventory
   (screen counts, stage lists, implementation detail) to the case study page
   and link to it. `auction-house-spreadsheets.md` is the model.
-- Body: 600-1200 words, `##` headings, short paragraphs. Write like the case
+- Body: about 350-600 words, `##` headings, short paragraphs. Write like the case
   studies: concrete, first person plural, says what was decided and why.
   Link to the relevant service or case-study pages and end with a line
   pointing to /contact.
