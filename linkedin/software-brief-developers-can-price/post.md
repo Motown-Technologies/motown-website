@@ -2,21 +2,19 @@
 
 ## Post 1: native text
 
-You send the same description to three developers and get three very different quotes. Before deciding who's overcharging, check they pictured the same product.
+You send the same description to three developers and get three very different quotes. Before deciding who's overcharging, check that they pictured the same product.
 
-"We need an app for our field team" could mean anything from a form to a scheduling system that works offline. Every quote carries guesses about users, data and exceptions, written down or not.
+"We need an app for our field team" could mean a single form or a scheduling system that works offline. Every quote rests on guesses about your users, your data and the odd cases.
 
-A brief someone can price usually fits on a couple of pages, in your own words. Start with the problem and its cost. "Our dispatchers spend the first hour of every day copying jobs from email into a spreadsheet, and drivers call in to ask where they're going next" says far more than "we need a dispatch system."
+A brief that fixes this fits on a couple of pages, in your own words. Start with the problem: "Our dispatchers spend the first hour of every day copying jobs from email into a spreadsheet" says far more than "we need a dispatch system." Then give each type of user one line, like "a driver sees today's jobs on a phone, marks each one done and adds a photo." That's a piece of work someone can estimate.
 
-Then name each type of user and what they do. "A driver sees today's jobs on a phone, marks each one done and adds a photo" is work someone can estimate.
+Attach the real spreadsheet, mess and all. List the systems it has to talk to, since that's often where estimates go wrong.
 
-Attach the real spreadsheet, messy parts and all. List every system it has to talk to, since that's often where estimates go wrong. Give a budget range, the deadline and why it's the deadline. Mark what's needed at launch and what can wait.
+Then the part people skip: the budget. We'd give a range. Without one, nobody can tell whether you want the smallest version that works or the complete one.
 
-Skip the programming language unless you've got a real reason, and the polished mockups. Same for a fifty-page spec, which can still miss the one exception your staff handle by email every week.
+Leave out the programming language and the fifty-page spec. A long spec can still miss the one exception your staff handle by email every week.
 
-The quotes may still differ, but now you can ask each developer about the same pieces.
-
-Link's in the comments, with a one-page outline you can copy.
+The article has a one-page outline you can fill in this week. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/software-brief-developers-can-price.pdf)
 

@@ -3,54 +3,40 @@ title: "Taking over someone else's codebase without breaking it"
 image: ../../assets/blog/inherited-codebase-image.jpg
 imageAlt: "A ring of old mismatched keys on a blue surface, one of them new and blue"
 cover: ../../assets/blog/inherited-codebase.png
-description: "What we do when a client hands us someone else's codebase that still works, and how one practice ended up with a site that publishes itself."
+description: "A healthcare practice handed us a website someone else built. Why our first month shipped nothing new, and how every step after kept a way back."
 pubDate: 2026-09-24
 relatedPages: ["/case-studies/healthcare-practice"]
 category: case-stories
 ---
 
-When you take over a codebase that still works, make it reproducible first, change one thing at a time for a reason you can name, and keep a way back from every step. That is how we handled a multi-site healthcare practice that came to us in August 2023 with a website someone else had built.
+When a multi-site healthcare practice came to us in August 2023, publishing a change to its website meant asking a developer to run a script. There were no drafts, no preview and no way to schedule anything. The site worked, and every change to it was risky.
 
-The site still worked, but the systems underneath it made changes difficult and risky. There was no obvious failure to begin with. We had to establish what could be changed safely while keeping the practice's site running.
+Someone else had built it, and nothing was obviously broken. That's what makes an inherited system tricky. There's no failure to point at, so the first job is finding out what can be changed safely while the site stays up.
 
-## What we were handed
+## Our first month shipped nothing new
 
-The site was a React app copied to cloud storage by a one-line shell script. It talked to a Django API, and that API's admin panel was doing the job of a content management system. There were no drafts, no preview, no scheduling and no media library. Publishing a change meant asking a developer to run the deploy script. A production key sat in the repository, and the list of dependencies couldn't be rebuilt the same way twice.
+A key to the live system sat in the code, and the site couldn't be rebuilt the same way twice. We spent the first month making it run, publish and rebuild reliably, so any later change could be made and undone on purpose. The practice saw almost none of that work, and everything after depended on it.
 
-Our first month produced no new features. We spent it making the system runnable, deployable and reproducible, so that any later change could be made and undone on purpose. That work was largely invisible to the client, but the later changes depended on it.
+## Each rebuild had a reason
 
-## Why each rebuild happened
+Over the next three years the site was rebuilt three times, and something forced each one.
 
-Over the next three years the site was rebuilt three times, and each rebuild had something forcing it.
+Search engines came first. Every page arrived empty until the visitor's browser filled it in, so search engines saw very little. In October 2023 we rebuilt it so pages arrived finished. It went live, was backed out five days later, and went back in at the end of the month.
 
-Search engines were the first. Every URL served the same empty page until JavaScript filled it in, so search engines saw very little. In October 2023 we rebuilt it so pages arrived as finished HTML, with proper metadata and a build that could fail before anything shipped. It landed, was backed out five days later, and went back in at the end of the month. It also left a problem in place: content was still fetched twice, once at build time and again in the visitor's browser.
+Then the editors. The practice kept adding kinds of content, and we kept hand-building drafts, a preview mode and other editing features into an admin screen that was never meant to have them. By mid-2026 that pile of workarounds was the clearest sign the practice needed a real content management system.
 
-From 2024 into 2026 the work was quiet: framework upgrades, pinned dependencies, error monitoring, and a site that rebuilt itself whenever someone published. The practice kept adding content types, and we kept hand-building editor features into an admin panel that was never meant to have them. By mid-2026 we had written draft states, a preview mode and a registry of pages the editors couldn't otherwise reach. That custom code was the clearest sign the practice needed a real CMS.
+In March 2026 we rebuilt the site so it looks pixel for pixel like the live one but no longer loads anything while a patient is browsing. The practice never asked for a redesign, so we ruled one out from the start. In June the editors moved to Wagtail, which has drafts, revisions, preview, scheduled publishing and editor roles. The framework underneath had lost support that April, so an upgrade was coming anyway. We bundled the two so the practice paid for one migration instead of two, and shipped the upgrade alone first so any fallout stayed separate.
 
-## Moving to Astro and Wagtail without a redesign
+## Every step kept a way back
 
-In March 2026 we rebuilt the site on Astro. We wrote the specification first, with three rules: as little browser JavaScript as possible, nothing fetched while a visitor is on the page, and pixel parity with the live site. The practice never asked for a redesign, so a redesign and new features were both ruled out from the start.
-
-The CMS move came in June 2026. Django 4.2 reached end of support that April, so a framework upgrade was coming either way. We combined it with the CMS replacement to avoid paying for two migrations, and shipped the upgrade as its own release first so any fallout from it stayed separate. The editors now work in Wagtail, a CMS with drafts, revisions, preview, scheduled publishing and editor roles.
-
-## Making each step easy to undo
-
-To make missing or incorrect content easier to recover, we planned reversible migration steps:
-
-- The old API stayed running, frozen, and nothing was removed to make the new one work.
-- Rolling the site back to the old API meant changing one setting.
-- The content migration copied records and never deleted them, and it could be re-run safely to pick up later edits.
-- Every migrated record kept a pointer to the row it came from.
-- The old tables stayed in place for a month after the switch, along with a database snapshot.
+The old system stayed running, frozen. Switching the site back to it meant changing one setting. The content move copied records and never deleted any, and it could be re-run to pick up later edits. The old data stayed in place for a month after the switch, along with a database snapshot.
 
 ## Where the practice is now
 
-The site is 352 pages of real HTML, built ahead of time and served from a CDN. Nothing is fetched while a visitor is on the page, so the site stays up even when the API doesn't. When an editor hits publish, the site rebuilds on its own. Every change goes through an automated build first, and a change that would break the site fails there and never reaches production.
+The site is 352 pages built ahead of time, and it stays up even when the back end doesn't. When an editor hits publish, the site rebuilds on its own, and a change that would break it fails before it reaches patients. Patients see the same site. Editors no longer wait on a developer.
 
-Patients see the same site, while the editors can now publish content without waiting for a developer.
+## What we'd tell anyone taking over a working system
 
-## If you've inherited a codebase
+Make it reproducible first, change one thing at a time for a reason you can name, and keep a way back from every step. Before agreeing on new features with an incoming team, ask them to publish a change and roll it back in front of you.
 
-A working system you didn't build is worth taking seriously before anyone touches it. A buyer runs a similar review before a deal, which we cover in [what technical due diligence checks](/blog/technical-due-diligence-explained). A review should distinguish what needs replacing from what can safely keep running.
-
-The [healthcare practice case study](/case-studies/healthcare-practice) has the full timeline. If you're taking over a working system, ask the incoming team to demonstrate a deploy and a rollback before agreeing on new features.
+A buyer runs a similar review before a deal, which we cover in [what technical due diligence checks](/blog/technical-due-diligence-explained). The [healthcare practice case study](/case-studies/healthcare-practice) has the full timeline. If you've inherited a system like this, [tell us about it](/contact).

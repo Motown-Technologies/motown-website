@@ -2,22 +2,20 @@
 
 ## Post 1: native text
 
-A donor types an ordinary name and your platform flags a possible sanctions match. Can the gift go ahead, what does the donor see, and what gets recorded?
+A simple name check on a donation platform we're building flagged six of twenty ordinary donor names. "Maria Garcia" sits inside a longer name on a sanctions list.
 
-If you take payments for other organizations, those answers are yours to decide, and they're much cheaper to settle before money is moving.
+Every donor on the platform, which we're building for nonprofits, is screened against those lists. Most of the work was deciding what happens around a possible match.
 
-On a donation platform we're building for nonprofits, the first decision was where the check lives. Usually a platform calls a screening vendor mid-donation. This one keeps the watchlists locally and checks them in about half a millisecond, so the check sits in the one function every payment route passes through, before any record or payment exists.
+Allowing exactly one extra word cut the false alarms to three of twenty, and those three were genuine possible matches for a person to review. Then came the decisions we made on purpose:
 
-Other things worth deciding on purpose:
+• If the lists can't be checked, the gift is declined. A check that switches off in an outage protects nobody.
+• A flagged donor sees a neutral decline that never mentions a watchlist while a person reviews the match.
+• Passes are recorded along with blocks, or you can't show you screened everyone.
+• Charity verification only advises. Churches are exempt and mostly aren't on the federal list, so blocking would stop legitimate gifts.
 
-• What happens when the lists can't be reached. Declining is safest, since a check that switches off in an outage protects nobody.
-• What the decline says. Keep it neutral and never mention a watchlist. Most flags are possible matches, and a person should judge the match before anyone treats it as confirmed.
-• What gets logged. Record the passes as well as the blocks, or you can't show you screened everyone.
-• Which checks block. Charity verification should only advise, since churches are exempt and mostly aren't on the federal list.
+If your platform takes money for other organizations, walk through a possible match and a screening outage with whoever handles compliance. Decide who reviews it, what the donor sees and what you keep.
 
-Then test your matching on ordinary names. A naive check flagged six of twenty everyday names. Allowing one extra word brought it to three, and those three deserve a person's review.
-
-We end the write-up with a short checklist for your own platform. Link's in the comments.
+We wrote up what we decided and why. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/donation-platform-screening.pdf)
 

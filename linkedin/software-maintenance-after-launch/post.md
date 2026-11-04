@@ -2,17 +2,17 @@
 
 ## Post 1: native text
 
-The build's done and working. Then a browser changes, a payment connection needs an update or the contact form stops sending. Who gets the alert, and is fixing it in anyone's budget?
+The software is live. Then the contact form stops sending. Who gets the alert, and is fixing it in anyone's budget?
 
-Launch often ends the project with that unsettled. Maintenance keeps the software you already have useful and safe, and needs its own budget line, separate from new features.
+Launch often ends the project without settling that. Maintenance needs its own budget line from the first month, separate from new features, even when the same people do both.
 
-The biggest steady part is updates. Every modern app sits on dozens or hundreds of open source packages that put out security fixes. Skip a year and they pile up, each harder to apply than it would've been on time. Browsers, operating systems, hosts and app stores change on their own schedules too.
+Most of it is steady work. Every modern app sits on dozens or hundreds of open source packages that keep putting out security fixes, and after a year of skipping them, each update is harder to apply than it would have been on time. Browsers, app stores and hosts change on their own schedules. Monitoring only helps if a person reads the alerts.
 
-Monitoring only helps if a person reads the alerts. And the only way to know a backup works is to restore it.
+Two products of the same size can cost very different amounts to look after. Every integration is an outside company that can change underneath you. Health or payment data needs faster patching. And a product left alone for two years usually needs a catch-up project before routine work can start.
 
-Two same-size products can cost very different amounts to look after. Every integration is an outside company that can change on you. Automated tests, a test copy of the site and a repeatable release process let each update be checked before going live, with less testing by hand. Health or payment data needs faster patching. Each extra platform adds its own updates, and a product left alone for two years usually needs a catch-up project before routine work starts.
+Before the build team moves on, write down who gets the alerts, who can approve urgent work and what the maintenance budget covers. Give a copy to whoever runs the business and to whoever runs the software.
 
-Before the build team moves on, write down who gets alerts, who can approve urgent work and what the maintenance budget covers. Give a copy to whoever runs the business and whoever runs the software.
+The full write-up covers how maintenance is usually priced. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/software-maintenance-after-launch.pdf)
 

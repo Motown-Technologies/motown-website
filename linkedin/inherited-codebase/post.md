@@ -2,21 +2,15 @@
 
 ## Post 1: native text
 
-A multi-site healthcare practice handed us a website someone else had built. Nothing was broken, but every change was risky.
+A healthcare practice handed us a website someone else had built. Nothing was broken, but publishing a change meant asking a developer to run a script.
 
-Publishing meant a developer running a script. A key to the live system sat in the code, and the site couldn't be rebuilt the same way twice.
+So our first month shipped nothing new. We made the site run, publish and rebuild the same way every time, so any change could be made and undone on purpose. The practice saw almost none of it, and every later change depended on it.
 
-We spent the first month making it run, publish and rebuild reliably. That let any change be made and undone on purpose, and everything after depended on it.
+Over three years the site was rebuilt three times, each for a reason we could name. Search engines couldn't read the pages. Editors kept needing features the admin screen was never built for. Then the framework underneath lost support in April 2026, so we bundled that upgrade with moving editors to Wagtail, a proper editing system. The practice paid for one migration instead of two.
 
-Over three years the site moved three times, each move keeping what worked:
+Every step kept a way back. The old system stayed running, switching back took one setting, and the content move copied records without deleting any.
 
-• Pages arrived fully built, so search engines could finally read them, and a bad build stopped before anything shipped.
-• A pixel-for-pixel rebuild left patients with the same site, but it no longer fetches content while they browse, so it stays up when the back end doesn't.
-• Django 4.2, the framework underneath, lost support in April 2026. We bundled that upgrade with moving editors to Wagtail, a proper editing system, so the practice paid for one migration instead of two. The upgrade shipped alone first.
-
-Each step had a way back: the old system stayed running, rollback was one setting, and the content move copied records without deleting any.
-
-Today the site is 352 ready-made pages. Editors publish without a developer, and a breaking change fails in the build before it goes live.
+Today patients see the same site, it stays up when the back end doesn't, and editors publish without waiting on a developer.
 
 Taking over a working system? Before agreeing to new features, have the new team publish a change and roll it back in front of you.
 

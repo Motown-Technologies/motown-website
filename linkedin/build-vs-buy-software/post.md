@@ -6,7 +6,7 @@ A home-care agency buys a scheduling app. Two years on, the coordinators still u
 
 The app works. It just doesn't cover the whole job, and the workarounds never show up on an invoice.
 
-Most businesses should buy most of their software. Payroll, email and accounting are much the same everywhere, and the vendor's already hit the odd cases you haven't. It's harder when a team works around a tool daily. The signs we look for:
+Most businesses should buy most of their software. Payroll and accounting are much the same everywhere, and the vendor's already hit the odd cases you haven't. It gets harder when a team works around a tool every day. The signs:
 
 • A spreadsheet sits open beside the tool doing the part it can't.
 • You pay for a higher tier, or a second tool, to fill one gap.
@@ -15,9 +15,9 @@ Most businesses should buy most of their software. Payroll, email and accounting
 
 One of these is normal. Three or more usually means the tool costs more than its invoice says.
 
-You don't have to replace the app. The agency could keep it and build a small system for certifications and visit notes that reads from and writes back to the app. No more morning exports, and the parts that work stay put. That needs a decent API (so other software can connect) and a way to get your data out. Check both before you sign.
+The agency could keep the app and add a small system for certifications and visit notes that reads from it and writes back to it. The morning export goes away, and the parts that work stay put. Before you sign with any vendor, check that other software can connect to it and that you can get your data out.
 
-Then add up what the workarounds cost a month and compare it with a small addition or a replacement, including upkeep and who'll look after it.
+Then price the workarounds per month and compare them with a small addition or a replacement, upkeep included.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/build-vs-buy-software.pdf)
 

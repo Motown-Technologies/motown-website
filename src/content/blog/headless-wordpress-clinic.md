@@ -1,58 +1,40 @@
 ---
-title: "Your website is slow. Does your team need a new editor too?"
+title: "Headless WordPress: faster pages without a new editor"
 image: ../../assets/blog/headless-wordpress-clinic-image.jpg
 imageAlt: "An empty blue stage with ropes and pulleys visible backstage"
 cover: ../../assets/blog/headless-wordpress-clinic.png
-description: "An endoscopy center kept WordPress for editing while changing how its public pages were delivered. The benefits and publishing tradeoffs."
+description: "An endoscopy center kept WordPress for editing and stopped serving patients from it. What changed for staff, and the publishing tradeoff."
 pubDate: 2026-10-14
 relatedPages: ["/case-studies/endoscopy-center", "/migrate-from-wordpress"]
 category: case-stories
 ---
 
-If your staff are happy editing in WordPress and the trouble is how the site behaves for visitors, you may not need to leave WordPress at all. You can keep it as the place people edit and stop it from assembling pages for every visitor. Pages load faster and stay up when WordPress has a bad day, and nobody has to learn a new tool.
+At an outpatient endoscopy center we worked with, WordPress could now be down for a week and patients wouldn't notice. Staff would, and that was the point.
 
-## Work out which problem you have
+## Staff liked editing, and nobody liked how it loaded
 
-Complaints about a WordPress site tend to fall into two groups. Some are about running it, like plugin updates nobody trusts and upkeep that eats into the week. Others are about what visitors get, which means slow pages and a site that breaks when something on the server misbehaves.
+The center's staff were comfortable in WordPress and didn't want a new tool. The trouble was what patients got. Without a page cache, WordPress builds every page on the spot for each visitor, using its database and whatever plugins are installed. A cache helps, but visitors still reach the live install, so a bad plugin update or a slow database can still land in front of a patient.
 
-If most of your complaints are in the first group, read [when it's time to leave WordPress](/blog/when-to-leave-wordpress). If they're mostly in the second and your editors like the tool, replacing it is usually the expensive answer, because it takes away the one thing that works.
+If your complaints are more about running WordPress, like updates nobody trusts and upkeep that eats the week, that's a different problem. We wrote about [when it's time to leave WordPress](/blog/when-to-leave-wordpress). Here, replacing the editor would have thrown away the one part that worked.
 
-The slowness and fragility have a specific cause. Without a page cache in front of it, a WordPress install builds each page on the spot, every time someone opens it, with PHP, a database and whatever plugins you run. A cache speeds that up, but the public site still runs on the live install, so anything that goes wrong in that chain can still go wrong in front of a visitor.
+## We kept WordPress and stopped serving pages from it
 
-## Build the pages before anyone asks for them
+WordPress still holds the pages, provider bios, procedures and the navigation menu, and staff edit them the way they always did. The public site is built from that content ahead of time and served as plain pages, so patients never touch WordPress. Developers call this headless WordPress.
 
-The alternative is to keep WordPress as the place content lives and build the public site from it ahead of time. The site reads pages, menus and everything else from WordPress while it builds, then serves plain HTML files. Visitors load those files and never touch WordPress. This is usually called headless WordPress.
+A slow database or an expiring certificate on the editing side is now an inconvenience for staff that patients never see.
 
-An outpatient endoscopy center we worked with was in exactly this spot. Staff liked editing their site but were unhappy with how it loaded for patients. After the change, WordPress still holds the pages, provider bios, procedures and the navigation menu, and staff edit them the way they always did. A slow database, a plugin update or an expiring certificate on the editing side is now an inconvenience for staff that patients never see. WordPress could be down all week and the public pages would keep loading.
+## Publishing had to stay one button
 
-## Publishing has to stay one button
+If every edit needed a developer to run a deploy, we'd have swapped a slow site for slow publishing. So nothing changed for editors. When someone presses publish, the site waits ninety seconds, so ten quick saves turn into one rebuild, and then rebuilds itself. The new pages replace the old ones only once the whole set is ready. The tradeoff is that an edit takes a minute or two to show up.
 
-If every edit now needs a developer to run a deploy, you have swapped a slow site for a slow publishing process. Before you agree to this setup, ask exactly what happens when an editor presses publish.
+## The risk moved into the build
 
-At the clinic, the answer is that nothing changes for the editor. A small plugin notices the published change, waits ninety seconds so that ten quick saves turn into one rebuild, and asks the host to build the site again. The new pages replace the old ones only once the whole set is ready. The trade is that an edit takes a minute or two to appear.
+The build needs WordPress reachable while it runs. If WordPress is down at that moment, the build fails and the previous version of the site stays up. That only works if the build is strict. When something in the content looks wrong, like a field that's been renamed, it stops with a clear error instead of publishing a broken page. It never fills a gap with placeholder text that looks real.
 
-## The risk moves into the build
+## What we'd tell another practice
 
-The cost is that the build needs WordPress reachable while it runs. If WordPress is down during a build, the build fails and the previous version of the site stays up. That lets patients keep using the published pages while the editing system is repaired.
+This setup fits when your editors like WordPress, the complaints come from visitors, the site is mostly pages people read rather than shopping carts or logins, and a minute or two before an edit goes live is fine.
 
-That only holds if the build is strict about what it accepts. Some things worth checking with whoever builds it for you:
+If someone pitches it to you, ask to see a full publishing cycle, failed build included. Your editors need to know how they'll notice a failure and who helps them publish again.
 
-- Content from WordPress is checked before it's used, so a renamed field stops the build with a clear error and the live site stays as it was.
-- A missing piece of content never gets filled with placeholder text that looks real.
-- HTML from the editor is cleaned on the way in, with scripts, forms and embedded frames stripped out.
-- Every code change is built against a test copy of the WordPress content before it goes near the live site.
-
-If the build rejects a change, the previous published site should remain available.
-
-## When this approach fits
-
-It suits you if most of these are true:
-
-- Your editors are comfortable in WordPress and you don't want to retrain them.
-- The complaints are about speed and outages for visitors more than about editing.
-- The public site is mostly pages people read, without shopping carts or logged-in areas that need WordPress running for each visitor.
-- Waiting a minute or two for an edit to go live is acceptable.
-
-The clinic's build handles a few other publishing chores too. Old image links that used to break are now fixed during the build, and each page gets a search description written from its own content.
-
-The [endoscopy center case study](/case-studies/endoscopy-center) has the full build. If you're considering the same approach, ask to see a complete publishing cycle, including a failed build. Your editors need to know how they will notice a failure and who will help them publish again.
+The [endoscopy center case study](/case-studies/endoscopy-center) has the full build. If your site sounds like theirs, [tell us about it](/contact).

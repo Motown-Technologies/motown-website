@@ -2,21 +2,15 @@
 
 ## Post 1: native text
 
-An item was "photographed" in the spreadsheet, "still in storage" in the group chat, with two differently named photos in the shared folder. Which one was right?
+An item was "photographed" in the spreadsheet, "still in storage" in the group chat, and had two differently named photos in the shared folder.
 
-That was a normal week at an auction house we worked with, and nobody was careless. Each tool held part of the inventory process, and working out which version to trust had become a job of its own.
+That was a normal week at an auction house we worked with, and nobody was being careless. Each tool held part of the inventory process, and working out which version to trust had become a job of its own. Getting a deleted row back meant restoring an older file and wiping everyone's later edits.
 
-No single place recorded who'd changed an item or when. Getting a deleted row back meant restoring an older file, wiping everyone's later edits.
-
-Tidier tabs and stricter naming help for a while, but the same fact still lives in more than one place. What fixed it was one record per item, following it through seven stages from intake to sold:
-
-• The status comes from what's actually happened to the item, so every screen gives the same answer.
-• Every change is saved with who made it.
-• Deleted records come back in bulk from a recently-deleted screen instead of being rebuilt from memory.
+Tidier tabs and stricter naming help for a while, but the same fact still lives in more than one place. So we gave every item one record, following it through seven stages from intake to sold. Its status comes from what's actually happened to it, so every screen gives the same answer. Every change is saved with who made it, and deleted records come back from a recently-deleted screen.
 
 We looked at the typing around the spreadsheet too. Catalogers used to write every title and description by hand. Now an AI model drafts them from the photos, and a cataloger reads, fixes and approves every draft before it goes into the inventory.
 
-To test your own setup, take a recent disagreement about an item or order, trace where each version came from and decide who should own that information. You might fix part of the process before replacing any software.
+To test your own setup, take one recent disagreement about an item or an order, trace where each version came from and decide who should own that information. You might fix part of the process before replacing any software.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/auction-house-spreadsheets.pdf)
 

@@ -9,55 +9,39 @@ relatedPages: ["/rag-development", "/llm-fine-tuning"]
 category: ai
 ---
 
-Ask an AI assistant about an unpublished internal refund policy it has no access to, and it has no reliable basis for answering. It may say it doesn't know, or produce a plausible policy that isn't yours. What it learned during training won't tell it what your team agreed last week.
+Ask an AI assistant about your internal refund policy, the one your team agreed last week, and it has nothing reliable to go on. It may say it doesn't know. Or it may write a plausible policy that isn't yours.
 
-AI proposals often mention retrieval-augmented generation, usually shortened to RAG, alongside fine-tuning. RAG supplies relevant documents when the model answers. Fine-tuning changes the model's weights to help it follow patterns learned from examples. For a support team, that might mean looking up today's refund policy and learning how to structure a reply. Both need testing against the work you expect them to do.
+Most AI proposals offer two fixes: retrieval-augmented generation (RAG) and fine-tuning. They change different things, and for facts that change, we'd start with RAG.
 
 ## What a model knows, and what it reads
 
-A language model has two sources of information when it answers. The first is what it absorbed during training, stored in billions of numbers called weights. That knowledge is broad but frozen: it doesn't update when your prices change.
+A model answers from two places. One is what it absorbed in training, stored in billions of numbers called weights. That knowledge is broad but frozen; it doesn't update when your prices change. The other is whatever you send with the question, called the context: instructions, a pasted document, the conversation so far. The model reads that fresh every time, up to a limit.
 
-The second is whatever you send with the question: instructions, a pasted document, the conversation so far. This is called the context. The model reads it fresh every time, and it can only hold so much in one request.
+## RAG changes what the model reads
 
-## What RAG does
+RAG looks things up before answering. The term comes from a [2020 research paper](https://arxiv.org/abs/2005.11401) from Facebook AI Research. Your documents are split into passages and indexed so they can be found by meaning, usually with [vector embeddings](/blog/vector-embeddings-explained), and by exact words. A question triggers a search, and the best passages go to the model with an instruction to answer from them and say which ones it used.
 
-RAG is a way of looking things up before answering. The term comes from a [2020 research paper](https://arxiv.org/abs/2005.11401) from Facebook AI Research. The system searches your own documents for the passages that matter, then hands those passages to the model along with the question.
+Think of an open-book exam. Change the refund policy, update the index, and the next answer uses the new wording. The model itself never changes.
 
-A RAG system has four main parts:
+The catch is search. If it pulls up last year's policy, or a passage about a different kind of refund, the model will write a convincing answer from it. So check the passages as well as the reply, and check what happens when nothing relevant turns up.
 
-1. Your documents are split into passages of a manageable size, a few paragraphs each.
-2. Each passage is indexed so it can be found by meaning and by exact words. Search by meaning usually relies on [vector embeddings](/blog/vector-embeddings-explained).
-3. When someone asks a question, the system searches the index and picks the most relevant passages.
-4. Those passages go into the context with an instruction to answer from them and say which ones were used.
+## Fine-tuning changes the model
 
-Think of it as an open-book exam. For a refund question, the system retrieves the relevant part of your policy and gives it to the model to use in its reply. When the policy changes, updating the index makes the revised passage available for retrieval without changing the model's weights.
+Fine-tuning continues training an existing model on examples you supply, each a customer request paired with a reviewed reply. It's closer to training a new hire on how your firm writes. If every reply should acknowledge the request, explain the policy and give a next step, tuning can make the model follow that shape more consistently, with a shorter prompt.
 
-Having the right passage doesn't guarantee that the answer follows it. Check that the reply accurately states the policy and that any citation supports what it says.
-
-Search is an important place to investigate when an answer is wrong. If the system retrieves an old policy or a passage about a different kind of refund, the model may write a convincing answer from it. Check the retrieved passages as well as the reply, including whether the system declines to answer when it finds nothing relevant.
-
-## What fine-tuning does
-
-Supervised fine-tuning takes an existing model and continues its training on examples you supply. Each example pairs an input with the output you want, such as a customer's refund request and a reviewed reply. The number of examples needed depends on the task and their quality; there is no universal requirement for hundreds or thousands. Test whether training improves the replies rather than assuming a larger dataset will do so.
-
-Fine-tuning is more like training a new hire on how your firm writes. Suppose the support team wants each reply to acknowledge the request, explain the applicable policy and give the customer a next step. Training on reviewed examples can help the model follow that structure more consistently, with a shorter prompt. Those changes are stored in its weights, but individual replies can still be wrong.
-
-Fine-tuning is a poor way to keep a changing refund policy current. If the terms change, the weights won't update themselves; changing what they learned requires another training run. Fine-tuning alone also doesn't provide a reliable way to trace an answer back to a particular training example.
-
-## How they compare
+It's a poor place to keep a policy. When the terms change, the weights don't, and fixing that takes another training run. Training alone also can't trace an answer back to a source.
 
 | | RAG | Fine-tuning |
 |---|---|---|
-| What changes | What the model reads for each question | The model's weights |
-| Good for | Current facts from your documents | Consistent format, tone or task behavior |
-| Updating | Change the documents and re-index | Prepare new examples and retrain |
-| Showing sources | Can cite retrieved passages; check that they support the answer | Training alone doesn't provide source attribution |
-| What you need | Documents and a search index | Reviewed input/output examples; quantity depends on the task |
+| What changes | What the model reads | The model's weights |
+| Good for | Current facts from your documents | Consistent format and tone |
+| Updating | Change the documents, re-index | New examples, retrain |
+| Sources | Can cite the passages it used | None from training alone |
 
-The two can work together: retrieval supplies today's refund terms while a tuned model helps keep the reply in the team's agreed format. Test both whether the terms are correct and whether the reply follows that format.
+The two can work together: retrieval supplies today's refund terms while a tuned model keeps the reply in your format.
 
-Before either, there is a cheaper step: write clear instructions and include a few good examples in the prompt. For many tasks that is enough, and it gives you a baseline to measure anything more elaborate against.
+## Try the cheap step first
 
-## Choosing between them
+Before either, write clear instructions and include a few good examples in the prompt. For many tasks that's enough. Even when it isn't, it gives you a baseline to measure anything fancier against.
 
-Which one you need depends on your documents, who is allowed to see them and how you'll measure the result. We cover that decision in [how to get AI to answer from your company documents](/blog/rag-or-fine-tuning), with questions to narrow the choice.
+This week, pick five real refund questions your team answered recently and write down the answers you'd accept. That's the start of a test set, and it'll tell you more about any proposal than its name does. When you're ready to choose, read [how to get AI to answer from your company documents](/blog/rag-or-fine-tuning), see our [RAG development](/rag-development) and [fine-tuning](/llm-fine-tuning) pages, or [ask us](/contact).

@@ -1,57 +1,51 @@
 ---
-title: "Who makes the technical decisions when nobody owns them?"
+title: "Fractional CTO or full-time hire: define the role first"
 image: ../../assets/blog/fractional-cto-for-startups-image.jpg
 imageAlt: "A brass compass on a blue surface casting a long shadow"
 cover: ../../assets/blog/fractional-cto-for-startups.png
-description: "How founders can recognize a gap in technical leadership and decide whether it needs a senior hire, part-time help or clearer ownership."
+description: "When technical decisions stall, the fix may be part-time leadership, a full-time hire or clearer authority. How founders can tell which one they need."
 pubDate: 2026-08-28
 relatedPages: ["/fractional-cto", "/startup-consulting"]
 category: software
 ---
 
-The engineers disagree about a rewrite, and the founder has no clear way to settle it. Meanwhile, a customer is waiting for a security answer before signing. Work continues, but the decisions don't have an owner.
+The engineers disagree about a rewrite, and the founder has no clear way to settle it. A customer is waiting on answers to security questions before signing. Work carries on, but the decisions don't have an owner.
 
-A team can keep shipping while those decisions wait, but the founder still needs answers about whether the product can support the next stage of growth. Before hiring a CTO, work out whether the problem is missing experience, unclear authority or simply no time to do the work.
+Before hiring a CTO, part time or full time, work out what's actually missing: experience, authority, or just the time to do the work. Each answer points to a different hire, and sometimes to no hire at all.
 
-## What goes unowned without a technical lead
+## What goes unowned
 
-A leadership gap can leave work like this without a clear owner:
+Without a technical lead, calls like these tend to drift:
 
 - What to build, what to skip and in what order, planned against the runway.
-- Architecture and stack choices the team can still defend in two years, made for its size, budget and realistic scale.
-- The scope of the first version, [cut down to the one loop](/blog/mvp-what-to-build-first) that proves value.
-- The technical part of the fundraising deck, and a codebase that holds up when [investors look at it](/blog/technical-due-diligence-explained).
-- Security and compliance, including the [SOC 2 questions](/soc-2-readiness) enterprise buyers raise before they sign.
-- Scoping the first engineering roles and running the technical screens.
+- Stack choices the team can still defend in two years.
+- The scope of the first version, [cut down to the one journey](/blog/mvp-what-to-build-first) that proves value.
+- The technical part of the fundraising deck, and code that holds up when [investors look at it](/blog/technical-due-diligence-explained).
+- The [SOC 2 questions](/soc-2-readiness) enterprise buyers raise before they sign.
+- Scoping the first engineering roles and running the technical interviews.
 
-These gaps can be hard to recognize while the team is busy. Six months of building before talking to a user may feel productive. A stack choice based on a blog post or an agency build that nobody in-house can maintain can also seem reasonable until the team has to live with it. Reversing those choices takes time.
+These gaps are hard to spot while everyone's busy. A stack picked from a blog post, or an agency build nobody in-house can maintain, seems reasonable until the team has to live with it. Reversing those choices takes time.
 
 ## What a part-time CTO does
 
-A fractional CTO takes responsibility for technical leadership on a part-time basis, often a day or two a week. That can include calls about rewriting or refactoring, building or buying, and how to divide the system. The decision and its tradeoffs need to be written down, so it doesn't drift to the next sprint.
+A fractional CTO takes on technical leadership part time, often a day or two a week. That means making calls like rewrite or refactor and build or buy, and writing each one down with its tradeoffs so it doesn't slide to the next sprint. It means one-to-ones and code review standards for engineers who've never had anyone senior to go to. It covers hiring, spend and risk, and the technical section of the board update, written by someone who can field the follow-up questions.
 
-The role also covers the engineers. That means one-to-ones, code review standards and mentoring for a team that has never had anyone senior to escalate to. It covers hiring too: scoping the role, writing the brief, screening candidates and running the technical interviews alongside the founders. For a founder who cannot assess the technical work themselves, an experienced interviewer can help test what the role actually requires.
+Check whether a proposed arrangement includes owning decisions or only giving advice. Both can be useful, but they leave you with different responsibilities.
 
-Then there's spend (cloud bills, overlapping tools and contractor rates) and risk: security posture, compliance questionnaires, single points of failure, and the parts of the system only one person understands. And there's the technical section of the board update, written by someone who can answer the follow-up questions.
+## Authority comes before the person
 
-Check whether the proposed role includes owning decisions and following through, or only giving advice. Either can be useful, but they leave the founder with different responsibilities.
+This is the part we'd settle first. A senior person can review the stack, the team and the roadmap and still leave the founder holding the same open decisions. Before anyone starts, agree which calls they can make, who controls the budget, and how disagreements get settled.
 
-## Define the authority before hiring the person
+Separate projects from the role, too. A migration or a first engineering hire has an end. Supporting engineers, reviewing spend and owning architecture go on as long as the company needs them, and a short project won't cover that.
 
-A senior person can review the stack, team and roadmap and still leave the founder with the same unresolved decisions. Before bringing someone in, agree which calls they can make, who controls the budget and how disagreements will be settled.
+## Part time or full time
 
-Separate a bounded problem from an ongoing role. A migration or a first engineering hire has an end. Supporting engineers, reviewing spend and owning architecture decisions continue as long as the company needs them. A short project won't fill that continuing gap by itself.
+Part-time leadership fits when decisions come up now and then and the team can carry the work between them. Full time is worth considering when people are stuck waiting for the next scheduled day.
 
-## How to tell whether the arrangement helps
+Look at the team you already have as well. A senior engineer may need clearer authority or protected time more than a new boss.
 
-Look for decisions that have been made and written down, with the tradeoffs and an owner. Ask the engineers whether they have someone to escalate to and whether code reviews are helping them move work forward.
+## This week
 
-A monthly summary should make the spend and outstanding risks understandable to the founder. It should also say what needs a business decision. If the same technical disagreement returns every sprint, look at why the reviews and updates aren't helping the team resolve it.
+List the last few technical decisions that stalled. For each, write down who could have made the call and what stopped them. Shape the role from that list before you pick a title.
 
-## Fractional or full-time: how to tell
-
-Part-time leadership can fit when the decisions are occasional and the team can carry out the work between them. A full-time role becomes worth considering when leadership is needed throughout the week and waiting for the next scheduled day holds people up.
-
-Check the team you already have, too. A senior engineer may need clearer authority or protected time rather than another person above them. If nobody can settle a technical disagreement or answer the board's questions, establish why before choosing the arrangement.
-
-Look back at the last few technical decisions that stalled. Write down who could have made each call and what prevented them. Use those responsibilities to define the role before choosing its title.
+Our [fractional CTO](/fractional-cto) and [startup consulting](/startup-consulting) pages cover the help we offer. If decisions keep stalling on your team, [tell us about it](/contact).

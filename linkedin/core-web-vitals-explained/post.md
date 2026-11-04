@@ -2,21 +2,19 @@
 
 ## Post 1: native text
 
-Core Web Vitals are three scores Google takes from real visits to your site, and your visitors already feel every one of them.
+Your website can feel fast on your laptop and still lose a customer on a phone.
 
-LCP is how long the main content takes to show up. Good is 2.5 seconds or less.
+Google measures three things from real visits: how long the main content takes to appear, how quickly a tap gets a response, and how much the page jumps while it loads. Three in four visits need to hit each target. Your laptop on office wifi is the best case, and your customers might be on a mid-range phone on mobile data.
 
-INP is how fast the page reacts to a tap or click. Good is 200 milliseconds or less. It replaced an older measure, First Input Delay, in 2024.
+The button that seems to do nothing, so people tap it twice? That's the second measurement. Often the browser is busy with chat widgets, tracking tags and marketing pixels, each adding a little.
 
-CLS is how much the layout jumps around while it loads. Good is 0.1 or less.
+On search rankings, Google's own guidance is modest. Good scores don't guarantee a top spot, and the most relevant page still wins. Speed counts most once visitors arrive. A slow checkout loses sales wherever it ranks.
 
-Google collects these from real Chrome users, and roughly three in four visits need to hit the target. Your laptop on office wifi is the best case. Your customers might be on a mid-range phone on mobile data.
+Sites also get slower without anyone deciding to. A booking widget goes in, marketing adds two tracking tags, and the new team photos go up straight from the camera.
 
-On rankings, Google's own guidance is modest. Good scores don't guarantee a top spot, and Search still prefers the most relevant page even if it's worse to use. Where speed really counts is what visitors do once they've arrived. A slow checkout loses sales wherever it ranks.
+This week, do the one task your visitors come for, booking or checking out, on a real phone. Write down the scores before the next widget goes in.
 
-The usual culprits are oversized images, too much third-party JavaScript (code from widgets and tracking tags), and ads or banners that shove content around. Most sites also get slower over time as widgets and tags pile up.
-
-Pick someone to check the scores in PageSpeed Insights or Search Console after changes. Have them write the numbers down before the next widget or tracking tag goes in, so you can tell if it made things worse.
+The article has the three measurements and their targets. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/core-web-vitals-explained.pdf)
 

@@ -1,74 +1,44 @@
 ---
-title: "The AI demo looked good. How do you know it is ready?"
+title: "Testing an AI feature before your customers do"
 image: ../../assets/blog/testing-ai-features-image.jpg
 imageAlt: "A row of blue glass bottles lined up at a stone ring, one of them slightly too wide to pass through"
 cover: ../../assets/blog/testing-ai-features.png
-description: "How to test an AI feature against real customer questions and measure whether a change improves the work people rely on."
+description: "A good demo is one person's impression. How to build a test set of real questions and use its score to decide whether an AI change ships."
 pubDate: 2026-11-04
 relatedPages: ["/mlops-services", "/llm-fine-tuning", "/case-studies/auction-operations"]
 category: ai
 ---
 
-Someone tries a few questions in the demo, likes the answers and says the feature is ready. A customer may then phrase the question differently and get a confident but incorrect answer.
+Someone tries a few questions in the demo, likes the answers and says the AI feature is ready. Then a customer phrases the same question differently and gets an answer that is confident and wrong.
 
-A repeatable test set gives the team more to go on than a good demonstration. Run realistic inputs through the feature, agree how to grade the answers and compare versions using the same cases. That process is usually called an eval.
+A demo is one person's impression. Before launch we'd want a test set: realistic questions, an agreed way to grade the answers, and a score you can compare from one version to the next. The usual name for this is an eval. It takes more effort than a demo, and in return you find out whether a change made things better or worse.
 
-## Why AI features need a different kind of testing
+## Why a demo can't tell you
 
-Ordinary software gives the same output for the same input, so a test either passes or fails. An AI feature can give a different answer each time, and a wrong answer looks just as confident as a right one. The feature can get worse on untested cases without crashing or showing an error.
+Ordinary software gives the same output for the same input. An AI feature can answer differently each time, and a wrong answer sounds as sure as a right one. Nothing crashes when it gets worse.
 
-It also changes without anyone touching your code. A provider updates a model, someone tweaks the prompt to fix one complaint, a new batch of documents goes into the search index. Any of these can fix one thing and break three others, and you won't know which unless you measure.
+It also changes when nobody has touched your product. The provider updates its model, someone tweaks the instructions to fix one complaint, new documents go into what it searches. Any of these can fix one thing and break three others, and you won't know which unless you measure.
 
-## What is an eval?
+## What goes in the test set
 
-An eval has three parts:
+Start with real inputs if you have them: past support tickets, real documents, questions customers have actually asked. For something new, write them with the people who do the job today. They know what the strange cases look like.
 
-- A test set: real or realistic inputs, each with what a good answer looks like.
-- A way to grade each answer.
-- A score you track over time, so you can compare this week's version with last week's.
+Say a dental group is adding an assistant for patients' questions about appointments and insurance. Its first test set would have the common questions, phrased the way patients phrase them, typos included. It would have questions the assistant should decline because they need a clinician, and two insurance plans with similar names that need different answers. It would also have a message telling the assistant to ignore its instructions; our post on [prompt injection](/blog/prompt-injection-explained) explains why that one matters.
 
-Anthropic's guide to [defining success criteria and building evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) makes two points we agree with. Success criteria should be specific and measurable. And the test cases should look like your real traffic, awkward edge cases included.
+A few dozen well-chosen cases are a reasonable start. Every real mistake after launch becomes a new case, so it can't come back unnoticed.
 
-## How to build a test set
+## Grade with the simplest thing that works
 
-Start with real inputs if you have them: past support tickets, real documents, questions customers have actually asked. If you're launching something new, write them with the people who do the job today, because they know what the strange cases look like.
+When the right answer is a category, a yes or no, or a number, an automatic check grades it the same way every time. For open-ended answers, like a reply to a customer, a separate model can grade each one against a written rubric. [Anthropic's guide to building evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) suggests using a different model from the one being tested, and someone should check a sample of its grades by hand. Save people for the judgment calls that need someone who knows the work.
 
-Say a dental group is adding an assistant that answers patients' questions about appointments and insurance. A useful first test set would include:
+## Let the score decide what ships
 
-- The common questions, phrased the way patients actually phrase them, typos included.
-- Questions the assistant should decline, such as anything that needs a clinician's judgment.
-- Questions that look similar but need different answers, such as two insurance plans with similar names.
-- Inputs that try to make it misbehave, such as a message telling it to ignore its instructions. Our post on [prompt injection](/blog/prompt-injection-explained) covers why that one matters.
-- Every real mistake it makes after launch, added as a new case so it can't come back unnoticed.
+Every change to the instructions, the model or the documents runs the full set before it goes live. Mark the cases you can't afford to get wrong as must-pass, so failing any one of them blocks the change whatever the overall score says.
 
-A few dozen well-chosen cases are a reasonable start. The set grows as you learn where the feature goes wrong.
+A good score still doesn't replace a person where an answer leads to something hard to undo. In the [auction house system](/case-studies/auction-operations) we built, a model drafts catalog copy from photos, and a cataloger reviews and approves every draft before it becomes inventory.
 
-## How to grade the answers
+## One thing to do this week
 
-Use the simplest grader that works for each case.
+Write down what a good answer looks like for your AI feature. If the people involved can't agree, settle that before anyone calls it ready.
 
-### Checks in code
-
-If the right answer is a category, a yes or no, a number or a field in a fixed format, check it with code. It's fast and cheap, and it grades the same way every time. Many AI features can be graded this way more often than people expect, especially ones that extract data from documents.
-
-### A second model as grader
-
-For open-ended answers, such as a summary or a reply to a customer, you can ask a separate model to grade each answer against a written rubric: did it answer the question, did it stay within policy, did it invent anything. Anthropic's guide suggests using a different model from the one being tested. Check a sample of its grades by hand from time to time to make sure the grader agrees with you.
-
-### People
-
-Some judgments need someone who knows the work. Keep human grading for the cases that really need it, and use their verdicts to improve the automated checks.
-
-## Use the eval as a gate
-
-The eval is most useful when it decides whether a change ships. Every time you change the prompt, the model or the documents the feature searches, run the full set and compare scores. Pin the cases you can't afford to get wrong, so any change that fails one of them is blocked regardless of the overall score. Keep that comparison in place for tuning work too; a training run is not evidence that the feature improved.
-
-After launch, keep watching. If the questions customers ask start to look different from the ones you tested, scores on the old set will look fine while real quality slips. Have someone review real failures and update the test cases, so the set continues to reflect the work people need done.
-
-## Where human review still belongs
-
-An eval measures performance across the test set; an individual answer still needs appropriate checks. When an answer leads to something hard to undo, keep a person in the loop. In the [auction house system](/case-studies/auction-operations) we built, a model drafts the catalog copy from photos, and a cataloger reviews, regenerates with feedback where needed and approves every draft before it becomes inventory.
-
-## Before you launch
-
-Write down what a good answer is, collect the cases that matter, and decide what score you'll accept. If you can't say what "good" means for your AI feature, that's the first thing to settle.
+If you'd like help building the test set, [tell us about the feature](/contact).

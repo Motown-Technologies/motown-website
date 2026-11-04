@@ -1,68 +1,40 @@
 ---
-title: "What if an email tells your AI assistant to ignore the rules?"
+title: "Prompt injection: how to limit what a tricked AI can do"
 image: ../../assets/blog/prompt-injection-explained-image.jpg
 imageAlt: "An open blue envelope on off-white paper, with a dark thread leading from inside it to a stone key lying nearby."
 cover: ../../assets/blog/prompt-injection-explained.png
-description: "How instructions hidden in emails and documents can redirect AI tools, and how to limit the business damage when that happens."
+description: "Hidden instructions in emails and documents can redirect AI tools. There's no complete fix, so limit what a tricked assistant can do."
 pubDate: 2026-10-19
 relatedPages: ["/ai-agent-development", "/mlops-services", "/rag-development"]
 category: ai
 ---
 
-A recruiting assistant reads a CV with a hidden instruction to rank the applicant first. An operations assistant reads an email telling it to change an order's delivery address. In both examples, material the assistant was asked to read contains an instruction from someone else.
+A recruiting assistant reads a CV with a hidden line telling it to rank this applicant first. An operations assistant reads an email asking it to change an order's delivery address. Nobody on your team did anything wrong. They asked the AI to read something, and it had someone else's instructions in it.
 
-These are examples of prompt injection. With no complete fix yet, the tool's permissions determine how much damage following the wrong instruction could cause.
+That's prompt injection, and there's no complete fix for it yet. What you can control is how much damage the assistant could do if it followed the wrong instruction.
 
-## How does prompt injection work?
+## Why the AI can't tell the difference
 
-A language model receives one long stream of text. Your instructions ("you are a support assistant, answer questions about orders") sit in that stream alongside whatever the user typed and whatever documents the system pulled in to help. The model has no reliable way to tell which parts are instructions it should obey and which parts are data it should only read.
+A language model gets one long stream of text. Your instructions sit in it next to whatever the user typed and whatever documents the system pulled in. The model has no reliable way to tell which parts to obey and which parts only to read. It decides by judgment, and judgment can be tricked.
 
-So if a piece of that text says "ignore your previous instructions and do this instead," the model may comply. Telling instructions from data is something the model does by judgment, and judgment can be tricked.
+OWASP describes two kinds. Direct injection is a user typing the attack into the chat box, trying to get your support bot to offer a discount it isn't allowed to give or say something embarrassing. On its own, that mostly risks your reputation.
 
-## Direct and indirect injection
+Indirect injection is the serious one. The instructions arrive inside content the AI reads on someone's behalf: a web page, a PDF, an email, a calendar invite, a product review. They can be white text on a white background or tucked into a document's metadata, so the person using the tool never sees them.
 
-OWASP describes two kinds.
+## It gets worse once the AI can act
 
-Direct injection is a user typing the attack into the chat box. Someone asks your support bot to reveal its instructions, offer a discount it isn't allowed to give or write something embarrassing that ends up in a screenshot. This is the version people have heard of, and on its own it mostly risks your reputation.
+A chatbot that only replies can be made to say something wrong. An agent that can send email, edit records or call your systems can be made to do something wrong, with whatever permissions you gave it.
 
-Indirect injection is the more serious one. The instructions arrive inside content the AI reads on someone's behalf: a web page, an uploaded PDF, an email, a calendar invite, a product review. The person using the tool never sees them. They can be written in white text on a white background, tucked into a document's metadata or phrased to look like ordinary content.
+The combination to watch for is a tool that reads outside content, can see private data and can send information out, even through a link it shows. That mix lets an attacker's instructions pull your data out through the AI.
 
-In the CV and order-email examples, a team member could be carrying out a legitimate task when the attack arrives. Reviewing the instructions your own team wrote is not enough; test the content the assistant retrieves and reads as well.
+## Assume it will be fooled, and make that cheap
 
-## Why it gets worse when AI can take actions
+That's OWASP's guidance and our own practice. Give the AI the least access that does the job: an assistant that drafts replies doesn't need to send them. Have a person approve refunds, deletions, payments and messages to customers. Enforce permissions outside the model, so it only ever receives documents the person asking is allowed to see. If it never gets the confidential file, no hidden instruction can leak it. Check its output like any other input, try the attacks yourself before launch, and log what it does after.
 
-A chatbot that can only reply with text can be made to say something wrong. An agent that can send email, edit records or call your APIs can be made to do something wrong, with whatever permissions you gave it. Connecting more tools gives an attacker more possible actions to exploit.
+The price is an assistant that does less on its own, with someone approving the expensive steps. We think that's worth paying. If you're still deciding how much freedom a process needs, see [choosing between an AI agent and plain automation](/blog/ai-agent-or-automation).
 
-Pay particular attention to a tool that combines these capabilities: reads content from outside your company, has access to private data, and can send information out (by email, a web request or even a link it renders). That combination lets an attacker's instructions pull your data out through the AI.
+## One thing to do this week
 
-## How to defend against prompt injection
+Pick one AI feature you run and write down what it reads, what private data it can see and what it can do. If it reads outside content and can act, make sure the worst thing it can do alone is something you could live with.
 
-OWASP's guidance, and our own practice, comes down to assuming the model will sometimes be fooled and designing so that being fooled doesn't cost much.
-
-### Give the AI the least access that does the job
-
-An assistant that summarizes support tickets doesn't need permission to close them. An agent that drafts replies doesn't need to send them. Every permission you leave out is one an attacker can't use.
-
-### Put a person in front of anything expensive
-
-Refunds, deletions, payments and messages to customers should wait for a human to approve them. The AI can prepare the action and explain why, and a person confirms it. Agree which actions need that checkpoint before giving the assistant access.
-
-### Keep untrusted content clearly separate
-
-Mark text from outside sources as data, tell the model it is data, and never put it in the same place as your own instructions. This lowers the success rate without bringing it to zero, which is why it's paired with the other measures.
-
-### Check what comes out
-
-When the AI's output feeds into another system, validate it like any user input. If it should be a category from a fixed list, reject anything else. If it should never contain a link, strip links.
-
-### Enforce permissions outside the model
-
-A retrieval system should only fetch documents the person asking is allowed to see, checked in code at query time. If the model never receives the confidential file, no injected instruction can make it leak that file. Test those boundaries with users who have different access rights.
-
-### Test with attacks, and keep testing
-
-Before launch, try the attacks yourself: hidden instructions in documents, emails written to hijack the agent, requests to reveal the system prompt. After launch, log what the AI did and why, and watch for unusual behavior. If you're still deciding how much autonomy a process needs, our post on [choosing between an AI agent and plain automation](/blog/ai-agent-or-automation) covers that.
-
-## What to ask before you launch
-
-For any AI feature, list what it reads, what private data it can see and what actions it can take. If it reads outside content and can act, assume someone will try to steer it, and make sure the worst action it can take on its own is one you could live with.
+If you'd like help working through that for an [AI agent](/ai-agent-development) you're building or already running, [get in touch](/contact).

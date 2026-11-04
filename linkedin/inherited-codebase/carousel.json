@@ -3,7 +3,7 @@
     "slides": [
         {
             "title": "Can it be rebuilt the same way twice?",
-            "body": "Pinned dependencies, no production keys in the repository, a deploy you can repeat. Fix this before anyone adds a feature."
+            "body": "No keys to the live system left in the code, and a publish anyone can repeat. Fix this before anyone adds a feature."
         },
         {
             "title": "Can you name the reason for each change?",
@@ -18,8 +18,8 @@
             "body": "Pointing the site back at the old system should take one setting."
         },
         {
-            "title": "Does the migration copy, never delete?",
-            "body": "It should re-run safely, every record should point to its source row, and old tables should stay a month after the switch."
+            "title": "Does the move copy, never delete?",
+            "body": "It should be safe to re-run, with the old data kept in place for a month after the switch."
         },
         {
             "title": "Have you seen a deploy and a rollback?",

@@ -1,5 +1,5 @@
 ---
-title: "The software launched. Who is looking after it now?"
+title: "Software maintenance after launch: what to budget for"
 image: ../../assets/blog/software-maintenance-after-launch-image.jpg
 imageAlt: "A small blue bonsai on a stone block, ringed by miniature watering cans, shears and an oil can on a blue background"
 cover: ../../assets/blog/software-maintenance-after-launch.png
@@ -9,64 +9,38 @@ relatedPages: ["/website-maintenance", "/app-maintenance-and-support"]
 category: software
 ---
 
-The build is finished and the software works. Then a browser changes, a payment connection needs an update or the contact form stops sending messages. Who gets the alert, and is fixing it part of anyone's budget?
+The build is finished and the software works. Then a browser changes, a payment connection needs an update or the contact form stops sending messages. Who gets the alert, and is fixing it in anyone's budget?
 
-Launch often closes a project without settling those responsibilities. Maintenance covers the work needed to keep the software useful and safe, while new features need their own budget and decisions.
+Launch often closes the project without settling that. Give maintenance its own budget line from the first month after launch, separate from new features, even when the same people do both jobs.
 
-## What maintenance actually is
+## What the money pays for
 
-Budget separately for keeping the existing product running and adding features, even if the same people do both jobs.
+The biggest steady part is updates. Every modern application is built on dozens or hundreds of open source packages, and each of them releases security fixes. Skip a year and the updates pile up, each one harder to apply than it would have been on time.
 
-### Security and dependency updates
+Then there's change you don't control. Browsers, operating systems, hosting providers and app stores move on their own schedules, and a mobile app faces two operating system releases a year.
 
-Every modern application is built on dozens or hundreds of open source packages, and each of them releases updates and security fixes. Applying them on a schedule, testing them first and handling the occasional update that breaks something is the largest steady part of maintenance. Skip it for a year and the updates pile up, each one harder to apply than it would have been on time.
+Someone also has to notice when checkout stops working. Monitoring catches that, provided a person reads the alerts. Backups need the same care: we rehearse restores and tell the client how long recovery takes.
 
-### Platform changes you don't control
+Last come the small requests, like a new price, a staff update or a report for finance. Agree which of these count as maintenance and which need their own estimate, or they'll sit between two budgets.
 
-Browsers, operating systems, hosting providers and app stores all change on their own schedules. A mobile app faces two operating system releases a year and store policies that change without much warning. Ask who checks the app against upcoming releases and how much time is allowed for fixes.
+## Why similar products cost different amounts
 
-### Monitoring, backups and restores
+Every integration is an outside company that can change underneath you. A booking app connected to a payment provider, a calendar service and an accounting system has three. A brochure site with a contact form has almost none.
 
-Someone has to notice when the checkout or contact form stops working. Uptime and error monitoring catches that, provided a person reads the alerts. Backups need the same care, since the only way to know a backup works is to restore it. We rehearse restores and tell the client how long recovery takes.
+Software where each update can be tried on a test copy before it goes live is cheaper to change than software someone has to check by hand. If you've taken over a product without that, we wrote about [inheriting a codebase that still works](/blog/inherited-codebase).
 
-### Bug fixes and small changes
+Sensitive data needs faster patching. If a clinic's patient portal has a known vulnerability in one of its packages, the fix can't wait for next month's cycle. Each platform adds its own updates: a web app plus iOS and Android apps is three, and two of them answer to app store reviews. A product left alone for two years usually needs a catch-up project before routine maintenance can start.
 
-Users find problems that testing missed, and the business needs small changes: a new price, a staff update or a report for finance. Agree which of these requests belong in maintenance and which need a separate estimate, so they don't sit between the two budgets.
+## A monthly plan or a block of hours
 
-## What drives the cost up or down
+Most [maintenance](/app-maintenance-and-support) runs on a monthly plan, a block of hours or a mix. A plan is easier to budget for. A block of hours suits a product that rarely changes but sometimes needs a burst of work.
 
-Two products of the same size can have very different maintenance bills. When estimating one, we look at the dependencies and the work needed to change them safely.
+Either way, ask what the monthly report contains: what was patched, what broke, what was fixed and what needs a decision, in words the owner can use. If you never hear from your maintenance provider, you can't tell whether the work is happening.
 
-### How many moving parts it depends on
+## Before the build team moves on
 
-Every integration, plugin and third-party service is something that can change underneath you. A booking app that connects to a payment provider, a calendar service and an accounting system has three outside parties who can each change their API. A brochure site with a contact form has almost none.
+Ask your developer three things while they still have the whole system in their heads. Which parts depend on outside services? What would a new developer need to know to take over? What would they patch first?
 
-### Whether it was built to be changed
+Then write down who receives alerts, who can approve urgent work and what the budget covers. Give a copy to the person running the business as well as the person running the software.
 
-Automated tests, a staging environment and a repeatable deploy make every later change cheaper, because each update can be checked before it goes live. Without them, the team has to test changes by hand or risk releasing them unchecked. If you've taken over a product without these, we wrote about [inheriting a codebase that still works](/blog/inherited-codebase).
-
-### How sensitive the data is
-
-Software that holds health records, payment details or personal data needs faster patching, access reviews and audit logs. Say a clinic's patient portal has a known vulnerability in one of its packages. That fix can't wait for the next monthly cycle, so the plan has to allow for urgent work.
-
-### How many platforms it runs on
-
-A web app is one codebase on one platform you largely control. A web app plus iOS and Android apps is three, and two of them answer to app store reviews. Each platform adds its own updates and its own testing.
-
-### How long it was left alone
-
-Maintenance costs least when it's continuous. A product that went two years without updates usually needs a catch-up project first, sometimes including a framework upgrade, before routine maintenance can start.
-
-## How maintenance is usually priced
-
-Most maintenance runs on a monthly plan covering a defined set of work, or on a block of hours used as needed, or on some mix of the two. A plan is easier to budget for. A block of hours suits products that change rarely but sometimes need a burst of work.
-
-Whichever you choose, ask what the monthly report contains. It should cover what was patched, what broke, what was fixed and what needs a decision, in language the owner can use. If you never hear anything from your maintenance provider, you can't tell whether the work is happening.
-
-## How to budget for it before launch
-
-The cheapest time to plan maintenance is before the build ends. Ask your developer three things while they still have the whole system in their heads. Which parts depend on outside services? What would a new developer need to know to take over? And what would they patch first if they were looking after it?
-
-Then put a monthly line in the budget from the first month after launch, sized to the moving parts, and treat new features as a separate decision.
-
-Before the build team moves on, write down who receives alerts, who can approve urgent work and what the maintenance budget covers. Give that document to the person running the business as well as the person running the software.
+If your software launched without a plan like this, [tell us about it](/contact).

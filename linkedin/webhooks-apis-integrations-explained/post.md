@@ -2,17 +2,17 @@
 
 ## Post 1: native text
 
-A deposit clears in Stripe, and someone still marks the booking as paid by hand. A customer changes their address, and two departments update different copies of it.
+A deposit clears in Stripe, and someone still marks the booking as paid by hand. A customer changes their address, and two departments update different copies.
 
-Connecting tools sounds simple until both hold information you rely on. An API lets one system ask another for data or an action. A webhook lets a system send a message the moment something happens, so Stripe tells your booking system the deposit cleared and the appointment confirms itself.
+A webhook lets one system tell another the moment something happens. Stripe tells your booking system the deposit cleared, and the appointment confirms itself.
 
-The receiving side has to be built for that. It should check every message is genuine, because anyone can send a request to your web address, and a forged "payment succeeded" could mark an order as paid. It should expect the same event twice, not count on events arriving in order, and reply at once, doing the work later from a queue.
+The receiving side has to be built for it. Anyone can send a request to your web address, so each message has to be checked as genuine, or a forged "payment succeeded" could mark an order as paid. The same event can arrive twice, and not always in order. Users never see this handling, so quick builds skip it, and you get the occasional double charge or a booking that never confirmed.
 
-Users never see any of this, so quick builds skip it, and you get the occasional double charge or a booking that never confirmed.
+Once the connection works, most of the effort is decisions. If an address changes in the CRM and in accounting on the same day, one system has to win. "Client" in one tool may or may not mean "customer" in another. And someone has to hear when a call fails. Without a daily check that totals match on both sides, a quiet failure can sit until month end.
 
-Once it works, most of the effort is decisions. If an address changes in the CRM and in accounting on the same day, one system has to win. "Client" in one tool may or may not mean "customer" in another. Someone has to hear when a call fails, and without a daily check that totals match on both sides, a quiet failure can sit until month end.
+This week, pick the connection your team leans on most and ask who gets told when it breaks.
 
-Link's in the comments: questions to answer before connecting two tools, and when Zapier or a built-in connector is enough.
+We wrote up how APIs and webhooks work, and when Zapier is enough. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/webhooks-apis-integrations-explained.pdf)
 

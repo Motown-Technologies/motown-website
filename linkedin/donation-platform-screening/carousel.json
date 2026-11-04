@@ -3,7 +3,7 @@
     "slides": [
         {
             "title": "Does every payment route hit the check?",
-            "body": "Including routes added later. On one platform it sits in the function that identifies the donor, before any payment exists."
+            "body": "Including ways to pay added later. Screen at the one step every gift passes through, before any payment exists."
         },
         {
             "title": "What if the lists can’t be reached?",

@@ -2,19 +2,19 @@
 
 ## Post 1: native text
 
-Your team wants an AI assistant that answers from your policies, contracts and product manuals. The proposal mentions fine-tuning. Should it?
+Your team wants an AI assistant that answers from your policies and manuals, and the proposal says fine-tuning. Ask three questions before you sign.
 
-Your documents change. Replace a policy and the next answer should use the new one. Retrieval (RAG) means updating the index. A fine-tuned model keeps the old policy until someone retrains it.
+Do the documents change? With retrieval (RAG), you update the index and the next answer uses the new version. A fine-tuned model keeps the old policy until someone retrains it.
 
-Access differs too. Retrieval can check it at search time, so people only get answers from documents they're allowed to open. A tuned model can repeat anything it was trained on to anyone who asks the right way.
+Do different people have different access? Retrieval can check permissions at search time. A tuned model can repeat anything it was trained on to anyone who asks the right way.
 
-Answers need to show where they came from. Retrieval can cite the passage. Fine-tuning spreads what it learned through the model, leaving no passage to point to.
+Does an answer need to show its source? Retrieval can cite the passage. A tuned model has no passage to point to.
 
-So the documents go into retrieval. Fine-tuning is about behavior: the model knows the right thing but says it in the wrong shape across thousands of requests, and you've got hundreds of agreed examples of good output. An insurance broker sorting every incoming email into one of fifteen categories, in a fixed format for its claims system, fits. It could use both: retrieval pulls the customer's policy wording into each tuned summary.
+A yes to any of these points to retrieval. Fine-tuning is a separate decision about behavior: the model knows the right thing but says it in the wrong shape, thousands of times. An insurance broker sorting every incoming email into one of fifteen categories, in a fixed format for its claims system, fits. It could use both, with retrieval pulling the customer's policy wording into each summary.
 
-If you tune, keep the dataset and test set yourself. OpenAI is winding down its fine-tuning platform, and base models get replaced every year or so.
+If you do tune, keep the dataset and test set yourself. OpenAI is winding down its fine-tuning platform, and base models get replaced every year or so.
 
-First, build the test set: real questions with agreed answers, scored the same way on every version. Then ask to see what happens with a replaced policy, and with a question no document covers.
+Whatever you choose, we build the test set first: real questions with agreed answers, scored the same way on every version. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/rag-or-fine-tuning.pdf)
 

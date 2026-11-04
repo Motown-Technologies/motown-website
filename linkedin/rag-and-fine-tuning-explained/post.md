@@ -2,21 +2,19 @@
 
 ## Post 1: native text
 
-AI proposals usually offer two ways to make a model work with your company's information: RAG or fine-tuning. They change different things.
+Ask an AI assistant about the refund policy your team agreed last week and it has nothing to go on. It might say so. It might make one up.
 
-RAG (retrieval-augmented generation) changes what the model reads. Your documents get split into passages and indexed. Ask a question and the system finds the relevant ones and hands them to the model, with an instruction to answer from them and say which ones it used. Think open-book exam.
+AI proposals usually offer two fixes, RAG and fine-tuning, and they change different things.
 
-So when your refund policy changes, you update the index and the next question gets the new wording, with no change to the model.
+RAG (retrieval-augmented generation) changes what the model reads. Your documents are split into passages and indexed. A question triggers a search, and the best passages go to the model with an instruction to answer from them and say which ones it used. Think open-book exam. Change the policy, update the index, and the next answer uses the new wording.
 
-Finding the right passage doesn't guarantee a right answer, so check the reply and the passages behind it. Pull up an old policy and it'll still write a convincing answer.
+The catch is search. Pull up last year's policy and the model will still write a convincing answer, so check the passages as well as the reply.
 
-Fine-tuning changes the model's weights. You keep training an existing model on examples, each one an input paired with the reviewed output you want. It's more like training a new hire on how your firm writes, so every support reply acknowledges the request, explains the policy and gives a next step, with a shorter prompt.
+Fine-tuning changes the model itself. You keep training it on reviewed examples, so it's closer to teaching a new hire how your firm writes: acknowledge the request, explain the policy, give a next step. It's a poor place to keep a policy, though. When the terms change, fixing it takes another training run.
 
-It's a bad place to keep a policy that changes. Updating it takes another training run, and training alone can't trace an answer back to a source.
+Before either, try clear instructions and a few good examples in the prompt. That's often enough, and it gives you a baseline.
 
-You can use both. There's also a cheaper step before either: clear instructions and a few good examples in the prompt. That often does the job, and it gives you a baseline to measure against.
-
-Side-by-side table's in the article. Link's in the comments.
+One thing to do this week: write down five real refund questions and the answers you'd accept. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/rag-and-fine-tuning-explained.pdf)
 

@@ -2,23 +2,17 @@
 
 ## Post 1: native text
 
-A lot of the processes people want to "put AI on" need much less AI than the pitch suggests.
+A lot of the processes people want to "put AI on" need one AI step inside ordinary automation, and nothing more.
 
-Look closely and the job is often someone copying information, checking a few rules and chasing replies. If you can write the steps down and they come out the same every time, that's automation. AI earns its place where the next step depends on reading something messy.
+Look closely and the job is usually someone copying information, checking a few rules and chasing replies. If you can write the steps down and they come out the same each time, that's plain automation.
 
-Here's how maintenance requests at a property manager break down:
+Take maintenance requests at a property manager. Logging the request is automation. Picking a vendor by trade and building is a rule. Booking the visit and telling the tenant is automation. The step that needs a model is turning "the thing under the sink is dripping again" into "plumbing, low urgency, unit 4B." And a burst pipe at 2 a.m. still goes to a person.
 
-• Logging the request and confirming receipt is automation.
-• Turning "the thing under the sink is dripping again" into "plumbing, low urgency, unit 4B" is where a model helps.
-• Picking a vendor by trade and building is a rule.
-• Booking the visit and telling the tenant is automation.
-• Deciding whether a burst pipe at 2 a.m. needs an emergency plumber stays with a person.
+Hand the whole thing to an agent and you add cost and unpredictability for the same result.
 
-That's one AI step inside an ordinary workflow. Handing the whole thing to an agent would add cost and unpredictability, and you'd get the same result.
+An agent starts to make sense when the job includes chasing: checking the vendor's reply, rebooking when they say no, asking the tenant for photos when the description's vague. Each case takes a different path, which can justify giving software more control within limits you've agreed.
 
-An agent starts to make sense if the coordinator also does the chasing: checking the vendor's reply, rebooking when they say no, asking the tenant for photos when the description's vague, deciding when to escalate. Each of those takes a different path, which can justify giving software more control within limits you've agreed.
-
-We've written up the four questions that decide it, plus the limits to set before you connect an agent to anything. Link's in the comments.
+Try it on one of your own processes. Mark each step "rule" or "judgment," then circle the judgment steps where a mistake would be expensive. The write-up has the questions that decide the rest.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/ai-agent-or-automation.pdf)
 

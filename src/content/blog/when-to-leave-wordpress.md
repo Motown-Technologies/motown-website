@@ -9,39 +9,32 @@ relatedPages: ["/migrate-from-wordpress"]
 category: software
 ---
 
-Leave WordPress when keeping the site alive takes more of your team's time than writing for it. Years of plugins, theme changes and quick fixes can leave the team spending more time on upkeep than on writing. If updates go through cleanly and pages load fast on a phone, staying is fine.
+A dozen plugins are waiting on updates, and nobody is sure which one will break the site. Bots hammer `/wp-admin` all day. Visitors say pages are slow, and nobody has worked out why. The theme is something only the original developer understands.
 
-## The signs it's time
-
-These are the complaints we hear on first calls about WordPress sites:
-
-- A dozen plugins are waiting on updates, and nobody is sure which one will break the site.
-- Bots hammer `/wp-admin` all day.
-- Visitors report slow pages, and nobody has established what is causing the delay.
-- The theme is something only the original developer understands.
-
-Investigate which parts of the setup are causing these problems. Find out which updates are difficult, what is slowing the site and whether another developer could maintain the theme. Compare the cost of those repairs with the disruption of a move.
+That's what we hear on first calls about WordPress sites. Our rule of thumb: leave WordPress when keeping the site alive takes more of your team's time than writing for it.
 
 ## When staying is fine
 
 If your site runs a handful of plugins, updates go through without drama and pages load quickly on a phone, WordPress is doing its job. A migration takes real work, and we wouldn't spend it on a site that isn't causing problems.
 
-## Compare the disruption as well as the technology
+Even if some of the complaints sound familiar, find the cause before deciding. Which updates are risky, what is slowing the pages, and could another developer take over the theme? Then compare the cost of those repairs with the disruption of a move.
 
-Replacing the public site doesn't always require replacing the editor. WordPress can remain the place staff write while the public pages are built ahead of time and served separately. Or the team can move the content to another CMS.
+## You might not need to replace the editor
 
-The first option keeps a familiar editing tool but adds a build process to maintain. The second may remove frustrations with editing, but staff need to learn it and the content has to be checked in its new home. Ask the people publishing the site to try that workflow before choosing.
+Leaving WordPress for visitors doesn't have to mean leaving it for staff. WordPress can stay the place people write while the public pages are built ahead of time and served separately. Or the content can move to another content system.
 
-Inventory the things around the pages too: contact forms, newsletter signups, media and analytics. Decide who will operate each after the move, since a simpler site for visitors can still create new tasks for staff.
+Each has a cost. Keeping WordPress for editing keeps a tool your staff know, but adds a build process someone has to maintain. A new system can fix editing frustrations, but staff have to learn it and every page has to be checked in its new home. Have the people who publish try the workflow before you choose.
 
-## Make a plan for the existing URLs
+## A clinic that kept WordPress for editing
 
-Record the old URLs and their destinations before moving content. Where an address changes, plan a redirect and test it. Check the imported pages and media against the originals, then monitor Search Console after launch for changes in search performance.
+An endoscopy center we worked with ran its whole site on WordPress. Staff liked editing in it; nobody liked how it loaded for patients. So we kept WordPress as the back office and rebuilt the public site as pages built ahead of time from its content. Staff still edit in the admin they know. Patients never touch WordPress, and if it has a bad day, only staff notice. We wrote up [how that rebuild works](/blog/headless-wordpress-clinic), and the [endoscopy center case study](/case-studies/endoscopy-center) has the details.
 
-Keep the current site running while the replacement is reviewed. Agree who can approve the switch and what would trigger a rollback. The schedule should include content checking and editor training alongside development.
+## What a move involves around the pages
 
-## Example: a clinic that kept WordPress for editing
+The pages are the easy part. Contact forms, newsletter signups, media and analytics all need someone to run them afterward, so name that person before the move. A simpler site for visitors can still create new chores for staff.
 
-An endoscopy center's site ran on a full WordPress install. We rebuilt it as static pages that pull content from WordPress at build time. Patients never touch WordPress, and staff still edit in the admin they know. We wrote up [how that rebuild works](/blog/headless-wordpress-clinic), and the [endoscopy center case study](/case-studies/endoscopy-center) has the technical details.
+Then the old addresses. Record every URL and where it should go, plan a redirect wherever one changes, and test it. Keep the current site running until the new one checks out, agree who approves the switch, and watch Search Console after launch.
 
-Before deciding to move, list the maintenance and publishing problems you want to solve, then compare fixing the existing site with replacing it. Include the work your editors would have to learn.
+## Start with a list this week
+
+Write down the maintenance and publishing problems you actually want to solve, and the work your editors would have to learn if you moved. If the list is short, fix the site you have. If it's long, our [WordPress migration](/migrate-from-wordpress) page covers what moving involves, and we're happy to [go through the list with you](/contact).

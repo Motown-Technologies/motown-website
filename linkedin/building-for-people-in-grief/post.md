@@ -2,20 +2,17 @@
 
 ## Post 1: native text
 
-Someone who lost a parent last month might close a long form meaning to come back later, when on an ordinary day they'd have finished it.
+When we met them, a nonprofit supporting women through the loss of a parent ran almost entirely on conversations.
 
-People come to a grief-support organization for the help. Every question the software asks is one more thing to do on a day when they've already got plenty to carry.
+Events, support groups, subsidized therapy, applications to join: four staff with no engineers kept track of all of it by memory. Between events, members had no way to find each other, and nobody could easily see who hadn't been checked in on lately.
 
-A few things we'd check in any product built for people going through something hard:
+We built the public site and the members' app at the same time. A site that brings in applications isn't worth much if there's nowhere good to review them.
 
-• Ask for less, in smaller pieces. One group at a time feels manageable, especially on a phone.
-• Give people words to start from. When members of one nonprofit we worked with leave a memorial wish for someone, the app offers a few preset phrases first, and they can still write their own.
-• Write down the tones to avoid. That nonprofit's design brief named four: clinical, corporate, greeting-card and funereal.
-• Get the dates that matter exactly right. Their members mark a parent's anniversary on the Hebrew calendar, so it moves every year and is worked out fresh.
-• Treat each member's record as theirs. Their account closes when they ask, and erasing their details later leaves the memorial to their parent in place.
-• Let the software hold the rules. The nonprofit has a team of four and no engineers, so every admin action is logged and only one role can do anything destructive.
+Members now have one place for the community between gatherings: the calendar, registration, a waitlist that moves them up on its own, and a memorial wall where each woman remembers her parent. Her parent's anniversary is kept on the Hebrew calendar and worked out fresh each year, and other members can leave her a wish before the day.
 
-We've written up each one, including how staff preview the members' app without reaching a real member's account. Link's in the comments.
+Staff can assign reach-out tasks that show who hasn't heard from anyone in a while, and see how much each person has on their plate. Donations and receipts live in the same system.
+
+We wrote up what we built and what we'd tell another small nonprofit. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/building-for-people-in-grief.pdf)
 

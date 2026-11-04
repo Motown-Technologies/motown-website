@@ -9,67 +9,43 @@ relatedPages: ["/mvp-development", "/web-application-development"]
 category: software
 ---
 
-You send the same description to three developers and get three very different quotes. Before deciding which one is overpriced, check whether they imagined the same product. "We need an app for our field team" leaves room for anything from a form to a scheduling system with offline sync.
+You send the same description to three developers and get three very different quotes. Before deciding which one is overpriced, check whether they pictured the same product. "We need an app for our field team" could mean anything from a single form to a scheduling system that works offline.
 
-A brief helps developers estimate the same work. Describe who needs help, what they do today, the systems involved and the limits on the project. You can do that in your own words, usually in a couple of pages.
-
-## Why most software briefs can't be priced
-
-A quote contains assumptions about the users, data and exceptions, even if the developer hasn't written them down. A clearer brief makes more of those assumptions visible. The prices may still differ, but you can ask each developer about the same pieces of work.
+Every quote rests on guesses about your users, your data and the odd cases. A good brief replaces those guesses with things you've told them. It fits on a couple of pages, in your own words. The prices may still differ, but you can ask each developer about the same pieces of work.
 
 ## Start with the problem and who has it
 
-Open with what is going wrong today and what it costs you. "Our dispatchers spend the first hour of every day copying jobs from email into a spreadsheet, and drivers call in to ask where they're going next" tells a developer far more than "we need a dispatch system."
+"Our dispatchers spend the first hour of every day copying jobs from email into a spreadsheet, and drivers call in to ask where they're going next" says far more than "we need a dispatch system." If you know what that costs in hours, mistakes or lost sales, say so; it helps them suggest how much to build first.
 
-If you know what the current process costs in hours, mistakes or lost sales, include it. It helps the developer suggest how much to build first.
+Then give each type of user a line. A dispatcher assigns each new job to a driver. A driver sees today's jobs on a phone, marks each one done and adds a photo. The owner sees which jobs are late. Each line is a piece of work someone can estimate.
 
-## List the users and what each one does
+## Send the messy real thing
 
-Name each type of person who will use the software and write a sentence or two about what they do in it. For example:
+Attach the spreadsheet you actually use, the paper form, the report someone builds by hand every Monday. Remove anything sensitive but keep the columns and the mess.
 
-- A dispatcher assigns each new job to a driver.
-- A driver sees today's jobs on a phone, marks each one done and adds a photo.
-- The owner sees how many jobs were finished this week and which ones are late.
+Then list every system it has to talk to, like your accounting package, CRM or online store. Integrations are often where estimates go wrong, and "we don't know if it can connect to anything" is a fine thing to write down.
 
-Each of these lines is a piece of work someone can estimate. Roles also tell the developer who needs to see what, and permissions are much cheaper to design in at the start than to add after the first complaint.
+## Put the budget in writing
 
-## Show the data and the systems it touches
+Many people hold the budget back to see what comes in. We'd give a range; without one, a developer can't tell whether you want the smallest version that works or the complete one. Give the deadline and the reason for it too. "Live before our busy season starts in March" lets someone plan a smaller first release that makes the date.
 
-Attach the real artifacts: the spreadsheet you use now, the paper form, a screenshot of the report you build by hand every Monday. Remove anything sensitive, but keep the columns and the messy parts. The actual spreadsheet lets the developer inspect details that a description may leave out.
-
-Then list every system the software has to talk to, such as your accounting package, your CRM, your online store or a supplier's portal. Integrations are often where estimates go wrong, so say what you know: which product it is, whether data needs to flow one way or both, and how often. If you don't know whether a system can connect to anything, say so, and a good developer will find out before quoting.
-
-## Say what is fixed
-
-Budget, deadline and rules shape the design, so put them in writing.
-
-Give a budget range. Many people hold it back to see what comes in, but without it developers can't tell whether you want the smallest version that works or the complete one. With a range, they can tell you what fits inside it.
-
-Give the date and the reason for it. "Live before our busy season starts in March" lets a developer plan a smaller first release that makes the date. Also list any rules the software has to follow, for example if it will hold patient records, card payments or children's data, and anything your customers already require of you, such as a security review.
-
-## Separate what you need now from what can wait
-
-Mark each feature as needed for launch or useful later. This list helps control the price, but it can be difficult to write when each feature has someone who wants it included. We wrote about how we make those cuts in [what to build first in an MVP](/blog/mvp-what-to-build-first).
+Mark each feature as needed at launch or useful later. That list controls the price, and it's hard to write when every feature has a champion. We wrote about making those cuts in [what to build first in an MVP](/blog/mvp-what-to-build-first).
 
 ## What to leave out
 
-Leave out the choice of programming language or platform unless you have a real reason, such as an in-house team that already works in one. Leave out detailed screen designs too. Rough sketches of what people need to see are useful, but polished mockups often fix decisions before anyone has tested them.
+Skip the programming language unless you have a real reason, like an in-house team that already works in one. Skip polished mockups, which settle decisions before anyone has tested them. A fifty-page spec can still miss the one exception your staff handle by email every week, which is what a developer most needs to hear.
 
-You also don't need a fifty-page specification. A long spec can still miss the one exception your staff handle by email every week, and that exception is what a developer most needs to hear about.
+A short brief leaves questions open, and a good developer will ask about them. One who quotes a vague brief without asking anything has filled the gaps with assumptions you haven't seen.
 
-## A one-page outline you can copy
+## A one-page outline to start this week
 
 1. The problem today, and what it costs.
-2. The people who will use it, and what each one does.
+2. Who will use it, and what each person does.
 3. Your current tools and data, with samples attached.
 4. Systems it has to connect to.
 5. What's needed at launch, and what can wait.
 6. Budget range, deadline and the reason for the date.
-7. Rules you have to follow.
-8. Who on your side makes decisions, and how fast they can answer questions.
+7. Rules you have to follow, like patient records or card payments.
+8. Who on your side decides, and how fast they can answer questions.
 
-## What a good developer does with it
-
-Expect questions about anything the brief leaves open. A developer who quotes a vague brief without asking anything has filled the gaps with assumptions you haven't seen.
-
-For larger projects, ask for a defined first phase and a range for what follows, with the open questions attached. You should be able to see what you are paying to learn before committing to the whole build.
+Fill in the first two lines this week. Nobody outside your business can write them for you. Then [send it to us](/contact) for a quote.

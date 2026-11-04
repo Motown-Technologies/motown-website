@@ -2,15 +2,15 @@
 
 ## Post 1: native text
 
-Technical debt is the extra work of changing software whose earlier design or shortcuts no longer fit. Ward Cunningham coined the metaphor in 1992. Martin Fowler puts it in money terms: the extra effort to add features is the interest.
+If adding one field to a form has become a two-week job, that's technical debt. A full rewrite is usually the wrong fix.
 
-Some of it's a sensible choice. Shipping a simpler version to see if customers want it can be right, if someone plans to pay it back. Most of it builds up without anyone deciding. The business changed and the software got bent to fit, its outside code fell years behind, or tests never got written.
+Technical debt is the extra work of changing software whose earlier design or shortcuts no longer fit. Ward Cunningham coined the metaphor in 1992, and Martin Fowler puts it in money terms: the extra effort to add features is the interest.
 
-You can spot it without reading code. Adding one form field becomes a two-week job. A routine release breaks a report nobody touched. Estimates keep growing, only one person understands part of the system, and updates get put off because the code feels unsafe to touch. Each can have other causes, but several at once usually mean debt.
+Some of it is a sensible choice, like shipping a simple version to see whether customers want it. Most builds up without anyone deciding, as the business changes and the software gets bent to fit.
 
-A full rewrite is tempting, and usually the wrong first move. It freezes new work for months, and the new system has to rediscover every rule the old one handled.
+You can spot it without reading code. Releases break reports nobody touched. Estimates keep growing. One person understands part of the system and everyone waits for them. Any of these can have other causes, but several at once usually mean debt.
 
-Start where the system changes and breaks most, since debt in code nobody touches costs almost nothing. Write tests capturing what it does today, odd behavior included. Clean up the messy part a feature already touches, and set aside part of every cycle for maintenance.
+A rewrite freezes new work for months, and the new system has to rediscover every rule the old one handled. We'd pay the debt down where it hurts instead. Debt in code nobody touches costs almost nothing. Debt in your checkout costs you every week.
 
 Not technical? Ask your team which part they're most nervous about changing, and why. Then cost and rank the fixes they name.
 

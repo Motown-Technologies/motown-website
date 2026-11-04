@@ -22,8 +22,8 @@
             "body": "Restoring one is the only way to know it works. Ask how long recovery takes."
         },
         {
-            "title": "How are updates tested?",
-            "body": "Automated tests and a staging site cut the manual checking on each update. Ask which checks are still done by hand."
+            "title": "What would a new developer need?",
+            "body": "Ask what someone taking over would need to know, and get it written down before the build team moves on."
         }
     ]
 }

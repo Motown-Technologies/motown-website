@@ -1,65 +1,46 @@
 ---
-title: "Your online store is losing sales. Is the platform really the problem?"
+title: "Shopify or headless: finding where your store loses sales"
 image: ../../assets/blog/shopify-custom-or-headless-image.jpg
 imageAlt: "Three empty shopping baskets, wicker, wire and blue, on a blue floor"
 cover: ../../assets/blog/shopify-custom-or-headless.png
-description: "How to distinguish storefront problems from platform limits before committing to a Shopify rebuild or headless commerce."
+description: "Before paying for a Shopify rebuild or going headless, find where shoppers give up. Most of the fixes happen on the store you already have."
 pubDate: 2026-09-30
 relatedPages: ["/ecommerce-development", "/shopify-development", "/headless-commerce-development"]
 category: software
 ---
 
-You pay to bring people to the store, then watch them leave before checkout. A platform rebuild is one possible response, but it may not address the reason they left. A slow product page, poor search and a difficult checkout need different repairs.
+You pay to bring people to the store, then watch them leave before checkout. Someone suggests a new platform. A rebuild might not touch the reason they left, though. A slow product page, search that fails on a typo and a long checkout each need a different repair, and most of those repairs can happen on the Shopify store you already have.
 
-Find the point where the shopping journey is failing before choosing between Shopify, a custom storefront and headless commerce. Compare the cost of repairing that part of the journey with a full rebuild.
+So find where the shopping journey breaks first, and compare the cost of fixing that part with the cost of a rebuild.
 
-## When Shopify with a custom theme is enough
+## Most problems get fixed on the platform you have
 
-Over time, the theme won't do what the brand needs, the app stack is slowing the site down, and someone is still updating the ERP by hand every morning.
+When a store feels stuck, it's usually a theme that won't do what the brand needs, an app stack slowing the site down, or someone updating the ERP by hand every morning. Shopify can handle more of that than people assume:
 
-Check what can be repaired on the existing platform. Shopify has supported extension points for most of what people assume it can't do:
+- A custom theme built around your brand, with sections the marketing team can rearrange, instead of a premium theme carrying code from four other themes.
+- Shopify Functions and checkout UI extensions for discount, shipping and payment rules, where Shopify allows them.
+- Custom apps for logic no plugin covers, like pricing rules or a product builder.
+- Integrations that move orders, stock and product data between Shopify and your ERP, warehouse or accounting system.
 
-- A custom theme built from the brand, with sections the marketing team can rearrange, instead of a premium theme carrying code from four other themes.
-- Shopify Functions and checkout UI extensions for discount, shipping and payment logic, on surfaces Shopify supports.
-- Custom apps for the logic no plugin covers, such as pricing rules or a product builder.
-- Integrations that move orders, stock and product data between Shopify and the ERP, 3PL or accounting system.
+Before adding another app, look at the ones you have. Check for overlaps and for scripts loading on pages that don't need them. Remove one at a time and test a purchase after each, because every app was put there for something.
 
-Review the installed apps before adding another one. Check for overlapping jobs, unused features and scripts loaded on pages that don't need them. Removing an app also means checking what it was responsible for, so make each change separately and test the purchase flow.
+Agree up front which numbers should move: load time, conversion at each checkout step, average order value. Keep them tied to the problem you chose.
 
-## Rebuilding the storefront on the platform you have
+## When headless is worth it
 
-Sometimes the platform can support the work, but the storefront makes it difficult. Ask the team to distinguish what can be fixed in the current theme from what requires a different front end.
+Headless keeps Shopify for carts, orders and tax and replaces the storefront with a separate one, with a content system your marketing team can publish from directly. It's worth a look when the platform itself is the limit:
 
-Review the shopping journey, including:
-
-- A storefront that renders fast on a mid-range phone on mobile data.
-- Search that survives typos, with filters people can use and merchandising rules you control.
-- A shorter checkout with guest checkout, saved addresses and the wallets customers already have on their phone.
-- Inventory and order data synced with the systems the business runs on, so two people buying the last item at once doesn't break stock counts.
-
-Agree which numbers would show improvement before the work starts: load time, conversion rate at each checkout step, average order value or repeat purchase rate. Keep the measures tied to the problem you chose to solve.
-
-## When headless commerce is worth it
-
-Headless keeps the engine that handles your carts, orders and tax, and replaces the front end it ships with. The storefront becomes a separate application (Next, Astro or Hydrogen) rendered at the edge, with a CMS your marketing team can publish from without a deploy and a real search index behind it.
-
-Consider the extra complexity when the platform is causing problems such as:
-
-- The theme system can't render what the brand needs.
-- You maintain a separate store for every market and want one storefront serving several locales, currencies and brands.
+- The theme system can't show what the brand needs.
+- You run a separate store for every market and want one storefront for several locales, currencies and brands.
 - Marketing waits on a developer every time a landing page changes.
 - Platform search misses a large part of your own catalog.
 
-## When the extra system is too much to maintain
+## The tradeoff is a second system to look after
 
-The extra front end becomes your team's responsibility after launch. Consider that cost carefully in these situations:
+A headless storefront becomes your team's to maintain after launch: another codebase, another way of publishing, another content system. With a two-person team and nobody owning it, it turns into the part of the business nobody can change. If the theme is mostly fine and you want polish, a custom theme costs a fraction as much and ships months sooner. And if you need it live in six weeks, a decoupled build puts most of the work up front, so keeping Shopify's storefront is usually more practical.
 
-- Your team is two people. Headless adds a codebase, a deploy pipeline and a CMS to look after. Without someone owning the front end, it becomes the part of the business nobody can change.
-- The theme is mostly fine. If what you want is design polish and you haven't hit a real platform limit, a custom theme costs a fraction as much and ships months sooner.
-- You need it in six weeks. A decoupled build puts most of the work up front. If the deadline can't move, keeping the platform's front end may be more practical.
+Our view: fix what's losing sales on the platform you have, and go headless only when the platform is the limit and someone will own the result.
 
-## How to decide
+## Do this before anyone quotes a rebuild
 
-Start with what's losing you sales. If the store is slow, the checkout is long or search fails, that can usually be fixed on the platform you have. If the platform itself is the limit and you have people to maintain a separate front end, headless starts to make sense.
-
-Try a purchase on a mid-range phone before choosing a platform. Record where finding a product or completing checkout becomes difficult, then ask which problems can be fixed in the current store. Compare a platform change against that smaller scope, including who will maintain each option.
+This week, buy something from your own store on a mid-range phone on mobile data. Note every point where finding a product or checking out gets hard, then ask which of those your current store can fix. Our [Shopify development](/shopify-development) and [headless commerce](/headless-commerce-development) pages cover both routes, and we can [look at the list with you](/contact).

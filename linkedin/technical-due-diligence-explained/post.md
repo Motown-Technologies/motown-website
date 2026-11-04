@@ -2,19 +2,17 @@
 
 ## Post 1: native text
 
-An investor asks who owns the code. You know the contractor got paid, but you're not sure where the signed assignment is.
+An investor asks who owns your code. You know the contractor got paid, but where's the signed assignment?
 
-Then they ask what the platform will cost at ten times the load, and nobody knows.
+Paying an invoice doesn't settle every ownership question, and in technical due diligence the reviewer wants evidence they can check. Ownership is one area of several. They'll also look at whether the architecture can carry the next 18 months of roadmap, how much code a new engineer could safely change in their first month, security, running costs at ten times the load, and which systems only one person understands.
 
-That's technical due diligence, the tech side of a raise or acquisition. The reviewer looks at whether the architecture can carry the next 18 months of roadmap, how much code a new engineer could safely change in their first month, security, running costs, which systems only one person understands, and who owns the code.
+We'd rather you raise a weak spot than hope it goes unnoticed. A known problem can be looked into, fixed or disclosed with a plan. One that surfaces late in the deal leaves both sides less time to understand it, and can sway the negotiation.
 
-Paying an invoice doesn't settle every ownership question. The reviewer needs evidence they can check: signed agreements handing contractor-built code to the company, and a list of licenses for the outside code you use.
+The cost is time. Tracking down a signed agreement runs on a different schedule from redesigning a system, so leave room before you open the data room, the shared folder reviewers work from.
 
-A known problem can be looked into, fixed or disclosed with a plan. One that surfaces late in the deal leaves both sides less time to understand it, and can sway the negotiation. So leave time before you open the data room, the shared folder reviewers work from. How much depends on what's missing. Tracking down a signed agreement runs on a different schedule from redesigning a system.
+This week, find the signed IP assignment for every contractor who's written code for you. If one's missing, that's your first job, deal or no deal.
 
-Before ordering a new report, ask your team to pull together the evidence they already have. Then rank the known gaps. Give each one an owner, an estimated cost and whether it gets fixed before the deal or after.
-
-Link's in the comments for what reviewers ask in each area and how to present findings.
+The write-up covers what reviewers ask in each area and what a useful finding looks like.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/technical-due-diligence-explained.pdf)
 

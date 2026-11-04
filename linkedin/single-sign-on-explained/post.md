@@ -2,17 +2,15 @@
 
 ## Post 1: native text
 
-Someone left the company yesterday. Which tools can they still get into?
+Someone left last month. Could you list every tool they can still sign in to?
 
-Email's usually on the offboarding list. The CRM, accounting tool and smaller apps each have their own accounts, which closing the company account may not close.
+Email was on the offboarding list. The CRM, the accounting tool and that smaller app each have their own accounts, and closing the company email may not close any of them.
 
-Single sign-on (SSO) connects those apps to one company login, held in an identity provider like Google Workspace, Microsoft Entra ID or Okta. Staff sign in there, and the app gets a signed message saying who they are, without ever seeing their password.
+Single sign-on connects those tools to one company login. Disable that one account and they can't sign in to anything connected to it. Revoke their open sessions in the same step, because an app they're already signed in to can keep them in until the session ends.
 
-When someone leaves, you disable that one account and they can't sign in to anything connected to it. Revoke their active sessions at the same time, because an app they're already signed in to can keep them in until that session ends.
+It leaves two gaps. Being unable to sign in is different from having no account: the account, and everything it owns, can sit inside the app until someone removes it. And if an app still allows a plain password, someone who's left may have a way back in that single sign-on never closed.
 
-There are gaps. SSO handles signing in, and may not remove the accounts inside each app. That's provisioning, usually done with a standard called SCIM. And if an app still allows password login, someone who's left may have a way back in that SSO never closed.
-
-You also set security rules once. Require a second sign-in step in the identity provider and every connected app inherits it. Plenty of vendors keep SSO for pricier plans, so check before you sign.
+Plenty of vendors keep single sign-on for their pricier plans, so ask before you sign.
 
 At your next offboarding review, sit down with IT and list which apps require the company login, which allow a separate password and which accounts still get removed by hand.
 

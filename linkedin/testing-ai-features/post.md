@@ -2,19 +2,19 @@
 
 ## Post 1: native text
 
-Someone tries a few demo questions, likes the answers and calls the AI feature ready. Then a customer asks it differently and gets a confident, wrong answer.
+A good demo is one person's impression. Before an AI feature goes in front of customers, we'd want a test set.
 
-That's normal for AI. The same question can get a different answer each time, and a wrong answer sounds as sure as a right one. The feature can also change without anyone touching your code, when the provider updates its model or someone tweaks the prompt to fix a complaint.
+Someone tries a few questions, likes the answers and calls it ready. Then a customer asks the same thing differently and gets an answer that's confident and wrong. Nothing crashes when an AI feature gets worse, and it can change without anyone touching your product, when the provider updates its model or someone tweaks the instructions.
 
-A demo is one person's impression. A test set gives you something to compare: fixed, realistic questions, an agreed way to grade each answer, and a score you track across versions.
+A test set is a fixed list of realistic questions, an agreed way to grade the answers, and a score you compare across versions.
 
-For a dental group's appointment and insurance assistant, that means the questions patients ask, typos included. Add ones it should decline, two insurance plans with similar names, and a message telling it to ignore its instructions. Every real mistake after launch becomes a new case.
+For a dental group's appointment and insurance assistant, that means questions phrased the way patients phrase them, typos included. Add ones it should decline, two insurance plans with similar names, and a message telling it to ignore its instructions. Every real mistake after launch becomes a new case.
 
-After that, every prompt, model or document change runs the full set before it ships, and a lower score keeps it out. Mark cases you can't afford to miss as must-pass, so any one failing blocks the change.
+Then every change runs the full set before it ships. Mark the cases you can't afford to miss as must-pass, so a single failure blocks the change.
 
-Answers that lead to something hard to undo still need a person. In an auction house system we built, a model drafts catalog copy from photos, and a cataloger reviews, regenerates with feedback where needed and approves every draft. The model never publishes on its own.
+A good score still doesn't replace a person where a mistake is hard to undo. In an auction house system we built, a model drafts catalog copy from photos and a cataloger approves every draft before it becomes inventory.
 
-Link's in the comments: grading open-ended answers and what to watch after launch.
+Start by writing down what a good answer looks like. If nobody can agree, that's your first problem.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/testing-ai-features.pdf)
 

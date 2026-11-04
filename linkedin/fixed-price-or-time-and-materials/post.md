@@ -2,19 +2,17 @@
 
 ## Post 1: native text
 
-One developer quotes a fixed price. Another quotes an hourly rate and a range.
+Two software quotes with similar totals can leave the cost of a bad estimate with different people.
 
-The totals look close, but you can't tell if they cover the same work or what happens when plans change.
+A fixed price puts a number on a written scope. The developer adds a margin for what they can't see yet, and if the work runs over, they absorb it. That gives them every reason to read the scope narrowly, so anything it doesn't name becomes a change request.
 
-A fixed price puts a number on a set scope. The developer guesses how long it'll take and adds a margin for the unknowns. If it runs over, they eat the cost, so they'll read the scope narrowly and treat anything it doesn't name as a change request.
+Time and materials bills the hours the work takes. You can change direction without renegotiating, and you keep the savings when things go faster. The catch is that nothing holds the total down except someone on your side reading the weekly report and asking why a task took twice the estimate.
 
-Time and materials bills for the hours the work takes. You can change direction without renegotiating. If your first users show you the reporting screen matters more than onboarding, the team switches and the invoice follows. The catch is that nothing keeps the total down except someone on your side who reads the weekly report and asks why a task took twice the estimate.
+Say a clinic wants a booking system that talks to its practice software, and nobody has checked how that software connects. A fixed quote has to price the worst case. An hourly quote can only give a range until someone looks.
 
-If a clinic wants a booking system that talks to its practice software, and nobody's checked how that software connects yet, a fixed quote has to price the worst case. An hourly quote can only give a range until someone looks.
+Our rule of thumb: fixed price when two developers would build roughly the same thing from your description, hourly when you're still finding things out. Can't describe it yet? Pay for a short discovery first.
 
-Fixed price suits work you can describe well enough that two developers would build roughly the same thing. Time and materials suits work where you're still finding things out. Can't describe it yet? Pay for a short discovery and get the build quoted after.
-
-Link's in the comments if you want the questions to ask either kind of quote.
+The article has four questions to ask either kind of quote. Link's in the comments.
 
 ## Post 2: carousel (~/Documents/Motown Carousels/fixed-price-or-time-and-materials.pdf)
 

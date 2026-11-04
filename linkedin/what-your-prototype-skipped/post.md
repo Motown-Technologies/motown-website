@@ -2,14 +2,14 @@
 
 ## Post 1: native text
 
-In one prototype we rebuilt, "submitted by" was a dropdown of six hard-coded names. It showed the workflow fine, but it couldn't tell anyone who'd actually submitted a record, and anyone with the link could submit as anyone.
+In one prototype we rebuilt, "submitted by" was a dropdown of six hard-coded names. Anyone with the link could submit as anyone.
 
-It was a senior-care operator's low-code proof of concept, and the workflow was right. So the spec was written in two halves: rebuild the screens the team already knew, then add what the demo had been allowed to skip. The dropdown became invite-only accounts, with permissions checked on the server for every request. Staff who'd used the prototype didn't need retraining.
+It was a senior-care operator's low-code proof of concept, and the workflow was right. So we kept the screens staff already knew and replaced the dropdown with invite-only accounts, with permissions checked on the server for every request. Nobody needed retraining.
 
-Vibe-coded, AI-built and no-code prototypes tend to skip the same things. Before yours holds real customer data, check:
+Vibe-coded, AI-built and no-code prototypes tend to skip the same things. Before yours holds real customer data, ask:
 
-• Is hiding a button the only thing stopping an action? Call the app directly, outside the screens, and see what the server accepts.
-• Do secret keys sit in the code or reach the browser? Rotate any that leaked, since deleting them leaves them in the code's history.
+• Is hiding a button the only thing stopping an action?
+• Did a secret key ever land in the code or reach the browser? Replace it, since deleting it leaves it in the history.
 • Does the data survive a restart, and has anyone restored a backup?
 • What do users see when payments, email or sign-in is slow or down?
 • Can someone other than the builder release an update and roll it back?
